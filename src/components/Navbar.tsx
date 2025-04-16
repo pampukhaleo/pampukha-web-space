@@ -17,8 +17,8 @@ const Navbar = () => {
           Леонід Пампуха
         </a>
         
-        {/* Desktop Menu - changed from md: to non-mobile (appears when width >= 1200px) */}
-        <div className="hidden mobile:flex items-center space-x-8">
+        {/* Desktop Menu - visible on screens >= 768px */}
+        <div className="hidden md:flex items-center space-x-8">
           <a href="#about" className="text-gray-700 hover:text-brand-blue transition-colors">
             Про мене
           </a>
@@ -36,9 +36,9 @@ const Navbar = () => {
           </Button>
         </div>
         
-        {/* Mobile menu button - changed from md: to mobile: (appears when width < 1200px) */}
+        {/* Mobile menu button - visible on screens < 768px */}
         <button 
-          className="mobile:hidden text-gray-700" 
+          className="md:hidden text-gray-700" 
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -46,9 +46,9 @@ const Navbar = () => {
         </button>
       </div>
       
-      {/* Mobile Menu - changed from md: to mobile: (appears when width < 1200px) */}
+      {/* Mobile Menu - visible on screens < 768px */}
       {isMenuOpen && (
-        <div className="mobile:hidden bg-white py-4 px-4 shadow-md">
+        <div className="md:hidden bg-white py-4 px-4 shadow-md">
           <div className="flex flex-col space-y-4">
             <a 
               href="#about" 

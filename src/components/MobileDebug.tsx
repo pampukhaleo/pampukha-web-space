@@ -9,7 +9,7 @@ const MobileDebug = () => {
     <div className="fixed top-0 right-0 bg-black text-white p-2 z-50">
       <p>Mobile: {isMobile ? 'Yes' : 'No'}</p>
       <p>Width: <span id="screen-width">Calculating...</span></p>
-      <p>Breakpoint: 1200px</p>
+      <p>Breakpoint: 768px</p>
       <script dangerouslySetInnerHTML={{
         __html: `
           function updateWidth() {

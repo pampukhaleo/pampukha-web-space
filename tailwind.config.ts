@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -115,8 +116,8 @@ export default {
 				'lg': '1024px',
 				'xl': '1280px',
 				'2xl': '1536px',
-				// Custom breakpoint for mobile
-				'mobile': {'max': '1200px'}
+				// Fixed mobile breakpoint definition - now correctly shows mobile BELOW 1200px
+				'mobile': '1200px'
 			},
 		}
 	},
