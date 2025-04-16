@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -109,6 +108,15 @@ export default {
 			backgroundImage: {
 				'hero-pattern': "url('/public/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png')",
 				'dots-pattern': "radial-gradient(circle, #1E5AD0 1px, transparent 1px)",
+			},
+			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1536px',
+				// Custom breakpoint for mobile
+				'mobile': {'max': '1200px'}
 			},
 		}
 	},
