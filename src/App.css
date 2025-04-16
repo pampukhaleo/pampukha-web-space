@@ -1,5 +1,5 @@
 
-/* Remove the max-width constraint that could be affecting mobile responsiveness */
+/* Make sure there are no constraints that could affect mobile responsiveness */
 #root {
   width: 100%;
   margin: 0 auto;

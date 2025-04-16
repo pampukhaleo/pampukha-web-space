@@ -4,26 +4,44 @@ import * as React from "react"
 const MOBILE_BREAKPOINT = 1200
 
 export function useIsMobile() {
-  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined)
+  const [isMobile, setIsMobile] = React.useState<boolean>(() => {
+    // Initialize with the current window width if we're in a browser environment
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < MOBILE_BREAKPOINT
+    }
+    return false
+  })
 
   React.useEffect(() => {
-    // Create a media query list
-    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
+    if (typeof window === 'undefined') return
     
-    // Function to update state based on media query
+    // Function to update state based on window width
     const updateMobileState = () => {
-      setIsMobile(mql.matches)
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+    }
+    
+    // Add both matchMedia and resize listeners for better compatibility
+    const mediaQuery = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
+    
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', updateMobileState)
+    } else {
+      // Fallback for older browsers
+      window.addEventListener('resize', updateMobileState)
     }
     
     // Set initial state
     updateMobileState()
     
-    // Add listener for changes
-    mql.addEventListener("change", updateMobileState)
-    
     // Cleanup
-    return () => mql.removeEventListener("change", updateMobileState)
+    return () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', updateMobileState)
+      } else {
+        window.removeEventListener('resize', updateMobileState)
+      }
+    }
   }, [])
 
-  return isMobile !== undefined ? isMobile : false
+  return isMobile
 }
