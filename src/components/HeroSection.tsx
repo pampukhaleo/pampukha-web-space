@@ -57,10 +57,10 @@ const HeroSection = () => {
       </div>
       
       {/* Floating icons */}
-      <div className="hidden md:block absolute top-1/4 left-10 p-4 bg-white rounded-xl shadow-lg rotate-12 animate-float">
+      <div className="hidden md:block absolute top-44 left-1/4 p-4 bg-white rounded-xl shadow-lg rotate-12 animate-float">
         <Code className="text-brand-blue" size={32} />
       </div>
-      <div className="hidden md:block absolute bottom-1/4 right-10 p-4 bg-white rounded-xl shadow-lg -rotate-12 animate-float" style={{ animationDelay: '1s' }}>
+      <div className="hidden md:block absolute bottom-1/4 right-1/4 p-4 bg-white rounded-xl shadow-lg -rotate-12 animate-float" style={{ animationDelay: '1s' }}>
         <MonitorSmartphone className="text-brand-teal" size={32} />
       </div>
       <div className="hidden md:block absolute top-2/3 left-1/4 p-4 bg-white rounded-xl shadow-lg rotate-6 animate-float" style={{ animationDelay: '2s' }}>

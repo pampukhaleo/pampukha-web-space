@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Command, Globe, Cpu, Search, Palette, Gauge } from 'lucide-react';
+import { Command, Globe, Search, Palette, Gauge, CircleDollarSign } from 'lucide-react';
 
 const servicesData = [
   {
@@ -16,9 +16,9 @@ const servicesData = [
     color: 'bg-brand-teal/10',
   },
   {
-    icon: <Cpu size={36} className="text-brand-orange" />,
-    title: 'Інтернет-магазини',
-    description: 'Створення функціональних онлайн-магазинів з інтеграцією платіжних систем.',
+    icon: <CircleDollarSign size={36} className="text-brand-orange" />,
+    title: 'Google and Facebook ads',
+    description: 'Запуск реклами вашого вебсайту у Facebook/Instagram, Google',
     color: 'bg-brand-orange/10',
   },
   {
@@ -89,10 +89,10 @@ const ServicesSection = () => {
                   <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
                   <p>Прозоре ціноутворення</p>
                 </div>
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
-                  <p>Зручна CMS для керування</p>
-                </div>
+                {/*<div className="flex items-center">*/}
+                {/*  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>*/}
+                {/*  <p>Зручна CMS для керування</p>*/}
+                {/*</div>*/}
                 <div className="flex items-center">
                   <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
                   <p>Підтримка після запуску</p>
