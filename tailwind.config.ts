@@ -19,6 +19,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         // Dark theme base colors inspired by the screenshot
         background: {
@@ -69,4 +72,3 @@ export default {
     require('@tailwindcss/typography')
   ],
 } satisfies Config;
-
