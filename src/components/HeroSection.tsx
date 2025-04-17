@@ -5,15 +5,15 @@ import { ArrowDown, Code, MonitorSmartphone, Zap } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 relative overflow-hidden">
+    <section className="pt-24 mobile:pt-32 pb-16 mobile:pb-24 px-4 relative overflow-hidden">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="order-2 md:order-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <div className="grid grid-cols-1 mobile:grid-cols-2 gap-8 items-center">
+          <div className="order-2 mobile:order-1">
+            <h1 className="text-4xl mobile:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Потрібен <span className="gradient-text">сайт</span>?<br />
               Я створю його для вас
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8">
+            <p className="text-lg mobile:text-xl text-gray-700 mb-8">
               Професійна розробка сучасних веб-сайтів для малого бізнесу. 
               Стильно, функціонально, доступно.
             </p>
@@ -33,7 +33,7 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div className="order-1 md:order-2 relative">
+          <div className="order-1 mobile:order-2 relative">
             <div className="relative z-10 p-4">
               <img 
                 src="/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png" 
@@ -46,7 +46,7 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <div className="mt-16 md:mt-24 flex justify-center">
+        <div className="mt-16 mobile:mt-24 flex justify-center">
           <div 
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             className="animate-bounce cursor-pointer bg-white p-2 rounded-full shadow-lg"
@@ -57,13 +57,13 @@ const HeroSection = () => {
       </div>
       
       {/* Floating icons */}
-      <div className="hidden md:block absolute top-44 left-1/4 p-4 bg-white rounded-xl shadow-lg rotate-12 animate-float">
+      <div className="hidden mobile:block absolute top-44 left-1/4 p-4 bg-white rounded-xl shadow-lg rotate-12 animate-float">
         <Code className="text-brand-blue" size={32} />
       </div>
-      <div className="hidden md:block absolute bottom-1/4 right-1/4 p-4 bg-white rounded-xl shadow-lg -rotate-12 animate-float" style={{ animationDelay: '1s' }}>
+      <div className="hidden mobile:block absolute bottom-1/4 right-1/4 p-4 bg-white rounded-xl shadow-lg -rotate-12 animate-float" style={{ animationDelay: '1s' }}>
         <MonitorSmartphone className="text-brand-teal" size={32} />
       </div>
-      <div className="hidden md:block absolute top-2/3 left-1/4 p-4 bg-white rounded-xl shadow-lg rotate-6 animate-float" style={{ animationDelay: '2s' }}>
+      <div className="hidden mobile:block absolute top-2/3 left-1/4 p-4 bg-white rounded-xl shadow-lg rotate-6 animate-float" style={{ animationDelay: '2s' }}>
         <Zap className="text-brand-orange" size={32} />
       </div>
 
