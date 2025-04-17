@@ -23,10 +23,10 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
-        // Dark theme base colors inspired by the screenshot
+        // Dark theme colors based on the screenshots
         background: {
-          DEFAULT: '#0F172A',  // Deep navy blue
-          darker: '#0B1120',   // Even darker blue for depth
+          DEFAULT: '#0B1120',  // Deeper navy blue background
+          darker: '#080E1A',   // Even darker blue for depth
         },
         foreground: {
           DEFAULT: '#FFFFFF',  // White text
@@ -41,12 +41,26 @@ export default {
           DEFAULT: '#10B981',  // Teal/green accent color
           light: '#34D399',    // Lighter teal
         },
+        brand: {
+          blue: '#3B82F6',     // Brand blue color
+          teal: '#10B981',     // Brand teal color
+          orange: '#F59E0B',   // Brand orange color
+          purple: '#8B5CF6',   // Brand purple color
+          red: '#EF4444',      // Brand red color
+        },
         border: {
           DEFAULT: '#1E293B',  // Dark border color
         },
         muted: {
           DEFAULT: '#1E293B',  // Muted background color
           foreground: '#64748B' // Muted text color
+        },
+        card: {
+          DEFAULT: '#0F172A',  // Card background color
+          foreground: '#FFFFFF' // Card text color
+        },
+        dark: {
+          lighter: '#1E293B',  // Lighter dark color
         },
       },
       backgroundImage: {
