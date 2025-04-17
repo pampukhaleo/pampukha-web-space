@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -6,86 +7,34 @@
 
 @layer base {
   :root {
-    --background: 210 50% 98%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 221 78% 47%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 186 71% 51%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 31 100% 65%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221 78% 47%;
-
-    --radius: 0.75rem;
-  }
-
-  :root[class~="dark"] {
-    --background: 225 18% 14%;
+    --background: 222 47% 11%;
     --foreground: 0 0% 100%;
-    --card: 228 15% 17%;
-    --card-foreground: 0 0% 100%;
-    --popover: 228 15% 17%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 228 15% 27%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 215 32% 22%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 228 15% 27%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 228 15% 27%;
+    
+    --muted: 215 32% 22%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 134 63% 45%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
+    
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 228 15% 27%;
-    --input: 228 15% 27%;
-    --ring: 224.3 76.3% 48%;
+    
+    --border: 215 32% 22%;
+    --input: 215 32% 22%;
+    --ring: 217 91% 60%;
   }
 
-  * {
-    @apply border-border;
-  }
-
-  html {
-    @apply scroll-smooth;
-  }
-  
   body {
-    @apply bg-background text-foreground font-montserrat dark:bg-dark;
-  }
-
-  .pattern-dots {
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    @apply bg-dots-pattern bg-[length:20px_20px];
+    @apply bg-background text-foreground font-montserrat;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-blue via-brand-teal to-brand-purple text-transparent bg-clip-text;
-  }
-
-  .card-gradient {
-    @apply bg-gradient-to-br from-white to-gray-100 shadow-lg;
-  }
-
-  .service-card {
-    @apply p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply bg-gradient-text bg-clip-text text-transparent;
   }
 }
