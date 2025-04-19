@@ -23,44 +23,60 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
-        // Dark theme colors based on the screenshots
+        // Both light and dark theme colors 
         background: {
-          DEFAULT: '#0B1120',  // Deeper navy blue background
-          darker: '#080E1A',   // Even darker blue for depth
+          DEFAULT: 'hsl(var(--background))',
+          darker: '#080E1A',
         },
         foreground: {
-          DEFAULT: '#FFFFFF',  // White text
-          muted: '#94A3B8',    // Soft gray for secondary text
+          DEFAULT: 'hsl(var(--foreground))',
+          muted: 'hsl(var(--muted-foreground))',
         },
         primary: {
-          DEFAULT: '#3B82F6',  // Bright blue for primary elements
-          light: '#60A5FA',    // Lighter blue for gradients
-          dark: '#1D4ED8',     // Darker blue for hover states
+          DEFAULT: 'hsl(var(--primary))',
+          light: '#60A5FA',
+          dark: '#1D4ED8',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
         },
         accent: {
-          DEFAULT: '#10B981',  // Teal/green accent color
-          light: '#34D399',    // Lighter teal
-        },
-        brand: {
-          blue: '#3B82F6',     // Brand blue color
-          teal: '#10B981',     // Brand teal color
-          orange: '#F59E0B',   // Brand orange color
-          purple: '#8B5CF6',   // Brand purple color
-          red: '#EF4444',      // Brand red color
-        },
-        border: {
-          DEFAULT: '#1E293B',  // Dark border color
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+          light: '#34D399',
         },
         muted: {
-          DEFAULT: '#1E293B',  // Muted background color
-          foreground: '#64748B' // Muted text color
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
         },
         card: {
-          DEFAULT: '#0F172A',  // Card background color
-          foreground: '#FFFFFF' // Card text color
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        border: {
+          DEFAULT: 'hsl(var(--border))',
+        },
+        input: {
+          DEFAULT: 'hsl(var(--input))',
+        },
+        ring: {
+          DEFAULT: 'hsl(var(--ring))',
+        },
+        brand: {
+          blue: '#3B82F6',
+          teal: '#10B981',
+          orange: '#F59E0B',
+          purple: '#8B5CF6',
+          red: '#EF4444',
         },
         dark: {
-          lighter: '#1E293B',  // Lighter dark color
+          lighter: '#1E293B',
         },
       },
       backgroundImage: {
@@ -69,9 +85,9 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            color: '#FFFFFF',
+            color: 'hsl(var(--foreground))',
             a: {
-              color: '#3B82F6',
+              color: 'hsl(var(--primary))',
               '&:hover': {
                 color: '#60A5FA',
               },
