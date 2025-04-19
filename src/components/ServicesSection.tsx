@@ -43,7 +43,7 @@ const servicesData = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 md:py-24 px-4 bg-gray-50">
+    <section id="services" className="py-16 md:py-24 px-4 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -54,61 +54,53 @@ const ServicesSection = () => {
             Від розробки до оптимізації - все, що потрібно для успішної присутності в Інтернеті.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.map((service, index) => (
-            <div 
-              key={index} 
-              className={`service-card card-gradient group ${service.color}`}
+          { servicesData.map((service, index) => (
+            <div
+              key={ index }
+              className={ `flex items-start gap-4 p-6 rounded-2xl border border-border shadow-md hover:shadow-lg transition-shadow bg-card text-card-foreground ${ service.color }` }
             >
-              <div className="mb-6">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-              <p className="text-gray-700">{service.description}</p>
+              <div className="flex-shrink-0">{ service.icon }</div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">{ service.title }</h3>
+                <p className="text-muted-foreground">{ service.description }</p>
+              </div>
             </div>
-          ))}
+          )) }
         </div>
-        
-        <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-xl">
+
+        <div
+          className="mt-16 p-8 rounded-2xl bg-background text-foreground shadow-xl transition-colors border border-border">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">Чому варто обрати мене?</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
-                  <p>Сучасний, адаптивний дизайн</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
-                  <p>Швидке завантаження сторінок</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
-                  <p>SEO-оптимізований код</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
-                  <p>Прозоре ціноутворення</p>
-                </div>
-                {/*<div className="flex items-center">*/}
-                {/*  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>*/}
-                {/*  <p>Зручна CMS для керування</p>*/}
-                {/*</div>*/}
-                <div className="flex items-center">
-                  <div className="h-2 w-2 bg-white rounded-full mr-3"></div>
-                  <p>Підтримка після запуску</p>
-                </div>
+                { [
+                  'Сучасний, адаптивний дизайн',
+                  'Швидке завантаження сторінок',
+                  'SEO-оптимізований код',
+                  'Прозоре ціноутворення',
+                  'Підтримка після запуску',
+                ].map((text, i) => (
+                  <div key={ i } className="flex items-center">
+                    <div className="h-2 w-2 bg-muted-foreground rounded-full mr-3"/>
+                    <p className="text-muted-foreground">{ text }</p>
+                  </div>
+                )) }
               </div>
             </div>
             <div className="text-center">
-              <button 
-                className="w-full py-4 px-8 bg-white text-brand-blue rounded-xl font-bold transition-transform hover:scale-105"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              <button
+                className="w-full py-4 px-8 bg-primary text-primary-foreground rounded-xl font-bold transition-transform hover:scale-105"
+                onClick={ () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }
               >
                 Замовити зараз
               </button>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

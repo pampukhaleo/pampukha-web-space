@@ -46,27 +46,33 @@ const PortfolioSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {portfolioItems.map((item) => (
-            <div key={item.id} className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+            <div
+              key={item.id}
+              className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground"
+            >
+              {/* Gradient Overlay on Hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
+
               <div className="relative z-10">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-64 object-cover"
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-64 object-cover rounded-t-2xl"
                 />
-                <div className="p-6 bg-white">
+
+                <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <span className="inline-block px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full mb-2">
-                        {item.category}
-                      </span>
+            <span className="inline-block px-3 py-1 text-xs bg-muted text-muted-foreground rounded-full mb-2">
+              {item.category}
+            </span>
                       <h3 className="text-xl font-bold">{item.title}</h3>
                     </div>
-                    <div className="bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <ExternalLink size={16} className="text-brand-blue" />
+                    <div className="bg-muted p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <ExternalLink size={16} className="text-primary" />
                     </div>
                   </div>
-                  <p className="text-gray-700">{item.description}</p>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </div>
               </div>
             </div>
