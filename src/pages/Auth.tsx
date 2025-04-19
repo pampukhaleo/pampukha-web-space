@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
@@ -23,17 +22,26 @@ const Auth = () => {
       }
       
       // Use email/password explicitly instead of trying anonymous sign-up
-      const { error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
-          emailRedirectTo: window.location.origin
+          emailRedirectTo: window.location.origin,
         }
       });
       
       if (error) throw error;
-      toast.success('Check your email for the confirmation link!');
+      
+      // If the sign-up is successful and user is created
+      if (data?.user) {
+        toast.success('Sign up successful! You can now sign in.');
+        // You might want to auto-login the user here instead of showing the success message
+        // For now, we'll keep the user on the auth page to sign in manually
+      } else {
+        toast.success('Check your email for the confirmation link!');
+      }
     } catch (error) {
+      console.error('Sign up error:', error);
       toast.error(error.message);
     } finally {
       setLoading(false);
@@ -48,14 +56,19 @@ const Auth = () => {
         throw new Error('Please enter both email and password');
       }
       
-      const { error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
       
       if (error) throw error;
-      navigate('/dashboard');
+      
+      if (data?.user) {
+        toast.success('Signed in successfully!');
+        navigate('/dashboard');
+      }
     } catch (error) {
+      console.error('Sign in error:', error);
       toast.error(error.message);
     } finally {
       setLoading(false);
@@ -67,11 +80,12 @@ const Auth = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: window.location.origin
+          redirectTo: `${window.location.origin}/dashboard`,
         }
       });
       if (error) throw error;
     } catch (error) {
+      console.error('Google sign in error:', error);
       toast.error(error.message);
     }
   }
