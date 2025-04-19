@@ -1,10 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
 import type { Database } from '@/integrations/supabase/types';
+import { Home } from 'lucide-react';
 
 type Profile = Database['public']['Tables']['profiles']['Row'];
 
@@ -49,7 +50,12 @@ const Dashboard = () => {
   return (
     <div className="container mx-auto py-8 px-4">
       <Card>
-        <CardHeader>
+        <CardHeader className="relative">
+          <Link to="/" className="absolute top-4 left-4">
+            <Button variant="ghost" size="icon">
+              <Home className="h-5 w-5" />
+            </Button>
+          </Link>
           <CardTitle>Welcome{profile.full_name ? `, ${profile.full_name}` : ''}!</CardTitle>
           <CardDescription>Your account dashboard</CardDescription>
         </CardHeader>
