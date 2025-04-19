@@ -4,13 +4,9 @@ import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import type { Database } from '@/integrations/supabase/types';
 
-interface Profile {
-  id: string;
-  full_name: string | null;
-  has_paid: boolean;
-  website_url: string | null;
-}
+type Profile = Database['public']['Tables']['profiles']['Row'];
 
 const Dashboard = () => {
   const navigate = useNavigate();
