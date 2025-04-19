@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,18 +9,28 @@ import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 
 const Auth = () => {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const [loading, setLoading] = React.useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   async function handleEmailSignUp() {
     try {
       setLoading(true);
+      
+      if (!email || !password) {
+        throw new Error('Please enter both email and password');
+      }
+      
+      // Use email/password explicitly instead of trying anonymous sign-up
       const { error } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          emailRedirectTo: window.location.origin
+        }
       });
+      
       if (error) throw error;
       toast.success('Check your email for the confirmation link!');
     } catch (error) {
@@ -33,10 +43,16 @@ const Auth = () => {
   async function handleEmailSignIn() {
     try {
       setLoading(true);
+      
+      if (!email || !password) {
+        throw new Error('Please enter both email and password');
+      }
+      
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
+      
       if (error) throw error;
       navigate('/dashboard');
     } catch (error) {
@@ -50,6 +66,9 @@ const Auth = () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
+        options: {
+          redirectTo: window.location.origin
+        }
       });
       if (error) throw error;
     } catch (error) {
