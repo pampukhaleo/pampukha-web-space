@@ -5,7 +5,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Database } from '@/integrations/supabase/types';
-import { Home } from 'lucide-react';
+import { Home, Settings } from 'lucide-react';
 
 type Profile = Database['public']['Tables']['profiles']['Row'];
 
@@ -95,7 +95,20 @@ const Dashboard = () => {
 
                 <div className="p-4 bg-secondary rounded-lg">
                   <h3 className="font-semibold mb-2">Contact Support</h3>
-                  <Button>Send Message</Button>
+                  <a href="https://t.me/YourTelegramBot" target="_blank" rel="noopener noreferrer">
+                    <Button>Contact via Telegram</Button>
+                  </a>
+                </div>
+                
+                <div className="p-4 bg-secondary rounded-lg">
+                  <h3 className="font-semibold mb-2">Website Management</h3>
+                  <p className="mb-3">Access your website content management system (CMS)</p>
+                  <Link to="/admin">
+                    <Button className="flex items-center">
+                      <Settings className="mr-2 h-4 w-4" />
+                      Open Admin Panel
+                    </Button>
+                  </Link>
                 </div>
               </div>
             )}
