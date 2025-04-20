@@ -50,15 +50,20 @@ const Dashboard = () => {
   return (
     <div className="container mx-auto py-8 px-4">
       <Card>
-        <CardHeader className="relative">
-          <Link to="/" className="absolute top-4 left-4">
-            <Button variant="ghost" size="icon">
-              <Home className="h-5 w-5" />
-            </Button>
-          </Link>
-          <CardTitle>Welcome{profile.full_name ? `, ${profile.full_name}` : ''}!</CardTitle>
+        <CardHeader>
+          <div className="flex items-center space-x-2">
+            <Link to="/">
+              <Button variant="ghost" size="icon" className="p-0">
+                <Home className="h-5 w-5" />
+              </Button>
+            </Link>
+            <CardTitle>
+              Welcome{profile.full_name ? `, ${profile.full_name}` : ''}!
+            </CardTitle>
+          </div>
           <CardDescription>Your account dashboard</CardDescription>
         </CardHeader>
+
         <CardContent>
           <div className="space-y-4">
             <div className="p-4 bg-secondary rounded-lg">

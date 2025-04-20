@@ -95,15 +95,17 @@ const Auth = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <Card className="w-full max-w-md">
-        <CardHeader className="relative">
-          <Link to="/" className="absolute top-4 left-4">
-            <Button variant="ghost" size="icon">
-              <Home className="h-5 w-5" />
+        <CardHeader>
+          <Link to="/">
+            <Button variant="ghost" className="flex items-center space-x-2 text-sm font-medium mb-2 p-2">
+              <Home className="h-4 w-4" />
+              <span>Go Home</span>
             </Button>
           </Link>
           <CardTitle>Welcome</CardTitle>
           <CardDescription>Sign in to your account or create a new one</CardDescription>
         </CardHeader>
+
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
