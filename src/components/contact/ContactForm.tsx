@@ -63,7 +63,7 @@ ${formData.message}
       console.log('Sending form data:', formData);
       console.log('Telegram message:', telegramText);
 
-      const apiUrl = '/api/sendTelegram';
+      const apiUrl = 'https://fwwpidktaanowpaihgzy.supabase.co/functions/v1/swift-responder';
       
       const response = await fetch(apiUrl, {
         method: 'POST',
