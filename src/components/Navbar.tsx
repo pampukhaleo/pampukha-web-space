@@ -44,8 +44,13 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-foreground">
-          Леонід Пампуха
+        <a href="#" className="flex items-center space-x-3">
+          <img 
+            src="/lovable-uploads/your-logo-file.png" 
+            alt="Leonforge" 
+            className="h-8 w-auto"
+          />
+          <span className="text-xl font-bold text-foreground">Leonforge</span>
         </a>
         
         {/* Desktop Menu */}
@@ -149,3 +154,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

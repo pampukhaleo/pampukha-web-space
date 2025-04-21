@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 
@@ -8,10 +7,17 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6">Леонід Пампуха</h3>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src="/lovable-uploads/your-logo-file.png" 
+                alt="Leonforge" 
+                className="h-8 w-auto"
+              />
+              <h3 className="text-2xl font-bold">Leonforge</h3>
+            </div>
             <p className="mb-6 text-foreground-muted">
-              Професійна розробка сучасних веб-сайтів для малого бізнесу. 
-              Стильно, функціонально, доступно.
+              Professional development of modern websites for small businesses. 
+              Stylish, functional, accessible.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-foreground-muted hover:text-primary transition-colors" aria-label="Facebook">
@@ -63,7 +69,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-border text-center text-foreground-muted">
-          <p>© {new Date().getFullYear()} Леонід Пампуха. Всі права захищені.</p>
+          <p>© {new Date().getFullYear()} Leonforge. All rights reserved.</p>
         </div>
       </div>
     </footer>
