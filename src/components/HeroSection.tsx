@@ -38,7 +38,7 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 relative mb-6 lg:mb-0">
             <div className="relative z-10 lg:p-4 flex justify-center lg:justify-end">
               <img
-                src="/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png"
+                src={`${import.meta.env.BASE_URL}lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`}
                 alt="Веб-розробка"
                 className="rounded-2xl shadow-2xl w-full max-w-sm"
               />
