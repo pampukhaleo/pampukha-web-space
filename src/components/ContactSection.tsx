@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -5,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Calendar, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -15,15 +17,19 @@ const ContactSection = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing again
+    if (error) setError('');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
     try {
       const response = await fetch('/api/sendTelegram', {
@@ -32,8 +38,10 @@ const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Не вдалося надіслати повідомлення');
+        throw new Error(data.error || 'Не вдалося надіслати повідомлення');
       }
 
       toast({
@@ -43,6 +51,10 @@ const ContactSection = () => {
 
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
+      console.error('Contact form error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Щось пішло не так';
+      setError(errorMessage);
+      
       toast({
         title: "Помилка!",
         description: "Щось пішло не так. Спробуйте ще раз або напишіть на email.",
@@ -131,6 +143,14 @@ const ContactSection = () => {
             <Card className="bg-card border border-border shadow-md text-card-foreground">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6">Замовити консультацію</h3>
+
+                {error && (
+                  <Alert className="mb-6 border-red-300 bg-red-50 dark:bg-red-900/10">
+                    <AlertDescription className="text-red-800 dark:text-red-200">
+                      {error}
+                    </AlertDescription>
+                  </Alert>
+                )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
