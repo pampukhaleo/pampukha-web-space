@@ -21,21 +21,35 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form data submitted:', formData);
+    try {
+      const response = await fetch('/api/sendTelegram', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Не вдалося надіслати повідомлення');
+      }
+
       toast({
         title: "Повідомлення надіслано!",
-        description: "Дякую за ваше звернення. Я зв'яжуся з вами найближчим часом.",
+        description: "Дякую за звернення — я зв'яжуся з вами найближчим часом.",
       });
 
       setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Помилка!",
+        description: "Щось пішло не так. Спробуйте ще раз або напишіть на email.",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -57,14 +71,14 @@ const ContactSection = () => {
             {[
               {
                 icon: <Phone className="text-primary" size={24} />,
-                title: "Телефон",
-                value: "+380 12 345 6789",
+                title: "Telegram",
+                value: "@leonid_kiev",
                 bg: "bg-primary/10",
               },
               {
                 icon: <Mail className="text-accent" size={24} />,
                 title: "Email",
-                value: "leonid.pampukha@example.com",
+                value: "lgpampukha@gmail.com",
                 bg: "bg-accent/10",
               },
               {
@@ -104,7 +118,7 @@ const ContactSection = () => {
                 </p>
                 <Button
                   className="w-full bg-primary hover:bg-primary/90"
-                  onClick={() => window.location.href = 'mailto:leonid.pampukha@example.com'}
+                  onClick={() => window.location.href = 'mailto:lgpampukha@gmail.com'}
                 >
                   Написати листа
                 </Button>

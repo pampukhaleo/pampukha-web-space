@@ -45,15 +45,11 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="flex items-center space-x-3">
-          <img 
-            src="/lovable-uploads/your-logo-file.png" 
-            alt="Leonforge" 
-            className="h-8 w-auto"
-          />
-          <span className="text-xl font-bold text-foreground">Leonforge</span>
+          <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
         </a>
-        
-        {/* Desktop Menu */}
+
+
+        {/* Desktop Menu */ }
         <div className="hidden md:flex items-center space-x-8">
           <a href="#about" className="text-foreground-muted hover:text-primary transition-colors">
             Про мене

@@ -8,15 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/lovable-uploads/your-logo-file.png" 
-                alt="Leonforge" 
-                className="h-8 w-auto"
-              />
-              <h3 className="text-2xl font-bold">Leonforge</h3>
+              <span
+                className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
             </div>
             <p className="mb-6 text-foreground-muted">
-              Professional development of modern websites for small businesses. 
+            Professional development of modern websites for small businesses.
               Stylish, functional, accessible.
             </p>
             <div className="flex space-x-4">
