@@ -30,27 +30,82 @@ export const ContactForm = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/sendTelegram', {
+      // Create the text for Telegram message
+      const telegramText = `
+🆕 *Нова заявка з сайту Leonforge*:
+
+👤 *Ім'я:* ${formData.name}
+📧 *Email:* ${formData.email}
+📱 *Телефон:* ${formData.phone || 'Не вказано'}
+📝 *Повідомлення:*
+${formData.message}
+      `;
+
+      // Log the data being sent (useful for debugging)
+      console.log('Sending form data:', formData);
+      console.log('Telegram message:', telegramText);
+
+      // Determine the correct API URL based on environment
+      // In production it would be '/api/sendTelegram'
+      // In development we might need a different approach
+      const apiUrl = '/api/sendTelegram';
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Не вдалося надіслати повідомлення');
+      // Handle different response types
+      let data;
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        // Handle non-JSON responses gracefully
+        const textResponse = await response.text();
+        console.log('Non-JSON response:', textResponse);
+        
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}: ${textResponse || response.statusText}`);
+        }
+        
+        data = { success: response.ok };
       }
 
+      if (!response.ok) {
+        throw new Error(data.error || `Помилка сервера: ${response.status}`);
+      }
+
+      // Show success message
       toast({
         title: "Повідомлення надіслано!",
         description: "Дякую за звернення — я зв'яжуся з вами найближчим часом.",
       });
 
+      // Reset form
       setFormData({ name: '', email: '', phone: '', message: '' });
+      
+      // If in development mode, show a special message
+      if (window.location.hostname === 'localhost') {
+        console.info('Development mode: In production, this would send a Telegram message.');
+      }
     } catch (error) {
       console.error('Contact form error:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Щось пішло не так';
+      
+      // Provide a more helpful error message in development
+      let errorMessage;
+      if (error instanceof Error) {
+        errorMessage = error.message;
+        
+        // Check for 404 errors which are common in local development
+        if (errorMessage.includes('404') || errorMessage.includes('Not Found')) {
+          errorMessage = 'API endpoint не знайдено. У локальному середовищі ця функція недоступна без налаштованого сервера.';
+        }
+      } else {
+        errorMessage = 'Щось пішло не так';
+      }
+      
       setError(errorMessage);
       
       toast({

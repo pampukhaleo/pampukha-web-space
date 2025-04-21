@@ -21,12 +21,15 @@ export default async function handler(req, res) {
 
 👤 *Ім'я:* ${name}
 📧 *Email:* ${email}
-📱 *Телефон:* ${phone}
+📱 *Телефон:* ${phone || 'Не вказано'}
 📝 *Повідомлення:*
 ${message}
   `
 
   try {
+    // Log the attempt to send a message
+    console.log(`Attempting to send Telegram message to chat ID: ${chatId}`);
+    
     const telegramRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -38,7 +41,8 @@ ${message}
       console.error('Telegram API error:', errorData)
       throw new Error(`Telegram API failed: ${errorData.description || telegramRes.statusText}`)
     }
-
+    
+    console.log('Telegram message sent successfully')
     return res.status(200).json({ success: true })
   } catch (err) {
     console.error('Telegram send error:', err)
