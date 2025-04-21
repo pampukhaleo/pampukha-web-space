@@ -95,7 +95,7 @@ const Dashboard = () => {
 
                 <div className="p-4 bg-secondary rounded-lg">
                   <h3 className="font-semibold mb-2">Contact Support</h3>
-                  <a href="https://t.me/YourTelegramBot" target="_blank" rel="noopener noreferrer">
+                  <a href="https://t.me/leonid_kiev" target="_blank" rel="noopener noreferrer">
                     <Button>Contact via Telegram</Button>
                   </a>
                 </div>
