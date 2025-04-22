@@ -17,17 +17,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Contact Info */}
-          <div className="lg:col-span-2">
-            <ContactInfoCard />
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-3">
-            <ContactForm />
-          </div>
-        </div>
+        <ContactForm />
       </div>
     </section>
   );

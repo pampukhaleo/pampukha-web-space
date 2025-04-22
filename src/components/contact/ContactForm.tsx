@@ -129,8 +129,8 @@ ${formData.message}
 
   return (
     <>
-      <Card className="bg-card border border-border shadow-md text-card-foreground">
-        <CardContent className="p-8">
+      <Card className="bg-card border border-border shadow-md text-card-foreground max-w-2xl mx-auto w-full">
+      <CardContent className="p-8">
           <h3 className="text-2xl font-bold mb-6">Замовити консультацію</h3>
 
           {error && (
