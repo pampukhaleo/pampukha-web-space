@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Command, Globe, Search, Palette, Gauge, CircleDollarSign } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const servicesData = [
   {
@@ -54,9 +54,12 @@ const ServicesSection = () => {
             Від розробки до оптимізації - все, що потрібно для успішної присутності в Інтернеті.
           </p>
           <div className="flex justify-center mt-6">
-            <span className="inline-block bg-brand-blue/90 text-white font-semibold rounded-full px-5 py-2 shadow-md text-base tracking-wide border-2 border-brand-blue/90">
-              дизайн + готовий сайт + <span className="font-bold text-brand-orange">СЕО</span>
-            </span>
+            <Badge 
+              variant="default" 
+              className="bg-brand-blue/10 text-brand-blue text-base px-4 py-2"
+            >
+              дизайн + готовий сайт + <span className="text-brand-orange font-bold ml-1">СЕО</span>
+            </Badge>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
