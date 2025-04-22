@@ -53,8 +53,12 @@ const ServicesSection = () => {
             Пропоную комплексні рішення для веб-представництва вашого бізнесу.
             Від розробки до оптимізації - все, що потрібно для успішної присутності в Інтернеті.
           </p>
+          <div className="flex justify-center mt-6">
+            <span className="inline-block bg-brand-blue/90 text-white font-semibold rounded-full px-5 py-2 shadow-md text-base tracking-wide border-2 border-brand-blue/90">
+              дизайн + готовий сайт + <span className="font-bold text-brand-orange">СЕО</span>
+            </span>
+          </div>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           { servicesData.map((service, index) => (
             <div
@@ -100,7 +104,6 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

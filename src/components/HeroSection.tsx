@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Code, MonitorSmartphone, Zap } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -13,6 +14,20 @@ const HeroSection = () => {
               Потрібен <span className="gradient-text">сайт</span>?<br />
               Я створю його для вас
             </h1>
+            <div className="flex flex-col items-center lg:items-start gap-2 mb-2 w-full">
+              <span className="inline-block bg-brand-orange/90 text-white text-lg md:text-xl font-extrabold rounded-full px-5 py-2 shadow-lg tracking-wider border-2 border-brand-orange/90"
+                    style={{ letterSpacing: '1px', maxWidth: '300px' }}>
+                всього 300 $
+              </span>
+              <span className="inline-block bg-gradient-to-r from-brand-blue via-brand-teal to-brand-purple text-white font-semibold rounded-full px-5 py-2 shadow-md text-base md:text-lg tracking-wide border-2 border-brand-blue/50"
+                    style={{ letterSpacing: '1px', maxWidth: '340px' }}>
+                <span className="font-bold mr-1">дизайн</span>
+                +
+                <span className="font-bold mx-1">готовий сайт</span>
+                +
+                <span className="font-bold text-brand-orange ml-1">СЕО</span>
+              </span>
+            </div>
             <p className="text-base md:text-xl text-gray-700 mb-6 md:mb-8 max-w-xl">
               Професійна розробка сучасних веб-сайтів для малого бізнесу.
               Стильно, функціонально, доступно.
