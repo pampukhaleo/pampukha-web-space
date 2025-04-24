@@ -19,13 +19,13 @@ const HeroSection = () => {
                   variant="default" 
                   className="bg-brand-orange/20 text-brand-orange text-base px-4 py-2 shadow-sm"
                 >
-                  всього 300 $
+                  300 $
                 </Badge>
                 <Badge 
                   variant="outline" 
                   className="border-brand-blue text-brand-blue text-base px-4 py-2"
                 >
-                  дизайн + готовий сайт + <span className="text-brand-orange font-bold ml-1">СЕО</span>
+                  дизайн + сайт + <span className="text-brand-orange font-bold ml-1">SEO</span>
                 </Badge>
               </div>
             </div>
