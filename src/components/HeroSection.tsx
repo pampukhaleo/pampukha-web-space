@@ -1,17 +1,21 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="pt-28 sm:pt-32 lg:pt-36 pb-10 lg:pb-24 px-4 relative overflow-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <div className="order-2 lg:order-1 z-20 relative text-center lg:text-left flex flex-col items-center lg:items-start">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Потрібен <span className="gradient-text">сайт</span>?<br />
-              Я створю його для вас
+              {t('hero.title1')} <span className="gradient-text">{t('hero.title2')}</span>{t('hero.title3')}<br />
+              {t('hero.title4')}
             </h1>
             <div className="flex flex-col items-center lg:items-start gap-4 mb-4 w-full">
               <div className="flex items-center gap-3">
@@ -19,33 +23,32 @@ const HeroSection = () => {
                   variant="default" 
                   className="bg-brand-orange/20 text-brand-orange text-base px-4 py-2 shadow-sm"
                 >
-                  300 $
+                  {t('hero.price')}
                 </Badge>
                 <Badge 
                   variant="outline" 
                   className="border-brand-blue text-brand-blue text-base px-4 py-2"
                 >
-                  дизайн + сайт + <span className="text-brand-orange font-bold ml-1">SEO</span>
+                  {t('hero.valueProposition')}
                 </Badge>
               </div>
             </div>
             <p className="text-base md:text-xl text-gray-700 mb-6 md:mb-8 max-w-xl">
-              Професійна розробка сучасних веб-сайтів для малого бізнесу.
-              Стильно, функціонально, доступно.
+              {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 className="text-base bg-brand-blue hover:bg-brand-blue/90 px-5 py-4 sm:px-6 sm:py-5"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Замовити консультацію
+                {t('hero.consultation')}
               </Button>
               <Button
                 variant="outline"
                 className="text-base border-brand-blue text-brand-blue hover:bg-brand-blue/10 px-5 py-4 sm:px-6 sm:py-5"
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Переглянути роботи
+                {t('hero.viewWork')}
               </Button>
             </div>
           </div>

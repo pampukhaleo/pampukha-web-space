@@ -1,64 +1,67 @@
+
 import React from 'react';
 import { Command, Globe, Search, Palette, Gauge, CircleDollarSign } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-
-const servicesData = [
-  {
-    icon: <Globe size={36} className="text-brand-blue" />,
-    title: 'Розробка веб-сайтів',
-    description: 'Створення сучасних, адаптивних веб-сайтів для вашого бізнесу з нуля.',
-    color: 'bg-brand-blue/10',
-  },
-  {
-    icon: <Command size={36} className="text-brand-teal" />,
-    title: 'Лендінг-сторінки',
-    description: 'Розробка ефективних одно-сторінкових сайтів для презентації товарів чи послуг.',
-    color: 'bg-brand-teal/10',
-  },
-  {
-    icon: <CircleDollarSign size={36} className="text-brand-orange" />,
-    title: 'Google and Facebook ads',
-    description: 'Запуск реклами вашого вебсайту у Facebook/Instagram, Google',
-    color: 'bg-brand-orange/10',
-  },
-  {
-    icon: <Palette size={36} className="text-brand-purple" />,
-    title: 'Редизайн сайтів',
-    description: 'Оновлення дизайну та функціоналу існуючих сайтів для покращення їх ефективності.',
-    color: 'bg-brand-purple/10',
-  },
-  {
-    icon: <Search size={36} className="text-brand-red" />,
-    title: 'SEO-оптимізація',
-    description: 'Налаштування сайту для кращої видимості в пошукових системах.',
-    color: 'bg-brand-red/10',
-  },
-  {
-    icon: <Gauge size={36} className="text-brand-yellow" />,
-    title: 'Оптимізація швидкості',
-    description: 'Прискорення завантаження сайту для кращого користувацького досвіду.',
-    color: 'bg-brand-yellow/10',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const ServicesSection = () => {
+  const { t } = useTranslation();
+  
+  const servicesData = [
+    {
+      icon: <Globe size={36} className="text-brand-blue" />,
+      title: t('services.service1.title'),
+      description: t('services.service1.description'),
+      color: 'bg-brand-blue/10',
+    },
+    {
+      icon: <Command size={36} className="text-brand-teal" />,
+      title: t('services.service2.title'),
+      description: t('services.service2.description'),
+      color: 'bg-brand-teal/10',
+    },
+    {
+      icon: <CircleDollarSign size={36} className="text-brand-orange" />,
+      title: t('services.service3.title'),
+      description: t('services.service3.description'),
+      color: 'bg-brand-orange/10',
+    },
+    {
+      icon: <Palette size={36} className="text-brand-purple" />,
+      title: t('services.service4.title'),
+      description: t('services.service4.description'),
+      color: 'bg-brand-purple/10',
+    },
+    {
+      icon: <Search size={36} className="text-brand-red" />,
+      title: t('services.service5.title'),
+      description: t('services.service5.description'),
+      color: 'bg-brand-red/10',
+    },
+    {
+      icon: <Gauge size={36} className="text-brand-yellow" />,
+      title: t('services.service6.title'),
+      description: t('services.service6.description'),
+      color: 'bg-brand-yellow/10',
+    },
+  ];
+
   return (
     <section id="services" className="py-16 md:py-24 px-4 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Мої <span className="gradient-text">послуги</span>
+            {t('services.title1')} <span className="gradient-text">{t('services.title2')}</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Пропоную комплексні рішення для веб-представництва вашого бізнесу.
-            Від розробки до оптимізації - все, що потрібно для успішної присутності в Інтернеті.
+            {t('services.description')}
           </p>
           <div className="flex justify-center mt-6">
             <Badge 
               variant="default" 
               className="bg-brand-blue/10 text-brand-blue text-base px-4 py-2"
             >
-              дизайн + готовий сайт + <span className="text-brand-orange font-bold ml-1">СЕО</span>
+              {t('services.package')}
             </Badge>
           </div>
         </div>
@@ -81,14 +84,14 @@ const ServicesSection = () => {
           className="mt-16 p-8 rounded-2xl bg-background text-foreground shadow-xl transition-colors border border-border">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">Чому варто обрати мене?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('services.whyChooseMe')}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 { [
-                  'Сучасний, адаптивний дизайн',
-                  'Швидке завантаження сторінок',
-                  'SEO-оптимізований код',
-                  'Прозоре ціноутворення',
-                  'Підтримка після запуску',
+                  t('services.benefit1'),
+                  t('services.benefit2'),
+                  t('services.benefit3'),
+                  t('services.benefit4'),
+                  t('services.benefit5'),
                 ].map((text, i) => (
                   <div key={ i } className="flex items-center">
                     <div className="h-2 w-2 bg-muted-foreground rounded-full mr-3"/>
@@ -102,7 +105,7 @@ const ServicesSection = () => {
                 className="w-full py-4 px-8 bg-primary text-primary-foreground rounded-xl font-bold transition-transform hover:scale-105"
                 onClick={ () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }
               >
-                Замовити зараз
+                {t('services.orderNow')}
               </button>
             </div>
           </div>

@@ -1,0 +1,116 @@
+
+{
+  "navbar": {
+    "about": "About me",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Log in",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title1": "Need a",
+    "title2": "website",
+    "title3": "?",
+    "title4": "I'll create it for you",
+    "price": "only $300",
+    "valueProposition": "design + website + SEO",
+    "description": "Professional development of modern websites for small businesses. Stylish, functional, accessible.",
+    "consultation": "Request a consultation",
+    "viewWork": "View works"
+  },
+  "about": {
+    "title1": "About",
+    "title2": "me",
+    "introduction": "Hello! My name is Leonid Pampukha. I am a web developer specializing in creating elegant and functional websites for small businesses.",
+    "approach": "My approach to web development",
+    "approachDescription": "My experience allows me to create websites that not only look attractive but also work fast and efficiently. Each project begins with a deep understanding of your business needs and goals.",
+    "cleanCode": "Clean code",
+    "cleanCodeDescription": "I create well-structured, understandable code for easy maintenance",
+    "responsive": "Responsive design",
+    "responsiveDescription": "Your website will look great on all devices - from mobile to desktop",
+    "modern": "Modern design",
+    "modernDescription": "I create stylish, modern interfaces that make an impression",
+    "clientFocused": "Client-focused",
+    "clientFocusedDescription": "I always put your needs and goals first"
+  },
+  "portfolio": {
+    "title1": "My",
+    "title2": "portfolio",
+    "description": "View examples of my work. Each project is designed with the individual needs of the client and modern web design trends in mind.",
+    "project1": {
+      "title": "Online store",
+      "category": "E-commerce",
+      "description": "Modern online store with product catalog, shopping cart, and payment."
+    },
+    "project2": {
+      "title": "Corporate website",
+      "category": "Business",
+      "description": "Professional website for company representation on the Internet."
+    },
+    "project3": {
+      "title": "Product landing page",
+      "category": "Marketing",
+      "description": "Sales page for presenting a product or service."
+    },
+    "orderSimilar": "Order a similar project"
+  },
+  "services": {
+    "title1": "My",
+    "title2": "services",
+    "description": "I offer comprehensive solutions for your business's web presence. From development to optimization - everything needed for a successful presence on the Internet.",
+    "package": "design + ready website + SEO",
+    "service1": {
+      "title": "Website development",
+      "description": "Creating modern, responsive websites for your business from scratch."
+    },
+    "service2": {
+      "title": "Landing pages",
+      "description": "Development of effective single-page websites for presenting products or services."
+    },
+    "service3": {
+      "title": "Google and Facebook ads",
+      "description": "Launch advertising for your website on Facebook/Instagram, Google"
+    },
+    "service4": {
+      "title": "Website redesign",
+      "description": "Updating the design and functionality of existing websites to improve their effectiveness."
+    },
+    "service5": {
+      "title": "SEO optimization",
+      "description": "Setting up the site for better visibility in search engines."
+    },
+    "service6": {
+      "title": "Speed optimization",
+      "description": "Accelerating site loading for better user experience."
+    },
+    "whyChooseMe": "Why choose me?",
+    "benefit1": "Modern, responsive design",
+    "benefit2": "Fast page loading",
+    "benefit3": "SEO-optimized code",
+    "benefit4": "Transparent pricing",
+    "benefit5": "Post-launch support",
+    "orderNow": "Order now"
+  },
+  "contact": {
+    "title1": "Request a",
+    "title2": "consultation",
+    "description": "Ready to discuss your project? Fill out the form below or contact me in any way convenient for you."
+  },
+  "footer": {
+    "description": "Professional development of modern websites for small businesses. Stylish, functional, accessible.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About me",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact",
+    "contactInfo": "Contact information",
+    "rights": "All rights reserved."
+  },
+  "language": {
+    "uk": "Українська",
+    "en": "English",
+    "pl": "Polski"
+  }
+}

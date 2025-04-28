@@ -1,7 +1,12 @@
+
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-background-darker text-foreground py-12">
       <div className="container mx-auto px-4">
@@ -12,8 +17,7 @@ const Footer = () => {
                 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
             </div>
             <p className="mb-6 text-foreground-muted">
-            Professional development of modern websites for small businesses.
-              Stylish, functional, accessible.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-foreground-muted hover:text-primary transition-colors" aria-label="Facebook">
@@ -29,28 +33,28 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">Навігація</h3>
+            <h3 className="text-xl font-bold mb-6">{t('footer.navigation')}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-foreground-muted hover:text-primary transition-colors">Головна</a>
+                <a href="#" className="text-foreground-muted hover:text-primary transition-colors">{t('footer.home')}</a>
               </li>
               <li>
-                <a href="#about" className="text-foreground-muted hover:text-primary transition-colors">Про мене</a>
+                <a href="#about" className="text-foreground-muted hover:text-primary transition-colors">{t('footer.about')}</a>
               </li>
               <li>
-                <a href="#portfolio" className="text-foreground-muted hover:text-primary transition-colors">Портфоліо</a>
+                <a href="#portfolio" className="text-foreground-muted hover:text-primary transition-colors">{t('footer.portfolio')}</a>
               </li>
               <li>
-                <a href="#services" className="text-foreground-muted hover:text-primary transition-colors">Послуги</a>
+                <a href="#services" className="text-foreground-muted hover:text-primary transition-colors">{t('footer.services')}</a>
               </li>
               <li>
-                <a href="#contact" className="text-foreground-muted hover:text-primary transition-colors">Контакти</a>
+                <a href="#contact" className="text-foreground-muted hover:text-primary transition-colors">{t('footer.contact')}</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">Контактна інформація</h3>
+            <h3 className="text-xl font-bold mb-6">{t('footer.contactInfo')}</h3>
             <div className="space-y-4">
               <div className="flex items-center">
                 <Phone size={20} className="mr-3 text-foreground-muted" />
@@ -65,7 +69,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-border text-center text-foreground-muted">
-          <p>© {new Date().getFullYear()} Leonforge. All rights reserved.</p>
+          <p>© {currentYear} Leonforge. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

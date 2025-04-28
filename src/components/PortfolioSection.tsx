@@ -2,45 +2,47 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const portfolioItems = [
-  {
-    id: 1,
-    title: 'Інтернет-магазин',
-    category: 'E-commerce',
-    description: 'Сучасний онлайн-магазин з каталогом товарів, корзиною та оплатою.',
-    image: '/lovable-uploads/de7b20fa-92c3-40c7-a0ae-65a24b565e47.png',
-    color: 'from-brand-blue/20 to-brand-teal/20',
-  },
-  {
-    id: 2,
-    title: 'Корпоративний сайт',
-    category: 'Бізнес',
-    description: 'Професійний сайт для представлення компанії у мережі Інтернет.',
-    image: '/lovable-uploads/86b7cf5d-0df5-43a4-bdc1-11e628046549.png',
-    color: 'from-brand-orange/20 to-brand-red/20',
-  },
-  {
-    id: 3,
-    title: 'Лендінг для продукту',
-    category: 'Маркетинг',
-    description: 'Продаюча сторінка для презентації товару чи послуги.',
-    image: '/lovable-uploads/79663af5-95cf-4efe-87d0-0c991bff6be3.png',
-    color: 'from-brand-purple/20 to-brand-blue/20',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const PortfolioSection = () => {
+  const { t } = useTranslation();
+  
+  const portfolioItems = [
+    {
+      id: 1,
+      title: t('portfolio.project1.title'),
+      category: t('portfolio.project1.category'),
+      description: t('portfolio.project1.description'),
+      image: '/lovable-uploads/de7b20fa-92c3-40c7-a0ae-65a24b565e47.png',
+      color: 'from-brand-blue/20 to-brand-teal/20',
+    },
+    {
+      id: 2,
+      title: t('portfolio.project2.title'),
+      category: t('portfolio.project2.category'),
+      description: t('portfolio.project2.description'),
+      image: '/lovable-uploads/86b7cf5d-0df5-43a4-bdc1-11e628046549.png',
+      color: 'from-brand-orange/20 to-brand-red/20',
+    },
+    {
+      id: 3,
+      title: t('portfolio.project3.title'),
+      category: t('portfolio.project3.category'),
+      description: t('portfolio.project3.description'),
+      image: '/lovable-uploads/79663af5-95cf-4efe-87d0-0c991bff6be3.png',
+      color: 'from-brand-purple/20 to-brand-blue/20',
+    },
+  ];
+
   return (
     <section id="portfolio" className="py-16 md:py-24 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Моє <span className="gradient-text">портфоліо</span>
+            {t('portfolio.title1')} <span className="gradient-text">{t('portfolio.title2')}</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Перегляньте приклади моїх робіт. Кожен проект розроблений з урахуванням 
-            індивідуальних потреб клієнта та сучасних тенденцій веб-дизайну.
+            {t('portfolio.description')}
           </p>
         </div>
         
@@ -63,9 +65,9 @@ const PortfolioSection = () => {
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-            <span className="inline-block px-3 py-1 text-xs bg-muted text-muted-foreground rounded-full mb-2">
-              {item.category}
-            </span>
+                      <span className="inline-block px-3 py-1 text-xs bg-muted text-muted-foreground rounded-full mb-2">
+                        {item.category}
+                      </span>
                       <h3 className="text-xl font-bold">{item.title}</h3>
                     </div>
                     <div className="bg-muted p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -85,7 +87,7 @@ const PortfolioSection = () => {
             className="border-brand-blue text-brand-blue hover:bg-brand-blue/10"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Замовити схожий проект
+            {t('portfolio.orderSimilar')}
           </Button>
         </div>
       </div>

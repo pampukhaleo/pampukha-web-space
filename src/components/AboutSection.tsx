@@ -1,18 +1,20 @@
 
 import React from 'react';
 import { Code, Laptop, Palette, User } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="about" className="py-16 md:py-24 px-4 bg-background text-foreground transition-colors">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Про <span className="gradient-text">мене</span>
+            {t('about.title1')} <span className="gradient-text">{t('about.title2')}</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Привіт! Мене звати Леонід Пампуха. Я - веб-розробник, що спеціалізується
-            на створенні елегантних та функціональних сайтів для малого бізнесу.
+            {t('about.introduction')}
           </p>
         </div>
 
@@ -32,22 +34,19 @@ const AboutSection = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-6">Мій підхід до веб-розробки</h3>
+            <h3 className="text-2xl font-bold mb-6">{t('about.approach')}</h3>
             <p className="text-muted-foreground mb-8">
-              Мій досвід дозволяє мені створювати сайти, які не лише виглядають привабливо,
-              але й працюють швидко та ефективно. Кожен проект починається з глибокого
-              розуміння ваших бізнес-потреб і цілей.
+              {t('about.approachDescription')}
             </p>
 
             <div className="space-y-6">
-            <div className="flex items-start">
+              <div className="flex items-start">
                 <div className="p-3 bg-brand-blue/10 rounded-lg mr-4">
                   <Code className="text-brand-blue" size={ 24 }/>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Чистий код</h4>
-                  <p className="text-gray-700">Створюю добре структурований, зрозумілий код для легкого
-                    обслуговування</p>
+                  <h4 className="font-semibold mb-1">{t('about.cleanCode')}</h4>
+                  <p className="text-gray-700">{t('about.cleanCodeDescription')}</p>
                 </div>
               </div>
 
@@ -56,9 +55,8 @@ const AboutSection = () => {
                   <Laptop className="text-brand-teal" size={ 24 }/>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Адаптивний дизайн</h4>
-                  <p className="text-gray-700">Ваш сайт буде чудово виглядати на всіх пристроях - від мобільних до
-                    десктопів</p>
+                  <h4 className="font-semibold mb-1">{t('about.responsive')}</h4>
+                  <p className="text-gray-700">{t('about.responsiveDescription')}</p>
                 </div>
               </div>
 
@@ -67,8 +65,8 @@ const AboutSection = () => {
                   <Palette className="text-brand-orange" size={ 24 }/>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Сучасний дизайн</h4>
-                  <p className="text-gray-700">Створюю стильні, сучасні інтерфейси, які справляють враження</p>
+                  <h4 className="font-semibold mb-1">{t('about.modern')}</h4>
+                  <p className="text-gray-700">{t('about.modernDescription')}</p>
                 </div>
               </div>
 
@@ -77,8 +75,8 @@ const AboutSection = () => {
                   <User className="text-brand-purple" size={ 24 }/>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Клієнтоорієнтованість</h4>
-                  <p className="text-gray-700">Завжди ставлю ваші потреби та цілі на перше місце</p>
+                  <h4 className="font-semibold mb-1">{t('about.clientFocused')}</h4>
+                  <p className="text-gray-700">{t('about.clientFocusedDescription')}</p>
                 </div>
               </div>
             </div>

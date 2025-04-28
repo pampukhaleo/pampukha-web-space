@@ -1,0 +1,116 @@
+
+{
+  "navbar": {
+    "about": "O mnie",
+    "portfolio": "Portfolio",
+    "services": "Usługi",
+    "contact": "Kontakt",
+    "login": "Zaloguj się",
+    "dashboard": "Panel sterowania"
+  },
+  "hero": {
+    "title1": "Potrzebujesz",
+    "title2": "strony internetowej",
+    "title3": "?",
+    "title4": "Stworzę ją dla Ciebie",
+    "price": "tylko 300 $",
+    "valueProposition": "projekt + strona + SEO",
+    "description": "Profesjonalne tworzenie nowoczesnych stron internetowych dla małych firm. Stylowo, funkcjonalnie, dostępnie.",
+    "consultation": "Zamów konsultację",
+    "viewWork": "Zobacz prace"
+  },
+  "about": {
+    "title1": "O",
+    "title2": "mnie",
+    "introduction": "Cześć! Nazywam się Leonid Pampukha. Jestem programistą stron internetowych specjalizującym się w tworzeniu eleganckich i funkcjonalnych stron dla małych firm.",
+    "approach": "Moje podejście do tworzenia stron",
+    "approachDescription": "Moje doświadczenie pozwala mi tworzyć strony, które nie tylko wyglądają atrakcyjnie, ale również działają szybko i efektywnie. Każdy projekt zaczyna się od głębokiego zrozumienia Twoich potrzeb biznesowych i celów.",
+    "cleanCode": "Czysty kod",
+    "cleanCodeDescription": "Tworzę dobrze ustrukturyzowany, zrozumiały kod dla łatwej konserwacji",
+    "responsive": "Responsywny design",
+    "responsiveDescription": "Twoja strona będzie świetnie wyglądać na wszystkich urządzeniach - od mobilnych po desktopowe",
+    "modern": "Nowoczesny design",
+    "modernDescription": "Tworzę stylowe, nowoczesne interfejsy, które robią wrażenie",
+    "clientFocused": "Zorientowanie na klienta",
+    "clientFocusedDescription": "Zawsze stawiam Twoje potrzeby i cele na pierwszym miejscu"
+  },
+  "portfolio": {
+    "title1": "Moje",
+    "title2": "portfolio",
+    "description": "Zobacz przykłady moich prac. Każdy projekt jest zaprojektowany z uwzględnieniem indywidualnych potrzeb klienta i nowoczesnych trendów w projektowaniu stron.",
+    "project1": {
+      "title": "Sklep internetowy",
+      "category": "E-commerce",
+      "description": "Nowoczesny sklep online z katalogiem produktów, koszykiem i płatnościami."
+    },
+    "project2": {
+      "title": "Strona firmowa",
+      "category": "Biznes",
+      "description": "Profesjonalna strona do reprezentowania firmy w Internecie."
+    },
+    "project3": {
+      "title": "Strona produktowa",
+      "category": "Marketing",
+      "description": "Strona sprzedażowa do prezentacji produktu lub usługi."
+    },
+    "orderSimilar": "Zamów podobny projekt"
+  },
+  "services": {
+    "title1": "Moje",
+    "title2": "usługi",
+    "description": "Oferuję kompleksowe rozwiązania dla obecności Twojej firmy w sieci. Od rozwoju po optymalizację - wszystko, co potrzebne do udanej obecności w Internecie.",
+    "package": "projekt + gotowa strona + SEO",
+    "service1": {
+      "title": "Tworzenie stron",
+      "description": "Tworzenie nowoczesnych, responsywnych stron internetowych dla Twojego biznesu od podstaw."
+    },
+    "service2": {
+      "title": "Strony lądowania",
+      "description": "Tworzenie efektywnych jednostronicowych witryn do prezentacji produktów lub usług."
+    },
+    "service3": {
+      "title": "Reklamy Google i Facebook",
+      "description": "Uruchomienie reklam dla Twojej strony na Facebooku/Instagramie, Google"
+    },
+    "service4": {
+      "title": "Redesign stron",
+      "description": "Aktualizacja projektu i funkcjonalności istniejących stron w celu poprawy ich efektywności."
+    },
+    "service5": {
+      "title": "Optymalizacja SEO",
+      "description": "Konfiguracja strony dla lepszej widoczności w wyszukiwarkach."
+    },
+    "service6": {
+      "title": "Optymalizacja szybkości",
+      "description": "Przyspieszenie ładowania strony dla lepszego doświadczenia użytkownika."
+    },
+    "whyChooseMe": "Dlaczego warto wybrać mnie?",
+    "benefit1": "Nowoczesny, responsywny design",
+    "benefit2": "Szybkie ładowanie stron",
+    "benefit3": "Kod zoptymalizowany pod SEO",
+    "benefit4": "Przejrzysta wycena",
+    "benefit5": "Wsparcie po uruchomieniu",
+    "orderNow": "Zamów teraz"
+  },
+  "contact": {
+    "title1": "Zamów",
+    "title2": "konsultację",
+    "description": "Gotowy omówić swój projekt? Wypełnij poniższy formularz lub skontaktuj się ze mną w dogodny dla Ciebie sposób."
+  },
+  "footer": {
+    "description": "Professional development of modern websites for small businesses. Stylish, functional, accessible.",
+    "navigation": "Nawigacja",
+    "home": "Strona główna",
+    "about": "O mnie",
+    "portfolio": "Portfolio",
+    "services": "Usługi",
+    "contact": "Kontakt",
+    "contactInfo": "Informacje kontaktowe",
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "language": {
+    "uk": "Українська",
+    "en": "English",
+    "pl": "Polski"
+  }
+}

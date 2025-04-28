@@ -1,16 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, LogIn, UserPlus } from 'lucide-react';
+import { Menu, X, Sun, Moon, LogIn } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
 import { supabase } from '@/integrations/supabase/client';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const { theme, setTheme } = useTheme();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const checkSession = async () => {
@@ -49,20 +52,21 @@ const Navbar = () => {
         </a>
 
 
-        {/* Desktop Menu */ }
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#about" className="text-foreground-muted hover:text-primary transition-colors">
-            Про мене
+            {t('navbar.about')}
           </a>
           <a href="#portfolio" className="text-foreground-muted hover:text-primary transition-colors">
-            Портфоліо
+            {t('navbar.portfolio')}
           </a>
           <a href="#services" className="text-foreground-muted hover:text-primary transition-colors">
-            Послуги
+            {t('navbar.services')}
           </a>
           <a href="#contact" className="text-foreground-muted hover:text-primary transition-colors">
-            Контакти
+            {t('navbar.contact')}
           </a>
+          <LanguageSwitcher />
           <Button 
             variant="ghost" 
             size="icon"
@@ -75,13 +79,14 @@ const Navbar = () => {
             onClick={handleAuthNavigation} 
             className="bg-primary hover:bg-primary/90 flex items-center gap-2"
           >
-            {isAuthenticated ? 'Dashboard' : 'Увійти'}
+            {isAuthenticated ? t('navbar.dashboard') : t('navbar.login')}
             {!isAuthenticated && <LogIn className="h-4 w-4" />}
           </Button>
         </div>
         
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center space-x-4">
+          <LanguageSwitcher />
           <Button 
             variant="ghost" 
             size="icon"
@@ -109,28 +114,28 @@ const Navbar = () => {
               className="text-foreground-muted hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Про мене
+              {t('navbar.about')}
             </a>
             <a 
               href="#portfolio" 
               className="text-foreground-muted hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Портфоліо
+              {t('navbar.portfolio')}
             </a>
             <a 
               href="#services" 
               className="text-foreground-muted hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Послуги
+              {t('navbar.services')}
             </a>
             <a 
               href="#contact" 
               className="text-foreground-muted hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Контакти
+              {t('navbar.contact')}
             </a>
             <Button 
               className="bg-primary hover:bg-primary/90 w-full flex items-center gap-2"
@@ -139,7 +144,7 @@ const Navbar = () => {
                 navigate(isAuthenticated ? '/dashboard' : '/auth');
               }}
             >
-              {isAuthenticated ? 'Dashboard' : 'Увійти'}
+              {isAuthenticated ? t('navbar.dashboard') : t('navbar.login')}
               {!isAuthenticated && <LogIn className="h-4 w-4" />}
             </Button>
           </div>
@@ -150,4 +155,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

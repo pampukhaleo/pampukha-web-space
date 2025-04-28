@@ -11,6 +11,9 @@ import Dashboard from "./pages/Dashboard";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
+// Import i18n configuration
+import "./i18n/i18n";
+
 const queryClient = new QueryClient();
 
 const App = () => (
