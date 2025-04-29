@@ -18,7 +18,7 @@ const HeroSection = () => {
               {t('hero.title4')}
             </h1>
             <div className="flex flex-col items-center lg:items-start gap-4 mb-4 w-full">
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col sm:flex-row items-center gap-3">
                 <Badge 
                   variant="default" 
                   className="bg-brand-orange/20 text-brand-orange text-base px-4 py-2 shadow-sm"

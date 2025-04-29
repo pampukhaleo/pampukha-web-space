@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "about": "O mnie",
@@ -12,27 +11,27 @@
     "title1": "Potrzebujesz",
     "title2": "strony internetowej",
     "title3": "?",
-    "title4": "Stworzę ją dla Ciebie",
+    "title4": "Zrobię wszystko za Ciebie",
     "price": "tylko 300 $",
-    "valueProposition": "projekt + strona + SEO",
-    "description": "Profesjonalne tworzenie nowoczesnych stron internetowych dla małych firm. Stylowo, funkcjonalnie, dostępnie.",
+    "valueProposition": "projekt + strona + SEO + reklama",
+    "description": "Kompleksowe rozwiązanie dla Twojego biznesu online. Zrobię wszystko: wybiorę projekt, stworzę stronę, skonfiguruję SEO i reklamę.",
     "consultation": "Zamów konsultację",
     "viewWork": "Zobacz prace"
   },
   "about": {
     "title1": "O",
     "title2": "mnie",
-    "introduction": "Cześć! Nazywam się Leonid Pampukha. Jestem programistą stron internetowych specjalizującym się w tworzeniu eleganckich i funkcjonalnych stron dla małych firm.",
-    "approach": "Moje podejście do tworzenia stron",
-    "approachDescription": "Moje doświadczenie pozwala mi tworzyć strony, które nie tylko wyglądają atrakcyjnie, ale również działają szybko i efektywnie. Każdy projekt zaczyna się od głębokiego zrozumienia Twoich potrzeb biznesowych i celów.",
-    "cleanCode": "Czysty kod",
-    "cleanCodeDescription": "Tworzę dobrze ustrukturyzowany, zrozumiały kod dla łatwej konserwacji",
-    "responsive": "Responsywny design",
-    "responsiveDescription": "Twoja strona będzie świetnie wyglądać na wszystkich urządzeniach - od mobilnych po desktopowe",
-    "modern": "Nowoczesny design",
-    "modernDescription": "Tworzę stylowe, nowoczesne interfejsy, które robią wrażenie",
-    "clientFocused": "Zorientowanie na klienta",
-    "clientFocusedDescription": "Zawsze stawiam Twoje potrzeby i cele na pierwszym miejscu"
+    "introduction": "Cześć! Nazywam się Leonid Pampukha. Tworzę gotowe do użycia strony internetowe dla małych firm, abyś mógł skupić się na swojej podstawowej działalności.",
+    "approach": "Moje podejście - robię wszystko za Ciebie",
+    "approachDescription": "Nie tracisz czasu na szukanie projektów czy rozwiązywanie kwestii technicznych. Badam Twój biznes, wybieram idealny projekt, tworzę stronę i konfiguruję promocję - wszystko pod klucz.",
+    "cleanCode": "Bez kłopotów technicznych",
+    "cleanCodeDescription": "Zajmuję się wszystkimi kwestiami technicznymi, żebyś Ty nie musiał",
+    "responsive": "Działa wszędzie",
+    "responsiveDescription": "Twoja strona będzie wyglądać idealnie na wszystkich urządzeniach bez dodatkowej konfiguracji",
+    "modern": "Nowoczesny wygląd",
+    "modernDescription": "Wybiorę stylowy projekt, który spodoba się Tobie i Twoim klientom",
+    "clientFocused": "Usługa all-inclusive",
+    "clientFocusedDescription": "Od projektu do reklamy - kompletny pakiet usług bez Twojej interwencji"
   },
   "portfolio": {
     "title1": "Moje",
@@ -58,38 +57,38 @@
   "services": {
     "title1": "Moje",
     "title2": "usługi",
-    "description": "Oferuję kompleksowe rozwiązania dla obecności Twojej firmy w sieci. Od rozwoju po optymalizację - wszystko, co potrzebne do udanej obecności w Internecie.",
-    "package": "projekt + gotowa strona + SEO",
+    "description": "Otrzymaj gotową do użycia stronę internetową bez żadnych kłopotów. Zajmuję się wszystkimi etapami: od wyboru projektu po konfigurację reklamy.",
+    "package": "wszystko w cenie: projekt + strona + SEO + reklama",
     "service1": {
-      "title": "Tworzenie stron",
-      "description": "Tworzenie nowoczesnych, responsywnych stron internetowych dla Twojego biznesu od podstaw."
+      "title": "Gotowa strona internetowa",
+      "description": "W pełni funkcjonalna strona dla Twojego biznesu bez Twojego zaangażowania w kwestie techniczne."
     },
     "service2": {
-      "title": "Strony lądowania",
-      "description": "Tworzenie efektywnych jednostronicowych witryn do prezentacji produktów lub usług."
+      "title": "Strony sprzedażowe",
+      "description": "Efektywne strony do prezentacji Twoich produktów lub usług, które zwiększają konwersję."
     },
     "service3": {
-      "title": "Reklamy Google i Facebook",
-      "description": "Uruchomienie reklam dla Twojej strony na Facebooku/Instagramie, Google"
+      "title": "Konfiguracja reklamy",
+      "description": "Uruchomienie i optymalizacja reklamy Twojej strony na Facebooku/Instagramie i Google."
     },
     "service4": {
-      "title": "Redesign stron",
-      "description": "Aktualizacja projektu i funkcjonalności istniejących stron w celu poprawy ich efektywności."
+      "title": "Aktualizacja istniejących stron",
+      "description": "Przekształcenie Twojej starej strony w nowoczesne i efektywne narzędzie sprzedaży."
     },
     "service5": {
       "title": "Optymalizacja SEO",
-      "description": "Konfiguracja strony dla lepszej widoczności w wyszukiwarkach."
+      "description": "Kompletna konfiguracja strony dla lepszej widoczności w wyszukiwarkach."
     },
     "service6": {
-      "title": "Optymalizacja szybkości",
-      "description": "Przyspieszenie ładowania strony dla lepszego doświadczenia użytkownika."
+      "title": "Optymalizacja techniczna",
+      "description": "Zapewnienie szybkiego ładowania strony dla lepszego doświadczenia użytkownika."
     },
     "whyChooseMe": "Dlaczego warto wybrać mnie?",
-    "benefit1": "Nowoczesny, responsywny design",
-    "benefit2": "Szybkie ładowanie stron",
-    "benefit3": "Kod zoptymalizowany pod SEO",
-    "benefit4": "Przejrzysta wycena",
-    "benefit5": "Wsparcie po uruchomieniu",
+    "benefit1": "Otrzymujesz gotowy produkt bez kłopotów",
+    "benefit2": "Nie musisz rozumieć szczegółów technicznych",
+    "benefit3": "Kompleksowe rozwiązanie: od projektu do reklamy",
+    "benefit4": "Stała cena bez ukrytych płatności",
+    "benefit5": "Wsparcie po uruchomieniu w cenie",
     "orderNow": "Zamów teraz"
   },
   "contact": {
@@ -98,7 +97,7 @@
     "description": "Gotowy omówić swój projekt? Wypełnij poniższy formularz lub skontaktuj się ze mną w dogodny dla Ciebie sposób."
   },
   "footer": {
-    "description": "Professional development of modern websites for small businesses. Stylish, functional, accessible.",
+    "description": "Kompleksowe rozwiązania dla Twojego biznesu online. Robię wszystko: od projektu do reklamy. Ty musisz tylko przyjmować klientów.",
     "navigation": "Nawigacja",
     "home": "Strona główna",
     "about": "O mnie",
