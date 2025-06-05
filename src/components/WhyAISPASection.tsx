@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Zap, Gauge, Cogs, DollarSign, BarChart3, Rocket } from 'lucide-react';
+import { Zap, Gauge, Cog, DollarSign, BarChart3, Rocket } from 'lucide-react';
 
 const WhyAISPASection = () => {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ const WhyAISPASection = () => {
       description: t('whyAiSpa.benefit2.description'),
     },
     {
-      icon: Cogs,
+      icon: Cog,
       title: t('whyAiSpa.benefit3.title'),
       description: t('whyAiSpa.benefit3.description'),
     },
