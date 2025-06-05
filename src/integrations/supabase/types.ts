@@ -9,6 +9,62 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      guilds: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
+          slug?: string
+        }
+        Relationships: []
+      }
+      invite_codes: {
+        Row: {
+          code: string
+          created_at: string
+          expires_at: string | null
+          guild_id: string
+          id: string
+          is_active: boolean | null
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          expires_at?: string | null
+          guild_id: string
+          id?: string
+          is_active?: boolean | null
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          expires_at?: string | null
+          guild_id?: string
+          id?: string
+          is_active?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "invite_codes_guild_id_fkey"
+            columns: ["guild_id"]
+            isOneToOne: false
+            referencedRelation: "guilds"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       payments: {
         Row: {
           amount: number
@@ -62,6 +118,50 @@ export type Database = {
           website_url?: string | null
         }
         Relationships: []
+      }
+      users: {
+        Row: {
+          created_at: string
+          dkp_balance: number
+          dkp_pending: number
+          guild_id: string | null
+          id: string
+          is_approved: boolean | null
+          name: string | null
+          roles: string[] | null
+          share_permission: boolean | null
+        }
+        Insert: {
+          created_at?: string
+          dkp_balance?: number
+          dkp_pending?: number
+          guild_id?: string | null
+          id: string
+          is_approved?: boolean | null
+          name?: string | null
+          roles?: string[] | null
+          share_permission?: boolean | null
+        }
+        Update: {
+          created_at?: string
+          dkp_balance?: number
+          dkp_pending?: number
+          guild_id?: string | null
+          id?: string
+          is_approved?: boolean | null
+          name?: string | null
+          roles?: string[] | null
+          share_permission?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "users_guild_id_fkey"
+            columns: ["guild_id"]
+            isOneToOne: false
+            referencedRelation: "guilds"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {

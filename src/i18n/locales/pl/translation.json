@@ -1,3 +1,4 @@
+
 {
   "navbar": {
     "about": "O mnie",
@@ -11,93 +12,93 @@
     "title1": "Potrzebujesz",
     "title2": "strony internetowej",
     "title3": "?",
-    "title4": "Zrobię wszystko za Ciebie",
+    "title4": "Stworzę ją z AI pod klucz",
     "price": "tylko 300 $",
-    "valueProposition": "projekt + strona + SEO + reklama",
-    "description": "Kompleksowe rozwiązanie dla Twojego biznesu online. Zrobię wszystko: wybiorę projekt, stworzę stronę, skonfiguruję SEO i reklamę.",
+    "valueProposition": "SPA + SEO + Google Ads + Analytics",
+    "description": "Tworzę szybkie strony SPA wykorzystując technologie AI. Konfiguruję SEO, Google Ads, Analytics i Tag Manager - wszystko pod klucz za stałą cenę.",
     "consultation": "Zamów konsultację",
     "viewWork": "Zobacz prace"
   },
   "about": {
     "title1": "O",
     "title2": "mnie",
-    "introduction": "Cześć! Nazywam się Leonid Pampukha. Tworzę gotowe do użycia strony internetowe dla małych firm, abyś mógł skupić się na swojej podstawowej działalności.",
-    "approach": "Moje podejście - robię wszystko za Ciebie",
-    "approachDescription": "Nie tracisz czasu na szukanie projektów czy rozwiązywanie kwestii technicznych. Badam Twój biznes, wybieram idealny projekt, tworzę stronę i konfiguruję promocję - wszystko pod klucz.",
-    "cleanCode": "Bez kłopotów technicznych",
-    "cleanCodeDescription": "Zajmuję się wszystkimi kwestiami technicznymi, żebyś Ty nie musiał",
-    "responsive": "Działa wszędzie",
-    "responsiveDescription": "Twoja strona będzie wyglądać idealnie na wszystkich urządzeniach bez dodatkowej konfiguracji",
-    "modern": "Nowoczesny wygląd",
-    "modernDescription": "Wybiorę stylowy projekt, który spodoba się Tobie i Twoim klientom",
-    "clientFocused": "Usługa all-inclusive",
-    "clientFocusedDescription": "Od projektu do reklamy - kompletny pakiet usług bez Twojej interwencji"
+    "introduction": "Cześć! Nazywam się Leonid Pampukha. Tworzę szybkie strony SPA z wykorzystaniem AI dla małych firm, abyś mógł skupić się na swojej podstawowej działalności.",
+    "approach": "Moje podejście - AI + szybkość + rezultaty",
+    "approachDescription": "Używam nowoczesnych technologii AI do szybkiego tworzenia Single Page Applications. Twoja strona będzie działać błyskawicznie szybko, a ja skonfiguruję wszystkie narzędzia Google dla maksymalnych rezultatów.",
+    "cleanCode": "Rozwój AI",
+    "cleanCodeDescription": "Używam najnowocześniejszych technologii AI do szybkiego tworzenia wysokiej jakości SPA",
+    "responsive": "Szybkie SPA",
+    "responsiveDescription": "Tworzę Single Page Applications, które ładują się natychmiastowo",
+    "modern": "Integracja Google",
+    "modernDescription": "Konfiguruję Google Ads, Analytics, Tag Manager dla maksymalnej efektywności",
+    "clientFocused": "Wszystko pod klucz z AI",
+    "clientFocusedDescription": "Od rozwoju AI po reklamę Google - kompletny pakiet bez Twojej interwencji"
   },
   "portfolio": {
     "title1": "Moje",
     "title2": "portfolio",
-    "description": "Zobacz przykłady moich prac. Każdy projekt jest zaprojektowany z uwzględnieniem indywidualnych potrzeb klienta i nowoczesnych trendów w projektowaniu stron.",
+    "description": "Zobacz przykłady szybkich stron SPA stworzonych z AI. Każdy projekt jest zoptymalizowany pod kątem szybkości i skonfigurowany z narzędziami Google.",
     "project1": {
-      "title": "Sklep internetowy",
-      "category": "E-commerce",
-      "description": "Nowoczesny sklep online z katalogiem produktów, koszykiem i płatnościami."
+      "title": "SPA sklep internetowy",
+      "category": "E-commerce SPA",
+      "description": "Szybki jednostronicowy sklep z Google Analytics i zoptymalizowaną reklamą."
     },
     "project2": {
-      "title": "Strona firmowa",
-      "category": "Biznes",
-      "description": "Profesjonalna strona do reprezentowania firmy w Internecie."
+      "title": "Korporacyjna strona SPA",
+      "category": "Biznes SPA",
+      "description": "Błyskawicznie szybka strona z pełną integracją narzędzi Google."
     },
     "project3": {
-      "title": "Strona produktowa",
-      "category": "Marketing",
-      "description": "Strona sprzedażowa do prezentacji produktu lub usługi."
+      "title": "SPA landing page",
+      "category": "Marketing SPA",
+      "description": "Szybka strona sprzedażowa ze skonfigurowanymi Google Ads i Tag Manager."
     },
-    "orderSimilar": "Zamów podobny projekt"
+    "orderSimilar": "Zamów podobny projekt SPA"
   },
   "services": {
     "title1": "Moje",
     "title2": "usługi",
-    "description": "Otrzymaj gotową do użycia stronę internetową bez żadnych kłopotów. Zajmuję się wszystkimi etapami: od wyboru projektu po konfigurację reklamy.",
-    "package": "wszystko w cenie: projekt + strona + SEO + reklama",
+    "description": "Otrzymaj szybką stronę SPA stworzoną z AI, z kompletną konfiguracją narzędzi Google. Wszystko pod klucz za stałą cenę.",
+    "package": "AI + SPA + narzędzia Google + reklama",
     "service1": {
-      "title": "Gotowa strona internetowa",
-      "description": "W pełni funkcjonalna strona dla Twojego biznesu bez Twojego zaangażowania w kwestie techniczne."
+      "title": "Rozwój SPA z AI",
+      "description": "Szybkie Single Page Applications tworzone przy użyciu zaawansowanych technologii AI."
     },
     "service2": {
-      "title": "Strony sprzedażowe",
-      "description": "Efektywne strony do prezentacji Twoich produktów lub usług, które zwiększają konwersję."
+      "title": "Szybkie SPA landing page",
+      "description": "Błyskawicznie szybkie strony sprzedażowe z zoptymalizowaną konwersją."
     },
     "service3": {
-      "title": "Konfiguracja reklamy",
-      "description": "Uruchomienie i optymalizacja reklamy Twojej strony na Facebooku/Instagramie i Google."
+      "title": "Konfiguracja Google Ads",
+      "description": "Profesjonalna konfiguracja i optymalizacja reklam Google dla Twojego SPA."
     },
     "service4": {
-      "title": "Aktualizacja istniejących stron",
-      "description": "Przekształcenie Twojej starej strony w nowoczesne i efektywne narzędzie sprzedaży."
+      "title": "Upgrade do SPA",
+      "description": "Przekształcanie zwykłych stron w szybkie Single Page Applications."
     },
     "service5": {
-      "title": "Optymalizacja SEO",
-      "description": "Kompletna konfiguracja strony dla lepszej widoczności w wyszukiwarkach."
+      "title": "SEO dla SPA",
+      "description": "Specjalna optymalizacja SEO dla aplikacji jednostronicowych."
     },
     "service6": {
-      "title": "Optymalizacja techniczna",
-      "description": "Zapewnienie szybkiego ładowania strony dla lepszego doświadczenia użytkownika."
+      "title": "Google Analytics + Tag Manager",
+      "description": "Kompletna konfiguracja analityki i śledzenia dla maksymalnej efektywności."
     },
-    "whyChooseMe": "Dlaczego warto wybrać mnie?",
-    "benefit1": "Otrzymujesz gotowy produkt bez kłopotów",
-    "benefit2": "Nie musisz rozumieć szczegółów technicznych",
-    "benefit3": "Kompleksowe rozwiązanie: od projektu do reklamy",
+    "whyChooseMe": "Dlaczego wybrać rozwój AI + SPA?",
+    "benefit1": "Szybkość rozwoju dzięki technologiom AI",
+    "benefit2": "Błyskawiczna wydajność SPA",
+    "benefit3": "Pełna integracja z ekosystemem Google",
     "benefit4": "Stała cena bez ukrytych płatności",
-    "benefit5": "Wsparcie po uruchomieniu w cenie",
-    "orderNow": "Zamów teraz"
+    "benefit5": "Konfiguracja Analytics w cenie",
+    "orderNow": "Zamów SPA teraz"
   },
   "contact": {
     "title1": "Zamów",
     "title2": "konsultację",
-    "description": "Gotowy omówić swój projekt? Wypełnij poniższy formularz lub skontaktuj się ze mną w dogodny dla Ciebie sposób."
+    "description": "Gotowy otrzymać szybką stronę SPA z technologiami AI? Wypełnij poniższy formularz lub skontaktuj się ze mną w dogodny dla Ciebie sposób."
   },
   "footer": {
-    "description": "Kompleksowe rozwiązania dla Twojego biznesu online. Robię wszystko: od projektu do reklamy. Ty musisz tylko przyjmować klientów.",
+    "description": "AI rozwój szybkich stron SPA z kompletną konfiguracją narzędzi Google. Od pomysłu do rezultatów - wszystko pod klucz.",
     "navigation": "Nawigacja",
     "home": "Strona główna",
     "about": "O mnie",

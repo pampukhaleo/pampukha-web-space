@@ -1,3 +1,4 @@
+
 {
   "navbar": {
     "about": "About me",
@@ -11,93 +12,93 @@
     "title1": "Need a",
     "title2": "website",
     "title3": "?",
-    "title4": "I'll do everything for you",
+    "title4": "I'll create it with AI turnkey",
     "price": "only $300",
-    "valueProposition": "design + website + SEO + ads",
-    "description": "Complete solution for your business online. I'll do everything: choose the design, create the website, set up SEO and advertising.",
+    "valueProposition": "SPA + SEO + Google Ads + Analytics",
+    "description": "I create fast SPA websites using AI technologies. I set up SEO, Google Ads, Analytics and Tag Manager - everything turnkey for a fixed price.",
     "consultation": "Request a consultation",
     "viewWork": "View works"
   },
   "about": {
     "title1": "About",
     "title2": "me",
-    "introduction": "Hello! My name is Leonid Pampukha. I create ready-to-use websites for small businesses so you can focus on your core business.",
-    "approach": "My approach - doing everything for you",
-    "approachDescription": "You don't waste time searching for designs or dealing with technical issues. I study your business, select the perfect design, develop the website, and set up promotion - everything turnkey.",
-    "cleanCode": "No technical hassles",
-    "cleanCodeDescription": "I handle all technical matters so you don't have to",
-    "responsive": "Works everywhere",
-    "responsiveDescription": "Your website will look perfect on all devices without additional setup",
-    "modern": "Modern look",
-    "modernDescription": "I'll select a stylish design that you and your customers will love",
-    "clientFocused": "All-inclusive service",
-    "clientFocusedDescription": "From design to advertising - a complete package of services without your intervention"
+    "introduction": "Hello! My name is Leonid Pampukha. I create fast SPA websites using AI for small businesses so you can focus on your core business.",
+    "approach": "My approach - AI + speed + results",
+    "approachDescription": "I use modern AI technologies for rapid Single Page Application development. Your site will work lightning fast, and I'll configure all Google tools for maximum results.",
+    "cleanCode": "AI Development",
+    "cleanCodeDescription": "I use cutting-edge AI technologies for rapid creation of quality SPAs",
+    "responsive": "Fast SPA",
+    "responsiveDescription": "I create Single Page Applications that load instantly",
+    "modern": "Google Integration",
+    "modernDescription": "I set up Google Ads, Analytics, Tag Manager for maximum efficiency",
+    "clientFocused": "Everything turnkey with AI",
+    "clientFocusedDescription": "From AI development to Google advertising - complete package without your intervention"
   },
   "portfolio": {
     "title1": "My",
     "title2": "portfolio",
-    "description": "View examples of my work. Each project is designed with the individual needs of the client and modern web design trends in mind.",
+    "description": "View examples of fast SPA websites created with AI. Each project is optimized for speed and configured with Google tools.",
     "project1": {
-      "title": "Online store",
-      "category": "E-commerce",
-      "description": "Modern online store with product catalog, shopping cart, and payment."
+      "title": "SPA online store",
+      "category": "E-commerce SPA",
+      "description": "Fast single-page store with Google Analytics and optimized advertising."
     },
     "project2": {
-      "title": "Corporate website",
-      "category": "Business",
-      "description": "Professional website for company representation on the Internet."
+      "title": "Corporate SPA website",
+      "category": "Business SPA",
+      "description": "Lightning-fast website with full Google tools integration."
     },
     "project3": {
-      "title": "Product landing page",
-      "category": "Marketing",
-      "description": "Sales page for presenting a product or service."
+      "title": "SPA landing page",
+      "category": "Marketing SPA",
+      "description": "Fast sales page with configured Google Ads and Tag Manager."
     },
-    "orderSimilar": "Order a similar project"
+    "orderSimilar": "Order a similar SPA project"
   },
   "services": {
     "title1": "My",
     "title2": "services",
-    "description": "Get a ready-to-use website without any hassle. I take care of all stages: from design selection to advertising setup.",
-    "package": "all-inclusive: design + website + SEO + ads",
+    "description": "Get a fast SPA website created with AI, with complete Google tools setup. Everything turnkey for a fixed price.",
+    "package": "AI + SPA + Google tools + advertising",
     "service1": {
-      "title": "Ready-made website",
-      "description": "Fully functional website for your business without your involvement in technical matters."
+      "title": "SPA development with AI",
+      "description": "Fast Single Page Applications created using advanced AI technologies."
     },
     "service2": {
-      "title": "Sales pages",
-      "description": "Effective pages for presenting your products or services that increase conversion."
+      "title": "Fast SPA landing pages",
+      "description": "Lightning-fast sales pages with optimized conversion."
     },
     "service3": {
-      "title": "Advertising setup",
-      "description": "Launch and optimization of your website advertising on Facebook/Instagram and Google."
+      "title": "Google Ads setup",
+      "description": "Professional setup and optimization of Google advertising for your SPA."
     },
     "service4": {
-      "title": "Existing websites update",
-      "description": "Transforming your old website into a modern and effective sales tool."
+      "title": "Upgrade to SPA",
+      "description": "Converting regular websites into fast Single Page Applications."
     },
     "service5": {
-      "title": "SEO optimization",
-      "description": "Complete website setup for better visibility in search engines."
+      "title": "SEO for SPA",
+      "description": "Special SEO optimization for single-page applications."
     },
     "service6": {
-      "title": "Technical optimization",
-      "description": "Ensuring fast website loading for better user experience."
+      "title": "Google Analytics + Tag Manager",
+      "description": "Complete analytics and tracking setup for maximum efficiency."
     },
-    "whyChooseMe": "Why choose me?",
-    "benefit1": "You get a ready product without hassle",
-    "benefit2": "No need to understand technical details",
-    "benefit3": "Comprehensive solution: from design to advertising",
+    "whyChooseMe": "Why choose AI + SPA development?",
+    "benefit1": "Development speed thanks to AI technologies",
+    "benefit2": "Lightning-fast SPA performance",
+    "benefit3": "Full integration with Google ecosystem",
     "benefit4": "Fixed price with no hidden payments",
-    "benefit5": "Post-launch support included",
-    "orderNow": "Order now"
+    "benefit5": "Analytics setup included",
+    "orderNow": "Order SPA now"
   },
   "contact": {
     "title1": "Request a",
     "title2": "consultation",
-    "description": "Ready to discuss your project? Fill out the form below or contact me in any way convenient for you."
+    "description": "Ready to get a fast SPA website with AI technologies? Fill out the form below or contact me in any way convenient for you."
   },
   "footer": {
-    "description": "Comprehensive solutions for your business online. I do everything: from design to advertising. You just have to receive clients.",
+    "description": "AI development of fast SPA websites with complete Google tools setup. From idea to results - everything turnkey.",
     "navigation": "Navigation",
     "home": "Home",
     "about": "About me",
