@@ -92,6 +92,27 @@
     "benefit5": "Analytics setup included",
     "orderNow": "Order SPA now"
   },
+  "faq": {
+    "title1": "Frequently",
+    "title2": "asked questions",
+    "description": "Answers to the most common questions about creating SPA websites with AI and setting up Google tools.",
+    "question1": "How long does it take to create a SPA website?",
+    "answer1": "Usually 3-5 business days. AI significantly speeds up development, but I always check quality and manually configure all Google tools for the best results.",
+    "question2": "What exactly is included in the $300 price?",
+    "answer2": "Complete package: AI SPA development, responsive design, SEO optimization, Google Ads setup, Analytics, Tag Manager, hosting for a year, and basic tech support for a month.",
+    "question3": "Do I need to do anything during development?",
+    "answer3": "Minimum! You provide content (texts, photos) and branding, and I do everything else. I periodically show intermediate results for approval.",
+    "question4": "What guarantees do you provide?",
+    "answer4": "100% guarantee of functionality, loading speed under 3 seconds, responsiveness on all devices. If something doesn't work - I fix it for free.",
+    "question5": "Why is SPA better than a regular website?",
+    "answer5": "SPA loads instantly after the first visit, converts visitors to customers better, is easier to maintain and optimize for search engines.",
+    "question6": "Will I be able to edit content myself?",
+    "answer6": "Yes! I'll set up a simple content management system or teach you to work with files. You can also ask for help - first edits are free.",
+    "question7": "What to do after the website launch?",
+    "answer7": "I'll set up automatic analytics and advertising. You'll receive instructions on working with Google panels and promotion recommendations.",
+    "question8": "Do you work with all business niches?",
+    "answer8": "Yes! E-commerce, services, B2B, restaurants, clinics - AI allows quick adaptation to any field. I have experience in various industries."
+  },
   "contact": {
     "title1": "Request a",
     "title2": "consultation",
