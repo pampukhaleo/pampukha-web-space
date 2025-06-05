@@ -92,6 +92,52 @@
     "benefit5": "Analytics setup included",
     "orderNow": "Order SPA now"
   },
+  "whyAiSpa": {
+    "title1": "Why",
+    "title2": "AI + SPA?",
+    "description": "I explain in simple terms why my approach with AI and Single Page Applications delivers better results than traditional development.",
+    "benefit1": {
+      "title": "AI Development Speed",
+      "description": "AI technologies allow creating a website in 3-5 days instead of weeks. Faster to market - more customers."
+    },
+    "benefit2": {
+      "title": "Instant SPA Loading",
+      "description": "Single Page Applications load in 1-2 seconds. Visitors don't leave, conversion increases."
+    },
+    "benefit3": {
+      "title": "Full Google Integration",
+      "description": "I set up Google Ads, Analytics, Tag Manager. You immediately see where customers come from and how much you earn."
+    },
+    "benefit4": {
+      "title": "Fixed Price $300",
+      "description": "No surcharges, hidden payments. Everything included: development, hosting, setup, support."
+    },
+    "benefit5": {
+      "title": "Analytics from Day One",
+      "description": "Get detailed statistics on visitors, traffic sources, conversions. Know what works."
+    },
+    "benefit6": {
+      "title": "Easy Management",
+      "description": "You can edit texts and images yourself. First edits are free of charge."
+    },
+    "comparison": {
+      "title": "Approach Comparison",
+      "traditional": {
+        "title": "Traditional Development",
+        "point1": "Development 2-4 weeks",
+        "point2": "Slow website loading",
+        "point3": "Analytics for extra fee",
+        "point4": "From $800 and up"
+      },
+      "aiSpa": {
+        "title": "AI + SPA Approach",
+        "point1": "Ready in 3-5 days",
+        "point2": "Instant loading",
+        "point3": "All analytics included",
+        "point4": "Fixed $300"
+      }
+    }
+  },
   "faq": {
     "title1": "Frequently",
     "title2": "asked questions",

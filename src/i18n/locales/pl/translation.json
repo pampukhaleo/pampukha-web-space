@@ -92,6 +92,52 @@
     "benefit5": "Konfiguracja Analytics w cenie",
     "orderNow": "Zamów SPA teraz"
   },
+  "whyAiSpa": {
+    "title1": "Dlaczego",
+    "title2": "AI + SPA?",
+    "description": "Wyjaśniam prostym językiem, dlaczego moje podejście z AI i Single Page Applications daje lepsze rezultaty niż tradycyjny rozwój.",
+    "benefit1": {
+      "title": "Szybkość rozwoju AI",
+      "description": "Technologie AI pozwalają stworzyć stronę w 3-5 dni zamiast tygodni. Szybciej na rynek - więcej klientów."
+    },
+    "benefit2": {
+      "title": "Natychmiastowe ładowanie SPA",
+      "description": "Single Page Applications ładują się w 1-2 sekundy. Odwiedzający nie odchodzą, konwersja rośnie."
+    },
+    "benefit3": {
+      "title": "Pełna integracja Google",
+      "description": "Konfiguruję Google Ads, Analytics, Tag Manager. Od razu widzisz skąd przychodzą klienci i ile zarabiasz."
+    },
+    "benefit4": {
+      "title": "Stała cena $300",
+      "description": "Żadnych dopłat, ukrytych opłat. Wszystko w cenie: rozwój, hosting, konfiguracja, wsparcie."
+    },
+    "benefit5": {
+      "title": "Analityka od pierwszego dnia",
+      "description": "Otrzymujesz szczegółowe statystyki odwiedzających, źródeł ruchu, konwersji. Wiesz co działa."
+    },
+    "benefit6": {
+      "title": "Łatwe zarządzanie",
+      "description": "Możesz sam edytować teksty i obrazy. Pierwsze edycje robię bezpłatnie."
+    },
+    "comparison": {
+      "title": "Porównanie podejść",
+      "traditional": {
+        "title": "Tradycyjny rozwój",
+        "point1": "Rozwój 2-4 tygodnie",
+        "point2": "Wolne ładowanie strony",
+        "point3": "Analityka za dopłatą",
+        "point4": "Od $800 wzwyż"
+      },
+      "aiSpa": {
+        "title": "Podejście AI + SPA",
+        "point1": "Gotowe w 3-5 dni",
+        "point2": "Natychmiastowe ładowanie",
+        "point3": "Cała analityka w cenie",
+        "point4": "Stałe $300"
+      }
+    }
+  },
   "faq": {
     "title1": "Często zadawane",
     "title2": "pytania",
