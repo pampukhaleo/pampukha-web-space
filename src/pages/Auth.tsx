@@ -21,7 +21,7 @@ const Auth = () => {
       async (event, session) => {
         if (event === 'SIGNED_IN' && session) {
           toast.success('Signed in successfully!');
-          navigate('/dashboard');
+          navigate(`${import.meta.env.BASE_URL}dashboard`);
         }
       }
     );
@@ -81,7 +81,7 @@ const Auth = () => {
       
       if (data?.user) {
         toast.success('Signed in successfully!');
-        navigate('/dashboard');
+        navigate(`${import.meta.env.BASE_URL}dashboard`);
       }
     } catch (error) {
       console.error('Sign in error:', error);
