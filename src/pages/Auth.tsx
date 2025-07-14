@@ -34,7 +34,22 @@ const Auth = () => {
       if (error) throw error;
       
       if (data?.user) {
+        // Пробуем создать профиль если его нет (дополнительная проверка)
+        const { error: profileError } = await supabase
+          .from('profiles')
+          .upsert({
+            id: data.user.id,
+            full_name: data.user.user_metadata?.full_name || data.user.email,
+            has_paid: false,
+            website_url: null
+          });
+        
+        if (profileError) {
+          console.error('Profile creation error:', profileError);
+        }
+        
         toast.success('Sign up successful! You can now sign in.');
+        navigate('/dashboard');
       } else {
         toast.success('Check your email for the confirmation link!');
       }
@@ -62,6 +77,24 @@ const Auth = () => {
       if (error) throw error;
       
       if (data?.user) {
+        // Проверяем есть ли профиль, если нет - создаем
+        const { data: profile, error: profileError } = await supabase
+          .from('profiles')
+          .select('*')
+          .eq('id', data.user.id)
+          .maybeSingle();
+        
+        if (!profile && !profileError) {
+          await supabase
+            .from('profiles')
+            .upsert({
+              id: data.user.id,
+              full_name: data.user.user_metadata?.full_name || data.user.email,
+              has_paid: false,
+              website_url: null
+            });
+        }
+        
         toast.success('Signed in successfully!');
         navigate('/dashboard');
       }

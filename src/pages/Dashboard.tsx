@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import type { Database } from '@/integrations/supabase/types';
 import { Home, Settings } from 'lucide-react';
+import { toast } from 'sonner';
 
 type Profile = Database['public']['Tables']['profiles']['Row'];
 
@@ -25,6 +26,7 @@ const Dashboard = () => {
       
       setUser(session.user);
       
+      // Получаем профиль пользователя
       const { data, error } = await supabase
         .from('profiles')
         .select('*')
@@ -33,9 +35,34 @@ const Dashboard = () => {
       
       if (error) {
         console.error('Error fetching profile:', error);
+        toast.error('Error loading profile');
       }
       
-      setProfile(data);
+      // Если профиля нет, создаем его
+      if (!data) {
+        console.log('Profile not found, creating one...');
+        const { data: newProfile, error: createError } = await supabase
+          .from('profiles')
+          .insert({
+            id: session.user.id,
+            full_name: session.user.user_metadata?.full_name || session.user.email,
+            has_paid: false,
+            website_url: null
+          })
+          .select()
+          .single();
+        
+        if (createError) {
+          console.error('Error creating profile:', createError);
+          toast.error('Error creating profile');
+        } else {
+          setProfile(newProfile);
+          toast.success('Profile created successfully!');
+        }
+      } else {
+        setProfile(data);
+      }
+      
       setLoading(false);
     };
 
