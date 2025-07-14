@@ -23,22 +23,18 @@ const Auth = () => {
         throw new Error('Please enter both email and password');
       }
       
-      // Use email/password explicitly instead of trying anonymous sign-up
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
-          emailRedirectTo: window.location.origin,
+          emailRedirectTo: `${window.location.origin}${import.meta.env.BASE_URL}`,
         }
       });
       
       if (error) throw error;
       
-      // If the sign-up is successful and user is created
       if (data?.user) {
         toast.success('Sign up successful! You can now sign in.');
-        // You might want to auto-login the user here instead of showing the success message
-        // For now, we'll keep the user on the auth page to sign in manually
       } else {
         toast.success('Check your email for the confirmation link!');
       }
@@ -67,7 +63,7 @@ const Auth = () => {
       
       if (data?.user) {
         toast.success('Signed in successfully!');
-        navigate('/dashboard');
+        navigate(`${import.meta.env.BASE_URL}dashboard`);
       }
     } catch (error) {
       console.error('Sign in error:', error);
@@ -82,7 +78,7 @@ const Auth = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/dashboard`,
+          redirectTo: `${window.location.origin}${import.meta.env.BASE_URL}dashboard`,
         }
       });
       if (error) throw error;
@@ -96,7 +92,7 @@ const Auth = () => {
     <div className="min-h-screen flex items-center justify-center px-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <Link to="/">
+          <Link to={`${import.meta.env.BASE_URL}`}>
             <Button variant="ghost" className="flex items-center space-x-2 text-sm font-medium mb-2 p-2">
               <Home className="h-4 w-4" />
               <span>Go Home</span>
