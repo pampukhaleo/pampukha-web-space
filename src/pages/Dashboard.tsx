@@ -19,7 +19,7 @@ const Dashboard = () => {
     const checkSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
-        navigate(`${import.meta.env.BASE_URL}auth`);
+        navigate('/auth');
         return;
       }
       
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
-    navigate(`${import.meta.env.BASE_URL}auth`);
+    navigate('/auth');
   };
 
   if (loading) {
@@ -56,7 +56,7 @@ const Dashboard = () => {
       <Card>
         <CardHeader>
           <div className="flex items-center space-x-2">
-            <Link to={`${import.meta.env.BASE_URL}`}>
+            <Link to="/">
               <Button variant="ghost" size="icon" className="p-0">
                 <Home className="h-5 w-5" />
               </Button>
@@ -109,7 +109,7 @@ const Dashboard = () => {
                     <div className="p-4 bg-secondary rounded-lg">
                       <h3 className="font-semibold mb-2">Website Management</h3>
                       <p className="mb-3">Access your website content management system (CMS)</p>
-                      <Link to={`${import.meta.env.BASE_URL}admin`}>
+                      <Link to="/admin">
                         <Button className="flex items-center">
                           <Settings className="mr-2 h-4 w-4" />
                           Open Admin Panel

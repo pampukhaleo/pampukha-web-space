@@ -63,7 +63,7 @@ const Auth = () => {
       
       if (data?.user) {
         toast.success('Signed in successfully!');
-        navigate(`${import.meta.env.BASE_URL}dashboard`);
+        navigate('/dashboard');
       }
     } catch (error) {
       console.error('Sign in error:', error);
@@ -92,7 +92,7 @@ const Auth = () => {
     <div className="min-h-screen flex items-center justify-center px-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <Link to={`${import.meta.env.BASE_URL}`}>
+          <Link to="/">
             <Button variant="ghost" className="flex items-center space-x-2 text-sm font-medium mb-2 p-2">
               <Home className="h-4 w-4" />
               <span>Go Home</span>
