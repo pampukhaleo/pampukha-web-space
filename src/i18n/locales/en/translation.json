@@ -1,8 +1,7 @@
-
 {
   "navbar": {
     "about": "About me",
-    "portfolio": "Portfolio",
+    "portfolio": "Portfolio", 
     "services": "Services",
     "contact": "Contact",
     "login": "Log in",
@@ -203,5 +202,13 @@
     "uk": "Українська",
     "en": "English",
     "pl": "Polski"
+  },
+  "cta": {
+    "afterHero": "Ready to get a fast SPA website? Let's discuss your project!",
+    "afterAbout": "Convinced by my approach? Let's create your perfect website together!",
+    "afterPortfolio": "Like what you see? Let's create something similar for your business!",
+    "afterWhyAiSpa": "Ready to experience the power of AI + React + SPA? Let's get started!",
+    "afterServices": "Everything you need in one package. Ready to start your project?",
+    "beforeContact": "Don't wait - your competitors are already online. Get your consultation now!"
   }
 }

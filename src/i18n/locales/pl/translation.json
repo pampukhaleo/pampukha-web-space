@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "about": "O mnie",
@@ -6,31 +5,31 @@
     "services": "Usługi",
     "contact": "Kontakt",
     "login": "Zaloguj się",
-    "dashboard": "Panel sterowania"
+    "dashboard": "Panel"
   },
   "hero": {
     "title1": "Potrzebujesz",
     "title2": "strony internetowej",
     "title3": "?",
     "title4": "Stworzę ją z AI pod klucz",
-    "price": "tylko 300 $",
-    "valueProposition": "SPA + SEO + Google Ads + Analytics",
-    "description": "Tworzę szybkie strony SPA wykorzystując technologie AI. Konfiguruję SEO, Google Ads, Analytics i Tag Manager - wszystko pod klucz za stałą cenę.",
-    "consultation": "Zamów konsultację",
+    "price": "tylko 300$",
+    "valueProposition": "SPA + SEO + Google Ads + Analityka",
+    "description": "Tworzę szybkie strony SPA przy użyciu technologii AI. Konfiguruję SEO, Google Ads, Analitykę i Tag Manager - wszystko pod klucz za stałą cenę.",
+    "consultation": "Poproś o konsultację",
     "viewWork": "Zobacz prace"
   },
   "about": {
     "title1": "O",
     "title2": "mnie",
-    "introduction": "Cześć! Nazywam się Leonid Pampukha. Tworzę szybkie strony SPA z wykorzystaniem AI dla małych firm, abyś mógł skupić się na swojej podstawowej działalności.",
-    "approach": "Moje podejście - AI + React + SPA = rezultaty",
-    "approachDescription": "Używam nowoczesnych technologii AI i React do szybkiego tworzenia Single Page Applications. Twoja strona będzie działać błyskawicznie szybko, a ja skonfiguruję wszystkie narzędzia Google dla maksymalnych rezultatów.",
+    "introduction": "Cześć! Nazywam się Leonid Pampukha. Tworzę szybkie strony SPA przy użyciu AI dla małych firm, abyś mógł skupić się na swojej podstawowej działalności.",
+    "approach": "Moje podejście - AI + React + SPA = wyniki",
+    "approachDescription": "Używam nowoczesnych technologii AI i React do szybkiego tworzenia aplikacji Single Page Application. Twoja strona będzie działać błyskawicznie, a ja skonfiguruję wszystkie narzędzia Google dla maksymalnych wyników.",
     "cleanCode": "Rozwój AI",
     "cleanCodeDescription": "Używam najnowocześniejszych technologii AI do szybkiego tworzenia wysokiej jakości React SPA",
-    "responsive": "Szybkie React SPA",
-    "responsiveDescription": "Tworzę Single Page Applications na React, które ładują się natychmiastowo",
-    "modern": "Integracja Google",
-    "modernDescription": "Konfiguruję Google Ads, Analytics, Tag Manager dla maksymalnej efektywności",
+    "responsive": "Szybki React SPA",
+    "responsiveDescription": "Tworzę aplikacje Single Page Application na React, które ładują się błyskawicznie",
+    "modern": "Integracja z Google",
+    "modernDescription": "Konfiguruję Google Ads, Analitykę, Tag Manager dla maksymalnej wydajności",
     "clientFocused": "Wszystko pod klucz z AI",
     "clientFocusedDescription": "Od rozwoju AI po reklamę Google - kompletny pakiet bez Twojej interwencji"
   },
@@ -39,17 +38,17 @@
     "title2": "portfolio",
     "description": "Zobacz przykłady szybkich stron SPA stworzonych z AI. Każdy projekt jest zoptymalizowany pod kątem szybkości i skonfigurowany z narzędziami Google.",
     "project1": {
-      "title": "SPA sklep internetowy",
+      "title": "Sklep internetowy SPA",
       "category": "E-commerce SPA",
-      "description": "Szybki jednostronicowy sklep z Google Analytics i zoptymalizowaną reklamą."
+      "description": "Szybki sklep jednostronicowy z Google Analytics i zoptymalizowaną reklamą."
     },
     "project2": {
       "title": "Korporacyjna strona SPA",
       "category": "Biznes SPA",
-      "description": "Błyskawicznie szybka strona z pełną integracją narzędzi Google."
+      "description": "Błyskawiczna strona z pełną integracją narzędzi Google."
     },
     "project3": {
-      "title": "SPA landing page",
+      "title": "Strona docelowa SPA",
       "category": "Marketing SPA",
       "description": "Szybka strona sprzedażowa ze skonfigurowanymi Google Ads i Tag Manager."
     },
@@ -58,23 +57,23 @@
   "services": {
     "title1": "Moje",
     "title2": "usługi",
-    "description": "Otrzymaj szybką stronę SPA stworzoną z AI, z kompletną konfiguracją narzędzi Google. Wszystko pod klucz za stałą cenę.",
-    "package": "AI + React + SPA + narzędzia Google + reklama",
+    "description": "Zdobądź szybką stronę SPA stworzoną z AI, z kompletną konfiguracją narzędzi Google. Wszystko pod klucz za stałą cenę.",
+    "package": "AI + React + SPA + Narzędzia Google + reklama",
     "service1": {
       "title": "Rozwój SPA z AI",
-      "description": "Szybkie Single Page Applications na React tworzone przy użyciu zaawansowanych technologii AI."
+      "description": "Szybkie aplikacje Single Page Application na React stworzone przy użyciu zaawansowanych technologii AI."
     },
     "service2": {
-      "title": "Szybkie SPA landing page",
-      "description": "Błyskawicznie szybkie strony sprzedażowe z zoptymalizowaną konwersją."
+      "title": "Szybkie strony docelowe SPA",
+      "description": "Błyskawiczne strony sprzedażowe ze zoptymalizowaną konwersją."
     },
     "service3": {
       "title": "Konfiguracja Google Ads",
-      "description": "Profesjonalna konfiguracja i optymalizacja reklam Google dla Twojego SPA."
+      "description": "Profesjonalna konfiguracja i optymalizacja reklamy Google dla Twojego SPA."
     },
     "service4": {
-      "title": "Upgrade do SPA",
-      "description": "Przekształcanie zwykłych stron w szybkie Single Page Applications."
+      "title": "Aktualizacja do SPA",
+      "description": "Konwersja zwykłych stron internetowych na szybkie aplikacje Single Page Application."
     },
     "service5": {
       "title": "SEO dla SPA",
@@ -82,63 +81,63 @@
     },
     "service6": {
       "title": "Google Analytics + Tag Manager",
-      "description": "Kompletna konfiguracja analityki i śledzenia dla maksymalnej efektywności."
+      "description": "Kompletna konfiguracja analityki i śledzenia dla maksymalnej wydajności."
     },
-    "whyChooseMe": "Dlaczego wybrać rozwój AI + React + SPA?",
+    "whyChooseMe": "Dlaczego warto wybrać rozwój AI + React + SPA?",
     "benefit1": "Szybkość rozwoju dzięki technologiom AI",
     "benefit2": "Błyskawiczna wydajność React SPA",
     "benefit3": "Pełna integracja z ekosystemem Google",
     "benefit4": "Stała cena bez ukrytych płatności",
-    "benefit5": "Konfiguracja Analytics w cenie",
+    "benefit5": "Konfiguracja analityki w cenie",
     "orderNow": "Zamów SPA teraz"
   },
   "whyAiSpa": {
     "title1": "Dlaczego",
     "title2": "AI + React + SPA?",
-    "description": "Wyjaśniam prostym językiem, dlaczego moje podejście z AI, React i Single Page Applications daje lepsze rezultaty niż tradycyjny rozwój.",
+    "description": "Wyjaśniam w prostych słowach, dlaczego moje podejście z AI, React i Single Page Applications daje lepsze wyniki niż tradycyjny rozwój.",
     "benefit1": {
       "title": "Szybkość rozwoju AI",
-      "description": "Technologie AI pozwalają stworzyć stronę w 3-5 dni zamiast tygodni. Automatyczna generacja kodu, komponentów i stylów. Szybciej na rynek - więcej klientów."
+      "description": "Technologie AI pozwalają stworzyć stronę internetową w 3-5 dni zamiast tygodni. Automatyczne generowanie kodu, komponentów i stylów. Szybciej na rynku - więcej klientów."
     },
     "benefit2": {
       "title": "React = Natychmiastowa szybkość",
-      "description": "React tworzy wirtualny DOM dla błyskawicznych aktualizacji stron. SPA ładuje się w 1-2 sekundy, dalsze nawigacje są natychmiastowe. Odwiedzający nie odchodzą."
+      "description": "React tworzy wirtualny DOM dla błyskawicznych aktualizacji stron. SPA ładuje się w 1-2 sekundy, dalsza nawigacja jest natychmiastowa. Odwiedzający nie odchodzą."
     },
     "benefit3": {
-      "title": "Co to jest SPA i dlaczego to świetne?",
-      "description": "Single Page Application to strona, która ładuje się raz, a potem działa jak aplikacja mobilna. Bez przeładowań stron, wszystko działa natychmiastowo."
+      "title": "Czym jest SPA i dlaczego jest fajne?",
+      "description": "Single Page Application to strona internetowa, która ładuje się raz, a następnie działa jak aplikacja mobilna. Bez przeładowywania stron, wszystko działa natychmiast."
     },
     "benefit4": {
-      "title": "Stała cena $300",
-      "description": "Żadnych dopłat, ukrytych opłat. Wszystko w cenie: rozwój AI, React SPA, hosting, konfiguracja, wsparcie."
+      "title": "Stała cena 300$",
+      "description": "Bez dopłat, ukrytych płatności. Wszystko w cenie: rozwój AI, React SPA, hosting, konfiguracja, wsparcie."
     },
     "benefit5": {
       "title": "Analityka od pierwszego dnia",
-      "description": "Otrzymujesz szczegółowe statystyki odwiedzających, źródeł ruchu, konwersji. Wiesz co działa i ile zarabiasz."
+      "description": "Uzyskaj szczegółowe statystyki dotyczące odwiedzających, źródeł ruchu, konwersji. Dowiedz się, co działa i ile zarabiasz."
     },
     "benefit6": {
       "title": "Łatwe zarządzanie",
-      "description": "Komponenty React są łatwe do edycji. Możesz sam zmieniać teksty i obrazy. Pierwsze edycje robię bezpłatnie."
+      "description": "Komponenty React są łatwe w edycji. Możesz samodzielnie zmieniać teksty i obrazy. Pierwsze edycje są bezpłatne."
     },
     "comparison": {
       "title": "Porównanie podejść",
       "traditional": {
         "title": "Tradycyjny rozwój",
         "point1": "Rozwój 2-4 tygodnie",
-        "point2": "Wolne ładowanie strony",
-        "point3": "Analityka za dopłatą",
-        "point4": "Od $800 wzwyż"
+        "point2": "Powolne ładowanie strony",
+        "point3": "Analityka za dodatkową opłatą",
+        "point4": "Od 800$ wzwyż"
       },
       "aiSpa": {
         "title": "Podejście AI + React + SPA",
         "point1": "Gotowe w 3-5 dni",
         "point2": "Natychmiastowe ładowanie",
         "point3": "Cała analityka w cenie",
-        "point4": "Stałe $300"
+        "point4": "Stałe 300$"
       }
     },
     "technicalBenefits": {
-      "title": "Techniczne korzyści React SPA",
+      "title": "Korzyści techniczne React SPA",
       "react": {
         "title": "Dlaczego React?",
         "point1": "Wirtualny DOM dla szybkości",
@@ -155,7 +154,7 @@
       },
       "ai": {
         "title": "Dlaczego rozwój AI?",
-        "point1": "Automatyczna generacja kodu",
+        "point1": "Automatyczne generowanie kodu",
         "point2": "Szybkie prototypowanie",
         "point3": "Mniej błędów w kodzie",
         "point4": "Optymalizacja wydajności"
@@ -163,33 +162,33 @@
     }
   },
   "faq": {
-    "title1": "Często zadawane",
-    "title2": "pytania",
-    "description": "Odpowiedzi na najczęstsze pytania dotyczące tworzenia stron SPA z AI i konfiguracji narzędzi Google.",
-    "question1": "Co to jest SPA i dlaczego jest lepsze?",
-    "answer1": "SPA (Single Page Application) to strona, która ładuje się raz, a potem działa jak aplikacja mobilna. Na React oznacza to natychmiastową nawigację, bez przeładowań stron. Użytkownicy mają lepsze doświadczenia, a Ty wyższą konwersję.",
+    "title1": "Często",
+    "title2": "zadawane pytania",
+    "description": "Odpowiedzi na najczęstsze pytania dotyczące tworzenia stron SPA z AI i konfigurowania narzędzi Google.",
+    "question1": "Czym jest SPA i dlaczego jest lepsze?",
+    "answer1": "SPA (Single Page Application) to strona internetowa, która ładuje się raz, a następnie działa jak aplikacja mobilna. Na React oznacza to natychmiastową nawigację, brak przeładowywania stron. Użytkownicy uzyskują lepsze wrażenia, a Ty uzyskujesz wyższą konwersję.",
     "question2": "Ile czasu zajmuje stworzenie strony SPA z AI?",
-    "answer2": "Zwykle 3-5 dni roboczych. AI znacznie przyspiesza rozwój komponentów React, ale zawsze sprawdzam jakość i ręcznie konfiguruję wszystkie narzędzia Google dla najlepszych rezultatów.",
-    "question3": "Co dokładnie wchodzi w cenę 300$?",
-    "answer3": "Kompletny pakiet: rozwój React SPA z AI, responsywny design, optymalizacja SEO, konfiguracja Google Ads, Analytics, Tag Manager, hosting na rok i podstawowe wsparcie techniczne przez miesiąc.",
+    "answer2": "Zwykle 3-5 dni roboczych. AI znacznie przyspiesza rozwój komponentów React, ale zawsze sprawdzam jakość i ręcznie konfiguruję wszystkie narzędzia Google dla najlepszych wyników.",
+    "question3": "Co dokładnie zawiera się w cenie 300$?",
+    "answer3": "Kompletny pakiet: rozwój AI React SPA, responsywny design, optymalizacja SEO, konfiguracja Google Ads, Analityka, Tag Manager, hosting na rok i podstawowe wsparcie techniczne przez miesiąc.",
     "question4": "Czy muszę coś robić podczas rozwoju?",
-    "answer4": "Minimum! Dostarczasz treści (teksty, zdjęcia) i branding, a ja robię wszystko inne. Okresowo pokazuję wyniki pośrednie do zatwierdzenia.",
-    "question5": "Jakie gwarancje zapewniasz?",
-    "answer5": "100% gwarancja funkcjonalności, szybkości ładowania poniżej 3 sekund, responsywności na wszystkich urządzeniach. Jeśli coś nie działa - naprawiam za darmo.",
-    "question6": "Czy będę mógł edytować treści samodzielnie?",
-    "answer6": "Tak! Komponenty React są łatwe do edycji. Skonfiguruję prosty system zarządzania treścią lub nauczę pracować z plikami. Możesz też prosić o pomoc - pierwsze edycje są bezpłatne.",
+    "answer4": "Minimum! Ty dostarczasz treść (teksty, zdjęcia) i branding, a ja robię wszystko inne. Okresowo pokazuję wyniki pośrednie do zatwierdzenia.",
+    "question5": "Jakie gwarancje udzielasz?",
+    "answer5": "100% gwarancji funkcjonalności, szybkości ładowania poniżej 3 sekund, responsywności na wszystkich urządzeniach. Jeśli coś nie działa - naprawiam to za darmo.",
+    "question6": "Czy będę mógł samodzielnie edytować treść?",
+    "answer6": "Tak! Komponenty React są łatwe w edycji. Skonfiguruję prosty system zarządzania treścią lub nauczę Cię pracy z plikami. Możesz również poprosić o pomoc - pierwsze edycje są bezpłatne.",
     "question7": "Co robić po uruchomieniu strony?",
-    "answer7": "Skonfiguruję automatyczną analitykę i reklamę. Otrzymasz instrukcje pracy z panelami Google i zalecenia dotyczące promocji.",
-    "question8": "Czy pracujesz ze wszystkimi niszami biznesowymi?",
-    "answer8": "Tak! E-commerce, usługi, B2B, restauracje, kliniki - AI pozwala na szybką adaptację do każdej dziedziny. Komponenty React łatwo dostosować do każdego biznesu."
+    "answer7": "Skonfiguruję automatyczną analitykę i reklamę. Otrzymasz instrukcje dotyczące pracy z panelami Google i rekomendacje dotyczące promocji.",
+    "question8": "Czy pracujesz ze wszystkimi niszy biznesowymi?",
+    "answer8": "Tak! E-commerce, usługi, B2B, restauracje, kliniki - AI pozwala na szybką adaptację do każdej dziedziny. Komponenty React są łatwo konfigurowalne dla każdego biznesu."
   },
   "contact": {
-    "title1": "Zamów",
+    "title1": "Poproś o",
     "title2": "konsultację",
-    "description": "Gotowy otrzymać szybką stronę SPA z technologiami AI? Wypełnij poniższy formularz lub skontaktuj się ze mną w dogodny dla Ciebie sposób."
+    "description": "Gotowy na szybką stronę SPA z technologiami AI? Wypełnij poniższy formularz lub skontaktuj się ze mną w dowolny dogodny sposób."
   },
   "footer": {
-    "description": "AI rozwój szybkich React SPA stron z kompletną konfiguracją narzędzi Google. Od pomysłu do rezultatów - wszystko pod klucz.",
+    "description": "Rozwój AI szybkich stron React SPA z kompletną konfiguracją narzędzi Google. Od pomysłu do wyników - wszystko pod klucz.",
     "navigation": "Nawigacja",
     "home": "Strona główna",
     "about": "O mnie",
@@ -203,5 +202,13 @@
     "uk": "Українська",
     "en": "English",
     "pl": "Polski"
+  },
+  "cta": {
+    "afterHero": "Gotowy na szybką stronę SPA? Omówmy Twój projekt!",
+    "afterAbout": "Przekonany do mojego podejścia? Stwórzmy razem Twoją idealną stronę!",
+    "afterPortfolio": "Podoba Ci się to, co widzisz? Stwórzmy coś podobnego dla Twojego biznesu!",
+    "afterWhyAiSpa": "Gotowy doświadczyć mocy AI + React + SPA? Zaczynajmy!",
+    "afterServices": "Wszystko czego potrzebujesz w jednym pakiecie. Gotowy rozpocząć projekt?",
+    "beforeContact": "Nie czekaj - Twoja konkurencja już jest online. Umów konsultację teraz!"
   }
 }
