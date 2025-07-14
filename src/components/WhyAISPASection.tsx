@@ -2,6 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Zap, Gauge, Cog, DollarSign, BarChart3, Rocket } from 'lucide-react';
+import TechnicalBenefitsSection from './TechnicalBenefitsSection';
 
 const WhyAISPASection = () => {
   const { t } = useTranslation();
@@ -63,7 +64,10 @@ const WhyAISPASection = () => {
           ))}
         </div>
 
-        <div className="bg-muted/30 rounded-xl p-8 text-center">
+        {/* Technical Benefits Section */}
+        <TechnicalBenefitsSection />
+
+        <div className="bg-muted/30 rounded-xl p-8 text-center mt-16">
           <h3 className="text-2xl font-bold mb-4">{t('whyAiSpa.comparison.title')}</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">

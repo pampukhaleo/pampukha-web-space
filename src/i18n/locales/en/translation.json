@@ -23,12 +23,12 @@
     "title1": "About",
     "title2": "me",
     "introduction": "Hello! My name is Leonid Pampukha. I create fast SPA websites using AI for small businesses so you can focus on your core business.",
-    "approach": "My approach - AI + speed + results",
-    "approachDescription": "I use modern AI technologies for rapid Single Page Application development. Your site will work lightning fast, and I'll configure all Google tools for maximum results.",
+    "approach": "My approach - AI + React + SPA = results",
+    "approachDescription": "I use modern AI technologies and React for rapid Single Page Application development. Your site will work lightning fast, and I'll configure all Google tools for maximum results.",
     "cleanCode": "AI Development",
-    "cleanCodeDescription": "I use cutting-edge AI technologies for rapid creation of quality SPAs",
-    "responsive": "Fast SPA",
-    "responsiveDescription": "I create Single Page Applications that load instantly",
+    "cleanCodeDescription": "I use cutting-edge AI technologies for rapid creation of quality React SPAs",
+    "responsive": "Fast React SPA",
+    "responsiveDescription": "I create Single Page Applications on React that load instantly",
     "modern": "Google Integration",
     "modernDescription": "I set up Google Ads, Analytics, Tag Manager for maximum efficiency",
     "clientFocused": "Everything turnkey with AI",
@@ -59,10 +59,10 @@
     "title1": "My",
     "title2": "services",
     "description": "Get a fast SPA website created with AI, with complete Google tools setup. Everything turnkey for a fixed price.",
-    "package": "AI + SPA + Google tools + advertising",
+    "package": "AI + React + SPA + Google tools + advertising",
     "service1": {
       "title": "SPA development with AI",
-      "description": "Fast Single Page Applications created using advanced AI technologies."
+      "description": "Fast Single Page Applications on React created using advanced AI technologies."
     },
     "service2": {
       "title": "Fast SPA landing pages",
@@ -84,9 +84,9 @@
       "title": "Google Analytics + Tag Manager",
       "description": "Complete analytics and tracking setup for maximum efficiency."
     },
-    "whyChooseMe": "Why choose AI + SPA development?",
+    "whyChooseMe": "Why choose AI + React + SPA development?",
     "benefit1": "Development speed thanks to AI technologies",
-    "benefit2": "Lightning-fast SPA performance",
+    "benefit2": "Lightning-fast React SPA performance",
     "benefit3": "Full integration with Google ecosystem",
     "benefit4": "Fixed price with no hidden payments",
     "benefit5": "Analytics setup included",
@@ -94,31 +94,31 @@
   },
   "whyAiSpa": {
     "title1": "Why",
-    "title2": "AI + SPA?",
-    "description": "I explain in simple terms why my approach with AI and Single Page Applications delivers better results than traditional development.",
+    "title2": "AI + React + SPA?",
+    "description": "I explain in simple terms why my approach with AI, React and Single Page Applications delivers better results than traditional development.",
     "benefit1": {
       "title": "AI Development Speed",
-      "description": "AI technologies allow creating a website in 3-5 days instead of weeks. Faster to market - more customers."
+      "description": "AI technologies allow creating a website in 3-5 days instead of weeks. Automatic code, component and style generation. Faster to market - more customers."
     },
     "benefit2": {
-      "title": "Instant SPA Loading",
-      "description": "Single Page Applications load in 1-2 seconds. Visitors don't leave, conversion increases."
+      "title": "React = Instant Speed",
+      "description": "React creates virtual DOM for lightning-fast page updates. SPA loads in 1-2 seconds, further navigation is instant. Visitors don't leave."
     },
     "benefit3": {
-      "title": "Full Google Integration",
-      "description": "I set up Google Ads, Analytics, Tag Manager. You immediately see where customers come from and how much you earn."
+      "title": "What is SPA and why is it cool?",
+      "description": "Single Page Application is a website that loads once and then works like a mobile app. No page reloads, everything works instantly."
     },
     "benefit4": {
       "title": "Fixed Price $300",
-      "description": "No surcharges, hidden payments. Everything included: development, hosting, setup, support."
+      "description": "No surcharges, hidden payments. Everything included: AI development, React SPA, hosting, setup, support."
     },
     "benefit5": {
       "title": "Analytics from Day One",
-      "description": "Get detailed statistics on visitors, traffic sources, conversions. Know what works."
+      "description": "Get detailed statistics on visitors, traffic sources, conversions. Know what works and how much you earn."
     },
     "benefit6": {
       "title": "Easy Management",
-      "description": "You can edit texts and images yourself. First edits are free of charge."
+      "description": "React components are easy to edit. You can change texts and images yourself. First edits are free of charge."
     },
     "comparison": {
       "title": "Approach Comparison",
@@ -130,11 +130,35 @@
         "point4": "From $800 and up"
       },
       "aiSpa": {
-        "title": "AI + SPA Approach",
+        "title": "AI + React + SPA Approach",
         "point1": "Ready in 3-5 days",
         "point2": "Instant loading",
         "point3": "All analytics included",
         "point4": "Fixed $300"
+      }
+    },
+    "technicalBenefits": {
+      "title": "Technical Benefits of React SPA",
+      "react": {
+        "title": "Why React?",
+        "point1": "Virtual DOM for speed",
+        "point2": "Component architecture",
+        "point3": "Easy maintenance and expansion",
+        "point4": "SEO optimization possible"
+      },
+      "spa": {
+        "title": "Why SPA?",
+        "point1": "Loads only once",
+        "point2": "Instant navigation between pages",
+        "point3": "Works like a mobile app",
+        "point4": "Less server load"
+      },
+      "ai": {
+        "title": "Why AI Development?",
+        "point1": "Automatic code generation",
+        "point2": "Rapid prototyping",
+        "point3": "Fewer code errors",
+        "point4": "Performance optimization"
       }
     }
   },
@@ -142,22 +166,22 @@
     "title1": "Frequently",
     "title2": "asked questions",
     "description": "Answers to the most common questions about creating SPA websites with AI and setting up Google tools.",
-    "question1": "How long does it take to create a SPA website?",
-    "answer1": "Usually 3-5 business days. AI significantly speeds up development, but I always check quality and manually configure all Google tools for the best results.",
-    "question2": "What exactly is included in the $300 price?",
-    "answer2": "Complete package: AI SPA development, responsive design, SEO optimization, Google Ads setup, Analytics, Tag Manager, hosting for a year, and basic tech support for a month.",
-    "question3": "Do I need to do anything during development?",
-    "answer3": "Minimum! You provide content (texts, photos) and branding, and I do everything else. I periodically show intermediate results for approval.",
-    "question4": "What guarantees do you provide?",
-    "answer4": "100% guarantee of functionality, loading speed under 3 seconds, responsiveness on all devices. If something doesn't work - I fix it for free.",
-    "question5": "Why is SPA better than a regular website?",
-    "answer5": "SPA loads instantly after the first visit, converts visitors to customers better, is easier to maintain and optimize for search engines.",
+    "question1": "What is SPA and why is it better?",
+    "answer1": "SPA (Single Page Application) is a website that loads once and then works like a mobile app. On React this means instant navigation, no page reloads. Users get better experience, and you get higher conversion.",
+    "question2": "How long does it take to create a SPA website with AI?",
+    "answer2": "Usually 3-5 business days. AI significantly speeds up React component development, but I always check quality and manually configure all Google tools for the best results.",
+    "question3": "What exactly is included in the $300 price?",
+    "answer3": "Complete package: AI React SPA development, responsive design, SEO optimization, Google Ads setup, Analytics, Tag Manager, hosting for a year, and basic tech support for a month.",
+    "question4": "Do I need to do anything during development?",
+    "answer4": "Minimum! You provide content (texts, photos) and branding, and I do everything else. I periodically show intermediate results for approval.",
+    "question5": "What guarantees do you provide?",
+    "answer5": "100% guarantee of functionality, loading speed under 3 seconds, responsiveness on all devices. If something doesn't work - I fix it for free.",
     "question6": "Will I be able to edit content myself?",
-    "answer6": "Yes! I'll set up a simple content management system or teach you to work with files. You can also ask for help - first edits are free.",
+    "answer6": "Yes! React components are easy to edit. I'll set up a simple content management system or teach you to work with files. You can also ask for help - first edits are free.",
     "question7": "What to do after the website launch?",
     "answer7": "I'll set up automatic analytics and advertising. You'll receive instructions on working with Google panels and promotion recommendations.",
     "question8": "Do you work with all business niches?",
-    "answer8": "Yes! E-commerce, services, B2B, restaurants, clinics - AI allows quick adaptation to any field. I have experience in various industries."
+    "answer8": "Yes! E-commerce, services, B2B, restaurants, clinics - AI allows quick adaptation to any field. React components are easily customizable for any business."
   },
   "contact": {
     "title1": "Request a",
@@ -165,7 +189,7 @@
     "description": "Ready to get a fast SPA website with AI technologies? Fill out the form below or contact me in any way convenient for you."
   },
   "footer": {
-    "description": "AI development of fast SPA websites with complete Google tools setup. From idea to results - everything turnkey.",
+    "description": "AI development of fast React SPA websites with complete Google tools setup. From idea to results - everything turnkey.",
     "navigation": "Navigation",
     "home": "Home",
     "about": "About me",
