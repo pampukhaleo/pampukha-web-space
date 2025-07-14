@@ -12,27 +12,32 @@ type Profile = Database['public']['Tables']['profiles']['Row'];
 const Dashboard = () => {
   const navigate = useNavigate();
   const [profile, setProfile] = useState<Profile | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
     const checkSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
-        navigate('/auth');
+        navigate(`${import.meta.env.BASE_URL}auth`);
         return;
       }
+      
+      setUser(session.user);
       
       const { data, error } = await supabase
         .from('profiles')
         .select('*')
         .eq('id', session.user.id)
-        .single();
+        .maybeSingle();
       
       if (error) {
         console.error('Error fetching profile:', error);
-        return;
+      } else {
+        setProfile(data);
       }
       
-      setProfile(data);
+      setLoading(false);
     };
 
     checkSession();
@@ -40,10 +45,10 @@ const Dashboard = () => {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
-    navigate('/auth');
+    navigate(`${import.meta.env.BASE_URL}auth`);
   };
 
-  if (!profile) {
+  if (loading) {
     return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
   }
 
@@ -52,13 +57,13 @@ const Dashboard = () => {
       <Card>
         <CardHeader>
           <div className="flex items-center space-x-2">
-            <Link to="/">
+            <Link to={import.meta.env.BASE_URL}>
               <Button variant="ghost" size="icon" className="p-0">
                 <Home className="h-5 w-5" />
               </Button>
             </Link>
             <CardTitle>
-              Welcome{profile.full_name ? `, ${profile.full_name}` : ''}!
+              Welcome{profile?.full_name ? `, ${profile.full_name}` : user?.email ? `, ${user.email}` : ''}!
             </CardTitle>
           </div>
           <CardDescription>Your account dashboard</CardDescription>
@@ -66,49 +71,63 @@ const Dashboard = () => {
 
         <CardContent>
           <div className="space-y-4">
-            <div className="p-4 bg-secondary rounded-lg">
-              <h3 className="font-semibold mb-2">Payment Status</h3>
-              {profile.has_paid ? (
-                <div className="text-green-500">✓ Payment received</div>
-              ) : (
-                <div className="text-yellow-500">⚠ Payment pending</div>
-              )}
-            </div>
-            
-            {profile.has_paid && (
-              <div className="space-y-4">
+            {profile ? (
+              <>
                 <div className="p-4 bg-secondary rounded-lg">
-                  <h3 className="font-semibold mb-2">Your Website</h3>
-                  {profile.website_url ? (
-                    <a 
-                      href={profile.website_url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      View your website
-                    </a>
+                  <h3 className="font-semibold mb-2">Payment Status</h3>
+                  {profile.has_paid ? (
+                    <div className="text-green-500">✓ Payment received</div>
                   ) : (
-                    <p>Website URL not set</p>
+                    <div className="text-yellow-500">⚠ Payment pending</div>
                   )}
                 </div>
-
-                <div className="p-4 bg-secondary rounded-lg">
-                  <h3 className="font-semibold mb-2">Contact Support</h3>
-                  <a href="https://t.me/leonid_kiev" target="_blank" rel="noopener noreferrer">
-                    <Button>Contact via Telegram</Button>
-                  </a>
-                </div>
                 
-                <div className="p-4 bg-secondary rounded-lg">
-                  <h3 className="font-semibold mb-2">Website Management</h3>
-                  <p className="mb-3">Access your website content management system (CMS)</p>
-                  <Link to="/admin">
-                    <Button className="flex items-center">
-                      <Settings className="mr-2 h-4 w-4" />
-                      Open Admin Panel
-                    </Button>
-                  </Link>
+                {profile.has_paid && (
+                  <div className="space-y-4">
+                    <div className="p-4 bg-secondary rounded-lg">
+                      <h3 className="font-semibold mb-2">Your Website</h3>
+                      {profile.website_url ? (
+                        <a 
+                          href={profile.website_url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          View your website
+                        </a>
+                      ) : (
+                        <p>Website URL not set</p>
+                      )}
+                    </div>
+
+                    <div className="p-4 bg-secondary rounded-lg">
+                      <h3 className="font-semibold mb-2">Contact Support</h3>
+                      <a href="https://t.me/leonid_kiev" target="_blank" rel="noopener noreferrer">
+                        <Button>Contact via Telegram</Button>
+                      </a>
+                    </div>
+                    
+                    <div className="p-4 bg-secondary rounded-lg">
+                      <h3 className="font-semibold mb-2">Website Management</h3>
+                      <p className="mb-3">Access your website content management system (CMS)</p>
+                      <Link to={`${import.meta.env.BASE_URL}admin`}>
+                        <Button className="flex items-center">
+                          <Settings className="mr-2 h-4 w-4" />
+                          Open Admin Panel
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="p-4 bg-secondary rounded-lg">
+                <h3 className="font-semibold mb-2">Account Setup</h3>
+                <p>Your profile is being set up. Please contact support if you need assistance.</p>
+                <div className="mt-3">
+                  <a href="https://t.me/leonid_kiev" target="_blank" rel="noopener noreferrer">
+                    <Button>Contact Support</Button>
+                  </a>
                 </div>
               </div>
             )}
