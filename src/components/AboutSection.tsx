@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Code, Laptop, Palette, User } from 'lucide-react';
+import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
@@ -21,13 +22,13 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <figure className="relative">
             <div className="relative z-10">
-              <img
-                src="/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png"
+              <LazyImage
+                src={`${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png`}
                 alt="Леонід Пампуха - веб-розробник та фахівець з AI розробки"
                 className="rounded-2xl shadow-xl mx-auto"
                 loading="lazy"
-                width="400"
-                height="500"
+                width={400}
+                height={500}
               />
             </div>
             <div

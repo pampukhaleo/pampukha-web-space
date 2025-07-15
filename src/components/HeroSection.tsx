@@ -3,13 +3,14 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
   const { t } = useTranslation();
   
   return (
-    <section className="pt-28 sm:pt-32 lg:pt-36 pb-10 lg:pb-24 px-4 relative overflow-hidden" role="banner">
+    <section className="pt-28 sm:pt-32 lg:pt-36 pb-10 lg:pb-24 px-4 relative overflow-hidden hero-section" role="banner">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <header className="order-2 lg:order-1 z-20 relative text-center lg:text-left flex flex-col items-center lg:items-start">
@@ -59,13 +60,14 @@ const HeroSection = () => {
 
           <figure className="order-1 lg:order-2 relative mb-6 lg:mb-0">
             <div className="relative z-10 lg:p-4 flex justify-center lg:justify-end">
-              <img
-                src={`${import.meta.env.BASE_URL}lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`}
+              <LazyImage
+                src={`${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`}
                 alt="Веб-разработка и создание современных сайтов - Leonforge"
                 className="rounded-2xl shadow-2xl w-full max-w-sm"
                 loading="eager"
-                width="400"
-                height="300"
+                priority={true}
+                width={400}
+                height={300}
               />
             </div>
 

@@ -2,6 +2,10 @@
 import React from 'react';
 import { useSEO } from '@/hooks/useSEO';
 import { StructuredData } from './StructuredData';
+import { MetaViewport } from './MetaViewport';
+import { PreloadResources } from './PreloadResources';
+import { PerformanceOptimizer } from './PerformanceOptimizer';
+import { SecurityHeaders } from './SecurityHeaders';
 
 interface SEOProps {
   title?: string;
@@ -39,6 +43,10 @@ export const SEO: React.FC<SEOProps> = ({
 
   return (
     <>
+      <MetaViewport />
+      <PreloadResources />
+      <PerformanceOptimizer />
+      <SecurityHeaders />
       {structuredData.map((schema, index) => (
         <StructuredData
           key={`${schema.type}-${index}`}
