@@ -10,6 +10,7 @@ import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
+import { SEO } from '@/components/SEO/SEO';
 import { useTranslation } from 'react-i18next';
 
 const Index = () => {
@@ -17,6 +18,21 @@ const Index = () => {
   
   return (
     <div className="min-h-screen">
+      <SEO
+        title={`Leonforge | ${t('hero.title2')} | AI + React + SPA`}
+        description={t('hero.description')}
+        keywords="веб-разработка, создание сайтов, AI разработка, React SPA, SEO, Google Ads, Украина, современные сайты, web development, website creation"
+        ogImage="https://lovable.dev/opengraph-image-p98pqg.png"
+        structuredData={[
+          { type: 'LocalBusiness' },
+          { type: 'Organization' },
+          { type: 'WebSite' },
+          { type: 'Person' },
+          { type: 'Service' },
+          { type: 'FAQPage' }
+        ]}
+      />
+      
       <Navbar />
       <HeroSection />
       
