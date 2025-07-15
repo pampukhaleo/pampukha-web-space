@@ -39,7 +39,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://lovable.dev/sitemap.xml
+Sitemap: https://pampukhaleo.github.io/pampukha-web-space/sitemap.xml
 
 # Block common bad bots
 User-agent: AhrefsBot

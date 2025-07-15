@@ -24,6 +24,9 @@ export const useSEO = ({
   const { i18n } = useTranslation();
 
   useEffect(() => {
+    // Получаем правильный базовый URL с учетом подпапки
+    const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`;
+    
     // Управление title
     if (title) {
       document.title = title;
@@ -61,6 +64,7 @@ export const useSEO = ({
     if (description) updateMetaProperty('og:description', description);
     if (ogImage) updateMetaProperty('og:image', ogImage);
     updateMetaProperty('og:type', ogType);
+    updateMetaProperty('og:url', baseUrl);
     updateMetaProperty('og:locale', i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL');
 
     // Управление canonical URL
@@ -70,8 +74,8 @@ export const useSEO = ({
       linkCanonical.setAttribute('rel', 'canonical');
       document.head.appendChild(linkCanonical);
     }
-    const currentPath = window.location.pathname;
-    const canonicalUrl = canonical || `${window.location.origin}${currentPath}`;
+    const currentPath = window.location.pathname.replace(import.meta.env.BASE_URL, '');
+    const canonicalUrl = canonical || `${baseUrl}${currentPath}`;
     linkCanonical.setAttribute('href', canonicalUrl);
 
     // Управление hreflang для мультиязычности
@@ -83,7 +87,7 @@ export const useSEO = ({
       const hreflang = document.createElement('link');
       hreflang.setAttribute('rel', 'alternate');
       hreflang.setAttribute('hreflang', lang);
-      hreflang.setAttribute('href', `${window.location.origin}${currentPath}?lang=${lang}`);
+      hreflang.setAttribute('href', `${baseUrl}${currentPath}?lang=${lang}`);
       document.head.appendChild(hreflang);
     });
 
@@ -91,7 +95,7 @@ export const useSEO = ({
     const hreflangDefault = document.createElement('link');
     hreflangDefault.setAttribute('rel', 'alternate');
     hreflangDefault.setAttribute('hreflang', 'x-default');
-    hreflangDefault.setAttribute('href', `${window.location.origin}${currentPath}`);
+    hreflangDefault.setAttribute('href', `${baseUrl}${currentPath}`);
     document.head.appendChild(hreflangDefault);
 
     // Управление robots meta

@@ -22,7 +22,7 @@ const Index = () => {
         title={`Leonforge | ${t('hero.title2')} | AI + React + SPA`}
         description={t('hero.description')}
         keywords="веб-разработка, создание сайтов, AI разработка, React SPA, SEO, Google Ads, Украина, современные сайты, web development, website creation"
-        ogImage="https://lovable.dev/opengraph-image-p98pqg.png"
+        ogImage="https://pampukhaleo.github.io/pampukha-web-space/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png"
         structuredData={[
           { type: 'LocalBusiness' },
           { type: 'Organization' },
