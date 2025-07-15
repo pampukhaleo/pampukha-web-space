@@ -41,7 +41,7 @@ export const PreloadResources = () => {
     ];
 
     dnsPrefetchDomains.forEach(domain => {
-      let link = document.querySelector(`link[rel="dns-prefetch"][href="${domain}"]`);
+      let link = document.querySelector(`link[rel="dns-prefetch"][href="${domain}"]`) as HTMLLinkElement;
       if (!link) {
         link = document.createElement('link');
         link.rel = 'dns-prefetch';
