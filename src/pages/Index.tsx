@@ -11,6 +11,7 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
 import { SEO } from '@/components/SEO/SEO';
+import { Breadcrumbs } from '@/components/SEO/Breadcrumbs';
 import { useTranslation } from 'react-i18next';
 
 const Index = () => {
@@ -22,7 +23,7 @@ const Index = () => {
         title={`Leonforge | ${t('hero.title2')} | AI + React + SPA`}
         description={t('hero.description')}
         keywords="веб-разработка, создание сайтов, AI разработка, React SPA, SEO, Google Ads, Украина, современные сайты, web development, website creation"
-        ogImage="https://pampukhaleo.github.io/pampukha-web-space/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png"
+        ogImage={`${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`}
         structuredData={[
           { type: 'LocalBusiness' },
           { type: 'Organization' },
@@ -34,23 +35,31 @@ const Index = () => {
       />
       
       <Navbar />
-      <HeroSection />
-      <AboutSection />
-
-      <section className="py-8 px-4 bg-muted/30">
-        <div className="container mx-auto text-center">
-          <p className="text-lg text-muted-foreground mb-6">
-            {t('cta.afterServices')}
-          </p>
-          <CTAButton />
+      
+      <main>
+        <div className="container mx-auto px-4">
+          <Breadcrumbs />
         </div>
-      </section>
+        
+        <HeroSection />
+        <AboutSection />
 
-      <PortfolioSection />
-      <WhyAISPASection />
-      <ServicesSection />
-      <FAQSection />
-      <ContactSection />
+        <section className="py-8 px-4 bg-muted/30" role="complementary" aria-label="Призыв к действию">
+          <div className="container mx-auto text-center">
+            <p className="text-lg text-muted-foreground mb-6">
+              {t('cta.afterServices')}
+            </p>
+            <CTAButton />
+          </div>
+        </section>
+
+        <PortfolioSection />
+        <WhyAISPASection />
+        <ServicesSection />
+        <FAQSection />
+        <ContactSection />
+      </main>
+      
       <Footer />
     </div>
   );

@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-background-darker text-foreground py-12">
+    <footer className="bg-background-darker text-foreground py-12" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
@@ -19,20 +19,35 @@ const Footer = () => {
             <p className="mb-6 text-foreground-muted">
               {t('footer.description')}
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-foreground-muted hover:text-primary transition-colors" aria-label="Facebook">
+            <div className="flex space-x-4" role="list" aria-label="Социальные сети">
+              <a 
+                href="#" 
+                className="text-foreground-muted hover:text-primary transition-colors" 
+                aria-label="Facebook Leonforge"
+                role="listitem"
+              >
                 <Facebook />
               </a>
-              <a href="#" className="text-foreground-muted hover:text-primary transition-colors" aria-label="Instagram">
+              <a 
+                href="#" 
+                className="text-foreground-muted hover:text-primary transition-colors" 
+                aria-label="Instagram Leonforge"
+                role="listitem"
+              >
                 <Instagram />
               </a>
-              <a href="#" className="text-foreground-muted hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a 
+                href="#" 
+                className="text-foreground-muted hover:text-primary transition-colors" 
+                aria-label="LinkedIn Leonforge"
+                role="listitem"
+              >
                 <Linkedin />
               </a>
             </div>
           </div>
           
-          <div>
+          <nav aria-label="Основная навигация">
             <h3 className="text-xl font-bold mb-6">{t('footer.navigation')}</h3>
             <ul className="space-y-3">
               <li>
@@ -51,20 +66,24 @@ const Footer = () => {
                 <a href="#contact" className="text-foreground-muted hover:text-primary transition-colors">{t('footer.contact')}</a>
               </li>
             </ul>
-          </div>
+          </nav>
           
           <div>
             <h3 className="text-xl font-bold mb-6">{t('footer.contactInfo')}</h3>
-            <div className="space-y-4">
+            <address className="space-y-4 not-italic">
               <div className="flex items-center">
-                <Phone size={20} className="mr-3 text-foreground-muted" />
-                <span>+380 12 345 6789</span>
+                <Phone size={20} className="mr-3 text-foreground-muted" aria-hidden="true" />
+                <a href="tel:+380123456789" className="hover:text-primary transition-colors">
+                  +380 12 345 6789
+                </a>
               </div>
               <div className="flex items-center">
-                <Mail size={20} className="mr-3 text-foreground-muted" />
-                <span>leonid.pampukha@example.com</span>
+                <Mail size={20} className="mr-3 text-foreground-muted" aria-hidden="true" />
+                <a href="mailto:leonid.pampukha@example.com" className="hover:text-primary transition-colors">
+                  leonid.pampukha@example.com
+                </a>
               </div>
-            </div>
+            </address>
           </div>
         </div>
         

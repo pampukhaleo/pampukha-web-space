@@ -7,18 +7,20 @@ const ContactSection = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="contact" className="py-16 md:py-24 px-4 bg-background">
+    <section id="contact" className="py-16 md:py-24 px-4 bg-background" role="main">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <h2 className="section-heading">
             {t('contact.title1')} <span className="gradient-text">{t('contact.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('contact.description')}
           </p>
-        </div>
+        </header>
 
-        <ContactForm />
+        <div role="region" aria-label="Форма обратной связи">
+          <ContactForm />
+        </div>
       </div>
     </section>
   );

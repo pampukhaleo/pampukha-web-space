@@ -47,18 +47,18 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 md:py-24 px-4 bg-muted/30">
+    <section id="faq" className="py-16 md:py-24 px-4 bg-muted/30" role="main">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <h2 className="section-heading">
             {t('faq.title1')} <span className="gradient-text">{t('faq.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('faq.description')}
           </p>
-        </div>
+        </header>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto" role="region" aria-label="Часто задаваемые вопросы">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 

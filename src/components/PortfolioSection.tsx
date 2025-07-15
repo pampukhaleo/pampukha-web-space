@@ -35,32 +35,38 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-16 md:py-24 px-4">
+    <section id="portfolio" className="py-16 md:py-24 px-4" role="main">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('portfolio.title1')} <span className="gradient-text">{t('portfolio.title2')}</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             {t('portfolio.description')}
           </p>
-        </div>
+        </header>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {portfolioItems.map((item) => (
-            <div
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
+          {portfolioItems.map((item, index) => (
+            <article
               key={item.id}
               className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground"
+              role="listitem"
             >
               {/* Gradient Overlay on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} aria-hidden="true" />
 
               <div className="relative z-10">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover rounded-t-2xl"
-                />
+                <figure>
+                  <img
+                    src={item.image}
+                    alt={`${item.title} - ${item.description}`}
+                    className="w-full h-64 object-cover rounded-t-2xl"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    width="400"
+                    height="256"
+                  />
+                </figure>
 
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
@@ -70,14 +76,14 @@ const PortfolioSection = () => {
                       </span>
                       <h3 className="text-xl font-bold">{item.title}</h3>
                     </div>
-                    <div className="bg-muted p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-muted p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
                       <ExternalLink size={16} className="text-primary" />
                     </div>
                   </div>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
         
