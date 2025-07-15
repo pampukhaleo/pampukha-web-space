@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Zap, Gauge, Cog, DollarSign, BarChart3, Rocket } from 'lucide-react';
 import TechnicalBenefitsSection from './TechnicalBenefitsSection';
+import CTAButton from "@/components/CTAButton.tsx";
 
 const WhyAISPASection = () => {
   const { t } = useTranslation();
@@ -66,6 +67,15 @@ const WhyAISPASection = () => {
 
         {/* Technical Benefits Section */}
         <TechnicalBenefitsSection />
+
+        <section className="py-8 px-4 bg-muted/30">
+          <div className="container mx-auto text-center">
+            <p className="text-lg text-muted-foreground mb-6">
+              {t('cta.afterServices')}
+            </p>
+            <CTAButton />
+          </div>
+        </section>
 
         <div className="bg-muted/30 rounded-xl p-8 text-center mt-16">
           <h3 className="text-2xl font-bold mb-4">{t('whyAiSpa.comparison.title')}</h3>
