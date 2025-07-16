@@ -12,113 +12,113 @@
     "title1": "Need a",
     "title2": "website",
     "title3": "?",
-    "title4": "I'll build it with React + TypeScript turnkey",
-    "price": "only $300",
-    "valueProposition": "SPA + SEO + Google Ads + Analytics + Facebook Ads",
-    "description": "I create fast SPA websites using React + TypeScript with complete marketing tools setup. Google Ads, Facebook Ads, Analytics, Search Console - everything turnkey for a fixed price.",
+    "title4": "I'll build it with React using individual approach",
+    "price": "from $300",
+    "valueProposition": "SPA + SEO + Marketing tools (optional)",
+    "description": "I create fast SPA websites using React with individual approach to each client. Marketing tools: Google Ads, Facebook Ads, Analytics, Search Console - I set up according to your needs.",
     "consultation": "Request a consultation",
     "viewWork": "View works"
   },
   "about": {
     "title1": "About",
     "title2": "me",
-    "introduction": "Hello! My name is Leonid Pampukha. I create fast SPA websites using React + TypeScript for small businesses with complete digital marketing setup, so you can focus on your core business.",
-    "approach": "My approach - React + TypeScript + SPA + complete marketing",
-    "approachDescription": "I use modern React + TypeScript + Supabase stack to create fast Single Page Applications. Your site will work lightning fast, and I'll configure all marketing tools for maximum results.",
-    "cleanCode": "React + TypeScript",
-    "cleanCodeDescription": "I use cutting-edge React and TypeScript technologies for creating reliable and fast SPAs",
+    "introduction": "Hello! My name is Leonid Pampukha. I create fast SPA websites using React for small businesses with individual approach to each project. I work with you to find exactly the solution your business needs.",
+    "approach": "My approach - React + SPA + individual solution",
+    "approachDescription": "I use modern React + Supabase stack to create fast Single Page Applications. Your site will work lightning fast. I set up marketing tools according to your needs and budget.",
+    "cleanCode": "React SPA",
+    "cleanCodeDescription": "I use cutting-edge React technology to create reliable and fast Single Page Applications",
     "responsive": "Fast SPAs",
     "responsiveDescription": "I create Single Page Applications that load instantly and work like native apps",
-    "modern": "Complete Marketing",
-    "modernDescription": "I set up Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager for maximum sales",
-    "clientFocused": "Everything turnkey",
-    "clientFocusedDescription": "From development to marketing - complete package without your intervention with detailed analytics"
+    "modern": "Marketing as needed",
+    "modernDescription": "I set up Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager only the tools you need",
+    "clientFocused": "Individual approach",
+    "clientFocusedDescription": "I work with each client individually to find exactly the solution their business needs"
   },
   "portfolio": {
     "title1": "My",
     "title2": "portfolio",
-    "description": "View examples of fast SPA websites built with React + TypeScript. Each project is optimized for speed and configured with complete marketing package.",
+    "description": "View examples of fast SPA websites built with React. Each project is created with individual approach and configured according to client needs.",
     "project1": {
       "title": "SPA online store",
       "category": "E-commerce SPA",
-      "description": "Fast single-page store with complete analytics and configured advertising in Google and Facebook."
+      "description": "Fast single-page store with analytics and selective advertising setup according to client needs."
     },
     "project2": {
       "title": "Corporate SPA website",
       "category": "Business SPA",
-      "description": "Lightning-fast website with full marketing tools integration and detailed analytics."
+      "description": "Lightning-fast website with integration of only necessary marketing tools."
     },
     "project3": {
       "title": "SPA landing page",
       "category": "Marketing SPA",
-      "description": "Fast sales page with configured Google and Facebook advertising campaigns."
+      "description": "Fast sales page with advertising campaign setup according to client preferences."
     },
     "orderSimilar": "Order a similar SPA project"
   },
   "services": {
     "title1": "My",
     "title2": "services",
-    "description": "Get a fast SPA website built with React + TypeScript with complete setup of all marketing tools. Everything turnkey for a fixed price.",
-    "package": "React + TypeScript + SPA + complete digital marketing",
+    "description": "Get a fast SPA website built with React using individual approach. I set up marketing tools according to your needs and budget.",
+    "package": "React + SPA + individual solution + marketing as needed",
     "service1": {
       "title": "SPA development with React",
-      "description": "Fast Single Page Applications built with React + TypeScript using Supabase for maximum performance."
+      "description": "Fast Single Page Applications built with React using Supabase for maximum performance and reliability."
     },
     "service2": {
       "title": "Fast SPA landing pages",
-      "description": "Lightning-fast sales pages with optimized conversion and detailed analytics."
+      "description": "Lightning-fast sales pages with optimized conversion and possibility to connect analytics."
     },
     "service3": {
-      "title": "Complete advertising setup",
-      "description": "Google Ads, Facebook Ads, Instagram Ads - professional setup and optimization of all advertising channels."
+      "title": "Marketing tools",
+      "description": "Google Ads, Facebook Ads, Instagram Ads - professional setup of only the tools you need."
     },
     "service4": {
       "title": "Upgrade to SPA",
-      "description": "Converting regular websites into fast Single Page Applications with improved SEO and analytics."
+      "description": "Converting regular websites into fast Single Page Applications with improved performance."
     },
     "service5": {
       "title": "SEO + Search Console",
       "description": "Complete SEO optimization for SPAs with Google Search Console setup for position tracking."
     },
     "service6": {
-      "title": "Complete Analytics",
-      "description": "Google Analytics, Tag Manager, Facebook Pixel - detailed tracking of all metrics and conversions."
+      "title": "Analytics as needed",
+      "description": "Google Analytics, Tag Manager, Facebook Pixel - I set up only the metrics you need for your business."
     },
-    "whyChooseMe": "Why choose React + TypeScript + SPA with complete marketing?",
-    "benefit1": "Modern tech stack React + TypeScript",
+    "whyChooseMe": "Why choose React SPA with individual approach?",
+    "benefit1": "Modern React technology for reliability",
     "benefit2": "Lightning-fast SPA performance (loads in 1-2 sec)",
-    "benefit3": "Full integration with all marketing channels",
-    "benefit4": "Fixed price with no hidden payments",
-    "benefit5": "Detailed analytics and ROI tracking",
+    "benefit3": "Marketing tools only as needed",
+    "benefit4": "Individual approach to each project",
+    "benefit5": "Transparent pricing from $300 depending on complexity",
     "orderNow": "Order SPA now"
   },
   "whyAiSpa": {
     "title1": "Why",
-    "title2": "React + TypeScript + SPA?",
-    "description": "I explain in simple terms why Single Page Applications built with React and complete marketing package is the best choice for your business.",
+    "title2": "React + SPA?",
+    "description": "I explain in simple terms why Single Page Applications built with React using individual approach is the best choice for your business.",
     "benefit1": {
-      "title": "React + TypeScript = reliability",
-      "description": "React is the most popular library for web development. TypeScript adds typing to minimize errors. Your website will be stable and easy to maintain."
+      "title": "React = reliability and popularity",
+      "description": "React is the most popular library for web development, used by Facebook, Netflix, Airbnb. Your website will be stable, fast and easy to maintain."
     },
     "benefit2": {
       "title": "SPA = mobile app speed",
-      "description": "Single Page Application loads once and then works like a mobile app. Instant navigation, no reloads - visitors don't leave."
+      "description": "Single Page Application loads once and then works like a mobile app. Instant navigation, no reloads - users stay on the site longer."
     },
     "benefit3": {
       "title": "Supabase = powerful backend",
-      "description": "I use Supabase to create a powerful backend with database, authentication, and API. Your site is ready to scale."
+      "description": "I use Supabase to create a powerful backend with database, authentication, and API. Your site is ready to scale without additional costs."
     },
     "benefit4": {
-      "title": "Complete marketing package",
-      "description": "Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager, Search Console - everything configured and ready to use."
+      "title": "Marketing according to your needs",
+      "description": "Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager, Search Console - I set up only what your business and budget need."
     },
     "benefit5": {
-      "title": "Detailed analytics from day one",
-      "description": "Get the complete picture: where visitors come from, what they do on site, how much they spend, ROI of each advertising channel."
+      "title": "Analytics for your business",
+      "description": "I set up only the metrics important for your business: where customers come from, what interests them, how much they spend, ROI of each channel."
     },
     "benefit6": {
-      "title": "Easy management and scaling",
-      "description": "React components are easy to edit and extend. TypeScript protects from errors. You can safely add new features."
+      "title": "Individual approach",
+      "description": "I work with each client separately to understand business needs and create exactly the solution that will bring maximum results."
     },
     "comparison": {
       "title": "Comparison with traditional websites",
@@ -127,23 +127,23 @@
         "point1": "Slow loading (5-10 seconds)",
         "point2": "Reload on every transition",
         "point3": "Complex integration with marketing tools",
-        "point4": "Analytics for extra fee"
+        "point4": "Standard approach without considering specifics"
       },
       "aiSpa": {
-        "title": "React SPA with complete marketing",
+        "title": "React SPA with individual approach",
         "point1": "Instant loading (1-2 seconds)",
         "point2": "Works like mobile app",
-        "point3": "All marketing tools included",
-        "point4": "Detailed analytics from day one"
+        "point3": "Marketing tools as needed",
+        "point4": "Solution created specifically for your business"
       }
     },
     "technicalBenefits": {
       "title": "Technical Benefits of React SPA",
       "react": {
-        "title": "Why React + TypeScript?",
+        "title": "Why exactly React?",
         "point1": "Virtual DOM for maximum speed",
         "point2": "Component architecture for easy maintenance",
-        "point3": "TypeScript protects from errors and improves DX",
+        "point3": "Huge community and support",
         "point4": "SEO optimization possible with right approach"
       },
       "spa": {
@@ -165,31 +165,33 @@
   "faq": {
     "title1": "Frequently",
     "title2": "asked questions",
-    "description": "Answers to the most common questions about creating SPA websites with React and setting up complete marketing package.",
+    "description": "Answers to the most common questions about creating SPA websites with React using individual approach and marketing tools.",
     "question1": "What is SPA and why is it better than regular website?",
-    "answer1": "SPA (Single Page Application) is a website that loads once and then works like a mobile app. Instead of reloading the entire page on transitions, only content changes. Result: speed, better UX, higher conversion.",
+    "answer1": "SPA (Single Page Application) is a website that loads once and then works like a mobile app. Instead of reloading the entire page on transitions, only content changes. Result: speed, better UX, higher conversion, longer time on site.",
     "question2": "How long does it take to create a SPA website?",
-    "answer2": "Usually 5-7 business days. React + TypeScript allow quick creation of quality components, and Supabase provides ready backend. Most time is spent setting up all marketing tools.",
-    "question3": "What exactly is included in the $300 price?",
-    "answer3": "Complete package: React SPA development, TypeScript, responsive design, Supabase backend, SEO optimization, Google Ads setup, Facebook Ads, Instagram Ads, Analytics, Tag Manager, Search Console, hosting for a year.",
-    "question4": "Will I be able to track advertising effectiveness?",
-    "answer4": "Yes! You'll get complete analytics: how many visitors from each advertising channel, conversions, ROI, user behavior. All in convenient Google Analytics and Facebook Business Manager dashboards.",
-    "question5": "What guarantees of website reliability?",
-    "answer5": "React + TypeScript ensure high code reliability. Supabase guarantees 99.9% uptime. Your website will work stably even under high loads.",
-    "question6": "Will I be able to add content myself?",
-    "answer6": "Yes! I'll set up a convenient admin panel through Supabase or teach you to work with code. React components are easy to edit. First changes are free.",
-    "question7": "How does SEO work for SPA?",
-    "answer7": "I use Server-Side Rendering and proper meta tag structure. Set up Google Search Console for position tracking. SPAs can rank just as well as regular websites.",
-    "question8": "What to do after website launch?",
-    "answer8": "I'll set up all advertising campaigns and analytics. You'll receive detailed instructions for working with advertising dashboards and optimization recommendations for better results."
+    "answer2": "Depends on project complexity. Simple landing page - 3-5 days, corporate website - 7-10 days, online store - 2-3 weeks. React allows quick creation of quality components, and Supabase provides ready backend.",
+    "question3": "What is included in the base price from $300?",
+    "answer3": "Base price includes: React SPA development, responsive design, basic SEO, hosting for a year. Marketing tools (Google Ads, Facebook Ads, Analytics etc.) are set up additionally as needed.",
+    "question4": "What marketing tools can you set up?",
+    "answer4": "I can set up: Google Ads, Facebook Ads, Instagram Ads, Google Analytics, Google Tag Manager, Google Search Console, Facebook Pixel. I discuss with each client which tools are needed specifically for their business.",
+    "question5": "Why did you choose React specifically?",
+    "answer5": "React is the most popular and stable library for web development. It's used by Facebook, Netflix, Airbnb, Uber. Huge community, constant updates, countless ready solutions. Your website will be reliable and easy to maintain.",
+    "question6": "What guarantees of website reliability?",
+    "answer6": "React ensures high code reliability thanks to component architecture. Supabase guarantees 99.9% uptime. Your website will work stably even under high loads.",
+    "question7": "Will I be able to add content myself?",
+    "answer7": "Yes! I'll set up a convenient admin panel through Supabase or teach you to work with code. React components are easy to edit. First changes are free, then we can agree on subscription maintenance.",
+    "question8": "How does SEO work for SPA?",
+    "answer8": "I use Server-Side Rendering and proper meta tag structure. Set up Google Search Console for position tracking. SPAs can rank just as well as regular websites with the right approach.",
+    "question9": "What to do after website launch?",
+    "answer9": "I'll help with setting up chosen marketing tools. Provide instructions for working with admin panel and optimization recommendations for better results. Support is discussed individually."
   },
   "contact": {
     "title1": "Request a",
     "title2": "consultation",
-    "description": "Ready to get a fast SPA website built with React and complete marketing package? Fill out the form below or contact me in any convenient way."
+    "description": "Ready to get a fast SPA website built with React using individual approach? Fill out the form below or contact me in any convenient way. Let's discuss your needs and find the optimal solution."
   },
   "footer": {
-    "description": "Development of fast React SPA websites with complete digital marketing setup. From idea to sales - everything turnkey.",
+    "description": "Development of fast React SPA websites with individual approach to each client. From idea to result - finding exactly the solution your business needs.",
     "navigation": "Navigation",
     "home": "Home",
     "about": "About me",
@@ -205,11 +207,11 @@
     "pl": "Polski"
   },
   "cta": {
-    "afterHero": "Ready to get a fast SPA with complete marketing? Let's discuss your project!",
-    "afterAbout": "Convinced by React SPA advantages? Let's create your perfect website!",
-    "afterPortfolio": "Like what you see? Let's create something similar for your business!",
-    "afterWhyAiSpa": "Ready to experience the power of React SPA with complete marketing? Let's get started!",
-    "afterServices": "Everything you need in one package. Ready to start your project?",
+    "afterHero": "Ready to get a fast SPA with individual approach? Let's discuss your project!",
+    "afterAbout": "Convinced by React SPA advantages? Let's create a solution for your business!",
+    "afterPortfolio": "Like what you see? Let's create something unique for your business!",
+    "afterWhyAiSpa": "Ready to experience the power of React SPA with individual approach? Let's get started!",
+    "afterServices": "Need an individual solution? Ready to start your project?",
     "beforeContact": "Don't wait - your competitors are already using modern technologies. Get your consultation now!"
   }
 }
