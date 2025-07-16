@@ -24,15 +24,27 @@ export const PerformanceOptimizer = () => {
       }
     };
 
-    // Оптимизируем загрузку шрифтов
+    // Оптимизируем загрузку шрифтов с правильным preload
     const optimizeFonts = () => {
-      const fontLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"]');
-      fontLinks.forEach(link => {
-        const linkElement = link as HTMLLinkElement;
-        linkElement.setAttribute('rel', 'preload');
-        linkElement.setAttribute('as', 'style');
-        linkElement.setAttribute('onload', "this.onload=null;this.rel='stylesheet'");
-      });
+      // Удаляем старые font preload'ы
+      const oldFontPreloads = document.querySelectorAll('link[href*="fonts.googleapis.com"][rel="preload"]');
+      oldFontPreloads.forEach(link => link.remove());
+
+      // Добавляем preconnect для Google Fonts
+      const preconnectGoogle = document.createElement('link');
+      preconnectGoogle.rel = 'preconnect';
+      preconnectGoogle.href = 'https://fonts.googleapis.com';
+      if (!document.querySelector('link[rel="preconnect"][href="https://fonts.googleapis.com"]')) {
+        document.head.appendChild(preconnectGoogle);
+      }
+
+      const preconnectGstatic = document.createElement('link');
+      preconnectGstatic.rel = 'preconnect';
+      preconnectGstatic.href = 'https://fonts.gstatic.com';
+      preconnectGstatic.crossOrigin = 'anonymous';
+      if (!document.querySelector('link[rel="preconnect"][href="https://fonts.gstatic.com"]')) {
+        document.head.appendChild(preconnectGstatic);
+      }
     };
 
     // Добавляем service worker для кеширования

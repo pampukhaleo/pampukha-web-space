@@ -10,7 +10,7 @@ export const PreloadResources = () => {
     const existingPreloads = document.querySelectorAll('link[rel="preload"]');
     existingPreloads.forEach(link => link.remove());
 
-    // Preload критических ресурсов с новым доменом
+    // Preload критических ресурсов с правильными as атрибутами
     const criticalResources = [
       {
         href: 'https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png',
@@ -36,8 +36,7 @@ export const PreloadResources = () => {
     // DNS prefetch для внешних ресурсов
     const dnsPrefetchDomains = [
       '//fonts.googleapis.com',
-      '//fonts.gstatic.com',
-      '//cdn.gpteng.co'
+      '//fonts.gstatic.com'
     ];
 
     dnsPrefetchDomains.forEach(domain => {
