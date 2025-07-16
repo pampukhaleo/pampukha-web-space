@@ -5,28 +5,28 @@
   
   <!-- Main page -->
   <url>
-    <loc>https://pampukhaleo.github.io/pampukha-web-space/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://leonforge.com/</loc>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://pampukhaleo.github.io/pampukha-web-space/?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pampukhaleo.github.io/pampukha-web-space/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://pampukhaleo.github.io/pampukha-web-space/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pampukhaleo.github.io/pampukha-web-space/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://leonforge.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://leonforge.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://leonforge.com/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leonforge.com/"/>
   </url>
 
   <!-- Auth page -->
   <url>
-    <loc>https://pampukhaleo.github.io/pampukha-web-space/auth</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://leonforge.com/auth</loc>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Dashboard page -->
   <url>
-    <loc>https://pampukhaleo.github.io/pampukha-web-space/dashboard</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://leonforge.com/dashboard</loc>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
