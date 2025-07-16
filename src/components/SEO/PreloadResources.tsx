@@ -10,15 +10,15 @@ export const PreloadResources = () => {
     const existingPreloads = document.querySelectorAll('link[rel="preload"]');
     existingPreloads.forEach(link => link.remove());
 
-    // Preload критических ресурсов
+    // Preload критических ресурсов с новым доменом
     const criticalResources = [
       {
-        href: `${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`,
+        href: 'https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png',
         as: 'image',
         type: 'image/png'
       },
       {
-        href: `${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png`,
+        href: 'https://leonforge.com/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png',
         as: 'image',
         type: 'image/png'
       }

@@ -12,8 +12,8 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
 
   useEffect(() => {
     const generateSchema = () => {
-      // Получаем правильный базовый URL с учетом подпапки
-      const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`;
+      // Используем новый домен leonforge.com
+      const baseUrl = 'https://leonforge.com';
       
       switch (type) {
         case 'LocalBusiness':
@@ -71,7 +71,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "name": "Leonforge",
             "description": t('footer.description'),
             "url": baseUrl,
-            "logo": `${baseUrl}lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`,
+            "logo": `${baseUrl}/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`,
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+380123456789",
@@ -95,7 +95,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": `${baseUrl}search?q={search_term_string}`
+                "urlTemplate": `${baseUrl}/search?q={search_term_string}`
               },
               "query-input": "required name=search_term_string"
             },
@@ -126,7 +126,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "jobTitle": "Full Stack Developer",
             "description": t('about.introduction'),
             "url": baseUrl,
-            "image": `${baseUrl}lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png`,
+            "image": `${baseUrl}/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png`,
             "knowsAbout": [
               "React",
               "AI Development", 

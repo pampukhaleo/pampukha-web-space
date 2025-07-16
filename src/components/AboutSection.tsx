@@ -23,7 +23,7 @@ const AboutSection = () => {
           <figure className="relative">
             <div className="relative z-10">
               <LazyImage
-                src={`${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png`}
+                src="https://leonforge.com/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png"
                 alt="Леонід Пампуха - веб-розробник та фахівець з AI розробки"
                 className="rounded-2xl shadow-xl mx-auto"
                 loading="lazy"

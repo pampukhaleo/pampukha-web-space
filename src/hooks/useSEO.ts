@@ -24,8 +24,8 @@ export const useSEO = ({
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Получаем правильный базовый URL с учетом подпапки
-    const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`;
+    // Используем новый домен leonforge.com
+    const baseUrl = 'https://leonforge.com';
     
     // Управление title
     if (title) {
@@ -74,7 +74,7 @@ export const useSEO = ({
       linkCanonical.setAttribute('rel', 'canonical');
       document.head.appendChild(linkCanonical);
     }
-    const currentPath = window.location.pathname.replace(import.meta.env.BASE_URL, '');
+    const currentPath = window.location.pathname;
     const canonicalUrl = canonical || `${baseUrl}${currentPath}`;
     linkCanonical.setAttribute('href', canonicalUrl);
 

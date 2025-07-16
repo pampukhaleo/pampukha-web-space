@@ -14,7 +14,7 @@ const PortfolioSection = () => {
       title: t('portfolio.project1.title'),
       category: t('portfolio.project1.category'),
       description: t('portfolio.project1.description'),
-      image: `${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/de7b20fa-92c3-40c7-a0ae-65a24b565e47.png`,
+      image: 'https://leonforge.com/lovable-uploads/de7b20fa-92c3-40c7-a0ae-65a24b565e47.png',
       color: 'from-brand-blue/20 to-brand-teal/20',
     },
     {
@@ -22,7 +22,7 @@ const PortfolioSection = () => {
       title: t('portfolio.project2.title'),
       category: t('portfolio.project2.category'),
       description: t('portfolio.project2.description'),
-      image: `${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/86b7cf5d-0df5-43a4-bdc1-11e628046549.png`,
+      image: 'https://leonforge.com/lovable-uploads/86b7cf5d-0df5-43a4-bdc1-11e628046549.png',
       color: 'from-brand-orange/20 to-brand-red/20',
     },
     {
@@ -30,7 +30,7 @@ const PortfolioSection = () => {
       title: t('portfolio.project3.title'),
       category: t('portfolio.project3.category'),
       description: t('portfolio.project3.description'),
-      image: `${window.location.origin}${import.meta.env.BASE_URL}lovable-uploads/79663af5-95cf-4efe-87d0-0c991bff6be3.png`,
+      image: 'https://leonforge.com/lovable-uploads/79663af5-95cf-4efe-87d0-0c991bff6be3.png',
       color: 'from-brand-purple/20 to-brand-blue/20',
     },
   ];
