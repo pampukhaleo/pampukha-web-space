@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
@@ -14,6 +13,14 @@ const HeroSection = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <header className="order-2 lg:order-1 z-20 relative text-center lg:text-left flex flex-col items-center lg:items-start">
+            <div className="flex items-center space-x-3 mb-6 lg:mb-8">
+              <img 
+                src="/leonforge_logo.png" 
+                alt="Leonforge" 
+                className="h-12 w-auto"
+              />
+              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
+            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               {t('hero.title1')} <span className="gradient-text">{t('hero.title2')}</span>{t('hero.title3')}<br />
               {t('hero.title4')}

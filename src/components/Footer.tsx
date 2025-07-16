@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -13,8 +12,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <span
-                className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
+              <img 
+                src="/leonforge_logo.png" 
+                alt="Leonforge" 
+                className="h-8 w-auto"
+              />
+              <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
             </div>
             <p className="mb-6 text-foreground-muted">
               {t('footer.description')}
