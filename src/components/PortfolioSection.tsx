@@ -84,11 +84,11 @@ const PortfolioSection = () => {
           {portfolioItems.map((item, index) => (
             <div key={item.id} className="group relative" role="listitem">
               {/* Device Mockups - вынесены наверх */}
-              <div className="flex justify-center items-end gap-6 mb-8">
+              <div className="flex justify-center items-end gap-8 mb-8">
                 {/* Desktop Mockup */}
-                <div className="relative transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-                  {/* Monitor Base - снизу */}
-                  <div className="w-32 h-20 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden mb-2">
+                <div className="relative">
+                  {/* Monitor */}
+                  <div className="w-40 h-28 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-125 transition-transform duration-300 cursor-pointer">
                     <div className="w-full h-2 bg-gray-600"></div>
                     <div className="w-full h-full bg-white overflow-hidden">
                       <LazyImage
@@ -96,32 +96,32 @@ const PortfolioSection = () => {
                         alt={`${item.title} desktop version`}
                         className="w-full h-full object-cover object-top"
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={128}
-                        height={80}
+                        width={160}
+                        height={112}
                       />
                     </div>
                   </div>
-                  {/* Stand */}
-                  <div className="w-6 h-4 bg-gray-400 rounded-t mx-auto"></div>
-                  <div className="w-24 h-2 bg-gray-300 rounded-full mx-auto"></div>
+                  {/* Stand - касается монитора */}
+                  <div className="w-8 h-6 bg-gray-400 rounded-t mx-auto -mt-1"></div>
+                  <div className="w-32 h-3 bg-gray-300 rounded-full mx-auto"></div>
                 </div>
 
                 {/* Mobile Mockup */}
-                <div className="relative transform hover:scale-110 transition-transform duration-300 cursor-pointer">
+                <div className="relative transform hover:scale-125 transition-transform duration-300 cursor-pointer">
                   {/* Phone Frame */}
-                  <div className="w-16 h-28 bg-gray-800 rounded-lg border-2 border-gray-700 p-1 overflow-hidden">
+                  <div className="w-20 h-36 bg-gray-800 rounded-lg border-2 border-gray-700 p-1 overflow-hidden">
                     {/* Notch */}
-                    <div className="w-8 h-1 bg-gray-700 rounded-full mx-auto mb-1"></div>
+                    <div className="w-10 h-1 bg-gray-700 rounded-full mx-auto mb-1"></div>
                     
-                    {/* Screen */}
-                    <div className="w-full h-full bg-white rounded overflow-hidden">
+                    {/* Screen - исправлена высота для предотвращения выхода за границы */}
+                    <div className="w-full h-32 bg-white rounded overflow-hidden">
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
                         className="w-full h-full object-cover object-top"
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={64}
-                        height={112}
+                        width={80}
+                        height={128}
                       />
                     </div>
                   </div>
