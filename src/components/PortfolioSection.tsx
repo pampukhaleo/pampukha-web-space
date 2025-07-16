@@ -1,12 +1,14 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
+import ProjectPopup from '@/components/portfolio/ProjectPopup';
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   
   const portfolioItems = [
     {
@@ -68,6 +70,16 @@ const PortfolioSection = () => {
     return 'bg-red-100 border-red-300';
   };
 
+  const openProjectPopup = (project: any) => {
+    setSelectedProject(project);
+    setIsPopupOpen(true);
+  };
+
+  const closeProjectPopup = () => {
+    setIsPopupOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <section id="portfolio" className="py-16 md:py-24 px-4" role="main">
       <div className="container mx-auto">
@@ -88,7 +100,10 @@ const PortfolioSection = () => {
                 {/* Desktop Mockup */}
                 <div className="relative">
                   {/* Monitor */}
-                  <div className="w-40 h-28 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-125 transition-transform duration-300 cursor-pointer">
+                  <div 
+                    className="w-40 h-28 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-125 transition-transform duration-300 cursor-pointer"
+                    onClick={() => openProjectPopup(item)}
+                  >
                     <div className="w-full h-2 bg-gray-600"></div>
                     <div className="w-full h-full bg-white overflow-hidden">
                       <LazyImage
@@ -107,7 +122,10 @@ const PortfolioSection = () => {
                 </div>
 
                 {/* Mobile Mockup */}
-                <div className="relative transform hover:scale-125 transition-transform duration-300 cursor-pointer">
+                <div 
+                  className="relative transform hover:scale-125 transition-transform duration-300 cursor-pointer"
+                  onClick={() => openProjectPopup(item)}
+                >
                   {/* Phone Frame */}
                   <div className="w-20 h-36 bg-gray-800 rounded-lg border-2 border-gray-700 p-1 overflow-hidden">
                     {/* Notch */}
@@ -129,7 +147,10 @@ const PortfolioSection = () => {
               </div>
 
               {/* Card с описанием и метриками */}
-              <article className="relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6">
+              <article 
+                className="relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6 cursor-pointer"
+                onClick={() => openProjectPopup(item)}
+              >
                 {/* Gradient Overlay on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl`} aria-hidden="true" />
 
@@ -193,6 +214,15 @@ const PortfolioSection = () => {
           </Button>
         </div>
       </div>
+
+      {/* Project Popup */}
+      {selectedProject && (
+        <ProjectPopup
+          isOpen={isPopupOpen}
+          onClose={closeProjectPopup}
+          project={selectedProject}
+        />
+      )}
     </section>
   );
 };
