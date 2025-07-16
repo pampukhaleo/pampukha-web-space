@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -47,12 +46,15 @@ export const PerformanceOptimizer = () => {
       }
     };
 
-    // Добавляем service worker для кеширования
-    const registerServiceWorker = () => {
+    // Улучшенная регистрация service worker
+    const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').catch(() => {
-          // Service worker не критичен для работы
-        });
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
+          console.log('Service Worker registered successfully:', registration);
+        } catch (error) {
+          console.warn('Service Worker registration failed:', error);
+        }
       }
     };
 
