@@ -80,51 +80,65 @@ const PortfolioSection = () => {
           </p>
         </header>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12" role="list">
           {portfolioItems.map((item, index) => (
             <article
               key={item.id}
-              className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground"
+              className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6"
               role="listitem"
             >
               {/* Gradient Overlay on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} aria-hidden="true" />
+              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl`} aria-hidden="true" />
 
               <div className="relative z-10">
-                {/* Responsive Images with Hover Effect */}
-                <div className="relative overflow-hidden rounded-t-2xl">
-                  {/* Desktop Image */}
-                  <div className="hidden md:block">
-                    <LazyImage
-                      src={item.desktopImage}
-                      alt={`${item.title} desktop version - ${item.description}`}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                      loading={index === 0 ? "eager" : "lazy"}
-                      width={400}
-                      height={256}
-                    />
+                {/* Device Mockups */}
+                <div className="flex justify-center items-end gap-4 mb-6">
+                  {/* Desktop Mockup */}
+                  <div className="relative transform group-hover:scale-105 transition-transform duration-300">
+                    {/* Monitor Base */}
+                    <div className="w-24 h-2 bg-gray-300 rounded-full mx-auto"></div>
+                    <div className="w-6 h-4 bg-gray-400 rounded-t mx-auto -mt-1"></div>
+                    
+                    {/* Monitor Screen */}
+                    <div className="w-32 h-20 bg-gray-800 rounded-lg border-4 border-gray-700 -mt-1 overflow-hidden">
+                      <div className="w-full h-2 bg-gray-600"></div>
+                      <div className="w-full h-full bg-white overflow-hidden">
+                        <LazyImage
+                          src={item.desktopImage}
+                          alt={`${item.title} desktop version`}
+                          className="w-full h-full object-cover object-top"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          width={128}
+                          height={80}
+                        />
+                      </div>
+                    </div>
                   </div>
-                  
-                  {/* Mobile Image */}
-                  <div className="block md:hidden">
-                    <LazyImage
-                      src={item.mobileImage}
-                      alt={`${item.title} mobile version - ${item.description}`}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                      loading={index === 0 ? "eager" : "lazy"}
-                      width={400}
-                      height={256}
-                    />
-                  </div>
-                  
-                  {/* External Link Icon */}
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
-                    <ExternalLink size={16} className="text-primary" />
+
+                  {/* Mobile Mockup */}
+                  <div className="relative transform group-hover:scale-105 transition-transform duration-300">
+                    {/* Phone Frame */}
+                    <div className="w-16 h-28 bg-gray-800 rounded-lg border-2 border-gray-700 p-1 overflow-hidden">
+                      {/* Notch */}
+                      <div className="w-8 h-1 bg-gray-700 rounded-full mx-auto mb-1"></div>
+                      
+                      {/* Screen */}
+                      <div className="w-full h-full bg-white rounded overflow-hidden">
+                        <LazyImage
+                          src={item.mobileImage}
+                          alt={`${item.title} mobile version`}
+                          className="w-full h-full object-cover object-top"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          width={64}
+                          height={112}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 {/* PageSpeed Insights Metrics */}
-                <div className="p-4 bg-muted/30">
+                <div className="mb-6">
                   <div className="grid grid-cols-4 gap-2">
                     <div className={`flex flex-col items-center p-2 rounded-lg border ${getScoreBgColor(item.pageSpeed.performance)}`}>
                       <div className={`text-lg font-bold ${getScoreColor(item.pageSpeed.performance)}`}>
@@ -154,12 +168,17 @@ const PortfolioSection = () => {
                 </div>
 
                 {/* Project Info */}
-                <div className="p-6">
+                <div className="text-center">
                   <span className="inline-block px-3 py-1 text-xs bg-muted text-muted-foreground rounded-full mb-2">
                     {item.category}
                   </span>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                </div>
+
+                {/* External Link Icon */}
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
+                  <ExternalLink size={16} className="text-primary" />
                 </div>
               </div>
             </article>
