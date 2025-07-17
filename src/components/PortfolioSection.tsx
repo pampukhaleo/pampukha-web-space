@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -72,65 +73,99 @@ const PortfolioSection = () => {
               index === portfolioItems.length - 1;
 
             return (
-
             <div key={item.id}
                  role="listitem"
                  className={`group relative ${isLastOdd ? 'lg:col-span-2' : ''}`}
             >
-              {/* Device Mockups - оптимизированные размеры */}
-              <div className="flex justify-center items-center gap-5 mb-12">
-                {/* Desktop Mockup - оптимизированный размер */}
-                <div className="relative">
-                  {/* Monitor - средний размер */}
-                  <div 
-                    className="w-72 h-48 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg"
-                    onClick={() => openProjectPopup(item)}
-                  >
-                    <div className="w-full h-2 bg-gray-600"></div>
-                    <div className="w-full h-44 bg-white overflow-hidden">
-                      <LazyImage
-                        src={item.desktopImage}
-                        alt={`${item.title} desktop version`}
-                        className="w-full h-full object-cover object-top"
-                        loading={index === 0 ? "eager" : "lazy"}
-                        width={288}
-                        height={176}
-                      />
+              {/* 3D Device Mockups */}
+              <div className="flex justify-center items-end gap-8 mb-12 perspective-1000">
+                {/* MacBook Mockup */}
+                <div className="relative transform-gpu group-hover:scale-105 transition-transform duration-500">
+                  {/* MacBook Base */}
+                  <div className="relative">
+                    {/* Screen */}
+                    <div 
+                      className="w-80 h-52 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-lg border border-gray-600 overflow-hidden transform rotate-x-12 cursor-pointer shadow-2xl"
+                      style={{
+                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05)'
+                      }}
+                      onClick={() => openProjectPopup(item)}
+                    >
+                      {/* Camera notch */}
+                      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-700 rounded-full border border-gray-600"></div>
+                      
+                      {/* Screen content */}
+                      <div className="w-full h-full bg-white mt-4 rounded-sm overflow-hidden">
+                        <LazyImage
+                          src={item.desktopImage}
+                          alt={`${item.title} desktop version`}
+                          className="w-full h-full object-cover object-top"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          width={320}
+                          height={200}
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* MacBook Base/Keyboard */}
+                    <div 
+                      className="w-80 h-6 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500 rounded-b-lg -mt-1 transform rotate-x-45"
+                      style={{
+                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+                      }}
+                    >
+                      {/* Keyboard details */}
+                      <div className="flex justify-center mt-1">
+                        <div className="w-40 h-1 bg-gray-600 rounded-full opacity-60"></div>
+                      </div>
                     </div>
                   </div>
-                  {/* Stand */}
-                  <div className="w-12 h-8 bg-gray-400 rounded-t mx-auto -mt-1"></div>
-                  <div className="w-44 h-4 bg-gray-300 rounded-full mx-auto"></div>
                 </div>
 
-                {/* Mobile Mockup - оптимизированный размер */}
+                {/* iPhone Mockup */}
                 <div 
-                  className="relative transform hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  className="relative transform-gpu group-hover:scale-105 transition-transform duration-500 cursor-pointer"
                   onClick={() => openProjectPopup(item)}
                 >
-                  {/* Phone Frame - средний размер */}
-                  <div className="w-36 h-64 bg-gray-800 rounded-xl border-2 border-gray-700 p-3 overflow-hidden shadow-lg">
-                    {/* Notch */}
-                    <div className="w-16 h-1.5 bg-gray-700 rounded-full mx-auto mb-3"></div>
+                  {/* Phone Shadow */}
+                  <div 
+                    className="absolute inset-0 bg-black/20 rounded-3xl transform translate-y-2 translate-x-1 blur-md"
+                    style={{ filter: 'blur(8px)' }}
+                  ></div>
+                  
+                  {/* Phone Body */}
+                  <div 
+                    className="relative w-40 h-80 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-3xl p-2 border border-gray-600"
+                    style={{
+                      boxShadow: '0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                    }}
+                  >
+                    {/* Dynamic Island */}
+                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-16 h-6 bg-black rounded-full border border-gray-700"></div>
                     
-                    {/* Screen - оптимизированный размер */}
-                    <div className="w-full h-58 bg-white rounded overflow-hidden">
+                    {/* Screen */}
+                    <div className="w-full h-full bg-white rounded-2xl mt-8 overflow-hidden">
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
                         className="w-full h-full object-cover object-top"
                         loading={index === 0 ? "eager" : "lazy"}
                         width={144}
-                        height={224}
+                        height={288}
                       />
                     </div>
+                    
+                    {/* Side buttons */}
+                    <div className="absolute left-0 top-20 w-1 h-8 bg-gradient-to-b from-gray-600 to-gray-700 rounded-l-sm"></div>
+                    <div className="absolute left-0 top-32 w-1 h-12 bg-gradient-to-b from-gray-600 to-gray-700 rounded-l-sm"></div>
+                    <div className="absolute right-0 top-28 w-1 h-16 bg-gradient-to-b from-gray-600 to-gray-700 rounded-r-sm"></div>
                   </div>
                 </div>
               </div>
 
-              {/* Card с описанием */}
+              {/* Project Card */}
               <article 
-                className=" max-w-3xl w-full mx-auto relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6 cursor-pointer"
+                className="max-w-3xl w-full mx-auto relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6 cursor-pointer"
                 onClick={() => openProjectPopup(item)}
               >
                 {/* Gradient Overlay on Hover */}
