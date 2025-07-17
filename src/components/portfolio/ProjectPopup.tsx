@@ -46,6 +46,7 @@ const ProjectPopup = ({ isOpen, onClose, project }: ProjectPopupProps) => {
     }
   }, [isOpen]);
 
+  // Show screenshots if no live URL or iframe failed to load
   const showScreenshots = !project.liveUrl || iframeError;
 
   return (
