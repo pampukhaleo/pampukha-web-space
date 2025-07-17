@@ -137,6 +137,12 @@ const PortfolioSection = () => {
                         src={item.desktopImage}
                         alt={`${item.title} desktop version`}
                         className="w-full h-full object-cover object-top transition-transform duration-700"
+                        style={{
+                          imageRendering: '-webkit-optimize-contrast',
+                          imageRendering: 'crisp-edges',
+                          imageRendering: '-moz-crisp-edges',
+                          imageRendering: 'pixelated'
+                        }}
                         loading={index === 0 ? "eager" : "lazy"}
                         width={384}
                         height={256}
@@ -173,6 +179,12 @@ const PortfolioSection = () => {
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
                         className="w-full h-full object-cover object-top transition-transform duration-700"
+                        style={{
+                          imageRendering: '-webkit-optimize-contrast',
+                          imageRendering: 'crisp-edges',
+                          imageRendering: '-moz-crisp-edges',
+                          imageRendering: 'pixelated'
+                        }}
                         loading={index === 0 ? "eager" : "lazy"}
                         width={176}
                         height={320}
