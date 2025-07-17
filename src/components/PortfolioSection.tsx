@@ -62,11 +62,20 @@ const PortfolioSection = () => {
           </p>
         </header>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-20" role="list">
-          {portfolioItems.map((item, index) => (
-            <div key={item.id} className="group relative" role="listitem">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-20" role="list">
+          {portfolioItems.map((item, index) => {
+            const isLastOdd =
+              portfolioItems.length % 2 === 1 &&
+              index === portfolioItems.length - 1;
+
+            return (
+
+            <div key={item.id}
+                 role="listitem"
+                 className={`group relative ${isLastOdd ? 'lg:col-span-2' : ''}`}
+            >
               {/* Device Mockups - оптимизированные размеры */}
-              <div className="flex justify-center items-end gap-8 mb-12">
+              <div className="flex justify-center items-center gap-5 mb-12">
                 {/* Desktop Mockup - оптимизированный размер */}
                 <div className="relative">
                   {/* Monitor - средний размер */}
@@ -74,7 +83,7 @@ const PortfolioSection = () => {
                     className="w-72 h-48 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg"
                     onClick={() => openProjectPopup(item)}
                   >
-                    <div className="w-full h-3 bg-gray-600"></div>
+                    <div className="w-full h-2 bg-gray-600"></div>
                     <div className="w-full h-44 bg-white overflow-hidden">
                       <LazyImage
                         src={item.desktopImage}
@@ -102,7 +111,7 @@ const PortfolioSection = () => {
                     <div className="w-16 h-1.5 bg-gray-700 rounded-full mx-auto mb-3"></div>
                     
                     {/* Screen - оптимизированный размер */}
-                    <div className="w-full h-56 bg-white rounded overflow-hidden">
+                    <div className="w-full h-58 bg-white rounded overflow-hidden">
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
@@ -118,7 +127,7 @@ const PortfolioSection = () => {
 
               {/* Card с описанием */}
               <article 
-                className="relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6 cursor-pointer"
+                className=" max-w-3xl w-full mx-auto relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6 cursor-pointer"
                 onClick={() => openProjectPopup(item)}
               >
                 {/* Gradient Overlay on Hover */}
@@ -141,7 +150,7 @@ const PortfolioSection = () => {
                 </div>
               </article>
             </div>
-          ))}
+          )})}
         </div>
         
         <div className="mt-12 text-center">
