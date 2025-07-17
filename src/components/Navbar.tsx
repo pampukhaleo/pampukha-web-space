@@ -57,7 +57,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu - показывать только на очень больших экранах */}
-        <div className="hidden xl:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
           <a href="#about" className="text-foreground-muted hover:text-primary transition-colors">
             {t('navbar.about')}
           </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
         
         {/* Mobile menu button - показывать на экранах меньше xl */}
-        <div className="xl:hidden flex items-center space-x-4">
+        <div className="lg:hidden flex items-center space-x-4">
           <LanguageSwitcher />
           <Button 
             variant="ghost" 
