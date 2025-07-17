@@ -66,7 +66,7 @@ const HeroSection = () => {
             <div className="relative z-10 flex justify-center lg:justify-end">
               <div className="relative">
                 <LazyImage
-                  src="https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png"
+                  src="/leonforge_logo.png"
                   alt="Веб-разработка и создание современных сайтов - Leonforge"
                   className="rounded-3xl shadow-2xl w-full max-w-lg transform hover:scale-105 transition-transform duration-300"
                   loading="eager"
