@@ -14,14 +14,6 @@ const HeroSection = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <header className="order-2 lg:order-1 z-20 relative text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
-              <img 
-                src="/leonforge_logo.png" 
-                alt="Leonforge" 
-                className="h-10 w-auto"
-              />
-              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
-            </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-4xl">
               {t('hero.title1')} <span className="gradient-text">{t('hero.title2')}</span>{t('hero.title3')}<br />

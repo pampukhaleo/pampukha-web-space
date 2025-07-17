@@ -14,7 +14,7 @@
     "title3": "?",
     "title4": "Stworzę ją na React z indywidualnym podejściem",
     "price": "od 300$",
-    "valueProposition": "SPA + SEO + Narzędzia marketingowe (opcjonalnie)",
+    "valueProposition": "SPA + SEO + Narzędzia marketingowe",
     "description": "Tworzę szybkie strony SPA na React z indywidualnym podejściem do każdego klienta. Narzędzia marketingowe: Google Ads, Facebook Ads, Analytics, Search Console - konfiguruję według Twoich potrzeb.",
     "consultation": "Poproś o konsultację",
     "viewWork": "Zobacz prace"
@@ -22,7 +22,7 @@
   "about": {
     "title1": "O",
     "title2": "mnie",
-    "introduction": "Cześć! Nazywam się Leonid Pampukha. Tworzę szybkie strony SPA na React dla małych firm z indywidualnym podejściem do każdego projektu. Pracuję z Tobą, aby znaleźć dokładnie to rozwiązanie, którego potrzebuje Twój biznes.",
+    "introduction": "Cześć! Nazywam się Leonid. Tworzę szybkie strony SPA na React dla małych firm z indywidualnym podejściem do każdego projektu. Pracuję z Tobą, aby znaleźć dokładnie to rozwiązanie, którego potrzebuje Twój biznes.",
     "approach": "Moje podejście - React + SPA + indywidualne rozwiązanie",
     "approachDescription": "Używam nowoczesnego stosu React + Supabase do tworzenia szybkich aplikacji Single Page Application. Twoja strona będzie działać błyskawicznie. Konfiguruję narzędzia marketingowe zgodnie z Twoimi potrzebami i budżetem.",
     "cleanCode": "React SPA",
@@ -181,7 +181,7 @@
     "question7": "Czy będę mógł samodzielnie dodawać treść?",
     "answer7": "Tak! Skonfiguruję wygodny panel administracyjny przez Supabase lub nauczę Cię pracy z kodem. Komponenty React są łatwe w edycji. Pierwsze zmiany są bezpłatne, dalej możemy umówić się na abonamentowe utrzymanie.",
     "question8": "Jak działa SEO dla SPA?",
-    "answer8": "Używam Server-Side Rendering i odpowiedniej struktury meta tagów. Konfiguruję Google Search Console do śledzenia pozycji. SPA mogą pozycjonować się tak samo dobrze jak zwykłe strony przy odpowiednim podejściu.",
+    "answer8": "Używam Client-Side Rendering i odpowiedniej struktury meta tagów. Konfiguruję Google Search Console do śledzenia pozycji. SPA mogą pozycjonować się tak samo dobrze jak zwykłe strony przy odpowiednim podejściu.",
     "question9": "Co robić po uruchomieniu strony?",
     "answer9": "Pomogę z konfiguracją wybranych narzędzi marketingowych. Dostarczę instrukcje dotyczące pracy z panelem administracyjnym i rekomendacje optymalizacji dla lepszych wyników. Wsparcie jest omawiane indywidualnie."
   },

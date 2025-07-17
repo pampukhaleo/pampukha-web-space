@@ -14,7 +14,7 @@
     "title3": "?",
     "title4": "I'll build it with React using individual approach",
     "price": "from $300",
-    "valueProposition": "SPA + SEO + Marketing tools (optional)",
+    "valueProposition": "SPA + SEO + Marketing tools",
     "description": "I create fast SPA websites using React with individual approach to each client. Marketing tools: Google Ads, Facebook Ads, Analytics, Search Console - I set up according to your needs.",
     "consultation": "Request a consultation",
     "viewWork": "View works"
@@ -22,7 +22,7 @@
   "about": {
     "title1": "About",
     "title2": "me",
-    "introduction": "Hello! My name is Leonid Pampukha. I create fast SPA websites using React for small businesses with individual approach to each project. I work with you to find exactly the solution your business needs.",
+    "introduction": "Hello! My name is Leonid. I create fast SPA websites using React for small businesses with individual approach to each project. I work with you to find exactly the solution your business needs.",
     "approach": "My approach - React + SPA + individual solution",
     "approachDescription": "I use modern React + Supabase stack to create fast Single Page Applications. Your site will work lightning fast. I set up marketing tools according to your needs and budget.",
     "cleanCode": "React SPA",
@@ -181,7 +181,7 @@
     "question7": "Will I be able to add content myself?",
     "answer7": "Yes! I'll set up a convenient admin panel through Supabase or teach you to work with code. React components are easy to edit. First changes are free, then we can agree on subscription maintenance.",
     "question8": "How does SEO work for SPA?",
-    "answer8": "I use Server-Side Rendering and proper meta tag structure. Set up Google Search Console for position tracking. SPAs can rank just as well as regular websites with the right approach.",
+    "answer8": "I use Client-Side Rendering and proper meta tag structure. Set up Google Search Console for position tracking. SPAs can rank just as well as regular websites with the right approach.",
     "question9": "What to do after website launch?",
     "answer9": "I'll help with setting up chosen marketing tools. Provide instructions for working with admin panel and optimization recommendations for better results. Support is discussed individually."
   },

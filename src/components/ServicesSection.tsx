@@ -91,7 +91,6 @@ const ServicesSection = () => {
                   t('services.benefit2'),
                   t('services.benefit3'),
                   t('services.benefit4'),
-                  t('services.benefit5'),
                 ].map((text, i) => (
                   <div key={ i } className="flex items-center">
                     <div className="h-2 w-2 bg-muted-foreground rounded-full mr-3"/>
