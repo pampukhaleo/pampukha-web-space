@@ -50,13 +50,15 @@ const ProjectPopup = ({ isOpen, onClose, project }: ProjectPopupProps) => {
           {/* Mobile Screenshot */}
           <div className="space-y-3">
             <h3 className="text-lg font-semibold">Mobile Version</h3>
-            <div className="border rounded-lg overflow-hidden bg-white inline-block">
-              <LazyImage
-                src={project.mobileImage}
-                alt={`${project.title} mobile screenshot`}
-                className="h-auto max-w-sm"
-                loading="lazy"
-              />
+            <div className="flex justify-center">
+              <div className="border rounded-lg overflow-hidden bg-white inline-block">
+                <LazyImage
+                  src={project.mobileImage}
+                  alt={`${project.title} mobile screenshot`}
+                  className="h-auto max-w-sm"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
