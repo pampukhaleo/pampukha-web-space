@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -18,13 +19,7 @@ const PortfolioSection = () => {
       description: t('portfolio.project1.description'),
       desktopImage: 'https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png',
       mobileImage: 'https://leonforge.com/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png',
-      color: 'from-brand-blue/20 to-brand-teal/20',
-      pageSpeed: {
-        performance: 95,
-        accessibility: 100,
-        bestPractices: 92,
-        seo: 100
-      }
+      color: 'from-brand-blue/20 to-brand-teal/20'
     },
     {
       id: 2,
@@ -33,13 +28,7 @@ const PortfolioSection = () => {
       description: t('portfolio.project2.description'),
       desktopImage: 'https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png',
       mobileImage: 'https://leonforge.com/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png',
-      color: 'from-brand-orange/20 to-brand-red/20',
-      pageSpeed: {
-        performance: 98,
-        accessibility: 95,
-        bestPractices: 96,
-        seo: 100
-      }
+      color: 'from-brand-orange/20 to-brand-red/20'
     },
     {
       id: 3,
@@ -48,27 +37,9 @@ const PortfolioSection = () => {
       description: t('portfolio.project3.description'),
       desktopImage: 'https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png',
       mobileImage: 'https://leonforge.com/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png',
-      color: 'from-brand-purple/20 to-brand-blue/20',
-      pageSpeed: {
-        performance: 92,
-        accessibility: 98,
-        bestPractices: 94,
-        seo: 100
-      }
+      color: 'from-brand-purple/20 to-brand-blue/20'
     },
   ];
-
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 50) return 'text-orange-500';
-    return 'text-red-500';
-  };
-
-  const getScoreBgColor = (score: number) => {
-    if (score >= 90) return 'bg-green-100 border-green-300';
-    if (score >= 50) return 'bg-orange-100 border-orange-300';
-    return 'bg-red-100 border-red-300';
-  };
 
   const openProjectPopup = (project: any) => {
     setSelectedProject(project);
@@ -95,58 +66,58 @@ const PortfolioSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12" role="list">
           {portfolioItems.map((item, index) => (
             <div key={item.id} className="group relative" role="listitem">
-              {/* Device Mockups - вынесены наверх */}
+              {/* Device Mockups - увеличенные размеры */}
               <div className="flex justify-center items-end gap-8 mb-8">
-                {/* Desktop Mockup */}
+                {/* Desktop Mockup - увеличенный */}
                 <div className="relative">
-                  {/* Monitor */}
+                  {/* Monitor - увеличенный размер */}
                   <div 
-                    className="w-40 h-28 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-125 transition-transform duration-300 cursor-pointer"
+                    className="w-56 h-36 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-110 transition-transform duration-300 cursor-pointer"
                     onClick={() => openProjectPopup(item)}
                   >
                     <div className="w-full h-2 bg-gray-600"></div>
-                    <div className="w-full h-full bg-white overflow-hidden">
+                    <div className="w-full h-32 bg-white overflow-hidden">
                       <LazyImage
                         src={item.desktopImage}
                         alt={`${item.title} desktop version`}
                         className="w-full h-full object-cover object-top"
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={160}
-                        height={112}
+                        width={224}
+                        height={128}
                       />
                     </div>
                   </div>
                   {/* Stand - касается монитора */}
-                  <div className="w-8 h-6 bg-gray-400 rounded-t mx-auto -mt-1"></div>
-                  <div className="w-32 h-3 bg-gray-300 rounded-full mx-auto"></div>
+                  <div className="w-10 h-6 bg-gray-400 rounded-t mx-auto"></div>
+                  <div className="w-40 h-3 bg-gray-300 rounded-full mx-auto"></div>
                 </div>
 
-                {/* Mobile Mockup */}
+                {/* Mobile Mockup - увеличенный */}
                 <div 
-                  className="relative transform hover:scale-125 transition-transform duration-300 cursor-pointer"
+                  className="relative transform hover:scale-110 transition-transform duration-300 cursor-pointer"
                   onClick={() => openProjectPopup(item)}
                 >
-                  {/* Phone Frame */}
-                  <div className="w-20 h-36 bg-gray-800 rounded-lg border-2 border-gray-700 p-1 overflow-hidden">
+                  {/* Phone Frame - увеличенный размер */}
+                  <div className="w-28 h-52 bg-gray-800 rounded-xl border-2 border-gray-700 p-2 overflow-hidden">
                     {/* Notch */}
-                    <div className="w-10 h-1 bg-gray-700 rounded-full mx-auto mb-1"></div>
+                    <div className="w-12 h-1 bg-gray-700 rounded-full mx-auto mb-2"></div>
                     
-                    {/* Screen - исправлена высота для предотвращения выхода за границы */}
-                    <div className="w-full h-32 bg-white rounded overflow-hidden">
+                    {/* Screen - увеличенный размер с правильными пропорциями */}
+                    <div className="w-full h-44 bg-white rounded overflow-hidden">
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
                         className="w-full h-full object-cover object-top"
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={80}
-                        height={128}
+                        width={112}
+                        height={176}
                       />
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Card с описанием и метриками */}
+              {/* Card с описанием - без PageSpeed метрик */}
               <article 
                 className="relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-border bg-card text-card-foreground p-6 cursor-pointer"
                 onClick={() => openProjectPopup(item)}
@@ -155,43 +126,13 @@ const PortfolioSection = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl`} aria-hidden="true" />
 
                 <div className="relative z-10">
-                  {/* PageSpeed Insights Metrics */}
-                  <div className="mb-6">
-                    <div className="grid grid-cols-4 gap-2">
-                      <div className={`flex flex-col items-center p-2 rounded-lg border ${getScoreBgColor(item.pageSpeed.performance)}`}>
-                        <div className={`text-lg font-bold ${getScoreColor(item.pageSpeed.performance)}`}>
-                          {item.pageSpeed.performance}
-                        </div>
-                        <div className="text-xs text-muted-foreground text-center">Performance</div>
-                      </div>
-                      <div className={`flex flex-col items-center p-2 rounded-lg border ${getScoreBgColor(item.pageSpeed.accessibility)}`}>
-                        <div className={`text-lg font-bold ${getScoreColor(item.pageSpeed.accessibility)}`}>
-                          {item.pageSpeed.accessibility}
-                        </div>
-                        <div className="text-xs text-muted-foreground text-center">Accessibility</div>
-                      </div>
-                      <div className={`flex flex-col items-center p-2 rounded-lg border ${getScoreBgColor(item.pageSpeed.bestPractices)}`}>
-                        <div className={`text-lg font-bold ${getScoreColor(item.pageSpeed.bestPractices)}`}>
-                          {item.pageSpeed.bestPractices}
-                        </div>
-                        <div className="text-xs text-muted-foreground text-center">Best Practices</div>
-                      </div>
-                      <div className={`flex flex-col items-center p-2 rounded-lg border ${getScoreBgColor(item.pageSpeed.seo)}`}>
-                        <div className={`text-lg font-bold ${getScoreColor(item.pageSpeed.seo)}`}>
-                          {item.pageSpeed.seo}
-                        </div>
-                        <div className="text-xs text-muted-foreground text-center">SEO</div>
-                      </div>
-                    </div>
-                  </div>
-
                   {/* Project Info */}
                   <div className="text-center">
-                    <span className="inline-block px-3 py-1 text-xs bg-muted text-muted-foreground rounded-full mb-2">
+                    <span className="inline-block px-3 py-1 text-xs bg-muted text-muted-foreground rounded-full mb-4">
                       {item.category}
                     </span>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.description}</p>
+                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.description}</p>
                   </div>
 
                   {/* External Link Icon */}
