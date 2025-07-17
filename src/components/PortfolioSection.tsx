@@ -63,54 +63,54 @@ const PortfolioSection = () => {
           </p>
         </header>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12" role="list">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16" role="list">
           {portfolioItems.map((item, index) => (
             <div key={item.id} className="group relative" role="listitem">
-              {/* Device Mockups - значительно увеличенные размеры */}
-              <div className="flex justify-center items-end gap-8 mb-8">
-                {/* Desktop Mockup - сильно увеличенный */}
+              {/* Device Mockups - увеличенные размеры с лучшим позиционированием */}
+              <div className="flex justify-center items-end gap-12 mb-8">
+                {/* Desktop Mockup - значительно увеличенный */}
                 <div className="relative">
-                  {/* Monitor - значительно увеличенный размер */}
+                  {/* Monitor - большой размер */}
                   <div 
-                    className="w-80 h-52 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-125 transition-transform duration-300 cursor-pointer"
+                    className="w-96 h-64 bg-gray-800 rounded-lg border-4 border-gray-700 overflow-hidden transform hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg"
                     onClick={() => openProjectPopup(item)}
                   >
-                    <div className="w-full h-3 bg-gray-600"></div>
-                    <div className="w-full h-48 bg-white overflow-hidden">
+                    <div className="w-full h-4 bg-gray-600"></div>
+                    <div className="w-full h-60 bg-white overflow-hidden">
                       <LazyImage
                         src={item.desktopImage}
                         alt={`${item.title} desktop version`}
                         className="w-full h-full object-cover object-top"
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={320}
-                        height={192}
+                        width={384}
+                        height={240}
                       />
                     </div>
                   </div>
-                  {/* Stand - прямо касается монитора */}
-                  <div className="w-12 h-8 bg-gray-400 rounded-t mx-auto -mt-0"></div>
-                  <div className="w-48 h-4 bg-gray-300 rounded-full mx-auto"></div>
+                  {/* Stand */}
+                  <div className="w-16 h-10 bg-gray-400 rounded-t mx-auto -mt-1"></div>
+                  <div className="w-56 h-5 bg-gray-300 rounded-full mx-auto"></div>
                 </div>
 
-                {/* Mobile Mockup - сильно увеличенный */}
+                {/* Mobile Mockup - увеличенный размер */}
                 <div 
-                  className="relative transform hover:scale-125 transition-transform duration-300 cursor-pointer"
+                  className="relative transform hover:scale-110 transition-transform duration-300 cursor-pointer"
                   onClick={() => openProjectPopup(item)}
                 >
-                  {/* Phone Frame - значительно увеличенный размер */}
-                  <div className="w-40 h-72 bg-gray-800 rounded-xl border-2 border-gray-700 p-3 overflow-hidden">
+                  {/* Phone Frame - большой размер */}
+                  <div className="w-48 h-80 bg-gray-800 rounded-xl border-2 border-gray-700 p-4 overflow-hidden shadow-lg">
                     {/* Notch */}
-                    <div className="w-16 h-1.5 bg-gray-700 rounded-full mx-auto mb-3"></div>
+                    <div className="w-20 h-2 bg-gray-700 rounded-full mx-auto mb-4"></div>
                     
-                    {/* Screen - увеличенный размер с правильным соотношением */}
-                    <div className="w-full h-64 bg-white rounded overflow-hidden">
+                    {/* Screen - увеличенный размер */}
+                    <div className="w-full h-72 bg-white rounded overflow-hidden">
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
                         className="w-full h-full object-cover object-top"
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={160}
-                        height={256}
+                        width={192}
+                        height={288}
                       />
                     </div>
                   </div>
