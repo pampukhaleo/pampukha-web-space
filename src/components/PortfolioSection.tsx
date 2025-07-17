@@ -153,7 +153,7 @@ const PortfolioSection = () => {
                   className="mobile-mockup relative transform-gpu hover:scale-105 hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer"
                   onClick={() => openProjectPopup(item, 'mobile')}
                 >
-                  <div className={`w-36 h-72 bg-black rounded-[2rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
+                  <div className={`w-36 h-72 bg-black rounded-[1rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 25px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.3)' : 
                                                item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.3)' : 
@@ -169,7 +169,7 @@ const PortfolioSection = () => {
                     </div>
                     
                     {/* Screen with neon glow */}
-                    <div className="relative w-full h-full bg-gray-900 overflow-hidden -mt-12 rounded-b-[2rem]">
+                    <div className="relative w-full h-full bg-gray-900 overflow-hidden -mt-12 rounded-b-[1rem]">
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
