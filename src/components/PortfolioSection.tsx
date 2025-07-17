@@ -18,7 +18,7 @@ const PortfolioSection = () => {
       description: t('portfolio.project1.description'),
       desktopImage: '/expertisedesktop.png',
       mobileImage: '/expertisemobile.png',
-      liveUrl: 'https://expertise.com.ua',
+      liveUrl: 'https://expertise.com.ua/',
       color: 'from-brand-blue/20 to-brand-teal/20'
     },
     {
@@ -28,7 +28,7 @@ const PortfolioSection = () => {
       description: t('portfolio.project2.description'),
       desktopImage: 'https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png',
       mobileImage: 'https://leonforge.com/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png',
-      liveUrl: 'https://google.com',
+      liveUrl: 'https://pampukha.pl/',
       color: 'from-brand-orange/20 to-brand-red/20'
     },
     {
