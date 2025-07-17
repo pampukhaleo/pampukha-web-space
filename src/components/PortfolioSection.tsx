@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -107,12 +108,12 @@ const PortfolioSection = () => {
             >
               {/* Neon Device Mockups - Desktop centered with Mobile */}
               <div className="flex justify-center items-center gap-8 mb-12 relative">
-                {/* Desktop Neon Frame - Increased size */}
+                {/* Desktop Neon Frame - Centered */}
                 <div 
                   className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer"
                   onClick={() => openProjectPopup(item, 'desktop')}
                 >
-                  <div className={`w-96 h-64 bg-black rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
+                  <div className={`w-80 h-52 bg-black rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 30px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.3)' : 
                                                item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.3)' : 
@@ -137,15 +138,9 @@ const PortfolioSection = () => {
                         src={item.desktopImage}
                         alt={`${item.title} desktop version`}
                         className="w-full h-full object-cover object-top transition-transform duration-700"
-                        style={{
-                          imageRendering: '-webkit-optimize-contrast',
-                          imageRendering: 'crisp-edges',
-                          imageRendering: '-moz-crisp-edges',
-                          imageRendering: 'pixelated'
-                        }}
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={384}
-                        height={256}
+                        width={320}
+                        height={200}
                       />
                       {/* Neon overlay */}
                       <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} />
@@ -153,12 +148,12 @@ const PortfolioSection = () => {
                   </div>
                 </div>
 
-                {/* Mobile Neon Frame - Increased size */}
+                {/* Mobile Neon Frame - Beside desktop */}
                 <div 
                   className="mobile-mockup relative transform-gpu hover:scale-105 hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer"
                   onClick={() => openProjectPopup(item, 'mobile')}
                 >
-                  <div className={`w-44 h-80 bg-black rounded-[1rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
+                  <div className={`w-36 h-72 bg-black rounded-[1rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 25px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.3)' : 
                                                item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.3)' : 
@@ -179,18 +174,12 @@ const PortfolioSection = () => {
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
                         className="w-full h-full object-cover object-top transition-transform duration-700"
-                        style={{
-                          imageRendering: '-webkit-optimize-contrast',
-                          imageRendering: 'crisp-edges',
-                          imageRendering: '-moz-crisp-edges',
-                          imageRendering: 'pixelated'
-                        }}
                         loading={index === 0 ? "eager" : "lazy"}
-                        width={176}
-                        height={320}
+                        width={144}
+                        height={288}
                       />
                       {/* Neon screen overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-[1rem]`} />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-[2rem]`} />
                     </div>
                   </div>
                 </div>
