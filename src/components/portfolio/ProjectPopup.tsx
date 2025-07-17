@@ -36,7 +36,7 @@ const ProjectPopup = ({ isOpen, onClose, project }: ProjectPopupProps) => {
         <div className="space-y-6">
           {/* Desktop Screenshot */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">{t('portfolio.desktopVersion')}</h3>
+            <h3 className="text-lg font-semibold">Desktop Version</h3>
             <div className="border rounded-lg overflow-hidden bg-white">
               <LazyImage
                 src={project.desktopImage}
@@ -49,12 +49,12 @@ const ProjectPopup = ({ isOpen, onClose, project }: ProjectPopupProps) => {
 
           {/* Mobile Screenshot */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">{t('portfolio.mobileVersion')}</h3>
-            <div className="border rounded-lg overflow-hidden bg-white flex justify-center">
+            <h3 className="text-lg font-semibold">Mobile Version</h3>
+            <div className="border rounded-lg overflow-hidden bg-white inline-block">
               <LazyImage
                 src={project.mobileImage}
                 alt={`${project.title} mobile screenshot`}
-                className="max-w-sm h-auto"
+                className="h-auto max-w-sm"
                 loading="lazy"
               />
             </div>
@@ -81,7 +81,7 @@ const ProjectPopup = ({ isOpen, onClose, project }: ProjectPopupProps) => {
                 onClick={() => window.open(project.liveUrl, '_blank')}
                 className="border-gray-300 text-gray-700 hover:bg-gray-50"
               >
-                {t('portfolio.openInNewTab') || 'Open in New Tab'}
+                Open in New Tab
               </Button>
             )}
           </div>
