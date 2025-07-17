@@ -10,6 +10,7 @@ const PortfolioSection = () => {
   const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [viewType, setViewType] = useState<'desktop' | 'mobile'>('desktop');
   
   const portfolioItems = [
     {
@@ -47,8 +48,9 @@ const PortfolioSection = () => {
     },
   ];
 
-  const openProjectPopup = (project: any) => {
+  const openProjectPopup = (project: any, type: 'desktop' | 'mobile') => {
     setSelectedProject(project);
+    setViewType(type);
     setIsPopupOpen(true);
   };
 
@@ -104,14 +106,14 @@ const PortfolioSection = () => {
                  role="listitem"
                  className={`group relative ${isLastOdd ? 'lg:col-span-2' : ''}`}
             >
-              {/* Neon Device Mockups */}
-              <div className="flex justify-center items-end gap-8 mb-12 relative">
-                {/* Desktop Neon Frame */}
+              {/* Neon Device Mockups - Desktop centered with Mobile */}
+              <div className="flex justify-center items-center gap-8 mb-12 relative">
+                {/* Desktop Neon Frame - Centered */}
                 <div 
                   className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer"
-                  onClick={() => openProjectPopup(item)}
+                  onClick={() => openProjectPopup(item, 'desktop')}
                 >
-                  <div className={`w-80 h-52 bg-black rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 desktop-mockup:hover:shadow-2xl`}
+                  <div className={`w-80 h-52 bg-black rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 30px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.3)' : 
                                                item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.3)' : 
@@ -127,7 +129,7 @@ const PortfolioSection = () => {
                       {/* Neon pulse line */}
                       <div className={`absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r ${item.neonColor === 'cyan' ? 'from-cyan-400 to-blue-500' : 
                                                                                                  item.neonColor === 'pink' ? 'from-pink-400 to-purple-500' : 
-                                                                                                 'from-green-400 to-emerald-500'} opacity-0 desktop-mockup:hover:opacity-100 transition-opacity duration-500`} />
+                                                                                                 'from-green-400 to-emerald-500'} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                     </div>
                     
                     {/* Screen with neon glow */}
@@ -141,17 +143,17 @@ const PortfolioSection = () => {
                         height={200}
                       />
                       {/* Neon overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 desktop-mockup:hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} />
                     </div>
                   </div>
                 </div>
 
-                {/* Mobile Neon Frame */}
+                {/* Mobile Neon Frame - Beside desktop */}
                 <div 
                   className="mobile-mockup relative transform-gpu hover:scale-105 hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer"
-                  onClick={() => openProjectPopup(item)}
+                  onClick={() => openProjectPopup(item, 'mobile')}
                 >
-                  <div className={`w-36 h-72 bg-black rounded-[2rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 mobile-mockup:hover:shadow-2xl`}
+                  <div className={`w-36 h-72 bg-black rounded-[2rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 25px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.3)' : 
                                                item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.3)' : 
@@ -163,7 +165,7 @@ const PortfolioSection = () => {
                       {/* Neon accent line */}
                       <div className={`absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r ${item.neonColor === 'cyan' ? 'from-cyan-400 to-blue-500' : 
                                                                                                    item.neonColor === 'pink' ? 'from-pink-400 to-purple-500' : 
-                                                                                                   'from-green-400 to-emerald-500'} opacity-0 mobile-mockup:hover:opacity-100 transition-opacity duration-500`} />
+                                                                                                   'from-green-400 to-emerald-500'} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                     </div>
                     
                     {/* Screen with neon glow */}
@@ -177,22 +179,16 @@ const PortfolioSection = () => {
                         height={288}
                       />
                       {/* Neon screen overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 mobile-mockup:hover:opacity-100 transition-opacity duration-500 rounded-b-[2rem]`} />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-[2rem]`} />
                     </div>
                   </div>
-                </div>
-
-                {/* Neon ambient glow - now separate for each device */}
-                <div className="absolute inset-0 pointer-events-none">
-                  <div className={`absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-32 bg-gradient-to-r ${item.glowColor} rounded-full blur-3xl opacity-0 desktop-mockup:hover:opacity-100 transition-opacity duration-1000`} />
-                  <div className={`absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-40 h-32 bg-gradient-to-r ${item.glowColor} rounded-full blur-3xl opacity-0 mobile-mockup:hover:opacity-100 transition-opacity duration-1000`} />
                 </div>
               </div>
 
               {/* Neon Project Info Card */}
               <article 
                 className="max-w-3xl w-full mx-auto relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 hover:-translate-y-3 bg-gray-800/50 backdrop-blur-sm p-8 border border-gray-700 group-hover:border-gray-600"
-                onClick={() => openProjectPopup(item)}
+                onClick={() => openProjectPopup(item, 'desktop')}
                 style={{
                   boxShadow: `0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.1)' : 
                                                                              item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.1)' : 
@@ -254,6 +250,7 @@ const PortfolioSection = () => {
           isOpen={isPopupOpen}
           onClose={closeProjectPopup}
           project={selectedProject}
+          viewType={viewType}
         />
       )}
     </section>

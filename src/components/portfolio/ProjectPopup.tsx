@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
@@ -14,9 +14,10 @@ interface ProjectPopupProps {
     mobileImage: string;
     liveUrl?: string;
   };
+  viewType: 'desktop' | 'mobile';
 }
 
-const ProjectPopup = ({ isOpen, onClose, project }: ProjectPopupProps) => {
+const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps) => {
   const { t } = useTranslation();
 
   const scrollToContact = () => {
@@ -26,39 +27,30 @@ const ProjectPopup = ({ isOpen, onClose, project }: ProjectPopupProps) => {
     }, 300);
   };
 
+  const isDesktop = viewType === 'desktop';
+  const imageToShow = isDesktop ? project.desktopImage : project.mobileImage;
+  const altText = `${project.title} ${isDesktop ? 'desktop' : 'mobile'} screenshot`;
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
+          <DialogDescription>
+            {isDesktop ? 'Desktop Version' : 'Mobile Version'}
+          </DialogDescription>
         </DialogHeader>
         
         <div className="space-y-6">
-          {/* Desktop Screenshot */}
-          <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Desktop Version</h3>
-            <div className="border rounded-lg overflow-hidden bg-white">
+          {/* Single Screenshot */}
+          <div className="flex justify-center">
+            <div className={`border rounded-lg overflow-hidden bg-white ${isDesktop ? 'w-full' : 'inline-block'}`}>
               <LazyImage
-                src={project.desktopImage}
-                alt={`${project.title} desktop screenshot`}
-                className="w-full h-auto"
+                src={imageToShow}
+                alt={altText}
+                className={`h-auto ${isDesktop ? 'w-full' : 'max-w-sm'}`}
                 loading="lazy"
               />
-            </div>
-          </div>
-
-          {/* Mobile Screenshot */}
-          <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Mobile Version</h3>
-            <div className="flex justify-center">
-              <div className="border rounded-lg overflow-hidden bg-white inline-block">
-                <LazyImage
-                  src={project.mobileImage}
-                  alt={`${project.title} mobile screenshot`}
-                  className="h-auto max-w-sm"
-                  loading="lazy"
-                />
-              </div>
             </div>
           </div>
 
