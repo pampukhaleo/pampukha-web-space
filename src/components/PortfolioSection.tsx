@@ -108,10 +108,10 @@ const PortfolioSection = () => {
               <div className="flex justify-center items-end gap-8 mb-12 relative">
                 {/* Desktop Neon Frame */}
                 <div 
-                  className="relative transform-gpu group-hover:scale-105 group-hover:-translate-y-4 transition-all duration-700 cursor-pointer"
+                  className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer"
                   onClick={() => openProjectPopup(item)}
                 >
-                  <div className={`w-80 h-52 bg-black rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 group-hover:shadow-2xl`}
+                  <div className={`w-80 h-52 bg-black rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 desktop-mockup:hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 30px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.3)' : 
                                                item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.3)' : 
@@ -127,7 +127,7 @@ const PortfolioSection = () => {
                       {/* Neon pulse line */}
                       <div className={`absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r ${item.neonColor === 'cyan' ? 'from-cyan-400 to-blue-500' : 
                                                                                                  item.neonColor === 'pink' ? 'from-pink-400 to-purple-500' : 
-                                                                                                 'from-green-400 to-emerald-500'} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                                                                                                 'from-green-400 to-emerald-500'} opacity-0 desktop-mockup:hover:opacity-100 transition-opacity duration-500`} />
                     </div>
                     
                     {/* Screen with neon glow */}
@@ -135,23 +135,23 @@ const PortfolioSection = () => {
                       <LazyImage
                         src={item.desktopImage}
                         alt={`${item.title} desktop version`}
-                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                        className="w-full h-full object-cover object-top transition-transform duration-700"
                         loading={index === 0 ? "eager" : "lazy"}
                         width={320}
                         height={200}
                       />
                       {/* Neon overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 desktop-mockup:hover:opacity-100 transition-opacity duration-500 rounded-b-2xl`} />
                     </div>
                   </div>
                 </div>
 
                 {/* Mobile Neon Frame */}
                 <div 
-                  className="relative transform-gpu group-hover:scale-105 group-hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer"
+                  className="mobile-mockup relative transform-gpu hover:scale-105 hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer"
                   onClick={() => openProjectPopup(item)}
                 >
-                  <div className={`w-36 h-72 bg-black rounded-[2rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 group-hover:shadow-2xl`}
+                  <div className={`w-36 h-72 bg-black rounded-[2rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 mobile-mockup:hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 25px ${item.neonColor === 'cyan' ? 'rgba(0, 255, 255, 0.3)' : 
                                                item.neonColor === 'pink' ? 'rgba(255, 20, 147, 0.3)' : 
@@ -163,7 +163,7 @@ const PortfolioSection = () => {
                       {/* Neon accent line */}
                       <div className={`absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r ${item.neonColor === 'cyan' ? 'from-cyan-400 to-blue-500' : 
                                                                                                    item.neonColor === 'pink' ? 'from-pink-400 to-purple-500' : 
-                                                                                                   'from-green-400 to-emerald-500'} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                                                                                                   'from-green-400 to-emerald-500'} opacity-0 mobile-mockup:hover:opacity-100 transition-opacity duration-500`} />
                     </div>
                     
                     {/* Screen with neon glow */}
@@ -171,20 +171,21 @@ const PortfolioSection = () => {
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
-                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                        className="w-full h-full object-cover object-top transition-transform duration-700"
                         loading={index === 0 ? "eager" : "lazy"}
                         width={144}
                         height={288}
                       />
                       {/* Neon screen overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-[2rem]`} />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${item.glowColor} opacity-0 mobile-mockup:hover:opacity-100 transition-opacity duration-500 rounded-b-[2rem]`} />
                     </div>
                   </div>
                 </div>
 
-                {/* Neon ambient glow */}
+                {/* Neon ambient glow - now separate for each device */}
                 <div className="absolute inset-0 pointer-events-none">
-                  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-32 bg-gradient-to-r ${item.glowColor} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
+                  <div className={`absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-32 bg-gradient-to-r ${item.glowColor} rounded-full blur-3xl opacity-0 desktop-mockup:hover:opacity-100 transition-opacity duration-1000`} />
+                  <div className={`absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-40 h-32 bg-gradient-to-r ${item.glowColor} rounded-full blur-3xl opacity-0 mobile-mockup:hover:opacity-100 transition-opacity duration-1000`} />
                 </div>
               </div>
 

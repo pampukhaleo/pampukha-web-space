@@ -91,4 +91,13 @@
   .section-description {
     @apply text-lg text-foreground-muted max-w-3xl mx-auto text-center mb-12;
   }
+
+  /* Separate hover effects for desktop and mobile mockups */
+  .desktop-mockup:hover ~ .mobile-mockup {
+    @apply transform-none translate-y-0 scale-100;
+  }
+  
+  .mobile-mockup:hover ~ .desktop-mockup {
+    @apply transform-none translate-y-0 scale-100;
+  }
 }
