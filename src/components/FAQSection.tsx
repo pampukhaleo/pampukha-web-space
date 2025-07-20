@@ -50,7 +50,7 @@ const FAQSection = () => {
     <section id="faq" className="py-16 md:py-24 px-4 bg-muted/30" role="main">
       <div className="container mx-auto">
         <header className="text-center mb-16">
-          <h2 className="section-heading">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('faq.title1')} <span className="gradient-text">{t('faq.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -67,7 +67,7 @@ const FAQSection = () => {
                 className="card-gradient rounded-lg px-6"
               >
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="font-semibold">{faq.question}</span>
+                  <h3 className="font-semibold">{faq.question}</h3>
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-muted-foreground leading-relaxed">
