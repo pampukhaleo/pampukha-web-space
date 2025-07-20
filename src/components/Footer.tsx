@@ -83,7 +83,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  @leonforge
+                  Telegram: @leonforge
                 </a>
               </div>
             </address>
