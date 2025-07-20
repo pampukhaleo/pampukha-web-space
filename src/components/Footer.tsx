@@ -22,32 +22,32 @@ const Footer = () => {
             <p className="mb-6 text-foreground-muted">
               {t('footer.description')}
             </p>
-            <div className="flex space-x-4" role="list" aria-label="Социальные сети">
-              <a 
-                href="#" 
-                className="text-foreground-muted hover:text-primary transition-colors" 
-                aria-label="Facebook Leonforge"
-                role="listitem"
-              >
-                <Facebook />
-              </a>
-              <a 
-                href="#" 
-                className="text-foreground-muted hover:text-primary transition-colors" 
-                aria-label="Instagram Leonforge"
-                role="listitem"
-              >
-                <Instagram />
-              </a>
-              <a 
-                href="#" 
-                className="text-foreground-muted hover:text-primary transition-colors" 
-                aria-label="LinkedIn Leonforge"
-                role="listitem"
-              >
-                <Linkedin />
-              </a>
-            </div>
+            {/*<div className="flex space-x-4" role="list" aria-label="Социальные сети">*/}
+            {/*  <a */}
+            {/*    href="#" */}
+            {/*    className="text-foreground-muted hover:text-primary transition-colors" */}
+            {/*    aria-label="Facebook Leonforge"*/}
+            {/*    role="listitem"*/}
+            {/*  >*/}
+            {/*    <Facebook />*/}
+            {/*  </a>*/}
+            {/*  <a */}
+            {/*    href="#" */}
+            {/*    className="text-foreground-muted hover:text-primary transition-colors" */}
+            {/*    aria-label="Instagram Leonforge"*/}
+            {/*    role="listitem"*/}
+            {/*  >*/}
+            {/*    <Instagram />*/}
+            {/*  </a>*/}
+            {/*  <a */}
+            {/*    href="#" */}
+            {/*    className="text-foreground-muted hover:text-primary transition-colors" */}
+            {/*    aria-label="LinkedIn Leonforge"*/}
+            {/*    role="listitem"*/}
+            {/*  >*/}
+            {/*    <Linkedin />*/}
+            {/*  </a>*/}
+            {/*</div>*/}
           </div>
           
           <nav aria-label="Основная навигация">
@@ -80,18 +80,12 @@ const Footer = () => {
                   +380 12 345 6789
                 </a>
               </div>
-              <div className="flex items-center">
-                <Mail size={20} className="mr-3 text-foreground-muted" aria-hidden="true" />
-                <a href="mailto:leonid.pampukha@example.com" className="hover:text-primary transition-colors">
-                  leonid.pampukha@example.com
-                </a>
-              </div>
             </address>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-border text-center text-foreground-muted">
-          <p>© {currentYear} Leonforge. {t('footer.rights')}</p>
+          <p>© 2025 Leonforge. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>
