@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -8,11 +8,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-background-darker text-foreground py-12" role="contentinfo">
+    <footer className="bg-background-darker text-foreground py-8" role="contentinfo">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
-            <div className="flex items-center space-x-3 mb-6">
+        <div className="text-center max-w-2xl mx-auto">
+          {/* Logo and Brief Description */}
+          <div className="mb-6">
+            <div className="flex items-center justify-center space-x-3 mb-4">
               <img 
                 src="/leonforge_logo.png" 
                 alt="Leonforge" 
@@ -20,40 +21,14 @@ const Footer = () => {
               />
               <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
             </div>
-            <p className="mb-6 text-foreground-muted">
+            <p className="text-foreground-muted text-sm max-w-md mx-auto">
               {t('footer.description')}
             </p>
-            {/*<div className="flex space-x-4" role="list" aria-label="Социальные сети">*/}
-            {/*  <a */}
-            {/*    href="#" */}
-            {/*    className="text-foreground-muted hover:text-primary transition-colors" */}
-            {/*    aria-label="Facebook Leonforge"*/}
-            {/*    role="listitem"*/}
-            {/*  >*/}
-            {/*    <Facebook />*/}
-            {/*  </a>*/}
-            {/*  <a */}
-            {/*    href="#" */}
-            {/*    className="text-foreground-muted hover:text-primary transition-colors" */}
-            {/*    aria-label="Instagram Leonforge"*/}
-            {/*    role="listitem"*/}
-            {/*  >*/}
-            {/*    <Instagram />*/}
-            {/*  </a>*/}
-            {/*  <a */}
-            {/*    href="#" */}
-            {/*    className="text-foreground-muted hover:text-primary transition-colors" */}
-            {/*    aria-label="LinkedIn Leonforge"*/}
-            {/*    role="listitem"*/}
-            {/*  >*/}
-            {/*    <Linkedin />*/}
-            {/*  </a>*/}
-            {/*</div>*/}
           </div>
           
-          <nav aria-label="Основная навигация">
-            <h3 className="text-xl font-bold mb-6">{t('footer.navigation')}</h3>
-            <ul className="space-y-3">
+          {/* Navigation Links in One Row */}
+          <nav className="mb-6" aria-label="Основная навигация">
+            <ul className="flex flex-wrap justify-center gap-6 text-sm">
               <li>
                 <a href="#" className="text-foreground-muted hover:text-primary transition-colors">{t('footer.home')}</a>
               </li>
@@ -72,26 +47,25 @@ const Footer = () => {
             </ul>
           </nav>
           
-          <div>
-            <h3 className="text-xl font-bold mb-6">{t('footer.contactInfo')}</h3>
-            <address className="space-y-4 not-italic">
-              <div className="flex items-center">
-                <MessageCircle size={20} className="mr-3 text-foreground-muted" aria-hidden="true" />
-                <a 
-                  href="https://t.me/leonforge" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  Telegram: @leonforge
-                </a>
-              </div>
-            </address>
+          {/* Telegram Contact */}
+          <div className="mb-6">
+            <div className="flex items-center justify-center">
+              <MessageCircle size={20} className="mr-3 text-foreground-muted" aria-hidden="true" />
+              <a 
+                href="https://t.me/leonforge" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                Telegram: @leonforge
+              </a>
+            </div>
           </div>
-        </div>
-        
-        <div className="mt-12 pt-8 border-t border-border text-center text-foreground-muted">
-          <p>© 2025 Leonforge. {t('footer.rights')}</p>
+          
+          {/* Copyright */}
+          <div className="pt-4 border-t border-border text-center text-foreground-muted text-sm">
+            <p>© 2025 Leonforge. {t('footer.rights')}</p>
+          </div>
         </div>
       </div>
     </footer>
