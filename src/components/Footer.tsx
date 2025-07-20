@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -75,9 +76,14 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">{t('footer.contactInfo')}</h3>
             <address className="space-y-4 not-italic">
               <div className="flex items-center">
-                <Phone size={20} className="mr-3 text-foreground-muted" aria-hidden="true" />
-                <a href="tel:+380123456789" className="hover:text-primary transition-colors">
-                  +380 12 345 6789
+                <MessageCircle size={20} className="mr-3 text-foreground-muted" aria-hidden="true" />
+                <a 
+                  href="https://t.me/leonforge" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  @leonforge
                 </a>
               </div>
             </address>
