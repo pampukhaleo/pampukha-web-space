@@ -59,7 +59,7 @@ const ServicesSection = () => {
           <div className="flex justify-center mt-6">
             <Badge 
               variant="default" 
-              className="bg-brand-blue/10 text-brand-blue text-base px-4 py-2"
+              className="bg-brand-blue/10 text-brand-blue text-base px-4 py-2 hover:text-white"
             >
               {t('services.package')}
             </Badge>
