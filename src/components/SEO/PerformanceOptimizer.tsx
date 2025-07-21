@@ -46,21 +46,8 @@ export const PerformanceOptimizer = () => {
       }
     };
 
-    // Улучшенная регистрация service worker
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered successfully:', registration);
-        } catch (error) {
-          console.warn('Service Worker registration failed:', error);
-        }
-      }
-    };
-
     addCriticalCSS();
     optimizeFonts();
-    registerServiceWorker();
   }, [i18n.language]);
 
   return null;
