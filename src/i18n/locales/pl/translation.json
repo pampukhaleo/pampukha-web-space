@@ -1,8 +1,7 @@
-
 {
   "navbar": {
     "about": "O mnie",
-    "portfolio": "Portfolio",
+    "portfolio": "Portfolio", 
     "services": "Usługi",
     "contact": "Kontakt",
     "login": "Zaloguj się",
@@ -37,23 +36,23 @@
   "portfolio": {
     "title1": "Moje",
     "title2": "portfolio",
-    "description": "Zobacz przykłady szybkich stron SPA zbudowanych z React. Każdy projekt jest tworzony z indywidualnym podejściem i skonfigurowany zgodnie z potrzebami klienta.",
+    "description": "Rozwiązania React SPA dla poważnego biznesu. Systemy wysokich obciążeń, złożone integracje, profesjonalna niezawodność. Każdy projekt zbudowany z najnowocześniejszym stosem technologicznym.",
     "project1": {
-      "title": "Sklep internetowy SPA",
-      "category": "E-commerce SPA",
-      "description": "Szybki sklep jednostronicowy z analityką i selektywną konfiguracją reklamy zgodnie z potrzebami klienta."
+      "title": "Platforma Instytutu Ekspertyz Sądowych",
+      "category": "Profesjonalna React SPA",
+      "description": "Wysokowydajne SPA dla biegłych sądowych obsługujących sądy i kancelarie prawne. Złożony system zarządzania sprawami z przetwarzaniem dokumentów, harmonogramowaniem ekspertów i automatycznym raportowaniem. Zbudowany do obsługi wrażliwych danych prawnych z maksymalnym bezpieczeństwem i szybkością."
     },
     "project2": {
-      "title": "Korporacyjna strona SPA",
-      "category": "Biznes SPA",
-      "description": "Błyskawiczna strona z integracją tylko niezbędnych narzędzi marketingowych."
+      "title": "Międzynarodowa Izba Arbitrażowa",
+      "category": "Korporacyjna React SPA",
+      "description": "Zaawansowana platforma dla Europejskiej Izby Arbitrażowej łącząca 35+ krajów. Wielojęzyczne zarządzanie arbitrażem, baza danych ekspertów i międzynarodowe przepływy pracy rozwiązywania sporów. Architektura klasy profesjonalnej dla transgranicznej działalności prawnej."
     },
     "project3": {
-      "title": "Strona docelowa SPA",
-      "category": "Marketing SPA",
-      "description": "Szybka strona sprzedażowa z konfiguracją kampanii reklamowych zgodnie z preferencjami klienta."
+      "title": "Usługi Prawne dla Ukraińców w Polsce",
+      "category": "Specjalistyczna React SPA",
+      "description": "Ukierunkowana platforma pomocy prawnej dla ukraińskich uchodźców i imigrantów w Polsce. System ekspertyz dwóch jurysdykcji, wsparcie wielojęzyczne i usprawnianie rezerwacji konsultacji. Zbudowana dla wrażliwego humanitarnego wsparcia prawnego."
     },
-    "orderSimilar": "Zamów podobny projekt SPA"
+    "orderSimilar": "Zamów podobny profesjonalny projekt"
   },
   "services": {
     "title1": "Moje",

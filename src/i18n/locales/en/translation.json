@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "about": "About me",
@@ -37,23 +36,23 @@
   "portfolio": {
     "title1": "My",
     "title2": "portfolio",
-    "description": "View examples of fast SPA websites built with React. Each project is created with individual approach and configured according to client needs.",
+    "description": "React SPA solutions for serious business. High-load systems, complex integrations, professional reliability. Each project built with cutting-edge technology stack.",
     "project1": {
-      "title": "SPA online store",
-      "category": "E-commerce SPA",
-      "description": "Fast single-page store with analytics and selective advertising setup according to client needs."
+      "title": "Forensic Institute Platform",
+      "category": "Professional React SPA",
+      "description": "High-performance SPA for forensic experts serving courts and law firms. Complex case management system with document processing, expert scheduling, and automated reporting. Built to handle sensitive legal data with maximum security and speed."
     },
     "project2": {
-      "title": "Corporate SPA website",
-      "category": "Business SPA",
-      "description": "Lightning-fast website with integration of only necessary marketing tools."
+      "title": "International Arbitration Chamber",
+      "category": "Enterprise React SPA",
+      "description": "Sophisticated platform for European Arbitration Chamber connecting 35+ countries. Multi-language arbitration management, expert database, and international dispute resolution workflows. Professional-grade architecture for cross-border legal operations."
     },
     "project3": {
-      "title": "SPA landing page",
-      "category": "Marketing SPA",
-      "description": "Fast sales page with advertising campaign setup according to client preferences."
+      "title": "Legal Services for Ukrainians in Poland",
+      "category": "Specialized React SPA",
+      "description": "Targeted legal assistance platform serving Ukrainian refugees and immigrants in Poland. Dual-jurisdiction expertise system, multi-language support, and streamlined consultation booking. Built for sensitive humanitarian legal support."
     },
-    "orderSimilar": "Order a similar SPA project"
+    "orderSimilar": "Order a similar professional project"
   },
   "services": {
     "title1": "My",
