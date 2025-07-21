@@ -190,6 +190,7 @@ ${formData.message}
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                   placeholder="+380 ХХ ХХХ ХХХХ"
                   className="w-full p-3 rounded-lg bg-input text-foreground border border-border"
                 />

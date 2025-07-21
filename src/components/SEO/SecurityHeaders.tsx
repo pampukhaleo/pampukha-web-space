@@ -14,7 +14,7 @@ export const SecurityHeaders = () => {
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
         "img-src 'self' data: https:; " +
         "font-src 'self' https://fonts.gstatic.com; " +
-        "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " +
+        "connect-src 'self' https://fwwpidktaanowpaihgzy.supabase.co https://www.googletagmanager.com https://www.google-analytics.com; " +
         "frame-src 'self' https://www.googletagmanager.com; " +
         "object-src 'none';"
       );
