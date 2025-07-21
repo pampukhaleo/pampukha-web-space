@@ -8,13 +8,15 @@ export const SecurityHeaders = () => {
     if (!csp) {
       csp = document.createElement('meta');
       csp.setAttribute('http-equiv', 'Content-Security-Policy');
-      csp.setAttribute('content', 
+      csp.setAttribute('content',
         "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; " +
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
         "img-src 'self' data: https:; " +
         "font-src 'self' https://fonts.gstatic.com; " +
-        "connect-src 'self' https:;"
+        "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " +
+        "frame-src 'self' https://www.googletagmanager.com; " +
+        "object-src 'none';"
       );
       document.head.appendChild(csp);
     }

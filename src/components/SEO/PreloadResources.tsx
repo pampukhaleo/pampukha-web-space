@@ -13,15 +13,10 @@ export const PreloadResources = () => {
     // Preload критических ресурсов с правильными as атрибутами
     const criticalResources = [
       {
-        href: 'https://leonforge.com/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png',
+        href: 'https://leonforge.com/leonforge_logo.png',
         as: 'image',
         type: 'image/png'
       },
-      {
-        href: 'https://leonforge.com/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png',
-        as: 'image',
-        type: 'image/png'
-      }
     ];
 
     criticalResources.forEach(resource => {

@@ -71,10 +71,9 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "name": "Leonforge",
             "description": t('footer.description'),
             "url": baseUrl,
-            "logo": `${baseUrl}/lovable-uploads/843d695e-7086-4611-b3f0-bf18982fdfc3.png`,
+            "logo": `${baseUrl}/leonforge_logo.png`,
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+380123456789",
               "contactType": "customer service",
               "availableLanguage": ["uk", "en", "pl"]
             },
@@ -126,7 +125,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "jobTitle": "Full Stack Developer",
             "description": t('about.introduction'),
             "url": baseUrl,
-            "image": `${baseUrl}/lovable-uploads/92e41082-6122-4fc2-aa66-93635743b006.png`,
+            "image": `${baseUrl}/leonforge_logo.png`,
             "knowsAbout": [
               "React",
               "AI Development", 
