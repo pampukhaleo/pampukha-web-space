@@ -35,12 +35,15 @@ const LanguageSwitcher = () => {
           <Globe className="h-5 w-5" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent 
+        align="end" 
+        className="bg-background border border-border shadow-lg z-50"
+      >
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
-            className={`cursor-pointer ${i18n.language === lang.code ? 'font-bold text-primary' : ''}`}
+            className={`cursor-pointer hover:bg-accent hover:text-accent-foreground ${i18n.language === lang.code ? 'font-bold text-primary' : ''}`}
           >
             {t(`language.${lang.code}`)}
           </DropdownMenuItem>
