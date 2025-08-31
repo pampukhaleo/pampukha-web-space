@@ -44,11 +44,11 @@ const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps)
         <div className="space-y-6">
           {/* Single Screenshot */}
           <div className="flex justify-center">
-            <div className={`border rounded-lg overflow-hidden bg-white ${isDesktop ? 'w-full' : 'inline-block'}`}>
+            <div className={`border rounded-lg overflow-hidden bg-white ${isDesktop ? 'max-w-full' : 'inline-block'}`}>
               <LazyImage
                 src={imageToShow}
                 alt={altText}
-                className={`h-auto ${isDesktop ? 'w-full' : 'max-w-sm'}`}
+                className={`h-auto ${isDesktop ? 'w-full h-auto' : 'w-full max-w-xs sm:max-w-sm'}`}
                 loading="lazy"
               />
             </div>

@@ -106,34 +106,34 @@ const PortfolioSection = () => {
                  role="listitem"
                  className={`group relative ${isLastOdd ? 'lg:col-span-2' : ''}`}
             >
-              {/* Neon Device Mockups - Desktop centered with Mobile */}
-              <div className="flex justify-center items-center gap-8 mb-12 relative">
-                {/* Desktop Neon Frame - Centered */}
+              {/* Neon Device Mockups - Responsive layout */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 flex-wrap justify-center mb-12 relative">
+                {/* Desktop Neon Frame - Responsive */}
                 <div 
                   className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer"
                   onClick={() => openProjectPopup(item, 'desktop')}
                 >
-                  <div className={`w-80 h-52 bg-card rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
+                  <div className={`w-64 h-40 sm:w-80 sm:h-52 bg-card rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 30px hsl(var(--primary) / 0.3)`
                        }}>
                     {/* Neon Status Bar */}
-                    <div className="h-12 bg-muted flex items-center justify-center border-b border-border relative">
-                      <div className="flex gap-3">
-                        <div className="w-3 h-3 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
-                        <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-lg shadow-yellow-500/50"></div>
-                        <div className="w-3 h-3 bg-green-500 rounded-full shadow-lg shadow-green-500/50"></div>
+                    <div className="h-8 sm:h-12 bg-muted flex items-center justify-center border-b border-border relative">
+                      <div className="flex gap-2 sm:gap-3">
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full shadow-lg shadow-yellow-500/50"></div>
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full shadow-lg shadow-green-500/50"></div>
                       </div>
                       {/* Neon pulse line */}
                       <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                     
                     {/* Screen with neon glow */}
-                    <div className="relative w-full h-full bg-background overflow-hidden -mt-12 rounded-b-2xl">
+                    <div className="relative w-full h-full bg-background overflow-hidden -mt-8 sm:-mt-12 rounded-b-2xl">
                       <LazyImage
                         src={item.desktopImage}
                         alt={`${item.title} desktop version`}
-                        className="w-full h-full object-cover object-top transition-transform duration-700"
+                        className="w-full h-full object-contain transition-transform duration-700"
                         loading={index === 0 ? "eager" : "lazy"}
                         width={320}
                         height={200}
@@ -144,28 +144,28 @@ const PortfolioSection = () => {
                   </div>
                 </div>
 
-                {/* Mobile Neon Frame - Beside desktop */}
+                {/* Mobile Neon Frame - Responsive */}
                 <div 
-                  className="mobile-mockup relative transform-gpu hover:scale-105 hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer"
+                  className="mobile-mockup relative transform-gpu hover:scale-105 hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer mx-auto sm:mx-0"
                   onClick={() => openProjectPopup(item, 'mobile')}
                 >
-                  <div className={`w-36 h-72 bg-card rounded-[1rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
+                  <div className={`w-28 h-56 sm:w-36 sm:h-72 bg-card rounded-[1rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
                        style={{
                          boxShadow: `0 0 25px hsl(var(--primary) / 0.3)`
                        }}>
                     {/* Neon Notch */}
-                    <div className="h-12 bg-muted flex items-center justify-center relative">
-                      <div className="w-20 h-3 bg-background rounded-full shadow-inner"></div>
+                    <div className="h-8 sm:h-12 bg-muted flex items-center justify-center relative">
+                      <div className="w-16 sm:w-20 h-2 sm:h-3 bg-background rounded-full shadow-inner"></div>
                       {/* Neon accent line */}
-                      <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-0.5 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                     
                     {/* Screen with neon glow */}
-                    <div className="relative w-full h-full bg-background overflow-hidden -mt-12 rounded-b-[1rem]">
+                    <div className="relative w-full h-full bg-background overflow-hidden -mt-8 sm:-mt-12 rounded-b-[1rem]">
                       <LazyImage
                         src={item.mobileImage}
                         alt={`${item.title} mobile version`}
-                        className="w-full h-full object-cover object-top transition-transform duration-700"
+                        className="w-full h-full object-contain object-top transition-transform duration-700"
                         loading={index === 0 ? "eager" : "lazy"}
                         width={144}
                         height={288}

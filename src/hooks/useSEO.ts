@@ -27,6 +27,9 @@ export const useSEO = ({
     // Используем новый домен leonforge.com
     const baseUrl = 'https://leonforge.com';
     
+    // Set document language
+    document.documentElement.lang = i18n.language;
+    
     // Управление title
     if (title) {
       document.title = title;
@@ -62,10 +65,33 @@ export const useSEO = ({
 
     if (title) updateMetaProperty('og:title', title);
     if (description) updateMetaProperty('og:description', description);
-    if (ogImage) updateMetaProperty('og:image', ogImage);
+    if (ogImage) {
+      updateMetaProperty('og:image', ogImage);
+      updateMetaProperty('og:image:alt', title || 'Leonforge - Web Development');
+    }
     updateMetaProperty('og:type', ogType);
-    updateMetaProperty('og:url', baseUrl);
+    
+    // Use canonicalUrl for og:url
+    const currentPath = window.location.pathname;
+    const canonicalUrl = canonical || `${baseUrl}${currentPath}`;
+    updateMetaProperty('og:url', canonicalUrl);
     updateMetaProperty('og:locale', i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL');
+
+    // Twitter Card meta tags
+    const updateTwitterMeta = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateTwitterMeta('twitter:card', 'summary_large_image');
+    if (title) updateTwitterMeta('twitter:title', title);
+    if (description) updateTwitterMeta('twitter:description', description);
+    if (ogImage) updateTwitterMeta('twitter:image', ogImage);
 
     // Управление canonical URL
     let linkCanonical = document.querySelector('link[rel="canonical"]');
@@ -74,8 +100,6 @@ export const useSEO = ({
       linkCanonical.setAttribute('rel', 'canonical');
       document.head.appendChild(linkCanonical);
     }
-    const currentPath = window.location.pathname;
-    const canonicalUrl = canonical || `${baseUrl}${currentPath}`;
     linkCanonical.setAttribute('href', canonicalUrl);
 
     // Управление hreflang для мультиязычности
