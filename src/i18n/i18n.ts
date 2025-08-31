@@ -26,7 +26,8 @@ i18n
     resources,
     fallbackLng: 'uk',
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['querystring', 'localStorage', 'navigator'],
+      lookupQuerystring: 'lang',
       caches: ['localStorage'],
     },
     interpolation: {

@@ -21,6 +21,10 @@ const LanguageSwitcher = () => {
   
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    // Update URL with language parameter
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lng);
+    window.history.pushState({}, '', url.toString());
   };
 
   return (

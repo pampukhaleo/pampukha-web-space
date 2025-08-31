@@ -29,6 +29,11 @@ export const useSEO = ({
     
     // Set document language
     document.documentElement.lang = i18n.language;
+
+    // Handle canonical URL - if ?lang= parameter exists, use current URL as canonical
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
+    const canonicalUrl = langParam ? window.location.href : (canonical || window.location.origin + window.location.pathname);
     
     // Управление title
     if (title) {
@@ -72,8 +77,6 @@ export const useSEO = ({
     updateMetaProperty('og:type', ogType);
     
     // Use canonicalUrl for og:url
-    const currentPath = window.location.pathname;
-    const canonicalUrl = canonical || `${baseUrl}${currentPath}`;
     updateMetaProperty('og:url', canonicalUrl);
     updateMetaProperty('og:locale', i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL');
 
@@ -103,6 +106,7 @@ export const useSEO = ({
     linkCanonical.setAttribute('href', canonicalUrl);
 
     // Управление hreflang для мультиязычности
+    const currentPath = window.location.pathname;
     const languages = ['uk', 'en', 'pl'];
     const existingHreflangs = document.querySelectorAll('link[rel="alternate"]');
     existingHreflangs.forEach(link => link.remove());
