@@ -23,7 +23,6 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "name": "Leonforge",
             "description": t('hero.description'),
             "url": baseUrl,
-            "telephone": "+380123456789",
             "email": "info@leonforge.com",
             "address": {
               "@type": "PostalAddress",
@@ -77,10 +76,6 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
               "contactType": "customer service",
               "availableLanguage": ["uk", "en", "pl"]
             },
-            "sameAs": [
-              "https://linkedin.com/in/leonforge",
-              "https://github.com/leonforge"
-            ]
           };
 
         case 'WebSite':
@@ -90,14 +85,6 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "name": "Leonforge",
             "description": t('hero.description'),
             "url": baseUrl,
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": `${baseUrl}/search?q={search_term_string}`
-              },
-              "query-input": "required name=search_term_string"
-            },
             "inLanguage": [
               {
                 "@type": "Language",

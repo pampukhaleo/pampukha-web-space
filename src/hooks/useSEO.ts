@@ -83,6 +83,9 @@ export const useSEO = ({
     // Use canonicalUrl for og:url
     updateMetaProperty('og:url', canonicalUrl);
     updateMetaProperty('og:locale', i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL');
+    updateMetaProperty('og:locale:alternate', 'uk_UA');
+    updateMetaProperty('og:locale:alternate', 'en_US');
+    updateMetaProperty('og:locale:alternate', 'pl_PL');
     updateMetaProperty('og:site_name', 'Leonforge');
 
     // Twitter Card meta tags
@@ -97,6 +100,7 @@ export const useSEO = ({
     };
 
     updateTwitterMeta('twitter:card', 'summary_large_image');
+    updateTwitterMeta('twitter:url', canonicalUrl);
     if (title) updateTwitterMeta('twitter:title', title);
     if (description) updateTwitterMeta('twitter:description', description);
     if (ogImage) updateTwitterMeta('twitter:image', ogImage);
