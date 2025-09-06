@@ -16,7 +16,7 @@ interface SEOProps {
   canonical?: string;
   noindex?: boolean;
   structuredData?: Array<{
-    type: 'LocalBusiness' | 'Organization' | 'WebSite' | 'Person' | 'Service' | 'FAQPage';
+    type: 'LocalBusiness' | 'Organization' | 'WebSite' | 'Person' | 'Service' | 'FAQPage' | 'BreadcrumbList';
     data?: any;
   }>;
 }

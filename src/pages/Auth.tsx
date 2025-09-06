@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { Home } from 'lucide-react';
+import { SEO } from '@/components/SEO/SEO';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
@@ -121,8 +122,14 @@ const Auth = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <Card className="w-full max-w-md">
+    <>
+      <SEO 
+        title="Sign In | Leonforge"
+        description="Sign in to your Leonforge account to access your dashboard and manage your website."
+        noindex={true}
+      />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 to-secondary/20 p-4">
+        <Card className="w-full max-w-md">
         <CardHeader>
           <Link to="/">
             <Button variant="ghost" className="flex items-center space-x-2 text-sm font-medium mb-2 p-2">
@@ -191,8 +198,9 @@ const Auth = () => {
             </Button>
           </div>
         </CardContent>
-      </Card>
-    </div>
+        </Card>
+      </div>
+    </>
   );
 };
 

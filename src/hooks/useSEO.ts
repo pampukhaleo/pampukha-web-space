@@ -41,10 +41,14 @@ export const useSEO = ({
     }
 
     // Управление meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription && description) {
-      metaDescription.setAttribute('content', description);
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    const finalDescription = description || 'Professional development of modern websites for small businesses. Stylish, functional, accessible.';
+    metaDescription.setAttribute('content', finalDescription);
 
     // Управление keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -79,6 +83,7 @@ export const useSEO = ({
     // Use canonicalUrl for og:url
     updateMetaProperty('og:url', canonicalUrl);
     updateMetaProperty('og:locale', i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL');
+    updateMetaProperty('og:site_name', 'Leonforge');
 
     // Twitter Card meta tags
     const updateTwitterMeta = (name: string, content: string) => {
@@ -135,6 +140,20 @@ export const useSEO = ({
     }
     const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
     metaRobots.setAttribute('content', robotsContent);
+
+    // Add specific bot meta tags for better crawling
+    const updateBotMeta = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateBotMeta('googlebot', robotsContent);
+    updateBotMeta('bingbot', robotsContent);
 
   }, [title, description, keywords, ogImage, ogType, canonical, noindex, i18n.language]);
 };

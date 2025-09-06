@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import type { Database } from '@/integrations/supabase/types';
 import { Home, Settings } from 'lucide-react';
 import { toast } from 'sonner';
+import { SEO } from '@/components/SEO/SEO';
 
 type Profile = Database['public']['Tables']['profiles']['Row'];
 
@@ -75,11 +76,26 @@ const Dashboard = () => {
   };
 
   if (loading) {
-    return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
+    return (
+      <>
+        <SEO 
+          title="Dashboard | Leonforge"
+          description="Your personal dashboard for managing your Leonforge account and website."
+          noindex={true}
+        />
+        <div className="flex justify-center items-center min-h-screen">Loading...</div>
+      </>
+    );
   }
 
   return (
-    <div className="container mx-auto py-8 px-4">
+    <>
+      <SEO 
+        title="Dashboard | Leonforge"
+        description="Your personal dashboard for managing your Leonforge account and website."
+        noindex={true}
+      />
+      <div className="container mx-auto py-8 px-4">
       <Card>
         <CardHeader>
           <div className="flex items-center space-x-2">
@@ -162,7 +178,8 @@ const Dashboard = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </>
   );
 };
 

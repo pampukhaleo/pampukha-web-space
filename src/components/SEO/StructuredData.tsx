@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface StructuredDataProps {
-  type: 'LocalBusiness' | 'Organization' | 'WebSite' | 'Person' | 'Service' | 'FAQPage';
+  type: 'LocalBusiness' | 'Organization' | 'WebSite' | 'Person' | 'Service' | 'FAQPage' | 'BreadcrumbList';
   data?: any;
 }
 
@@ -169,13 +169,13 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
                 "@type": "Question",
                 "name": t('faq.question1'),
                 "acceptedAnswer": {
-                  "@type": "Answer",
+                "@type": "Answer",
                   "text": t('faq.answer1')
                 }
               },
               {
-                "@type": "Question", 
-                "name": t('faq.question2'),
+                "@type": "Question",
+                "name": t('faq.question2'), 
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": t('faq.answer2')
@@ -183,11 +183,25 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
               },
               {
                 "@type": "Question",
-                "name": t('faq.question3'), 
+                "name": t('faq.question3'),
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": t('faq.answer3')
                 }
+              }
+            ]
+          };
+
+        case 'BreadcrumbList':
+          return {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://leonforge.com"
               }
             ]
           };

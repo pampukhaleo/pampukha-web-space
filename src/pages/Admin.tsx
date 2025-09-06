@@ -11,6 +11,7 @@ import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { Home, Save } from 'lucide-react';
 import type { Database } from '@/integrations/supabase/types';
+import { SEO } from '@/components/SEO/SEO';
 
 type Profile = Database['public']['Tables']['profiles']['Row'];
 
@@ -106,11 +107,26 @@ const Admin = () => {
   };
 
   if (isLoading) {
-    return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
+    return (
+      <>
+        <SEO 
+          title="Admin Panel | Leonforge"
+          description="Administrative panel for managing website content and settings."
+          noindex={true}
+        />
+        <div className="flex justify-center items-center min-h-screen">Loading...</div>
+      </>
+    );
   }
 
   return (
-    <div className="container mx-auto py-8 px-4">
+    <>
+      <SEO 
+        title="Admin Panel | Leonforge"
+        description="Administrative panel for managing website content and settings."
+        noindex={true}
+      />
+      <div className="container mx-auto py-8 px-4">
       <Card>
         <CardHeader>
           <div className="flex items-center justify-between">
@@ -265,7 +281,8 @@ const Admin = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </>
   );
 };
 

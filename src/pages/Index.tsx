@@ -30,7 +30,8 @@ const Index = () => {
           { type: 'WebSite' },
           { type: 'Person' },
           { type: 'Service' },
-          { type: 'FAQPage' }
+          { type: 'FAQPage' },
+          { type: 'BreadcrumbList' }
         ]}
       />
       
