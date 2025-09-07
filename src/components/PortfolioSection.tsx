@@ -11,7 +11,7 @@ const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [viewType, setViewType] = useState<'desktop' | 'mobile'>('desktop');
-  
+
   const portfolioItems = [
     {
       id: 1,
@@ -74,14 +74,14 @@ const PortfolioSection = () => {
 
       {/* Animated Neon Orbs */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" 
+        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"
              style={{ filter: 'drop-shadow(0 0 50px hsl(var(--primary) / 0.3))' }} />
-        <div className="absolute bottom-32 right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-pulse delay-700" 
+        <div className="absolute bottom-32 right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-pulse delay-700"
              style={{ filter: 'drop-shadow(0 0 60px hsl(var(--accent) / 0.3))' }} />
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-secondary/20 rounded-full blur-2xl animate-pulse delay-1000" 
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-secondary/20 rounded-full blur-2xl animate-pulse delay-1000"
              style={{ filter: 'drop-shadow(0 0 40px hsl(var(--secondary) / 0.3))' }} />
       </div>
-      
+
       <div className="container mx-auto relative z-10">
         <header className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -91,7 +91,7 @@ const PortfolioSection = () => {
             {t('portfolio.description')}
           </p>
         </header>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-12 lg:gap-20" role="list">
           {portfolioItems.map((item, index) => {
             const isLastOdd = portfolioItems.length % 2 === 1 && index === portfolioItems.length - 1;
@@ -110,7 +110,7 @@ const PortfolioSection = () => {
               {/* Neon Device Mockups - Desktop Only */}
               <div className="flex flex-col items-center sm:flex-row sm:items-center gap-6 sm:gap-8 flex-wrap justify-center mb-12 relative">
                 {/* Desktop Neon Frame - Responsive */}
-                <div 
+                <div
                   className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer mx-auto sm:mx-0"
                   onClick={() => openProjectPopup(item, 'desktop')}
                 >
@@ -128,13 +128,13 @@ const PortfolioSection = () => {
                       {/* Neon pulse line */}
                       <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
-                    
+
                     {/* Screen with neon glow */}
                     <div className="relative w-full h-full bg-background overflow-hidden -mt-8 sm:-mt-12 rounded-b-2xl">
                       <LazyImage
                         src={item.desktopImage}
                         alt={`${item.title} desktop version`}
-                        className="w-full h-full object-contain transition-transform duration-700"
+                        className="w-full object-fill transition-transform duration-700"
                         loading={index === 0 ? "eager" : "lazy"}
                         width={320}
                         height={200}
@@ -147,7 +147,7 @@ const PortfolioSection = () => {
               </div>
 
               {/* Neon Project Info Card */}
-              <article 
+              <article
                 className="max-w-3xl w-full mx-auto relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 hover:-translate-y-3 bg-card/50 backdrop-blur-sm p-8 border border-border group-hover:border-primary/30"
                 onClick={() => openProjectPopup(item, 'desktop')}
                 style={{
@@ -157,9 +157,9 @@ const PortfolioSection = () => {
                 {/* Neon border glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-2xl" aria-hidden="true" />
 
-                <div className="relative z-10">
+                <div className="relative z-10 h-[280px]">
                   {/* Project Info with neon effects */}
-                  <div className="text-center">
+                  <div className="flex-col text-center">
                     <span className={`inline-block px-6 py-3 text-sm text-foreground rounded-full mb-6 border transition-all duration-300 ${
                       item.neonColor === 'cyan' ? 'bg-primary/20 border-primary/50 shadow-lg shadow-primary/20' :
                       item.neonColor === 'pink' ? 'bg-accent/20 border-accent/50 shadow-lg shadow-accent/20' :
@@ -168,17 +168,9 @@ const PortfolioSection = () => {
                       {item.category}
                     </span>
                     <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-muted-foreground transition-all duration-300">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed text-lg group-hover:text-foreground/80 transition-colors duration-300">{item.description}</p>
+                    <p className="h-full text-muted-foreground leading-relaxed text-lg group-hover:text-foreground/80 transition-colors duration-300">{item.description}</p>
                   </div>
 
-                  {/* Neon external link indicator */}
-                  <div className={`absolute top-6 right-6 p-3 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 border ${
-                    item.neonColor === 'cyan' ? 'bg-primary/20 border-primary/50 shadow-lg shadow-primary/20' :
-                    item.neonColor === 'pink' ? 'bg-accent/20 border-accent/50 shadow-lg shadow-accent/20' :
-                    'bg-secondary/20 border-secondary/50 shadow-lg shadow-secondary/20'
-                  } transform group-hover:scale-110`} aria-hidden="true">
-                    <ExternalLink size={20} className="text-foreground" />
-                  </div>
                 </div>
 
                 {/* Neon scanning line effect */}
@@ -191,10 +183,10 @@ const PortfolioSection = () => {
             </div>
           )})}
         </div>
-        
+
         <div className="mt-16 text-center">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className="border-primary/50 text-primary bg-primary/10 hover:bg-primary/20 transition-all duration-300 border-2 px-8 py-3 rounded-2xl shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
