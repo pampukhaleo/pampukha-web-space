@@ -46,6 +46,39 @@ const PortfolioSection = () => {
       neonColor: 'green',
       glowColor: 'from-green-400/20 to-emerald-500/20'
     },
+    {
+      id: 4,
+      title: t('portfolio.project4.title'),
+      category: t('portfolio.project4.category'),
+      description: t('portfolio.project4.description'),
+      desktopImage: '/placeholder.svg',
+      mobileImage: '/placeholder.svg',
+      liveUrl: 'https://lemonshine.pl/',
+      neonColor: 'cyan',
+      glowColor: 'from-cyan-400/20 to-blue-500/20'
+    },
+    {
+      id: 5,
+      title: t('portfolio.project5.title'),
+      category: t('portfolio.project5.category'),
+      description: t('portfolio.project5.description'),
+      desktopImage: '/placeholder.svg',
+      mobileImage: '/placeholder.svg',
+      liveUrl: 'https://spotlessprohome.co.uk/',
+      neonColor: 'pink',
+      glowColor: 'from-pink-400/20 to-purple-500/20'
+    },
+    {
+      id: 6,
+      title: t('portfolio.project6.title'),
+      category: t('portfolio.project6.category'),
+      description: t('portfolio.project6.description'),
+      desktopImage: '/placeholder.svg',
+      mobileImage: '/placeholder.svg',
+      liveUrl: 'https://laserbeauty-studio.de/',
+      neonColor: 'green',
+      glowColor: 'from-green-400/20 to-emerald-500/20'
+    },
   ];
 
   const openProjectPopup = (project: any, type: 'desktop' | 'mobile') => {

@@ -52,6 +52,21 @@
       "category": "Specialized React SPA",
       "description": "Targeted legal assistance platform serving Ukrainian refugees and immigrants in Poland. Dual-jurisdiction expertise system, multi-language support, and streamlined consultation booking. Built for sensitive humanitarian legal support."
     },
+    "project4": {
+      "title": "Lemon Shine Cleaning Services",
+      "category": "Service Business React SPA",
+      "description": "Professional cleaning services platform with online booking system. Features service packages, team scheduling, customer management, and automated invoicing. Built for scalable cleaning business operations in Poland."
+    },
+    "project5": {
+      "title": "Spotless Pro Home Cleaning",
+      "category": "Premium Cleaning React SPA",
+      "description": "High-end residential cleaning service platform for UK market. Premium service booking, quality assurance tracking, customer testimonials, and subscription management. Professional-grade solution for luxury cleaning services."
+    },
+    "project6": {
+      "title": "Laser Beauty Studio",
+      "category": "Beauty Clinic React SPA",
+      "description": "Modern beauty clinic platform for laser treatments in Germany. Treatment booking system, before/after galleries, consultation scheduling, and medical history management. Professional aesthetic clinic solution."
+    },
     "orderSimilar": "Order a similar professional project"
   },
   "services": {

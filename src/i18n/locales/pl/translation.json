@@ -52,6 +52,21 @@
       "category": "Specjalistyczna React SPA",
       "description": "Ukierunkowana platforma pomocy prawnej dla ukraińskich uchodźców i imigrantów w Polsce. System ekspertyz dwóch jurysdykcji, wsparcie wielojęzyczne i usprawnianie rezerwacji konsultacji. Zbudowana dla wrażliwego humanitarnego wsparcia prawnego."
     },
+    "project4": {
+      "title": "Lemon Shine Usługi Sprzątające",
+      "category": "Biznesowa React SPA",
+      "description": "Platforma profesjonalnych usług sprzątających z systemem rezerwacji online. Oferuje pakiety usług, planowanie zespołu, zarządzanie klientami i automatyczne fakturowanie. Stworzona dla skalowalnych operacji sprzątających w Polsce."
+    },
+    "project5": {
+      "title": "Spotless Pro Home Cleaning",
+      "category": "Premium Sprzątanie React SPA",
+      "description": "Platforma wysokiej klasy usług sprzątania mieszkań na rynek brytyjski. Premium rezerwacja usług, śledzenie zapewnienia jakości, opinie klientów i zarządzanie subskrypcjami. Profesjonalne rozwiązanie dla luksusowych usług sprzątających."
+    },
+    "project6": {
+      "title": "Laser Beauty Studio",
+      "category": "Klinika Urody React SPA",
+      "description": "Nowoczesna platforma kliniki urody do zabiegów laserowych w Niemczech. System rezerwacji zabiegów, galerie przed/po, planowanie konsultacji i zarządzanie historią medyczną. Profesjonalne rozwiązanie dla kliniki estetycznej."
+    },
     "orderSimilar": "Zamów podobny profesjonalny projekt"
   },
   "services": {
