@@ -92,7 +92,7 @@ const PortfolioSection = () => {
           </p>
         </header>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-20" role="list">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-12 lg:gap-20" role="list">
           {portfolioItems.map((item, index) => {
             const isLastOdd = portfolioItems.length % 2 === 1 && index === portfolioItems.length - 1;
             const neonColorMap = {
@@ -104,13 +104,14 @@ const PortfolioSection = () => {
             return (
             <div key={item.id}
                  role="listitem"
-                 className={`group relative ${isLastOdd ? 'lg:col-span-2' : ''}`}
+                 className={`group relative animate-fade-in ${isLastOdd ? 'lg:col-span-2' : ''}`}
+                 style={{ animationDelay: `${index * 80}ms` }}
             >
-              {/* Neon Device Mockups - Responsive layout */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 flex-wrap justify-center mb-12 relative">
+              {/* Neon Device Mockups - Desktop Only */}
+              <div className="flex flex-col items-center sm:flex-row sm:items-center gap-6 sm:gap-8 flex-wrap justify-center mb-12 relative">
                 {/* Desktop Neon Frame - Responsive */}
                 <div 
-                  className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer"
+                  className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer mx-auto sm:mx-0"
                   onClick={() => openProjectPopup(item, 'desktop')}
                 >
                   <div className={`w-64 h-40 sm:w-80 sm:h-52 bg-card rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
@@ -140,38 +141,6 @@ const PortfolioSection = () => {
                       />
                       {/* Neon overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-accent/20 opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-2xl" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Mobile Neon Frame - Responsive */}
-                <div 
-                  className="mobile-mockup relative transform-gpu hover:scale-105 hover:-translate-y-6 transition-all duration-700 delay-100 cursor-pointer mx-auto sm:mx-0"
-                  onClick={() => openProjectPopup(item, 'mobile')}
-                >
-                  <div className={`w-28 h-56 sm:w-36 sm:h-72 bg-card rounded-[1rem] overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
-                       style={{
-                         boxShadow: `0 0 25px hsl(var(--primary) / 0.3)`
-                       }}>
-                    {/* Neon Notch */}
-                    <div className="h-8 sm:h-12 bg-muted flex items-center justify-center relative">
-                      <div className="w-16 sm:w-20 h-2 sm:h-3 bg-background rounded-full shadow-inner"></div>
-                      {/* Neon accent line */}
-                      <div className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-0.5 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                    
-                    {/* Screen with neon glow */}
-                    <div className="relative w-full h-full bg-background overflow-hidden -mt-8 sm:-mt-12 rounded-b-[1rem]">
-                      <LazyImage
-                        src={item.mobileImage}
-                        alt={`${item.title} mobile version`}
-                        className="w-full h-full object-contain object-top transition-transform duration-700"
-                        loading={index === 0 ? "eager" : "lazy"}
-                        width={144}
-                        height={288}
-                      />
-                      {/* Neon screen overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-accent/20 opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-[2rem]" />
                     </div>
                   </div>
                 </div>
