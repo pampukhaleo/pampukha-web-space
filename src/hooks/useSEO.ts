@@ -74,19 +74,31 @@ export const useSEO = ({
 
     if (title) updateMetaProperty('og:title', title);
     if (description) updateMetaProperty('og:description', description);
-    if (ogImage) {
-      updateMetaProperty('og:image', ogImage);
-      updateMetaProperty('og:image:alt', title || 'Leonforge - Web Development');
-    }
-    updateMetaProperty('og:type', ogType);
     
-    // Use canonicalUrl for og:url
+    // Add og:image with fallback
+    const finalOgImage = ogImage || `${baseUrl}/leonforge_logo.png`;
+    updateMetaProperty('og:image', finalOgImage);
+    updateMetaProperty('og:image:alt', title || 'Leonforge - Web Development');
+    
+    updateMetaProperty('og:type', ogType);
     updateMetaProperty('og:url', canonicalUrl);
     updateMetaProperty('og:locale', i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL');
-    updateMetaProperty('og:locale:alternate', 'uk_UA');
-    updateMetaProperty('og:locale:alternate', 'en_US');
-    updateMetaProperty('og:locale:alternate', 'pl_PL');
     updateMetaProperty('og:site_name', 'Leonforge');
+
+    // Remove existing locale alternates and create new ones
+    const existingLocaleAlternates = document.querySelectorAll('meta[property="og:locale:alternate"]');
+    existingLocaleAlternates.forEach(meta => meta.remove());
+    
+    // Add locale alternates
+    const locales = ['uk_UA', 'en_US', 'pl_PL'];
+    locales.forEach(locale => {
+      if (locale !== (i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL')) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'og:locale:alternate');
+        meta.setAttribute('content', locale);
+        document.head.appendChild(meta);
+      }
+    });
 
     // Twitter Card meta tags
     const updateTwitterMeta = (name: string, content: string) => {
@@ -103,7 +115,7 @@ export const useSEO = ({
     updateTwitterMeta('twitter:url', canonicalUrl);
     if (title) updateTwitterMeta('twitter:title', title);
     if (description) updateTwitterMeta('twitter:description', description);
-    if (ogImage) updateTwitterMeta('twitter:image', ogImage);
+    updateTwitterMeta('twitter:image', finalOgImage);
 
     // Управление canonical URL
     let linkCanonical = document.querySelector('link[rel="canonical"]');
@@ -117,7 +129,7 @@ export const useSEO = ({
     // Управление hreflang для мультиязычности
     const currentPath = window.location.pathname;
     const languages = ['uk', 'en', 'pl'];
-    const existingHreflangs = document.querySelectorAll('link[rel="alternate"]');
+    const existingHreflangs = document.querySelectorAll('link[rel="alternate"][hreflang]');
     existingHreflangs.forEach(link => link.remove());
 
     languages.forEach(lang => {

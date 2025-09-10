@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface StructuredDataProps {
-  type: 'LocalBusiness' | 'Organization' | 'WebSite' | 'Person' | 'Service' | 'FAQPage' | 'BreadcrumbList';
+  type: 'LocalBusiness' | 'Organization' | 'WebSite' | 'Person' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'ItemList';
   data?: any;
 }
 
@@ -191,6 +191,24 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
                 "item": "https://leonforge.com"
               }
             ]
+          };
+
+        case 'ItemList':
+          return {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Leonforge Portfolio",
+            "description": "Portfolio of web development projects by Leonforge",
+            "url": `${baseUrl}/#portfolio`,
+            "numberOfItems": data?.length || 0,
+            "itemListElement": data?.map((item: any, index: number) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": item.title,
+              "description": item.description,
+              "url": item.url,
+              "image": item.image
+            })) || []
           };
 
         default:

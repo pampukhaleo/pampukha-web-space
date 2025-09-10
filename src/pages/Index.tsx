@@ -17,6 +17,46 @@ import { useTranslation } from 'react-i18next';
 const Index = () => {
   const { t } = useTranslation();
   
+  // Portfolio data for structured data
+  const portfolioProjects = [
+    {
+      title: t('portfolio.project1.title'),
+      description: t('portfolio.project1.description'),
+      url: 'https://cheat-ai.com/',
+      image: 'https://leonforge.com/cheataicdesktop.png'
+    },
+    {
+      title: t('portfolio.project2.title'),
+      description: t('portfolio.project2.description'),
+      url: 'https://leonforge.com/portfolio/expertise',
+      image: 'https://leonforge.com/expertisedesktop.png'
+    },
+    {
+      title: t('portfolio.project3.title'),
+      description: t('portfolio.project3.description'),
+      url: 'https://leonforge.com/portfolio/pampukha-pl',
+      image: 'https://leonforge.com/pampukhapldesktop.png'
+    },
+    {
+      title: t('portfolio.project4.title'),
+      description: t('portfolio.project4.description'),
+      url: 'https://lemonshine.pl/',
+      image: 'https://leonforge.com/Screenshot_6.png'
+    },
+    {
+      title: t('portfolio.project5.title'),
+      description: t('portfolio.project5.description'),
+      url: 'https://spotlessprohome.co.uk/',
+      image: 'https://leonforge.com/Screenshot_7.png'
+    },
+    {
+      title: t('portfolio.project6.title'),
+      description: t('portfolio.project6.description'),
+      url: 'https://laserbeauty-studio.de/',
+      image: 'https://leonforge.com/Screenshot_8.png'
+    }
+  ];
+  
   return (
     <div className="min-h-screen">
       <SEO
@@ -31,7 +71,8 @@ const Index = () => {
           { type: 'Person' },
           { type: 'Service' },
           { type: 'FAQPage' },
-          { type: 'BreadcrumbList' }
+          { type: 'BreadcrumbList' },
+          { type: 'ItemList', data: portfolioProjects }
         ]}
       />
       
