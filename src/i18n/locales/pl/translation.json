@@ -220,6 +220,22 @@
     "en": "English",
     "pl": "Polski"
   },
+  "imageAlt": {
+    "portfolioDesktop": "Zrzut ekranu pulpitu prezentujący profesjonalny design strony internetowej",
+    "portfolioMobile": "Responsywny interfejs mobilnej strony internetowej",
+    "project1Desktop": "Platforma Instytutu Ekspertyz Sądowych - profesjonalny interfejs pulpitu React SPA",
+    "project1Mobile": "Platforma Instytutu Ekspertyz Sądowych - responsywny design mobilny",
+    "project2Desktop": "Międzynarodowa Izba Arbitrażowa - korporacyjny pulpit React SPA", 
+    "project2Mobile": "Międzynarodowa Izba Arbitrażowa - interfejs mobilny",
+    "project3Desktop": "Usługi Prawne dla Ukraińców - specjalistyczny pulpit React SPA",
+    "project3Mobile": "Usługi Prawne dla Ukraińców - responsywny układ mobilny",
+    "project4Desktop": "Lemon Shine Usługi Sprzątające - biznesowy pulpit React SPA",
+    "project4Mobile": "Lemon Shine Usługi Sprzątające - interfejs mobilny",
+    "project5Desktop": "Spotless Pro Home Cleaning - premium pulpit React SPA",
+    "project5Mobile": "Spotless Pro Home Cleaning - responsywny design mobilny",
+    "project6Desktop": "Laser Beauty Studio - pulpit React SPA kliniki urody",
+    "project6Mobile": "Laser Beauty Studio - interfejs mobilny"
+  },
   "cta": {
     "afterHero": "Gotowy na szybką stronę SPA z indywidualnym podejściem? Omówmy Twój projekt!",
     "afterAbout": "Przekonany do zalet React SPA? Stwórzmy rozwiązanie dla Twojego biznesu!",

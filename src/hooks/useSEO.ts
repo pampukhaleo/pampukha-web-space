@@ -79,6 +79,8 @@ export const useSEO = ({
     const finalOgImage = ogImage || `${baseUrl}/leonforge_logo.png`;
     updateMetaProperty('og:image', finalOgImage);
     updateMetaProperty('og:image:alt', title || 'Leonforge - Web Development');
+    updateMetaProperty('og:image:width', '1200');
+    updateMetaProperty('og:image:height', '630');
     
     updateMetaProperty('og:type', ogType);
     updateMetaProperty('og:url', canonicalUrl);
@@ -116,6 +118,7 @@ export const useSEO = ({
     if (title) updateTwitterMeta('twitter:title', title);
     if (description) updateTwitterMeta('twitter:description', description);
     updateTwitterMeta('twitter:image', finalOgImage);
+    updateTwitterMeta('twitter:image:alt', title || 'Leonforge - Web Development');
 
     // Управление canonical URL
     let linkCanonical = document.querySelector('link[rel="canonical"]');
@@ -128,15 +131,19 @@ export const useSEO = ({
 
     // Управление hreflang для мультиязычности
     const currentPath = window.location.pathname;
-    const languages = ['uk', 'en', 'pl'];
+    const languages = [
+      { code: 'uk-UA', param: 'uk' }, 
+      { code: 'en-US', param: 'en' }, 
+      { code: 'pl-PL', param: 'pl' }
+    ];
     const existingHreflangs = document.querySelectorAll('link[rel="alternate"][hreflang]');
     existingHreflangs.forEach(link => link.remove());
 
     languages.forEach(lang => {
       const hreflang = document.createElement('link');
       hreflang.setAttribute('rel', 'alternate');
-      hreflang.setAttribute('hreflang', lang);
-      hreflang.setAttribute('href', `${baseUrl}${currentPath}?lang=${lang}`);
+      hreflang.setAttribute('hreflang', lang.code);
+      hreflang.setAttribute('href', `${baseUrl}${currentPath}?lang=${lang.param}`);
       document.head.appendChild(hreflang);
     });
 

@@ -220,6 +220,22 @@
     "en": "English",
     "pl": "Polski"
   },
+  "imageAlt": {
+    "portfolioDesktop": "Desktop screenshot showcasing professional website design",
+    "portfolioMobile": "Mobile-responsive website interface",
+    "project1Desktop": "Forensic Institute Platform - Professional React SPA desktop interface",
+    "project1Mobile": "Forensic Institute Platform - Mobile responsive design",
+    "project2Desktop": "International Arbitration Chamber - Enterprise React SPA desktop view", 
+    "project2Mobile": "International Arbitration Chamber - Mobile interface",
+    "project3Desktop": "Legal Services for Ukrainians - Specialized React SPA desktop",
+    "project3Mobile": "Legal Services for Ukrainians - Mobile responsive layout",
+    "project4Desktop": "Lemon Shine Cleaning Services - Business React SPA desktop",
+    "project4Mobile": "Lemon Shine Cleaning Services - Mobile interface",
+    "project5Desktop": "Spotless Pro Home Cleaning - Premium React SPA desktop",
+    "project5Mobile": "Spotless Pro Home Cleaning - Mobile responsive design",
+    "project6Desktop": "Laser Beauty Studio - Beauty Clinic React SPA desktop",
+    "project6Mobile": "Laser Beauty Studio - Mobile interface"
+  },
   "cta": {
     "afterHero": "Ready to get a fast SPA with individual approach? Let's discuss your project!",
     "afterAbout": "Convinced by React SPA advantages? Let's create a solution for your business!",

@@ -221,6 +221,22 @@
     "en": "English",
     "pl": "Polski"
   },
+  "imageAlt": {
+    "portfolioDesktop": "Скріншот десктопу, що демонструє професійний дизайн сайту",
+    "portfolioMobile": "Мобільний адаптивний інтерфейс сайту",
+    "project1Desktop": "Платформа Інституту Судових Експертиз - професійний десктопний інтерфейс React SPA",
+    "project1Mobile": "Платформа Інституту Судових Експертиз - мобільний адаптивний дизайн",
+    "project2Desktop": "Міжнародна Арбітражна Палата - корпоративний десктоп React SPA", 
+    "project2Mobile": "Міжнародна Арбітражна Палата - мобільний інтерфейс",
+    "project3Desktop": "Юридичні послуги для українців - спеціалізований десктоп React SPA",
+    "project3Mobile": "Юридичні послуги для українців - мобільна адаптивна верстка",
+    "project4Desktop": "Lemon Shine Клінінгові Послуги - бізнес десктоп React SPA",
+    "project4Mobile": "Lemon Shine Клінінгові Послуги - мобільний інтерфейс",
+    "project5Desktop": "Spotless Pro Home Cleaning - преміум десктоп React SPA",
+    "project5Mobile": "Spotless Pro Home Cleaning - мобільний адаптивний дизайн",
+    "project6Desktop": "Laser Beauty Studio - десктоп React SPA клініки краси",
+    "project6Mobile": "Laser Beauty Studio - мобільний інтерфейс"
+  },
   "cta": {
     "afterHero": "Готові отримати швидкий SPA з індивідуальним підходом? Давайте обговоримо ваш проєкт!",
     "afterAbout": "Переконались в перевагах React SPA? Давайте створимо рішення для вашого бізнесу!",

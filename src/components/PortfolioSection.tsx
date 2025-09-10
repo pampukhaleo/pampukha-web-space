@@ -166,7 +166,7 @@ const PortfolioSection = () => {
                     <div className="relative w-full h-full bg-background overflow-hidden -mt-8 sm:-mt-12 rounded-b-2xl">
                       <LazyImage
                         src={item.desktopImage}
-                        alt={`${item.title} desktop version`}
+                        alt={t(`imageAlt.project${item.id}Desktop`)}
                         className="w-full object-fill transition-transform duration-700"
                         loading={index === 0 ? "eager" : "lazy"}
                         width={320}

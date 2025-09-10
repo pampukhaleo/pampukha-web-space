@@ -9,6 +9,7 @@ interface ProjectPopupProps {
   isOpen: boolean;
   onClose: () => void;
   project: {
+    id: number;
     title: string;
     desktopImage: string;
     mobileImage: string;
@@ -29,7 +30,7 @@ const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps)
 
   const isDesktop = viewType === 'desktop';
   const imageToShow = isDesktop ? project.desktopImage : project.mobileImage;
-  const altText = `${project.title} ${isDesktop ? 'desktop' : 'mobile'} screenshot`;
+  const altText = t(`imageAlt.project${project.id}${isDesktop ? 'Desktop' : 'Mobile'}`);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

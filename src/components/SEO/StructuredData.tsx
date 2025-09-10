@@ -63,20 +63,25 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             }
           };
 
-        case 'Organization':
-          return {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Leonforge",
-            "description": t('footer.description'),
-            "url": baseUrl,
-            "logo": `${baseUrl}/leonforge_logo.png`,
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "contactType": "customer service",
-              "availableLanguage": ["uk", "en", "pl"]
-            },
-          };
+         case 'Organization':
+           return {
+             "@context": "https://schema.org",
+             "@type": "Organization",
+             "name": "Leonforge",
+             "description": t('footer.description'),
+             "url": baseUrl,
+             "logo": `${baseUrl}/leonforge_logo.png`,
+             "sameAs": [
+               "https://www.linkedin.com/in/leonid-pampukha/",
+               "https://github.com/leonid-pampukha",
+               "https://t.me/leonforge_dev"
+             ],
+             "contactPoint": {
+               "@type": "ContactPoint",
+               "contactType": "customer service",
+               "availableLanguage": ["uk", "en", "pl"]
+             }
+           };
 
         case 'WebSite':
           return {
