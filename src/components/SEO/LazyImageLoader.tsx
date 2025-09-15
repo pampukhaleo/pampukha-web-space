@@ -9,6 +9,7 @@ interface LazyImageProps {
   height?: number;
   loading?: 'lazy' | 'eager';
   priority?: boolean;
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
 export const LazyImage: React.FC<LazyImageProps> = ({
@@ -18,7 +19,8 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   width,
   height,
   loading = 'lazy',
-  priority = false
+  priority = false,
+  fetchPriority = 'auto'
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -58,6 +60,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         width={width}
         height={height}
         loading={loading}
+        fetchPriority={fetchPriority}
         onLoad={handleLoad}
         onError={handleError}
         className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}

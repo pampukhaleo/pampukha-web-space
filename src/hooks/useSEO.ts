@@ -165,7 +165,7 @@ export const useSEO = ({
     metaRobots.setAttribute('content', robotsContent);
 
     // Add specific bot meta tags for better crawling
-    const updateBotMeta = (name: string, content: string) => {
+    const updateMetaTag = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
         meta = document.createElement('meta');
@@ -175,8 +175,21 @@ export const useSEO = ({
       meta.setAttribute('content', content);
     };
 
-    updateBotMeta('googlebot', robotsContent);
-    updateBotMeta('bingbot', robotsContent);
+    updateMetaTag('googlebot', robotsContent);
+    updateMetaTag('bingbot', robotsContent);
+    updateMetaTag('revisit-after', '7 days');
+    
+    // Additional SEO meta tags
+    updateMetaTag('author', 'Leonforge - AI SPA Development');
+    updateMetaTag('generator', 'React + Vite');
+    updateMetaTag('application-name', 'Leonforge');
+    updateMetaTag('distribution', 'global');
+    updateMetaTag('rating', 'general');
+    
+    // Enhanced keywords with more specific terms
+    if (!keywords) {
+      updateMetaTag('keywords', 'розробка SPA, AI веб-додатки, React розробка, Leonforge, штучний інтелект, веб-розробка, одностранічні додатки, сучасні сайти, UI/UX дизайн, фронтенд розробка, мобільна адаптивність, SEO оптимізація');
+    }
 
   }, [title, description, keywords, ogImage, ogType, canonical, noindex, i18n.language]);
 };

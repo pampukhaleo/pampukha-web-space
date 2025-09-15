@@ -68,6 +68,7 @@ const HeroSection = () => {
                 <LazyImage
                   src="/leonforge_logo.png"
                   alt="Веб-разработка и создание современных сайтов - Leonforge"
+                  fetchPriority="high"
                   className="rounded-3xl shadow-2xl w-full max-w-lg transform hover:scale-105 transition-transform duration-300"
                   loading="eager"
                   priority={true}
