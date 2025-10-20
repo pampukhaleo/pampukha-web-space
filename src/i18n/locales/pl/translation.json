@@ -3,9 +3,7 @@
     "about": "O mnie",
     "portfolio": "Portfolio", 
     "services": "Usługi",
-    "contact": "Kontakt",
-    "login": "Zaloguj się",
-    "dashboard": "Panel"
+    "contact": "Kontakt"
   },
   "hero": {
     "title1": "Potrzebujesz",

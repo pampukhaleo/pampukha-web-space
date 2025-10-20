@@ -3,9 +3,7 @@
     "about": "About me",
     "portfolio": "Portfolio", 
     "services": "Services",
-    "contact": "Contact",
-    "login": "Log in",
-    "dashboard": "Dashboard"
+    "contact": "Contact"
   },
   "hero": {
     "title1": "Need a",

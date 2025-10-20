@@ -1,36 +1,15 @@
 
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, LogIn } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
-import { supabase } from '@/integrations/supabase/client';
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const { theme, setTheme } = useTheme();
-  const navigate = useNavigate();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const checkSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      setIsAuthenticated(!!session);
-    };
-
-    checkSession();
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      setIsAuthenticated(!!session);
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -38,10 +17,6 @@ const Navbar = () => {
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
-  const handleAuthNavigation = () => {
-    navigate(isAuthenticated ? '/dashboard' : '/auth');
   };
 
   return (
@@ -78,13 +53,6 @@ const Navbar = () => {
             className="text-foreground-muted hover:text-primary mr-2"
           >
             {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
-          <Button 
-            onClick={handleAuthNavigation} 
-            className="bg-primary hover:bg-primary/90 flex items-center gap-2"
-          >
-            {isAuthenticated ? t('navbar.dashboard') : t('navbar.login')}
-            {!isAuthenticated && <LogIn className="h-4 w-4" />}
           </Button>
         </div>
         
@@ -141,16 +109,6 @@ const Navbar = () => {
             >
               {t('navbar.contact')}
             </a>
-            <Button 
-              className="bg-primary hover:bg-primary/90 w-full flex items-center gap-2"
-              onClick={() => {
-                setIsMenuOpen(false);
-                navigate(isAuthenticated ? '/dashboard' : '/auth');
-              }}
-            >
-              {isAuthenticated ? t('navbar.dashboard') : t('navbar.login')}
-              {!isAuthenticated && <LogIn className="h-4 w-4" />}
-            </Button>
           </div>
         </div>
       )}
