@@ -37,7 +37,6 @@ export const ContactForm = () => {
 
     // For local development, show dialog with form data instead of API call
     if (isLocalDevelopment) {
-      console.log('Development mode form submission:', formData);
       setFormSubmittedLocally(true);
       setShowLocalDevDialog(true);
       setIsSubmitting(false);
@@ -59,10 +58,6 @@ export const ContactForm = () => {
 ${formData.message}
       `;
 
-      // Log the data being sent (useful for debugging)
-      console.log('Sending form data:', formData);
-      console.log('Telegram message:', telegramText);
-
       const apiUrl = 'https://fwwpidktaanowpaihgzy.supabase.co/functions/v1/swift-responder';
       
       const response = await fetch(apiUrl, {
@@ -79,7 +74,6 @@ ${formData.message}
       } else {
         // Handle non-JSON responses gracefully
         const textResponse = await response.text();
-        console.log('Non-JSON response:', textResponse);
         
         if (!response.ok) {
           throw new Error(`Server returned ${response.status}: ${textResponse || response.statusText}`);
@@ -101,7 +95,6 @@ ${formData.message}
       // Reset form
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
-      console.error('Contact form error:', error);
       
       // Provide a more helpful error message in development
       let errorMessage;
