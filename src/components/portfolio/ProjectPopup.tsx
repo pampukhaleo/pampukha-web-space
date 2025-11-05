@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
+import { ExternalLink, Code2, Sparkles } from 'lucide-react';
 
 interface ProjectPopupProps {
   isOpen: boolean;
@@ -11,9 +12,13 @@ interface ProjectPopupProps {
   project: {
     id: number;
     title: string;
+    category?: string;
+    description?: string;
     desktopImage: string;
     mobileImage: string;
     liveUrl?: string;
+    technologies?: string[];
+    gradient?: string;
   };
   viewType: 'desktop' | 'mobile';
 }
@@ -34,39 +39,78 @@ const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps)
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
-          <DialogDescription>
-            {isDesktop ? 'Desktop Version' : 'Mobile Version'}
-          </DialogDescription>
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-card/95 backdrop-blur-xl border-border/50">
+        <DialogHeader className="space-y-4 pb-4 border-b border-border/50">
+          <div className="flex items-start justify-between gap-4">
+            <div className="space-y-2">
+              <DialogTitle className="text-3xl font-bold text-foreground">
+                {project.title}
+              </DialogTitle>
+              {project.category && (
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium bg-primary/10 border border-primary/30 rounded-full text-primary">
+                  <Sparkles className="w-3 h-3" />
+                  {project.category}
+                </div>
+              )}
+            </div>
+          </div>
+          
+          {project.description && (
+            <p className="text-muted-foreground leading-relaxed">
+              {project.description}
+            </p>
+          )}
+
+          {/* Technologies */}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-2">
+              {project.technologies.map((tech, index) => (
+                <span 
+                  key={index}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-secondary/50 backdrop-blur-sm border border-border/50 rounded-md text-foreground"
+                >
+                  <Code2 className="w-3 h-3" />
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
         </DialogHeader>
         
-        <div className="space-y-6">
-          {/* Single Screenshot */}
-          <div className="flex justify-center">
-            <div className={`border rounded-lg overflow-hidden bg-white ${isDesktop ? 'max-w-full' : 'inline-block'}`}>
+        <div className="space-y-6 py-6">
+          {/* Screenshot with gradient overlay */}
+          <div className="relative group rounded-xl overflow-hidden border border-border/50 bg-background">
+            <div className="relative">
               <LazyImage
                 src={imageToShow}
                 alt={altText}
-                className={`h-auto ${isDesktop ? 'w-full h-auto' : 'w-full max-w-xs sm:max-w-sm'}`}
+                className="w-full h-auto"
                 loading="lazy"
               />
+              {/* Subtle gradient overlay */}
+              {project.gradient && (
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none`} />
+              )}
+            </div>
+            
+            {/* View type indicator */}
+            <div className="absolute top-4 right-4 px-3 py-1.5 bg-card/90 backdrop-blur-sm border border-border/50 rounded-full text-xs font-medium text-foreground">
+              {isDesktop ? '🖥️ Desktop' : '📱 Mobile'}
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t">
+          <div className="flex flex-col sm:flex-row gap-3 pt-4">
             <Button 
               onClick={scrollToContact}
-              className="bg-brand-blue hover:bg-brand-blue/90 flex-1"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1 shadow-lg shadow-primary/25"
             >
               {t('portfolio.orderSimilar')}
             </Button>
             <Button 
               variant="outline"
               onClick={scrollToContact}
-              className="border-brand-blue text-brand-blue hover:bg-brand-blue/10 flex-1"
+              className="border-primary/50 text-primary hover:bg-primary/10 flex-1"
             >
               {t('hero.consultation')}
             </Button>
@@ -74,9 +118,10 @@ const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps)
               <Button
                 variant="outline"
                 onClick={() => window.open(project.liveUrl, '_blank')}
-                className="border-gray-300 text-gray-700 hover:bg-gray-50"
+                className="border-border hover:bg-secondary flex items-center gap-2"
               >
-                Open in New Tab
+                <ExternalLink className="w-4 h-4" />
+                Open Live
               </Button>
             )}
           </div>

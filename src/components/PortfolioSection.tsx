@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Code2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
 import ProjectPopup from '@/components/portfolio/ProjectPopup';
+import { Card } from '@/components/ui/card';
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
@@ -21,8 +22,9 @@ const PortfolioSection = () => {
       desktopImage: '/expertisedesktop.png',
       mobileImage: '/expertisemobile.png',
       liveUrl: 'https://expertise.com.ua/',
-      neonColor: 'cyan',
-      glowColor: 'from-cyan-400/20 to-blue-500/20'
+      technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase', 'i18next'],
+      size: 'large', // Bento grid size
+      gradient: 'from-primary/20 via-accent/10 to-transparent'
     },
     {
       id: 2,
@@ -32,8 +34,9 @@ const PortfolioSection = () => {
       desktopImage: '/cheataicdesktop.png',
       mobileImage: '/cheataicmobile.png',
       liveUrl: 'https://chea-taic.be/',
-      neonColor: 'pink',
-      glowColor: 'from-pink-400/20 to-purple-500/20'
+      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind'],
+      size: 'medium',
+      gradient: 'from-accent/20 via-primary/10 to-transparent'
     },
     {
       id: 3,
@@ -43,8 +46,9 @@ const PortfolioSection = () => {
       desktopImage: '/pampukhapldesktop.png',
       mobileImage: '/pampukhaplmobile.png',
       liveUrl: 'https://pampukha.pl/',
-      neonColor: 'green',
-      glowColor: 'from-green-400/20 to-emerald-500/20'
+      technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase'],
+      size: 'medium',
+      gradient: 'from-secondary/20 via-accent/10 to-transparent'
     },
     {
       id: 4,
@@ -54,8 +58,9 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_6.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://lemonshine.pl/',
-      neonColor: 'cyan',
-      glowColor: 'from-cyan-400/20 to-blue-500/20'
+      technologies: ['React', 'Vite', 'Tailwind'],
+      size: 'small',
+      gradient: 'from-primary/20 via-secondary/10 to-transparent'
     },
     {
       id: 5,
@@ -65,8 +70,9 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_7.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://spotlessprohome.co.uk/',
-      neonColor: 'pink',
-      glowColor: 'from-pink-400/20 to-purple-500/20'
+      technologies: ['React', 'TypeScript', 'Vite'],
+      size: 'small',
+      gradient: 'from-accent/20 via-primary/10 to-transparent'
     },
     {
       id: 6,
@@ -76,10 +82,25 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_8.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://laserbeauty-studio.de/',
-      neonColor: 'green',
-      glowColor: 'from-green-400/20 to-emerald-500/20'
+      technologies: ['React', 'Tailwind', 'Supabase'],
+      size: 'medium',
+      gradient: 'from-secondary/20 via-accent/10 to-transparent'
     },
   ];
+
+  // Bento grid size classes
+  const getSizeClasses = (size: string) => {
+    switch (size) {
+      case 'large':
+        return 'md:col-span-2 md:row-span-2';
+      case 'medium':
+        return 'md:col-span-1 md:row-span-1';
+      case 'small':
+        return 'md:col-span-1 md:row-span-1';
+      default:
+        return 'md:col-span-1 md:row-span-1';
+    }
+  };
 
   const openProjectPopup = (project: any, type: 'desktop' | 'mobile') => {
     setSelectedProject(project);
@@ -94,30 +115,26 @@ const PortfolioSection = () => {
 
   return (
     <section id="portfolio" className="py-16 md:py-24 px-4 relative overflow-hidden bg-background" role="main">
-      {/* Neon Grid Background */}
-      <div className="absolute inset-0 opacity-20 dark:opacity-20">
+      {/* Subtle animated background */}
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px)
+            linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: '60px 60px'
         }} />
       </div>
 
-      {/* Animated Neon Orbs */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"
-             style={{ filter: 'drop-shadow(0 0 50px hsl(var(--primary) / 0.3))' }} />
-        <div className="absolute bottom-32 right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-pulse delay-700"
-             style={{ filter: 'drop-shadow(0 0 60px hsl(var(--accent) / 0.3))' }} />
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-secondary/20 rounded-full blur-2xl animate-pulse delay-1000"
-             style={{ filter: 'drop-shadow(0 0 40px hsl(var(--secondary) / 0.3))' }} />
+      {/* Floating gradient orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-32 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-700" />
       </div>
 
       <div className="container mx-auto relative z-10">
         <header className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
             {t('portfolio.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">{t('portfolio.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -125,102 +142,79 @@ const PortfolioSection = () => {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-12 lg:gap-20" role="list">
-          {portfolioItems.map((item, index) => {
-            const isLastOdd = portfolioItems.length % 2 === 1 && index === portfolioItems.length - 1;
-            const neonColorMap = {
-              cyan: 'shadow-primary/50 border-primary/50',
-              pink: 'shadow-accent/50 border-accent/50',
-              green: 'shadow-secondary/50 border-secondary/50'
-            };
-
-            return (
-            <div key={item.id}
-                 role="listitem"
-                 className={`group relative animate-fade-in ${isLastOdd ? 'lg:col-span-2' : ''}`}
-                 style={{ animationDelay: `${index * 80}ms` }}
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-[280px] md:auto-rows-[320px]" role="list">
+          {portfolioItems.map((item, index) => (
+            <Card
+              key={item.id}
+              role="listitem"
+              className={`group relative overflow-hidden cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-500 ${getSizeClasses(item.size)} animate-fade-in hover:shadow-2xl hover:shadow-primary/10`}
+              style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => openProjectPopup(item, 'desktop')}
             >
-              {/* Neon Device Mockups - Desktop Only */}
-              <div className="flex flex-col items-center sm:flex-row sm:items-center gap-6 sm:gap-8 flex-wrap justify-center mb-12 relative">
-                {/* Desktop Neon Frame - Responsive */}
-                <div
-                  className="desktop-mockup relative transform-gpu hover:scale-105 hover:-translate-y-4 transition-all duration-700 cursor-pointer mx-auto sm:mx-0"
-                  onClick={() => openProjectPopup(item, 'desktop')}
-                >
-                  <div className={`w-64 h-40 sm:w-80 sm:h-52 bg-card rounded-2xl overflow-hidden border-2 ${neonColorMap[item.neonColor as keyof typeof neonColorMap]} transition-all duration-700 hover:shadow-2xl`}
-                       style={{
-                         boxShadow: `0 0 30px hsl(var(--primary) / 0.3)`
-                       }}>
-                    {/* Neon Status Bar */}
-                    <div className="h-8 sm:h-12 bg-muted flex items-center justify-center border-b border-border relative">
-                      <div className="flex gap-2 sm:gap-3">
-                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
-                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full shadow-lg shadow-yellow-500/50"></div>
-                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full shadow-lg shadow-green-500/50"></div>
-                      </div>
-                      {/* Neon pulse line */}
-                      <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
+              {/* Project Image Background */}
+              <div className="absolute inset-0">
+                <LazyImage
+                  src={item.desktopImage}
+                  alt={t(`imageAlt.project${item.id}Desktop`)}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  width={600}
+                  height={400}
+                />
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-60 group-hover:opacity-40 transition-opacity duration-500`} />
+                <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
+              </div>
 
-                    {/* Screen with neon glow */}
-                    <div className="relative w-full h-full bg-background overflow-hidden -mt-8 sm:-mt-12 rounded-b-2xl">
-                      <LazyImage
-                        src={item.desktopImage}
-                        alt={t(`imageAlt.project${item.id}Desktop`)}
-                        className="w-full object-fill transition-transform duration-700"
-                        loading={index === 0 ? "eager" : "lazy"}
-                        width={320}
-                        height={200}
-                      />
-                      {/* Neon overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-accent/20 opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-b-2xl" />
-                    </div>
+              {/* Content Overlay */}
+              <div className="relative h-full flex flex-col justify-between p-6 z-10">
+                {/* Top: Category Badge */}
+                <div className="flex items-start justify-between">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium bg-card/90 backdrop-blur-sm border border-border/50 rounded-full text-foreground">
+                    <Sparkles className="w-3 h-3" />
+                    {item.category}
+                  </span>
+                  <ExternalLink className="w-5 h-5 text-foreground/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+
+                {/* Bottom: Project Info */}
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className={`text-sm text-muted-foreground line-clamp-2 ${item.size === 'large' ? 'md:line-clamp-3' : 'line-clamp-2'} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {/* Technologies - shown on hover */}
+                  <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    {item.technologies.map((tech, techIndex) => (
+                      <span 
+                        key={techIndex}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium bg-primary/10 backdrop-blur-sm border border-primary/30 rounded-md text-primary"
+                        style={{ transitionDelay: `${techIndex * 50}ms` }}
+                      >
+                        <Code2 className="w-3 h-3" />
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              {/* Neon Project Info Card */}
-              <article
-                className="max-w-3xl w-full mx-auto relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 hover:-translate-y-3 bg-card/50 backdrop-blur-sm p-8 border border-border group-hover:border-primary/30"
-                onClick={() => openProjectPopup(item, 'desktop')}
-                style={{
-                  boxShadow: `0 10px 40px hsl(var(--background) / 0.3), 0 0 0 1px hsl(var(--border))`
-                }}
-              >
-                {/* Neon border glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-2xl" aria-hidden="true" />
-
-                <div className="relative z-10 h-[280px]">
-                  {/* Project Info with neon effects */}
-                  <div className="flex-col text-center">
-                    <span className={`inline-block px-6 py-3 text-sm text-foreground rounded-full mb-6 border transition-all duration-300 ${
-                      item.neonColor === 'cyan' ? 'bg-primary/20 border-primary/50 shadow-lg shadow-primary/20' :
-                      item.neonColor === 'pink' ? 'bg-accent/20 border-accent/50 shadow-lg shadow-accent/20' :
-                      'bg-secondary/20 border-secondary/50 shadow-lg shadow-secondary/20'
-                    }`}>
-                      {item.category}
-                    </span>
-                    <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-muted-foreground transition-all duration-300">{item.title}</h3>
-                    <p className="h-full text-muted-foreground leading-relaxed text-lg group-hover:text-foreground/80 transition-colors duration-300">{item.description}</p>
-                  </div>
-
-                </div>
-
-                {/* Neon scanning line effect */}
-                <div className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r ${
-                  item.neonColor === 'cyan' ? 'from-transparent via-primary to-transparent' :
-                  item.neonColor === 'pink' ? 'from-transparent via-accent to-transparent' :
-                  'from-transparent via-secondary to-transparent'
-                } opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-700`} />
-              </article>
-            </div>
-          )})}
+              {/* Hover Border Glow */}
+              <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-lg transition-colors duration-500 pointer-events-none" />
+            </Card>
+          ))}
         </div>
 
         <div className="mt-16 text-center">
           <Button
-            variant="outline"
-            className="border-primary/50 text-primary bg-primary/10 hover:bg-primary/20 transition-all duration-300 border-2 px-8 py-3 rounded-2xl shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1"
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-1 px-8"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             {t('portfolio.orderSimilar')}
