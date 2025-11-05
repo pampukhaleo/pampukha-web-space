@@ -167,6 +167,9 @@ const PortfolioSection = () => {
                 <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
               </div>
 
+              {/* Dark gradient underlay for text readability */}
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background/95 via-background/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-[1]" />
+
               {/* Content Overlay */}
               <div className="relative h-full flex flex-col justify-between p-6 z-10">
                 {/* Top: Category Badge */}
@@ -181,7 +184,7 @@ const PortfolioSection = () => {
                 {/* Bottom: Project Info */}
                 <div className="space-y-3">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300 drop-shadow-lg">
                       {item.title}
                     </h3>
                     <p className={`text-sm text-muted-foreground line-clamp-2 ${item.size === 'large' ? 'md:line-clamp-3' : 'line-clamp-2'} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
