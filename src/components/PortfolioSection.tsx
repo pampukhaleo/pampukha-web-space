@@ -163,12 +163,12 @@ const PortfolioSection = () => {
                   height={400}
                 />
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-60 group-hover:opacity-40 transition-opacity duration-500`} />
-                <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-40 group-hover:opacity-70 transition-opacity duration-500`} />
+                <div className="absolute inset-0 bg-background/30 group-hover:bg-background/50 transition-colors duration-500" />
               </div>
 
               {/* Dark gradient underlay for text readability */}
-              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background/95 via-background/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-[1]" />
+              <div className="absolute inset-x-0 bottom-0 h-4/5 md:h-3/4 bg-gradient-to-t from-background/95 via-background/80 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-500 z-[1]" />
 
               {/* Content Overlay */}
               <div className="relative h-full flex flex-col justify-between p-6 z-10">
@@ -184,10 +184,10 @@ const PortfolioSection = () => {
                 {/* Bottom: Project Info */}
                 <div className="space-y-3">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300 drop-shadow-lg">
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 line-clamp-2 transition-colors duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
                       {item.title}
                     </h3>
-                    <p className={`text-sm text-muted-foreground line-clamp-2 ${item.size === 'large' ? 'md:line-clamp-3' : 'line-clamp-2'} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
+                    <p className={`text-sm text-foreground/90 line-clamp-2 ${item.size === 'large' ? 'md:line-clamp-3' : 'line-clamp-2'} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
                       {item.description}
                     </p>
                   </div>
