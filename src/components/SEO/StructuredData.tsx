@@ -72,13 +72,12 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
              "url": baseUrl,
              "logo": `${baseUrl}/leonforge_logo.png`,
              "sameAs": [
-               "https://github.com/pampkhaleo",
                "https://t.me/leonforge"
              ],
              "contactPoint": {
                "@type": "ContactPoint",
                "contactType": "customer service",
-               "availableLanguage": ["ua", "en", "pl", "ru"]
+               "availableLanguage": ["ua", "en", "pl"]
              }
            };
 
