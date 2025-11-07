@@ -23,7 +23,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "name": "Leonforge",
             "description": t('hero.description'),
             "url": baseUrl,
-            "email": "info@leonforge.com",
+            "email": "leonforge.com@gmail.com",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "UA",
@@ -53,7 +53,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "AI SPA Development",
+                    "name": "SPA React Development",
                     "description": t('services.service1.description')
                   },
                   "price": "300",
@@ -72,14 +72,13 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
              "url": baseUrl,
              "logo": `${baseUrl}/leonforge_logo.png`,
              "sameAs": [
-               "https://www.linkedin.com/in/leonid-pampukha/",
-               "https://github.com/leonid-pampukha",
-               "https://t.me/leonforge_dev"
+               "https://github.com/pampkhaleo",
+               "https://t.me/leonforge"
              ],
              "contactPoint": {
                "@type": "ContactPoint",
                "contactType": "customer service",
-               "availableLanguage": ["uk", "en", "pl"]
+               "availableLanguage": ["ua", "en", "pl", "ru"]
              }
            };
 
@@ -120,7 +119,6 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
             "image": `${baseUrl}/leonforge_logo.png`,
             "knowsAbout": [
               "React",
-              "AI Development", 
               "Single Page Applications",
               "Web Development",
               "Google Analytics",
@@ -136,7 +134,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           return {
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "AI SPA Development",
+            "name": "SPA React Development",
             "description": t('services.service1.description'),
             "provider": {
               "@type": "Organization",

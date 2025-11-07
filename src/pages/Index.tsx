@@ -20,12 +20,6 @@ const Index = () => {
   // Portfolio data for structured data
   const portfolioProjects = [
     {
-      title: t('portfolio.project1.title'),
-      description: t('portfolio.project1.description'),
-      url: 'https://cheat-ai.com/',
-      image: 'https://leonforge.com/cheataicdesktop.png'
-    },
-    {
       title: t('portfolio.project2.title'),
       description: t('portfolio.project2.description'),
       url: 'https://leonforge.com/portfolio/expertise',
@@ -60,9 +54,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title={`Leonforge | ${t('hero.title2')} | AI + React + SPA`}
+        title={`Leonforge | ${t('hero.title2')} | React + SPA`}
         description={t('hero.description')}
-        keywords="веб-разработка, создание сайтов, AI разработка, React SPA, SEO, Google Ads, Украина, современные сайты, web development, website creation"
+        keywords="веб-разработка, создание сайтов, React SPA, SEO, Google Ads, Украина, современные сайты, web development, website creation"
         ogImage="https://leonforge.com/leonforge_logo.png"
         structuredData={[
           { type: 'LocalBusiness' },

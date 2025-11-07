@@ -180,7 +180,7 @@ export const useSEO = ({
     updateMetaTag('revisit-after', '7 days');
     
     // Additional SEO meta tags
-    updateMetaTag('author', 'Leonforge - AI SPA Development');
+    updateMetaTag('author', 'Leonforge Development');
     updateMetaTag('generator', 'React + Vite');
     updateMetaTag('application-name', 'Leonforge');
     updateMetaTag('distribution', 'global');
@@ -188,7 +188,7 @@ export const useSEO = ({
     
     // Enhanced keywords with more specific terms
     if (!keywords) {
-      updateMetaTag('keywords', 'розробка SPA, AI веб-додатки, React розробка, Leonforge, штучний інтелект, веб-розробка, одностранічні додатки, сучасні сайти, UI/UX дизайн, фронтенд розробка, мобільна адаптивність, SEO оптимізація');
+      updateMetaTag('keywords', 'розробка SPA, React розробка, Leonforge, штучний інтелект, веб-розробка, одностранічні додатки, сучасні сайти, UI/UX дизайн, фронтенд розробка, мобільна адаптивність, SEO оптимізація');
     }
 
   }, [title, description, keywords, ogImage, ogType, canonical, noindex, i18n.language]);
