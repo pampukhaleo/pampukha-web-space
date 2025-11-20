@@ -106,9 +106,58 @@ export const useAnalytics = () => {
     logger.info(`Portfolio view tracked: ${projectName}`);
   };
 
+  const trackCTAClick = (buttonText: string, section: string) => {
+    window.gtag?.('event', 'cta_click', {
+      event_category: 'CTA',
+      event_label: buttonText,
+      section: section,
+    });
+    logger.info(`CTA click tracked: ${buttonText} in ${section}`);
+  };
+
+  const trackScroll = (percentage: number) => {
+    window.gtag?.('event', 'scroll', {
+      event_category: 'Engagement',
+      event_label: `${percentage}%`,
+      value: percentage,
+    });
+    logger.info(`Scroll tracked: ${percentage}%`);
+  };
+
+  const trackPhoneClick = () => {
+    window.gtag?.('event', 'phone_click', {
+      event_category: 'Contact',
+      event_label: 'Phone Number',
+    });
+    logger.info('Phone click tracked');
+  };
+
+  const trackEmailClick = () => {
+    window.gtag?.('event', 'email_click', {
+      event_category: 'Contact',
+      event_label: 'Email',
+    });
+    logger.info('Email click tracked');
+  };
+
+  const trackConversion = (conversionLabel: string, value?: number) => {
+    // Note: Replace AW-XXXXXXXXXX with your actual Google Ads conversion ID
+    window.gtag?.('event', 'conversion', {
+      'send_to': 'AW-XXXXXXXXXX/' + conversionLabel,
+      'value': value || 0,
+      'currency': 'USD',
+    });
+    logger.info(`Conversion tracked: ${conversionLabel}`);
+  };
+
   return {
     trackInteraction,
     trackFormSubmission,
-    trackPortfolioView
+    trackPortfolioView,
+    trackCTAClick,
+    trackScroll,
+    trackPhoneClick,
+    trackEmailClick,
+    trackConversion,
   };
 };

@@ -13,9 +13,11 @@ import CTAButton from '@/components/CTAButton';
 import { SEO } from '@/components/SEO/SEO';
 import { Breadcrumbs } from '@/components/SEO/Breadcrumbs';
 import { useTranslation } from 'react-i18next';
+import { useAnalytics } from '@/components/SEO/Analytics';
 
 const Index = () => {
   const { t } = useTranslation();
+  useAnalytics(); // Initialize Web Vitals tracking
   
   // Portfolio data for structured data
   const portfolioProjects = [
