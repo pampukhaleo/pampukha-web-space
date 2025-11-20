@@ -4,6 +4,7 @@ import { logger } from '@/lib/logger';
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
   }
 }
 
@@ -83,7 +84,8 @@ export const useAnalytics = () => {
 
   // Track user interactions for SEO insights
   const trackInteraction = (action: string, section: string) => {
-    window.gtag?.('event', action, {
+    window.dataLayer?.push({
+      event: action,
       event_category: 'User Engagement',
       event_label: section,
     });
@@ -91,7 +93,8 @@ export const useAnalytics = () => {
   };
 
   const trackFormSubmission = (formType: string) => {
-    window.gtag?.('event', 'form_submit', {
+    window.dataLayer?.push({
+      event: 'form_submit',
       event_category: 'Lead Generation',
       event_label: formType,
     });
@@ -99,7 +102,8 @@ export const useAnalytics = () => {
   };
 
   const trackPortfolioView = (projectName: string) => {
-    window.gtag?.('event', 'portfolio_view', {
+    window.dataLayer?.push({
+      event: 'portfolio_view',
       event_category: 'Portfolio Engagement',
       event_label: projectName,
     });
@@ -107,7 +111,8 @@ export const useAnalytics = () => {
   };
 
   const trackCTAClick = (buttonText: string, section: string) => {
-    window.gtag?.('event', 'cta_click', {
+    window.dataLayer?.push({
+      event: 'cta_click',
       event_category: 'CTA',
       event_label: buttonText,
       section: section,
@@ -116,7 +121,8 @@ export const useAnalytics = () => {
   };
 
   const trackScroll = (percentage: number) => {
-    window.gtag?.('event', 'scroll', {
+    window.dataLayer?.push({
+      event: 'scroll',
       event_category: 'Engagement',
       event_label: `${percentage}%`,
       value: percentage,
@@ -125,7 +131,8 @@ export const useAnalytics = () => {
   };
 
   const trackPhoneClick = () => {
-    window.gtag?.('event', 'phone_click', {
+    window.dataLayer?.push({
+      event: 'phone_click',
       event_category: 'Contact',
       event_label: 'Phone Number',
     });
@@ -133,19 +140,30 @@ export const useAnalytics = () => {
   };
 
   const trackEmailClick = () => {
-    window.gtag?.('event', 'email_click', {
+    window.dataLayer?.push({
+      event: 'email_click',
       event_category: 'Contact',
       event_label: 'Email',
     });
     logger.info('Email click tracked');
   };
 
+  const trackTelegramClick = () => {
+    window.dataLayer?.push({
+      event: 'telegram_click',
+      event_category: 'Contact',
+      event_label: 'Telegram',
+    });
+    logger.info('Telegram click tracked');
+  };
+
   const trackConversion = (conversionLabel: string, value?: number) => {
     // Note: Replace AW-XXXXXXXXXX with your actual Google Ads conversion ID
-    window.gtag?.('event', 'conversion', {
-      'send_to': 'AW-XXXXXXXXXX/' + conversionLabel,
-      'value': value || 0,
-      'currency': 'USD',
+    window.dataLayer?.push({
+      event: 'conversion',
+      send_to: 'AW-XXXXXXXXXX/' + conversionLabel,
+      value: value || 0,
+      currency: 'USD',
     });
     logger.info(`Conversion tracked: ${conversionLabel}`);
   };
@@ -158,6 +176,7 @@ export const useAnalytics = () => {
     trackScroll,
     trackPhoneClick,
     trackEmailClick,
+    trackTelegramClick,
     trackConversion,
   };
 };
