@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { useAnalytics } from '@/components/SEO/Analytics';
 
 interface CTAButtonProps {
   variant?: 'primary' | 'outline';
@@ -10,8 +11,10 @@ interface CTAButtonProps {
 
 const CTAButton = ({ variant = 'primary', className = '' }: CTAButtonProps) => {
   const { t } = useTranslation();
+  const { trackCTAClick } = useAnalytics();
 
   const scrollToContact = () => {
+    trackCTAClick(t('hero.consultation'), 'cta_button');
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
