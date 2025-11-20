@@ -3,6 +3,7 @@ import React from 'react';
 import { Phone, Mail, MapPin, Calendar, MessageSquare } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useAnalytics } from '@/components/SEO/Analytics';
 
 const contactItems = [
   {
@@ -10,12 +11,16 @@ const contactItems = [
     title: "Telegram",
     value: "@leonid_kiev",
     bg: "bg-primary/10",
+    link: "https://t.me/leonid_kiev",
+    type: "telegram",
   },
   {
     icon: <Mail className="text-accent" size={24} />,
     title: "Email",
     value: "lgpampukha@gmail.com",
     bg: "bg-accent/10",
+    link: "mailto:lgpampukha@gmail.com",
+    type: "email",
   },
   {
     icon: <MapPin className="text-brand-orange" size={24} />,
@@ -32,6 +37,16 @@ const contactItems = [
 ];
 
 export const ContactInfoCard = () => {
+  const { trackEmailClick, trackTelegramClick } = useAnalytics();
+
+  const handleContactClick = (type?: string) => {
+    if (type === 'email') {
+      trackEmailClick();
+    } else if (type === 'telegram') {
+      trackTelegramClick();
+    }
+  };
+
   return (
     <div className="space-y-8">
       {contactItems.map((item, i) => (
@@ -41,7 +56,19 @@ export const ContactInfoCard = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-1">{item.title}</h4>
-            <p className="text-muted-foreground">{item.value}</p>
+            {item.link ? (
+              <a
+                href={item.link}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => handleContactClick(item.type)}
+                target={item.type === 'telegram' ? '_blank' : undefined}
+                rel={item.type === 'telegram' ? 'noopener noreferrer' : undefined}
+              >
+                {item.value}
+              </a>
+            ) : (
+              <p className="text-muted-foreground">{item.value}</p>
+            )}
           </div>
         </div>
       ))}
@@ -59,9 +86,14 @@ export const ContactInfoCard = () => {
           </p>
           <Button
             className="w-full bg-primary hover:bg-primary/90"
-            onClick={() => window.location.href = 'mailto:lgpampukha@gmail.com'}
+            asChild
           >
-            Написати листа
+            <a
+              href="mailto:lgpampukha@gmail.com"
+              onClick={() => trackEmailClick()}
+            >
+              Написати листа
+            </a>
           </Button>
         </CardContent>
       </Card>
