@@ -3,7 +3,6 @@ import { logger } from '@/lib/logger';
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
     dataLayer?: any[];
   }
 }
@@ -16,7 +15,8 @@ export const useAnalytics = () => {
       if ('web-vital' in window) {
         import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
           onCLS((metric) => {
-            window.gtag?.('event', 'web_vitals', {
+            window.dataLayer?.push({
+              event: 'web_vitals',
               name: metric.name,
               value: Math.round(metric.value * 1000),
               event_category: 'Web Vitals',
@@ -26,7 +26,8 @@ export const useAnalytics = () => {
           });
           
           onINP((metric) => {
-            window.gtag?.('event', 'web_vitals', {
+            window.dataLayer?.push({
+              event: 'web_vitals',
               name: metric.name,
               value: Math.round(metric.value),
               event_category: 'Web Vitals',
@@ -36,7 +37,8 @@ export const useAnalytics = () => {
           });
           
           onFCP((metric) => {
-            window.gtag?.('event', 'web_vitals', {
+            window.dataLayer?.push({
+              event: 'web_vitals',
               name: metric.name,
               value: Math.round(metric.value),
               event_category: 'Web Vitals',
@@ -46,7 +48,8 @@ export const useAnalytics = () => {
           });
           
           onLCP((metric) => {
-            window.gtag?.('event', 'web_vitals', {
+            window.dataLayer?.push({
+              event: 'web_vitals',
               name: metric.name,
               value: Math.round(metric.value),
               event_category: 'Web Vitals',
@@ -56,7 +59,8 @@ export const useAnalytics = () => {
           });
           
           onTTFB((metric) => {
-            window.gtag?.('event', 'web_vitals', {
+            window.dataLayer?.push({
+              event: 'web_vitals',
               name: metric.name,
               value: Math.round(metric.value),
               event_category: 'Web Vitals',
@@ -157,16 +161,6 @@ export const useAnalytics = () => {
     logger.info('Telegram click tracked');
   };
 
-  const trackConversion = (conversionLabel: string, value?: number) => {
-    // Note: Replace AW-XXXXXXXXXX with your actual Google Ads conversion ID
-    window.dataLayer?.push({
-      event: 'conversion',
-      send_to: 'AW-XXXXXXXXXX/' + conversionLabel,
-      value: value || 0,
-      currency: 'USD',
-    });
-    logger.info(`Conversion tracked: ${conversionLabel}`);
-  };
 
   return {
     trackInteraction,
@@ -177,6 +171,5 @@ export const useAnalytics = () => {
     trackPhoneClick,
     trackEmailClick,
     trackTelegramClick,
-    trackConversion,
   };
 };
