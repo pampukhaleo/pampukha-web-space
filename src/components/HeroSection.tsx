@@ -5,9 +5,11 @@ import { ArrowDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
+import { useAnalytics } from '@/components/SEO/Analytics';
 
 const HeroSection = () => {
   const { t } = useTranslation();
+  const { trackCTAClick } = useAnalytics();
   
   return (
     <section className="pt-32 lg:pt-40 pb-16 lg:pb-32 px-4 relative overflow-hidden hero-section" role="banner">
@@ -43,7 +45,10 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 className="text-lg bg-brand-blue hover:bg-brand-blue/90 px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  trackCTAClick(t('hero.consultation'), 'hero_section');
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 aria-describedby="hero-cta-description"
               >
                 {t('hero.consultation')}
@@ -52,7 +57,10 @@ const HeroSection = () => {
                 variant="outline"
                 size="lg"
                 className="text-lg border-brand-blue text-brand-blue hover:bg-brand-blue/10 px-8 py-6 transition-all duration-300"
-                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  trackCTAClick(t('hero.viewWork'), 'hero_section');
+                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {t('hero.viewWork')}
               </Button>
