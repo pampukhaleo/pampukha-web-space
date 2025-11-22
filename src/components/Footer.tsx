@@ -58,7 +58,13 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
-                onClick={trackTelegramClick}
+                onClick={(e) => {
+                  e.preventDefault();
+                  trackTelegramClick();
+                  setTimeout(() => {
+                    window.open('https://t.me/leonforge', '_blank', 'noopener,noreferrer');
+                  }, 150);
+                }}
               >
                 Telegram: @leonforge
               </a>
