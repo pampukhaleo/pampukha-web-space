@@ -2,9 +2,11 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useAnalytics } from '@/components/SEO/Analytics';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { trackTelegramClick } = useAnalytics();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -56,6 +58,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
+                onClick={trackTelegramClick}
               >
                 Telegram: @leonforge
               </a>
