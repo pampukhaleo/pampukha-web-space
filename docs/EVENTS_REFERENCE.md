@@ -12,10 +12,8 @@
 | 2 | `portfolio_view` | Portfolio Engagement | Клик на проект в портфолио | `PortfolioSection.tsx` | `openProjectPopup` |
 | 3 | `cta_click` | CTA | Клик на CTA кнопку | `CTAButton.tsx` | `scrollToContact` |
 | 4 | `scroll` | Engagement | Прокрутка страницы на 25/50/75/100% | `Analytics.tsx` | `trackScroll` |
-| 5 | `phone_click` | Contact | Клик на номер телефона | `ContactInfoCard.tsx` | `handleContactClick` |
-| 6 | `email_click` | Contact | Клик на email | `ContactInfoCard.tsx` | `handleContactClick` |
-| 7 | `telegram_click` | Contact | Клик на Telegram | `ContactInfoCard.tsx` | `handleContactClick` |
-| 8 | `conversion` | Conversion | Важное действие (конверсия) | `Analytics.tsx` | `trackConversion` |
+| 5 | `telegram_click` | Contact | Клик на Telegram | `Footer.tsx` | Telegram link |
+| 6 | `conversion` | Conversion | Важное действие (конверсия) | `Analytics.tsx` | `trackConversion` |
 
 ---
 
@@ -167,83 +165,7 @@ trackScroll(50); // 50% страницы прокручено
 
 ---
 
-## 5. phone_click
-
-### Описание
-Срабатывает при клике на номер телефона в контактной информации.
-
-### Параметры
-```javascript
-{
-  event: 'phone_click',
-  event_category: 'Contact',
-  event_label: 'Phone Number'
-}
-```
-
-### Где происходит
-- **Файл**: `src/components/contact/ContactInfoCard.tsx`
-- **Функция**: `handleContactClick`
-- **Строка**: ~46
-
-### Код
-```typescript
-const { trackPhoneClick } = useAnalytics();
-
-const handleContactClick = (type?: string) => {
-  if (type === 'phone') {
-    trackPhoneClick();
-  }
-};
-```
-
-### Использование в маркетинге
-- Конверсия "Клик на контакт"
-- Популярность канала связи
-- Создание аудитории "Заинтересованные в звонке"
-- Оптимизация мобильной версии
-
----
-
-## 6. email_click
-
-### Описание
-Срабатывает при клике на email адрес в контактной информации.
-
-### Параметры
-```javascript
-{
-  event: 'email_click',
-  event_category: 'Contact',
-  event_label: 'Email'
-}
-```
-
-### Где происходит
-- **Файл**: `src/components/contact/ContactInfoCard.tsx`
-- **Функция**: `handleContactClick`
-- **Строка**: ~44
-
-### Код
-```typescript
-const { trackEmailClick } = useAnalytics();
-
-const handleContactClick = (type?: string) => {
-  if (type === 'email') {
-    trackEmailClick();
-  }
-};
-```
-
-### Использование в маркетинге
-- Конверсия "Клик на контакт"
-- Популярность email как канала связи
-- Создание аудитории для email-рассылок
-- Сравнение эффективности каналов
-
----
-
-## 7. telegram_click
+## 5. telegram_click
 
 ### Описание
 Срабатывает при клике на ссылку Telegram в контактной информации.
@@ -258,19 +180,23 @@ const handleContactClick = (type?: string) => {
 ```
 
 ### Где происходит
-- **Файл**: `src/components/contact/ContactInfoCard.tsx`
-- **Функция**: `handleContactClick`
+- **Файл**: `src/components/Footer.tsx`
+- **Компонент**: Telegram ссылка в футере
 - **Строка**: ~48
 
 ### Код
 ```typescript
 const { trackTelegramClick } = useAnalytics();
 
-const handleContactClick = (type?: string) => {
-  if (type === 'telegram') {
-    trackTelegramClick();
-  }
-};
+// Вызывается при клике на Telegram ссылку
+<a 
+  href="https://t.me/leonforge"
+  onClick={() => trackTelegramClick()}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  {/* Telegram иконка */}
+</a>
 ```
 
 ### Использование в маркетинге
@@ -281,7 +207,7 @@ const handleContactClick = (type?: string) => {
 
 ---
 
-## 8. conversion
+## 6. conversion
 
 ### Описание
 Универсальное событие для отслеживания важных конверсий через Google Ads.
@@ -349,10 +275,10 @@ trackConversion('form_submit_label', 500);
 
 ### Аудитория 2: "Интересующиеся контактами"
 **Условия:**
-- Событие `email_click` ИЛИ `telegram_click` ИЛИ `phone_click`
+- Событие `telegram_click`
 - Но НЕ событие `form_submit`
 
-**Использование:** Упрощенная форма с минимальными полями
+**Использование:** Ремаркетинг через Telegram Ads или упрощенная форма
 
 ---
 
@@ -376,7 +302,7 @@ trackConversion('form_submit_label', 500);
    ↓
 4. cta_click (кликнули на CTA)
    ↓
-5. email_click / telegram_click (попытка связаться)
+5. telegram_click (попытка связаться через Telegram)
    ↓
 6. form_submit (отправили заявку) ✅ КОНВЕРСИЯ
 ```
@@ -435,6 +361,11 @@ dataLayer[dataLayer.length - 1]
 
 ### Событие отправляется дважды
 
+**✅ ВИРІШЕНО (form_submit)**: Подвійна подія `form_submit` була виправлена:
+1. Відключено GA4 Enhanced Measurement "Form interactions"
+2. Додано useRef lock в `ContactForm.tsx` для захисту від подвійних кліків
+
+**Якщо проблема залишилась для інших подій:**
 1. **Проверьте триггеры GTM**: возможно, есть дублирующиеся триггеры
 2. **Проверьте код**: убедитесь, что `trackEvent` вызывается только один раз
 3. **Проверьте старые теги**: удалите или отключите старые теги в GTM
