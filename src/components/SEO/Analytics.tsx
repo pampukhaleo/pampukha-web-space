@@ -134,24 +134,6 @@ export const useAnalytics = () => {
     logger.info(`Scroll tracked: ${percentage}%`);
   };
 
-  const trackPhoneClick = () => {
-    window.dataLayer?.push({
-      event: 'phone_click',
-      event_category: 'Contact',
-      event_label: 'Phone Number',
-    });
-    logger.info('Phone click tracked');
-  };
-
-  const trackEmailClick = () => {
-    window.dataLayer?.push({
-      event: 'email_click',
-      event_category: 'Contact',
-      event_label: 'Email',
-    });
-    logger.info('Email click tracked');
-  };
-
   const trackTelegramClick = () => {
     window.dataLayer?.push({
       event: 'telegram_click',
@@ -168,8 +150,6 @@ export const useAnalytics = () => {
     trackPortfolioView,
     trackCTAClick,
     trackScroll,
-    trackPhoneClick,
-    trackEmailClick,
     trackTelegramClick,
   };
 };
