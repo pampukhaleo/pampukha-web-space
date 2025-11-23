@@ -2,6 +2,12 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 interface SEOProps {
   title?: string;
   description?: string;
