@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -12,6 +12,7 @@ import { useAnalytics } from '@/components/SEO/Analytics';
 export const ContactForm = () => {
   const { toast } = useToast();
   const { trackFormSubmission } = useAnalytics();
+  const submitLockRef = useRef(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,6 +35,13 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Захист від подвійної відправки
+    if (submitLockRef.current) {
+      return;
+    }
+    
+    submitLockRef.current = true;
     setIsSubmitting(true);
     setError('');
 
@@ -121,6 +129,7 @@ ${formData.message}
         description: "Щось пішло не так. Спробуйте ще раз або напишіть на email.",
       });
     } finally {
+      submitLockRef.current = false;
       setIsSubmitting(false);
     }
   };
