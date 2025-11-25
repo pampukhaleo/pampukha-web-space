@@ -56,9 +56,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title={`Leonforge | ${t('hero.title2')} | React + SPA`}
-        description={t('hero.description')}
-        keywords="веб-разработка, создание сайтов, React SPA, SEO, Google Ads, Украина, современные сайты, web development, website creation"
+        title={`Створення сайтів на React у Києві | Leonforge | Веб-розробка під ключ`}
+        description="Професійна веб-розробка та створення сайтів на React у Києві. Швидкі SPA-рішення під ключ з SEO-оптимізацією та інтеграцією маркетингових інструментів. Від 300$."
+        keywords="створення сайтів, розробка сайтів, веб-розробка, створення сайтів Київ, розробка сайтів Київ, React SPA, SPA розробка, замовити сайт, веб-розробка під ключ, SEO, Google Ads"
         ogImage="https://leonforge.com/leonforge_logo.png"
         structuredData={[
           { type: 'LocalBusiness' },
