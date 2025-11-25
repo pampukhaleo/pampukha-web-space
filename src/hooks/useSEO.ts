@@ -53,7 +53,7 @@ export const useSEO = ({
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    const finalDescription = description || 'Professional development of modern websites for small businesses. Stylish, functional, accessible.';
+    const finalDescription = description || 'Створення сайтів на React у Києві. Веб-розробка під ключ з індивідуальним підходом.';
     metaDescription.setAttribute('content', finalDescription);
 
     // Управление keywords
