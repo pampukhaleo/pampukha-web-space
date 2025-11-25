@@ -1,4 +1,3 @@
-
 User-agent: *
 Allow: /
 
@@ -13,6 +12,7 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
@@ -25,6 +25,7 @@ Allow: /
 
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: facebookexternalhit
 Allow: /
@@ -34,9 +35,6 @@ Allow: /
 
 User-agent: LinkedInBot
 Allow: /
-
-# Crawl delay
-Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://leonforge.com/sitemap.xml
