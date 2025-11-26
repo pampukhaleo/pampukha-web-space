@@ -220,7 +220,7 @@ const PortfolioSection = () => {
         <div className="mt-16 text-center">
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-1 px-8"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-1 px-4 md:px-8 max-w-xs md:max-w-none whitespace-normal text-center"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             {t('portfolio.orderSimilar')}
