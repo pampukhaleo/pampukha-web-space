@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,7 +7,29 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { useAnalytics } from '@/components/SEO/Analytics';
+import { z } from 'zod';
 
+// Validation schema
+const contactFormSchema = z.object({
+  name: z.string()
+    .trim()
+    .min(2, { message: "Ім'я має містити мінімум 2 символи" })
+    .max(100, { message: "Ім'я має бути менше 100 символів" }),
+  email: z.string()
+    .trim()
+    .email({ message: "Невірний формат email" })
+    .max(255, { message: "Email має бути менше 255 символів" }),
+  phone: z.string()
+    .trim()
+    .min(1, { message: "Телефон обов'язковий" })
+    .regex(/^[\d\s+\-()]+$/, { message: "Телефон може містити тільки цифри, +, -, пробіли, дужки" })
+    .min(10, { message: "Телефон має містити мінімум 10 символів" })
+    .max(20, { message: "Телефон має бути менше 20 символів" }),
+  message: z.string()
+    .trim()
+    .min(10, { message: "Повідомлення має містити мінімум 10 символів" })
+    .max(1000, { message: "Повідомлення має бути менше 1000 символів" })
+});
 export const ContactForm = () => {
   const { toast } = useToast();
   const { trackFormSubmission } = useAnalytics();
@@ -21,6 +42,7 @@ export const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [showLocalDevDialog, setShowLocalDevDialog] = useState(false);
   const [formSubmittedLocally, setFormSubmittedLocally] = useState(false);
 
@@ -31,6 +53,10 @@ export const ContactForm = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     if (error) setError('');
+    // Clear field error when user types
+    if (fieldErrors[name]) {
+      setFieldErrors(prev => ({ ...prev, [name]: '' }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,9 +67,24 @@ export const ContactForm = () => {
       return;
     }
     
+    // Validate form data
+    const validationResult = contactFormSchema.safeParse(formData);
+    
+    if (!validationResult.success) {
+      const errors: Record<string, string> = {};
+      validationResult.error.errors.forEach((err) => {
+        if (err.path[0]) {
+          errors[err.path[0].toString()] = err.message;
+        }
+      });
+      setFieldErrors(errors);
+      return;
+    }
+    
     submitLockRef.current = true;
     setIsSubmitting(true);
     setError('');
+    setFieldErrors({});
 
     // For local development, show dialog with form data instead of API call
     if (isLocalDevelopment) {
@@ -170,6 +211,9 @@ ${formData.message}
                 required
                 className="w-full p-3 rounded-lg bg-input text-foreground border border-border"
               />
+              {fieldErrors.name && (
+                <p className="text-red-500 text-sm mt-1">{fieldErrors.name}</p>
+              )}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -187,6 +231,9 @@ ${formData.message}
                   required
                   className="w-full p-3 rounded-lg bg-input text-foreground border border-border"
                 />
+                {fieldErrors.email && (
+                  <p className="text-red-500 text-sm mt-1">{fieldErrors.email}</p>
+                )}
               </div>
               <div>
                 <label htmlFor="phone" className="block mb-2 font-medium">
@@ -201,6 +248,9 @@ ${formData.message}
                   placeholder="+380 ХХ ХХХ ХХХХ"
                   className="w-full p-3 rounded-lg bg-input text-foreground border border-border"
                 />
+                {fieldErrors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{fieldErrors.phone}</p>
+                )}
               </div>
             </div>
 
@@ -218,6 +268,9 @@ ${formData.message}
                 required
                 className="w-full p-3 rounded-lg resize-none bg-input text-foreground border border-border"
               />
+              {fieldErrors.message && (
+                <p className="text-red-500 text-sm mt-1">{fieldErrors.message}</p>
+              )}
             </div>
 
             <Button
