@@ -95,16 +95,6 @@ const HeroSection = () => {
             <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-brand-blue/10 rounded-full filter blur-3xl -z-10" aria-hidden="true"></div>
           </figure>
         </div>
-
-        <div className="mt-16 lg:mt-24 flex justify-center">
-          <button
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group animate-bounce cursor-pointer bg-white/80 backdrop-blur-sm p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white border border-gray-200"
-            aria-label="Прокрутить к разделу О нас"
-          >
-            <ArrowDown className="text-brand-blue group-hover:text-brand-blue/80 transition-colors" size={24} />
-          </button>
-        </div>
       </div>
     </section>
   );
