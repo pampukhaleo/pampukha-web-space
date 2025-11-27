@@ -6,15 +6,15 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title1": "Tworzenie",
-    "title2": "stron internetowych ",
-    "title3": "na React",
+    "title1": "Tworzenie ",
+    "title2": "Landing Page",
+    "title3": " i stron internetowych na React",
     "title4": "— szybko, niezawodnie, pod klucz",
     "price": "od 300$",
-    "valueProposition": "SPA + SEO + Narzędzia marketingowe",
-    "description": "Profesjonalna tworzenie stron internetowych i web development na React w Kijowie. Szybkie rozwiązania SPA z indywidualnym podejściem. Narzędzia marketingowe: Google Ads, Facebook Ads, Analytics, Search Console - konfiguruję według Twoich potrzeb.",
-    "consultation": "Poproś o konsultację",
-    "viewWork": "Zobacz prace"
+    "valueProposition": "Szybkość + SEO + Nowoczesny design",
+    "description": "Web developer w Kijowie. Tworzę wydajne landing page i strony internetowe na React pod klucz. Nacisk na szybkość, SEO i User Experience. Indywidualne podejście do każdego projektu.",
+    "consultation": "Zamów Landing Page",
+    "viewWork": "Zobacz portfolio"
   },
   "about": {
     "title1": "O",
