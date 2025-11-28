@@ -166,7 +166,7 @@ const PortfolioSection = () => {
                     <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <p className="text-sm text-muted-foreground line-clamp-2">
                       {item.description}
                     </p>
                   </div>
