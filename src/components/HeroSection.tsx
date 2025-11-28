@@ -55,7 +55,7 @@ const HeroSection = () => {
             </span>
           </header>
 
-          <figure className="order-1 lg:order-2 relative">
+          <figure className="order-1 lg:order-2 relative hidden lg:block">
             <div className="relative z-10 flex justify-center lg:justify-end">
               <LazyImage
                 src="/leonforge_logo.png"
