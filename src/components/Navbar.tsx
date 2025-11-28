@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="flex items-center space-x-3">
           <img 
@@ -28,21 +28,21 @@ const Navbar = () => {
             alt="Leonforge" 
             className="h-8 w-auto"
           />
-          <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
+          <span className="text-xl font-semibold text-foreground">LEONFORGE</span>
         </a>
 
-        {/* Desktop Menu - показывать только на очень больших экранах */}
+        {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-8">
-          <a href="#about" className="text-foreground-muted hover:text-primary transition-colors">
+          <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             {t('navbar.about')}
           </a>
-          <a href="#portfolio" className="text-foreground-muted hover:text-primary transition-colors">
+          <a href="#portfolio" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             {t('navbar.portfolio')}
           </a>
-          <a href="#services" className="text-foreground-muted hover:text-primary transition-colors">
+          <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             {t('navbar.services')}
           </a>
-          <a href="#contact" className="text-foreground-muted hover:text-primary transition-colors">
+          <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             {t('navbar.contact')}
           </a>
           <LanguageSwitcher />
@@ -50,61 +50,61 @@ const Navbar = () => {
             variant="ghost" 
             size="icon"
             onClick={toggleTheme}
-            className="text-foreground-muted hover:text-primary mr-2"
+            className="text-muted-foreground hover:text-foreground"
           >
-            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
         </div>
         
-        {/* Mobile menu button - показывать на экранах меньше xl */}
+        {/* Mobile menu button */}
         <div className="lg:hidden flex items-center space-x-4">
           <LanguageSwitcher />
           <Button 
             variant="ghost" 
             size="icon"
             onClick={toggleTheme}
-            className="text-foreground-muted"
+            className="text-muted-foreground hover:text-foreground"
           >
-            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
           <button 
             className="text-foreground" 
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
       
-      {/* Mobile Menu - показывать на экранах меньше xl */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="xl:hidden bg-background py-4 px-4 shadow-md">
+        <div className="lg:hidden bg-background border-t border-border py-4 px-4">
           <div className="flex flex-col space-y-4">
             <a 
               href="#about" 
-              className="text-foreground-muted hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navbar.about')}
             </a>
             <a 
               href="#portfolio" 
-              className="text-foreground-muted hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navbar.portfolio')}
             </a>
             <a 
               href="#services" 
-              className="text-foreground-muted hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navbar.services')}
             </a>
             <a 
               href="#contact" 
-              className="text-foreground-muted hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navbar.contact')}
