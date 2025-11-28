@@ -120,7 +120,7 @@ const PortfolioSection = () => {
               <LazyImage
                 src={featuredProject.desktopImage}
                 alt={t(`imageAlt.project${featuredProject.id}Desktop`)}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                 loading="eager"
                 priority
               />
@@ -153,7 +153,7 @@ const PortfolioSection = () => {
                 <LazyImage
                   src={item.desktopImage}
                   alt={t(`imageAlt.project${item.id}Desktop`)}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                   loading="lazy"
                 />
                 {/* Minimal darkening on hover */}
@@ -176,6 +176,7 @@ const PortfolioSection = () => {
         <div className="mt-16 text-center">
           <Button
             size="lg"
+            className="whitespace-normal h-auto py-3 px-6 leading-tight"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             {t('portfolio.orderSimilar')}
