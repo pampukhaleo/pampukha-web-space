@@ -5,71 +5,63 @@
 
 @layer base {
   :root {
-    /* Light theme colors */
+    /* Light theme colors - minimal for light mode */
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 0 0% 4%;
     
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 98%;
     
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 4%;
     
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 46%;
     
-    --accent: 134 63% 45%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 239 84% 67%;
+    --accent-foreground: 0 0% 98%;
     
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
     
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 239 84% 67%;
     
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 4%;
   }
   
   .dark {
-    /* Dark theme colors */
-    --background: 222 47% 11%;
-    --foreground: 0 0% 100%;
+    /* Dark theme colors - Linear.app style */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
     
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 98%;
     
-    --secondary: 215 32% 22%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
     
-    --muted: 215 32% 22%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 54%;
     
-    --accent: 134 63% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 239 84% 67%;
+    --accent-foreground: 0 0% 98%;
     
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
     
-    --border: 215 32% 22%;
-    --input: 215 32% 22%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 239 84% 67%;
     
-    --card: 222 47% 11%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
   }
 
   body {
-    @apply bg-background text-foreground font-montserrat;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
-  }
-
-  .card-gradient {
-    @apply bg-card text-card-foreground border border-border/40 shadow-lg transition-colors;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
 
@@ -79,23 +71,14 @@
   }
   
   .contact-text {
-    @apply text-foreground-muted;
+    @apply text-muted-foreground;
   }
   
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-center;
+    @apply text-3xl md:text-4xl font-semibold mb-6 text-center;
   }
   
   .section-description {
-    @apply text-lg text-foreground-muted max-w-3xl mx-auto text-center mb-12;
-  }
-
-  /* Separate hover effects for desktop and mobile mockups */
-  .desktop-mockup:hover ~ .mobile-mockup {
-    @apply transform-none translate-y-0 scale-100;
-  }
-  
-  .mobile-mockup:hover ~ .desktop-mockup {
-    @apply transform-none translate-y-0 scale-100;
+    @apply text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-12;
   }
 }

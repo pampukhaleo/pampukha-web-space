@@ -20,67 +20,53 @@ export default {
     },
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // Both light and dark theme colors 
-        background: {
-          DEFAULT: 'hsl(var(--background))',
-          darker: '#080E1A',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
         },
-        foreground: {
-          DEFAULT: 'hsl(var(--foreground))',
-          muted: 'hsl(var(--muted-foreground))',
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
         },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          light: '#60A5FA',
-          dark: '#1D4ED8',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-          light: '#34D399',
-        },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
         },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        border: {
-          DEFAULT: 'hsl(var(--border))',
-        },
-        input: {
-          DEFAULT: 'hsl(var(--input))',
-        },
-        ring: {
-          DEFAULT: 'hsl(var(--ring))',
-        },
-        brand: {
-          blue: '#3B82F6',
-          teal: '#10B981',
-          orange: '#F59E0B',
-          purple: '#8B5CF6',
-          red: '#EF4444',
-        },
-        dark: {
-          lighter: '#1E293B',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        chart: {
+          '1': 'hsl(var(--chart-1))',
+          '2': 'hsl(var(--chart-2))',
+          '3': 'hsl(var(--chart-3))',
+          '4': 'hsl(var(--chart-4))',
+          '5': 'hsl(var(--chart-5))',
         },
       },
       backgroundImage: {
-        'gradient-text': 'linear-gradient(to right, #3B82F6, #60A5FA)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       typography: {
         DEFAULT: {

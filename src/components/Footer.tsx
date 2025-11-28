@@ -21,9 +21,9 @@ const Footer = () => {
                 alt="Leonforge" 
                 className="h-8 w-auto"
               />
-              <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">LEONFORGE</span>
+              <span className="text-xl font-semibold text-foreground">LEONFORGE</span>
             </div>
-            <p className="text-muted-foreground text-sm max-w-md mx-auto">
+            <p className="text-sm text-muted-foreground max-w-md mx-auto">
               {t('footer.description')}
             </p>
           </div>

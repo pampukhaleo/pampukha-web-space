@@ -117,28 +117,11 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section id="portfolio" className="py-16 md:py-24 px-4 relative overflow-hidden bg-background" role="main">
-      {/* Subtle animated background */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
-
-      {/* Floating gradient orbs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-32 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-700" />
-      </div>
-
+    <section id="portfolio" className="py-16 md:py-24 px-4 relative overflow-hidden bg-muted/30" role="main">
       <div className="container mx-auto relative z-10">
         <header className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            {t('portfolio.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">{t('portfolio.title2')}</span>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            {t('portfolio.title1')} <span className="text-primary">{t('portfolio.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('portfolio.description')}
@@ -151,8 +134,7 @@ const PortfolioSection = () => {
             <Card
               key={item.id}
               role="listitem"
-              className={`group relative overflow-hidden cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-500 ${getSizeClasses(item.size)} animate-fade-in hover:shadow-2xl hover:shadow-primary/10`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`group relative overflow-hidden cursor-pointer border-border hover:border-primary/50 transition-all duration-200 ${getSizeClasses(item.size)}`}
               onClick={() => openProjectPopup(item, 'desktop')}
             >
               {/* Project Image Background */}
@@ -160,59 +142,48 @@ const PortfolioSection = () => {
                 <LazyImage
                   src={item.desktopImage}
                   alt={t(`imageAlt.project${item.id}Desktop`)}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading={index === 0 ? "eager" : "lazy"}
                   width={600}
                   height={400}
                 />
-                {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-40 group-hover:opacity-70 transition-opacity duration-500`} />
-                <div className="absolute inset-0 bg-background/30 group-hover:bg-background/50 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-colors duration-200" />
               </div>
-
-              {/* Dark gradient underlay for text readability */}
-              <div className="absolute inset-x-0 bottom-0 h-4/5 md:h-3/4 bg-gradient-to-t from-background/95 via-background/80 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-500 z-[1]" />
 
               {/* Content Overlay */}
               <div className="relative h-full flex flex-col justify-between p-6 z-10">
                 {/* Top: Category Badge */}
                 <div className="flex items-start justify-between">
-                  <span className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium bg-card/90 backdrop-blur-sm border border-border/50 rounded-full text-foreground">
-                    <Sparkles className="w-3 h-3" />
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium bg-muted border border-border rounded-md text-foreground">
                     {item.category}
                   </span>
-                  <ExternalLink className="w-5 h-5 text-foreground/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </div>
 
                 {/* Bottom: Project Info */}
                 <div className="space-y-3">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 line-clamp-2 transition-colors duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+                    <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">
                       {item.title}
                     </h3>
-                    <p className={`text-sm text-foreground/90 line-clamp-2 ${item.size === 'large' ? 'md:line-clamp-3' : 'line-clamp-2'} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
+                    <p className="text-sm text-muted-foreground line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       {item.description}
                     </p>
                   </div>
 
-                  {/* Technologies - shown on hover */}
-                  <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                    {item.technologies.map((tech, techIndex) => (
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200">
+                    {item.technologies.slice(0, 3).map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium bg-primary/10 backdrop-blur-sm border border-primary/30 rounded-md text-primary"
-                        style={{ transitionDelay: `${techIndex * 50}ms` }}
+                        className="px-2 py-0.5 text-xs bg-muted border border-border rounded text-muted-foreground"
                       >
-                        <Code2 className="w-3 h-3" />
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
               </div>
-
-              {/* Hover Border Glow */}
-              <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 rounded-lg transition-colors duration-500 pointer-events-none" />
             </Card>
           ))}
         </div>
@@ -220,7 +191,6 @@ const PortfolioSection = () => {
         <div className="mt-16 text-center">
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-1 px-4 md:px-8 max-w-xs md:max-w-none whitespace-normal text-center"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             {t('portfolio.orderSimilar')}

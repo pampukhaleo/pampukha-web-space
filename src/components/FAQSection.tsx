@@ -47,11 +47,11 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 md:py-24 px-4 bg-muted/30" role="main">
+    <section id="faq" className="py-16 md:py-24 px-4 bg-background" role="main">
       <div className="container mx-auto">
         <header className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {t('faq.title1')} <span className="gradient-text">{t('faq.title2')}</span>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            {t('faq.title1')} <span className="text-primary">{t('faq.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('faq.description')}
@@ -59,18 +59,18 @@ const FAQSection = () => {
         </header>
 
         <div className="max-w-4xl mx-auto" role="region" aria-label="Часто задаваемые вопросы">
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="card-gradient rounded-lg px-6"
+                className="border border-border rounded-lg px-6 bg-card"
               >
                 <AccordionTrigger className="text-left hover:no-underline">
-                  <h3 className="font-semibold">{faq.question}</h3>
+                  <h3 className="font-semibold text-sm">{faq.question}</h3>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {faq.answer}
                   </p>
                 </AccordionContent>
