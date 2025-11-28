@@ -46,7 +46,7 @@ const WhyAISPASection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-heading">
-            {t('whyAiSpa.title1')} <span className="gradient-text">{t('whyAiSpa.title2')}</span>
+            {t('whyAiSpa.title1')} <span className="text-primary">{t('whyAiSpa.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('whyAiSpa.description')}
@@ -55,7 +55,7 @@ const WhyAISPASection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {benefits.map((benefit, index) => (
-            <div key={index} className="card-gradient rounded-lg p-6 text-center">
+            <div key={index} className="bg-card border border-border rounded-lg p-6 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
                 <benefit.icon className="w-6 h-6 text-primary" />
               </div>
@@ -82,7 +82,7 @@ const WhyAISPASection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-red-500">{t('whyAiSpa.comparison.traditional.title')}</h4>
+              <h4 className="text-lg font-semibold text-foreground">{t('whyAiSpa.comparison.traditional.title')}</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>❌ {t('whyAiSpa.comparison.traditional.point1')}</li>
                 <li>❌ {t('whyAiSpa.comparison.traditional.point2')}</li>
@@ -92,7 +92,7 @@ const WhyAISPASection = () => {
             </div>
             
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-green-500">{t('whyAiSpa.comparison.aiSpa.title')}</h4>
+              <h4 className="text-lg font-semibold text-primary">{t('whyAiSpa.comparison.aiSpa.title')}</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>✅ {t('whyAiSpa.comparison.aiSpa.point1')}</li>
                 <li>✅ {t('whyAiSpa.comparison.aiSpa.point2')}</li>

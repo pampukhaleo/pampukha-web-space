@@ -10,7 +10,6 @@ export const PerformanceOptimizer = () => {
       const criticalCSS = `
         /* Critical CSS для улучшения LCP */
         .hero-section { display: block; }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); }
         .container { max-width: 1200px; margin: 0 auto; }
       `;
       
