@@ -22,7 +22,7 @@ const CTAButton = ({ variant = 'primary', className = '' }: CTAButtonProps) => {
     return (
       <Button
         variant="outline"
-        className={`border-cyan-400/50 text-white bg-cyan-500/10 hover:bg-cyan-500/20 hover:text-white transition-all duration-300 border-2 px-8 py-3 rounded-2xl shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 ${className}`}
+        className={`border-2 border-primary text-primary bg-transparent hover:bg-primary/10 transition-all duration-200 px-8 py-3 rounded-xl ${className}`}
         onClick={scrollToContact}
       >
         {t('hero.consultation')}
@@ -32,7 +32,7 @@ const CTAButton = ({ variant = 'primary', className = '' }: CTAButtonProps) => {
 
   return (
     <Button
-      className={`border-cyan-400/50 text-white bg-cyan-500/10 hover:bg-cyan-500/20 hover:text-white transition-all duration-300 border-2 px-8 py-3 rounded-2xl shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 ${className}`}
+      className={`bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 px-8 py-3 rounded-xl ${className}`}
       onClick={scrollToContact}
     >
       {t('hero.consultation')}
