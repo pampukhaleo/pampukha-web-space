@@ -116,7 +116,7 @@ const PortfolioSection = () => {
             onClick={() => openProjectPopup(featuredProject, 'desktop')}
             role="article"
           >
-            <div className="relative aspect-[21/9] overflow-hidden bg-muted">
+            <div className="relative aspect-[4/3] md:aspect-[21/9] overflow-hidden bg-muted">
               <LazyImage
                 src={featuredProject.desktopImage}
                 alt={t(`imageAlt.project${featuredProject.id}Desktop`)}
