@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, Code2, Sparkles } from 'lucide-react';
+import { ExternalLink, Code2 } from 'lucide-react';
 
 interface ProjectPopupProps {
   isOpen: boolean;
@@ -46,12 +45,6 @@ const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps)
               <DialogTitle className="text-3xl font-bold text-foreground">
                 {project.title}
               </DialogTitle>
-              {project.category && (
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium bg-primary/10 border border-primary/30 rounded-full text-primary">
-                  <Sparkles className="w-3 h-3" />
-                  {project.category}
-                </div>
-              )}
             </div>
           </div>
           
@@ -78,7 +71,7 @@ const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps)
         </DialogHeader>
         
         <div className="space-y-6 py-6">
-          {/* Screenshot with gradient overlay */}
+          {/* Screenshot */}
           <div className="relative group rounded-xl overflow-hidden border border-border/50 bg-background">
             <div className="relative">
               <LazyImage
@@ -87,10 +80,6 @@ const ProjectPopup = ({ isOpen, onClose, project, viewType }: ProjectPopupProps)
                 className="w-full h-auto"
                 loading="lazy"
               />
-              {/* Subtle gradient overlay */}
-              {project.gradient && (
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none`} />
-              )}
             </div>
             
             {/* View type indicator */}
