@@ -1,11 +1,8 @@
-
 import React, { useState } from 'react';
-import { ExternalLink, Code2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
 import ProjectPopup from '@/components/portfolio/ProjectPopup';
-import { Card } from '@/components/ui/card';
 import { useAnalytics } from '@/components/SEO/Analytics';
 
 const PortfolioSection = () => {
@@ -25,8 +22,7 @@ const PortfolioSection = () => {
       mobileImage: '/expertisemobile.png',
       liveUrl: 'https://expertise.com.ua/',
       technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase', 'i18next'],
-      size: 'large', // Bento grid size
-      gradient: 'from-primary/20 via-accent/10 to-transparent'
+      isFeatured: true,
     },
     {
       id: 2,
@@ -37,8 +33,7 @@ const PortfolioSection = () => {
       mobileImage: '/cheataicmobile.png',
       liveUrl: 'https://chea-taic.be/',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind'],
-      size: 'medium',
-      gradient: 'from-accent/20 via-primary/10 to-transparent'
+      isFeatured: false,
     },
     {
       id: 3,
@@ -49,8 +44,7 @@ const PortfolioSection = () => {
       mobileImage: '/pampukhaplmobile.png',
       liveUrl: 'https://pampukha.pl/',
       technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase'],
-      size: 'medium',
-      gradient: 'from-secondary/20 via-accent/10 to-transparent'
+      isFeatured: false,
     },
     {
       id: 4,
@@ -61,8 +55,7 @@ const PortfolioSection = () => {
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://lemonshine.pl/',
       technologies: ['React', 'Vite', 'Tailwind'],
-      size: 'small',
-      gradient: 'from-primary/20 via-secondary/10 to-transparent'
+      isFeatured: false,
     },
     {
       id: 5,
@@ -73,8 +66,7 @@ const PortfolioSection = () => {
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://spotlessprohome.co.uk/',
       technologies: ['React', 'TypeScript', 'Vite'],
-      size: 'small',
-      gradient: 'from-accent/20 via-primary/10 to-transparent'
+      isFeatured: false,
     },
     {
       id: 6,
@@ -85,24 +77,13 @@ const PortfolioSection = () => {
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://laserbeauty-studio.de/',
       technologies: ['React', 'Tailwind', 'Supabase'],
-      size: 'medium',
-      gradient: 'from-secondary/20 via-accent/10 to-transparent'
+      isFeatured: false,
     },
   ];
 
-  // Bento grid size classes
-  const getSizeClasses = (size: string) => {
-    switch (size) {
-      case 'large':
-        return 'md:col-span-2 md:row-span-2';
-      case 'medium':
-        return 'md:col-span-1 md:row-span-1';
-      case 'small':
-        return 'md:col-span-1 md:row-span-1';
-      default:
-        return 'md:col-span-1 md:row-span-1';
-    }
-  };
+  const featuredProject = portfolioItems.find(item => item.isFeatured);
+  const regularProjects = portfolioItems.filter(item => !item.isFeatured);
+
 
   const openProjectPopup = (project: any, type: 'desktop' | 'mobile') => {
     setSelectedProject(project);
@@ -128,63 +109,67 @@ const PortfolioSection = () => {
           </p>
         </header>
 
-        {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-[280px] md:auto-rows-[320px]" role="list">
-          {portfolioItems.map((item, index) => (
-            <Card
+        {/* Featured Project */}
+        {featuredProject && (
+          <div 
+            className="group relative overflow-hidden rounded-lg cursor-pointer mb-8 border border-border hover:border-primary/30 transition-all duration-300"
+            onClick={() => openProjectPopup(featuredProject, 'desktop')}
+            role="article"
+          >
+            <div className="relative aspect-[21/9] overflow-hidden bg-muted">
+              <LazyImage
+                src={featuredProject.desktopImage}
+                alt={t(`imageAlt.project${featuredProject.id}Desktop`)}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="eager"
+                priority
+              />
+              {/* Minimal darkening on hover */}
+              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/30 transition-colors duration-300" />
+            </div>
+            
+            {/* Title overlay - appears on hover */}
+            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-background via-background/90 to-transparent translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+              <h3 className="text-2xl font-semibold text-foreground mb-2">
+                {featuredProject.title}
+              </h3>
+              <p className="text-muted-foreground line-clamp-2">
+                {featuredProject.description}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Regular Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+          {regularProjects.map((item, index) => (
+            <div
               key={item.id}
               role="listitem"
-              className={`group relative overflow-hidden cursor-pointer border-border hover:border-primary/50 transition-all duration-200 ${getSizeClasses(item.size)}`}
+              className="group relative overflow-hidden rounded-lg cursor-pointer border border-border hover:border-primary/30 transition-all duration-300"
               onClick={() => openProjectPopup(item, 'desktop')}
             >
-              {/* Project Image Background */}
-              <div className="absolute inset-0">
+              <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                 <LazyImage
                   src={item.desktopImage}
                   alt={t(`imageAlt.project${item.id}Desktop`)}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  loading={index === 0 ? "eager" : "lazy"}
-                  width={600}
-                  height={400}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-colors duration-200" />
+                {/* Minimal darkening on hover */}
+                <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300" />
               </div>
-
-              {/* Content Overlay */}
-              <div className="relative h-full flex flex-col justify-between p-6 z-10">
-                {/* Top: Category Badge */}
-                <div className="flex items-start justify-between">
-                  <span className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium bg-muted border border-border rounded-md text-foreground">
-                    {item.category}
-                  </span>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                </div>
-
-                {/* Bottom: Project Info */}
-                <div className="space-y-3">
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200">
-                    {item.technologies.slice(0, 3).map((tech, techIndex) => (
-                      <span 
-                        key={techIndex}
-                        className="px-2 py-0.5 text-xs bg-muted border border-border rounded text-muted-foreground"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              
+              {/* Title overlay - appears on hover */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background via-background/90 to-transparent translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-foreground mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-1">
+                  {item.description}
+                </p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
