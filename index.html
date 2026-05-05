@@ -50,6 +50,43 @@
     <link rel="dns-prefetch" href="//cdn.gpteng.co">
 
     <meta name="google-site-verification" content="Ep4gte_iH5BczXdj0tmnZEDJSQFzlerK4ZKaUCdHg38" />
+
+    <!-- Structured Data: Person + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://leonforge.com/#person",
+          "name": "Leonid Pampukha",
+          "url": "https://leonforge.com/",
+          "jobTitle": "Web Developer",
+          "image": "https://leonforge.com/leonforge_logo.png",
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://leonforge.com/#website",
+          "url": "https://leonforge.com/",
+          "name": "Leonforge",
+          "description": "Створення лендінгів та веб сайтів на React під ключ",
+          "inLanguage": ["uk-UA", "en-US", "pl-PL"],
+          "publisher": { "@id": "https://leonforge.com/#person" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://leonforge.com/#service",
+          "name": "Leonforge - Web Development",
+          "url": "https://leonforge.com/",
+          "image": "https://leonforge.com/leonforge_logo.png",
+          "areaServed": ["UA", "EU"],
+          "provider": { "@id": "https://leonforge.com/#person" },
+          "serviceType": "Web development, React landing pages, SPA"
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
