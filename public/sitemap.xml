@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- Main page (default) -->
   <url>
     <loc>https://leonforge.com/</loc>
-    <lastmod>2025-01-25</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="uk-UA" href="https://leonforge.com/?lang=uk"/>
@@ -13,41 +11,4 @@
     <xhtml:link rel="alternate" hreflang="pl-PL" href="https://leonforge.com/?lang=pl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://leonforge.com/"/>
   </url>
-
-  <!-- Main page (Ukrainian) -->
-  <url>
-    <loc>https://leonforge.com/?lang=uk</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://leonforge.com/?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://leonforge.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://leonforge.com/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://leonforge.com/"/>
-  </url>
-
-  <!-- Main page (English) -->
-  <url>
-    <loc>https://leonforge.com/?lang=en</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://leonforge.com/?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://leonforge.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://leonforge.com/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://leonforge.com/"/>
-  </url>
-
-  <!-- Main page (Polish) -->
-  <url>
-    <loc>https://leonforge.com/?lang=pl</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="uk-UA" href="https://leonforge.com/?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://leonforge.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="pl-PL" href="https://leonforge.com/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://leonforge.com/"/>
-  </url>
-
 </urlset>
