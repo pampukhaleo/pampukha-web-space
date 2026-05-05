@@ -10,7 +10,7 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "12.2.12 (cd3cf9e)"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
@@ -63,6 +63,13 @@ export type Database = {
             columns: ["painting_id"]
             isOneToOne: false
             referencedRelation: "paintings"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "access_logs_painting_id_fkey"
+            columns: ["painting_id"]
+            isOneToOne: false
+            referencedRelation: "public_paintings"
             referencedColumns: ["id"]
           },
           {
@@ -128,60 +135,11 @@ export type Database = {
             referencedRelation: "paintings"
             referencedColumns: ["id"]
           },
-        ]
-      }
-      guilds: {
-        Row: {
-          created_at: string
-          id: string
-          name: string
-          slug: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          name: string
-          slug: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          name?: string
-          slug?: string
-        }
-        Relationships: []
-      }
-      invite_codes: {
-        Row: {
-          code: string
-          created_at: string
-          expires_at: string | null
-          guild_id: string
-          id: string
-          is_active: boolean | null
-        }
-        Insert: {
-          code: string
-          created_at?: string
-          expires_at?: string | null
-          guild_id: string
-          id?: string
-          is_active?: boolean | null
-        }
-        Update: {
-          code?: string
-          created_at?: string
-          expires_at?: string | null
-          guild_id?: string
-          id?: string
-          is_active?: boolean | null
-        }
-        Relationships: [
           {
-            foreignKeyName: "invite_codes_guild_id_fkey"
-            columns: ["guild_id"]
+            foreignKeyName: "access_tokens_painting_id_fkey"
+            columns: ["painting_id"]
             isOneToOne: false
-            referencedRelation: "guilds"
+            referencedRelation: "public_paintings"
             referencedColumns: ["id"]
           },
         ]
@@ -211,6 +169,13 @@ export type Database = {
             columns: ["painting_id"]
             isOneToOne: false
             referencedRelation: "paintings"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "painting_owners_painting_id_fkey"
+            columns: ["painting_id"]
+            isOneToOne: false
+            referencedRelation: "public_paintings"
             referencedColumns: ["id"]
           },
         ]
@@ -246,6 +211,13 @@ export type Database = {
             columns: ["painting_id"]
             isOneToOne: true
             referencedRelation: "paintings"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "painting_private_painting_id_fkey"
+            columns: ["painting_id"]
+            isOneToOne: true
+            referencedRelation: "public_paintings"
             referencedColumns: ["id"]
           },
         ]
@@ -394,60 +366,27 @@ export type Database = {
         }
         Relationships: []
       }
-      payments: {
-        Row: {
-          amount: number
-          created_at: string
-          id: string
-          payment_date: string
-          status: string
-          user_id: string
-        }
-        Insert: {
-          amount: number
-          created_at?: string
-          id?: string
-          payment_date?: string
-          status: string
-          user_id: string
-        }
-        Update: {
-          amount?: number
-          created_at?: string
-          id?: string
-          payment_date?: string
-          status?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
       profiles: {
         Row: {
           created_at: string
           email: string | null
           full_name: string | null
-          has_paid: boolean | null
           id: string
           updated_at: string
-          website_url: string | null
         }
         Insert: {
           created_at?: string
           email?: string | null
           full_name?: string | null
-          has_paid?: boolean | null
           id: string
           updated_at?: string
-          website_url?: string | null
         }
         Update: {
           created_at?: string
           email?: string | null
           full_name?: string | null
-          has_paid?: boolean | null
           id?: string
           updated_at?: string
-          website_url?: string | null
         }
         Relationships: []
       }
@@ -472,53 +411,149 @@ export type Database = {
         }
         Relationships: []
       }
-      users: {
-        Row: {
-          created_at: string
-          dkp_balance: number
-          dkp_pending: number
-          guild_id: string | null
-          id: string
-          is_approved: boolean | null
-          name: string | null
-          roles: string[] | null
-          share_permission: boolean | null
-        }
-        Insert: {
-          created_at?: string
-          dkp_balance?: number
-          dkp_pending?: number
-          guild_id?: string | null
-          id: string
-          is_approved?: boolean | null
-          name?: string | null
-          roles?: string[] | null
-          share_permission?: boolean | null
-        }
-        Update: {
-          created_at?: string
-          dkp_balance?: number
-          dkp_pending?: number
-          guild_id?: string | null
-          id?: string
-          is_approved?: boolean | null
-          name?: string | null
-          roles?: string[] | null
-          share_permission?: boolean | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "users_guild_id_fkey"
-            columns: ["guild_id"]
-            isOneToOne: false
-            referencedRelation: "guilds"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
     }
     Views: {
-      [_ in never]: never
+      public_paintings: {
+        Row: {
+          acquisition_credit_en: string | null
+          acquisition_credit_fr: string | null
+          acquisition_credit_ru: string | null
+          artist_dates: string | null
+          artist_en: string | null
+          artist_fr: string | null
+          artist_ru: string | null
+          certificates: Json | null
+          created_at: string | null
+          date_place_made_en: string | null
+          date_place_made_fr: string | null
+          date_place_made_ru: string | null
+          description_en: string | null
+          description_fr: string | null
+          description_ru: string | null
+          dimensions: string | null
+          documents: Json | null
+          expertise_report_en: string | null
+          expertise_report_fr: string | null
+          expertise_report_ru: string | null
+          frame_en: string | null
+          frame_fr: string | null
+          frame_ru: string | null
+          full_title_en: string | null
+          full_title_fr: string | null
+          full_title_ru: string | null
+          genre_en: string | null
+          genre_fr: string | null
+          genre_ru: string | null
+          id: string | null
+          is_published: boolean | null
+          materials_en: string | null
+          materials_fr: string | null
+          materials_ru: string | null
+          original_title: string | null
+          public_image_url: string | null
+          technical_analysis_en: string | null
+          technical_analysis_fr: string | null
+          technical_analysis_ru: string | null
+          title_en: string | null
+          title_fr: string | null
+          title_ru: string | null
+          updated_at: string | null
+          year: number | null
+        }
+        Insert: {
+          acquisition_credit_en?: string | null
+          acquisition_credit_fr?: string | null
+          acquisition_credit_ru?: string | null
+          artist_dates?: string | null
+          artist_en?: string | null
+          artist_fr?: string | null
+          artist_ru?: string | null
+          certificates?: Json | null
+          created_at?: string | null
+          date_place_made_en?: string | null
+          date_place_made_fr?: string | null
+          date_place_made_ru?: string | null
+          description_en?: string | null
+          description_fr?: string | null
+          description_ru?: string | null
+          dimensions?: string | null
+          documents?: Json | null
+          expertise_report_en?: string | null
+          expertise_report_fr?: string | null
+          expertise_report_ru?: string | null
+          frame_en?: string | null
+          frame_fr?: string | null
+          frame_ru?: string | null
+          full_title_en?: string | null
+          full_title_fr?: string | null
+          full_title_ru?: string | null
+          genre_en?: string | null
+          genre_fr?: string | null
+          genre_ru?: string | null
+          id?: string | null
+          is_published?: boolean | null
+          materials_en?: string | null
+          materials_fr?: string | null
+          materials_ru?: string | null
+          original_title?: string | null
+          public_image_url?: string | null
+          technical_analysis_en?: string | null
+          technical_analysis_fr?: string | null
+          technical_analysis_ru?: string | null
+          title_en?: string | null
+          title_fr?: string | null
+          title_ru?: string | null
+          updated_at?: string | null
+          year?: number | null
+        }
+        Update: {
+          acquisition_credit_en?: string | null
+          acquisition_credit_fr?: string | null
+          acquisition_credit_ru?: string | null
+          artist_dates?: string | null
+          artist_en?: string | null
+          artist_fr?: string | null
+          artist_ru?: string | null
+          certificates?: Json | null
+          created_at?: string | null
+          date_place_made_en?: string | null
+          date_place_made_fr?: string | null
+          date_place_made_ru?: string | null
+          description_en?: string | null
+          description_fr?: string | null
+          description_ru?: string | null
+          dimensions?: string | null
+          documents?: Json | null
+          expertise_report_en?: string | null
+          expertise_report_fr?: string | null
+          expertise_report_ru?: string | null
+          frame_en?: string | null
+          frame_fr?: string | null
+          frame_ru?: string | null
+          full_title_en?: string | null
+          full_title_fr?: string | null
+          full_title_ru?: string | null
+          genre_en?: string | null
+          genre_fr?: string | null
+          genre_ru?: string | null
+          id?: string | null
+          is_published?: boolean | null
+          materials_en?: string | null
+          materials_fr?: string | null
+          materials_ru?: string | null
+          original_title?: string | null
+          public_image_url?: string | null
+          technical_analysis_en?: string | null
+          technical_analysis_fr?: string | null
+          technical_analysis_ru?: string | null
+          title_en?: string | null
+          title_fr?: string | null
+          title_ru?: string | null
+          updated_at?: string | null
+          year?: number | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       cleanup_expired_tokens: { Args: never; Returns: number }
@@ -557,6 +592,18 @@ export type Database = {
           _user_id: string
         }
         Returns: boolean
+      }
+      log_access_attempt: {
+        Args: {
+          _error_message?: string
+          _error_type?: string
+          _ip_address?: string
+          _painting_id: string
+          _success: boolean
+          _token_id: string
+          _user_agent?: string
+        }
+        Returns: undefined
       }
       validate_access_token: {
         Args: { painting_id_param: string; token_text: string }
