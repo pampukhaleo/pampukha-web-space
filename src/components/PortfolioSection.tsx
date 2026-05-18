@@ -10,7 +10,7 @@ const PortfolioSection = () => {
   const { trackPortfolioView } = useAnalytics();
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [viewType, setViewType] = useState<'desktop' | 'mobile'>('desktop');
+  const [viewType] = useState<'desktop' | 'mobile'>('desktop');
 
   const portfolioItems = [
     {
@@ -21,8 +21,8 @@ const PortfolioSection = () => {
       desktopImage: '/expertisedesktop.png',
       mobileImage: '/expertisemobile.png',
       liveUrl: 'https://expertise.com.ua/',
-      technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase', 'i18next'],
-      isFeatured: true,
+      technologies: ['AI-сайт', 'Мультимовний', 'SEO'],
+      aspect: 'aspect-[4/3]',
     },
     {
       id: 2,
@@ -32,8 +32,8 @@ const PortfolioSection = () => {
       desktopImage: '/cheataicdesktop.png',
       mobileImage: '/cheataicmobile.png',
       liveUrl: 'https://chea-taic.be/',
-      technologies: ['React', 'TypeScript', 'Vite', 'Tailwind'],
-      isFeatured: false,
+      technologies: ['AI-сайт', 'Лендинг', 'SEO'],
+      aspect: 'aspect-[3/4]',
     },
     {
       id: 3,
@@ -43,8 +43,8 @@ const PortfolioSection = () => {
       desktopImage: '/pampukhapldesktop.png',
       mobileImage: '/pampukhaplmobile.png',
       liveUrl: 'https://pampukha.pl/',
-      technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase'],
-      isFeatured: false,
+      technologies: ['AI-сайт', 'Форма заявок', 'Мультимовний'],
+      aspect: 'aspect-[16/10]',
     },
     {
       id: 4,
@@ -54,8 +54,8 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_6.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://lemonshine.pl/',
-      technologies: ['React', 'Vite', 'Tailwind'],
-      isFeatured: false,
+      technologies: ['AI-сайт', 'Бронювання', 'SEO'],
+      aspect: 'aspect-[4/3]',
     },
     {
       id: 5,
@@ -65,8 +65,8 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_7.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://spotlessprohome.co.uk/',
-      technologies: ['React', 'TypeScript', 'Vite'],
-      isFeatured: false,
+      technologies: ['AI-сайт', 'Лендинг', 'SEO'],
+      aspect: 'aspect-[3/4]',
     },
     {
       id: 6,
@@ -76,18 +76,13 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_8.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://laserbeauty-studio.de/',
-      technologies: ['React', 'Tailwind', 'Supabase'],
-      isFeatured: false,
+      technologies: ['AI-сайт', 'Бронювання', 'Галерея'],
+      aspect: 'aspect-[16/10]',
     },
   ];
 
-  const featuredProject = portfolioItems.find(item => item.isFeatured);
-  const regularProjects = portfolioItems.filter(item => !item.isFeatured);
-
-
-  const openProjectPopup = (project: any, type: 'desktop' | 'mobile') => {
+  const openProjectPopup = (project: any) => {
     setSelectedProject(project);
-    setViewType(type);
     setIsPopupOpen(true);
     trackPortfolioView(project.title);
   };
@@ -98,78 +93,62 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section id="portfolio" className="py-16 md:py-24 px-4 relative overflow-hidden bg-muted/30" role="main">
+    <section
+      id="portfolio"
+      className="py-16 md:py-24 px-4 relative overflow-hidden bg-muted/30"
+      role="main"
+    >
       <div className="container mx-auto relative z-10">
         <header className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            {t('portfolio.title1')} <span className="text-primary">{t('portfolio.title2')}</span>
+            {t('portfolio.title1')}{' '}
+            <span className="text-primary">{t('portfolio.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('portfolio.description')}
           </p>
         </header>
 
-        {/* Featured Project */}
-        {featuredProject && (
-          <div 
-            className="group relative overflow-hidden rounded-lg cursor-pointer mb-8 border border-border hover:border-primary/30 transition-all duration-300"
-            onClick={() => openProjectPopup(featuredProject, 'desktop')}
-            role="article"
-          >
-            <div className="relative aspect-[4/3] md:aspect-[21/9] overflow-hidden bg-muted">
-              <LazyImage
-                src={featuredProject.desktopImage}
-                alt={t(`imageAlt.project${featuredProject.id}Desktop`)}
-                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                loading="eager"
-                priority
-              />
-              {/* Minimal darkening on hover */}
-              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/30 transition-colors duration-300" />
-            </div>
-            
-            {/* Title overlay - appears on hover */}
-            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-background via-background/90 to-transparent translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-foreground mb-2">
-                {featuredProject.title}
-              </h3>
-              <p className="text-muted-foreground line-clamp-2">
-                {featuredProject.description}
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* Regular Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
-          {regularProjects.map((item, index) => (
-            <div
+        {/* Masonry grid (CSS columns) */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+          {portfolioItems.map((item) => (
+            <article
               key={item.id}
-              role="listitem"
-              className="group relative overflow-hidden rounded-lg cursor-pointer border border-border hover:border-primary/30 transition-all duration-300"
-              onClick={() => openProjectPopup(item, 'desktop')}
+              onClick={() => openProjectPopup(item)}
+              className="group mb-6 break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:border-primary/40 hover:-translate-y-0.5"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+              <div className={`relative ${item.aspect} overflow-hidden bg-muted`}>
                 <LazyImage
                   src={item.desktopImage}
                   alt={t(`imageAlt.project${item.id}Desktop`)}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                  loading="lazy"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  loading={item.id <= 2 ? 'eager' : 'lazy'}
+                  priority={item.id === 1}
                 />
-                {/* Minimal darkening on hover */}
-                <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300" />
               </div>
-              
-              {/* Title overlay - appears on hover */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background via-background/90 to-transparent translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-foreground mb-1">
+
+              <div className="p-5">
+                <p className="text-xs uppercase tracking-wider text-primary mb-2">
+                  {item.category}
+                </p>
+                <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground line-clamp-1">
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
                   {item.description}
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  {item.technologies.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
@@ -177,14 +156,15 @@ const PortfolioSection = () => {
           <Button
             size="lg"
             className="whitespace-normal h-auto py-3 px-6 leading-tight"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+            }
           >
             {t('portfolio.orderSimilar')}
           </Button>
         </div>
       </div>
 
-      {/* Project Popup */}
       {selectedProject && (
         <ProjectPopup
           isOpen={isPopupOpen}

@@ -56,9 +56,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Створення лендінгів та веб сайтів на React | Leonforge - Веб-розробник у Києві"
-        description="Розробка лендінгів та веб сайтів на React під ключ. Веб-розробник у Києві. Швидкі, сучасні та SEO-оптимізовані сайти. Замовити лендінг за доступною ціною."
-        keywords="лендінг, лендінг під ключ, створення лендінгів, розробка лендінгів, замовити лендінг, веб сайт, створення сайтів, веб-розробник, React, SPA, SEO, Київ"
+        title="Створення сайтів з AI | SEO та реклама — Leonforge"
+        description="Створюю сучасні сайти з AI: кілька варіантів дизайну на вибір, SEO-оптимізація та допомога з рекламою Google Ads і Facebook/Instagram. Швидко і за адекватною ціною."
+        keywords="створення сайтів з AI, сайт під ключ, лендінг, веб-розробник, SEO, Google Ads, Facebook Ads, Instagram Ads, Google Analytics, GTM, дизайн на вибір, Київ"
         ogImage="https://leonforge.com/leonforge_logo.png"
         structuredData={[
           { type: 'LocalBusiness' },

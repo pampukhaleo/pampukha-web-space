@@ -1,216 +1,214 @@
 {
   "navbar": {
     "about": "About me",
-    "portfolio": "Portfolio", 
+    "portfolio": "Portfolio",
     "services": "Services",
     "contact": "Contact"
   },
   "hero": {
-    "title1": "Creating ",
-    "title2": "Landing Pages",
-    "title3": " and Websites with React",
-    "title4": "— fast, reliable, turnkey",
+    "title1": "I build ",
+    "title2": "websites",
+    "title3": " with AI",
+    "title4": "— fast, beautiful and affordable",
     "price": "from $300",
-    "valueProposition": "Speed + SEO + Modern Design",
-    "description": "Web developer in Kyiv. I create high-performance landing pages and websites with React turnkey. Focus on speed, SEO, and User Experience. Individual approach to each project.",
-    "consultation": "Order Landing Page",
-    "viewWork": "View Portfolio"
+    "valueProposition": "AI + SEO + Ads",
+    "description": "I create modern websites with AI: you get a few design options to choose from, full SEO setup and help launching ads on Google and social media. Simple, fast and result-driven.",
+    "consultation": "Book a call",
+    "viewWork": "See my work"
   },
   "about": {
     "title1": "About",
     "title2": "me",
-    "introduction": "Hello! My name is Leonid. I create fast SPA websites using React for small businesses with individual approach to each project. I work with you to find exactly the solution your business needs.",
-    "approach": "My approach - React + SPA + individual solution",
-    "approachDescription": "I use modern React + Supabase stack to create fast Single Page Applications. Your site will work lightning fast. I set up marketing tools according to your needs and budget.",
-    "cleanCode": "React SPA",
-    "cleanCodeDescription": "I use cutting-edge React technology to create reliable and fast Single Page Applications",
-    "responsive": "Fast SPAs",
-    "responsiveDescription": "I create Single Page Applications that load instantly and work like native apps",
-    "modern": "Marketing as needed",
-    "modernDescription": "I set up Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager only the tools you need",
-    "clientFocused": "Individual approach",
-    "clientFocusedDescription": "I work with each client individually to find exactly the solution their business needs"
+    "introduction": "Hi! I'm Leonid. I help small businesses get a website fast — with AI it's cheaper, quicker and gives more design freedom. I'm with you every step: from idea to launching your first ad campaign.",
+    "approach": "My approach — website + SEO + ads",
+    "approachDescription": "First we talk through your idea. Then I prepare a few design options so you can pick the one you love. After that I optimise the site for Google and help launch your first ad campaigns.",
+    "cleanCode": "Websites with AI",
+    "cleanCodeDescription": "I build sites faster and cheaper using modern AI tools — without losing quality or design.",
+    "responsive": "Multiple design options",
+    "responsiveDescription": "Don't like the first version? No problem. I prepare a few concepts until we find the one you really love.",
+    "modern": "SEO & ads",
+    "modernDescription": "I set up SEO, Google Analytics, GTM and help with basic Google Ads and Meta (Facebook/Instagram) campaigns.",
+    "clientFocused": "Simple & clear",
+    "clientFocusedDescription": "No tech jargon, no wasted spend. I explain in plain language what we're doing and why."
   },
   "portfolio": {
     "title1": "My",
-    "title2": "portfolio",
-    "description": "React SPA solutions for serious business. High-load systems, complex integrations, professional reliability. Each project built with cutting-edge technology stack.",
+    "title2": "work",
+    "description": "A few sites I've built for businesses around the world: landing pages, corporate sites and multilingual platforms. Click any project to see more.",
     "project1": {
       "title": "Forensic Institute Platform",
-      "category": "Professional React SPA",
-      "description": "High-performance SPA for forensic experts serving courts and law firms. Complex case management system with document processing, expert scheduling, and automated reporting. Built to handle sensitive legal data with maximum security and speed."
+      "category": "Corporate website",
+      "description": "Website for a team of forensic experts: clear service catalogue, request form and easy navigation for clients and law firms."
     },
     "project2": {
       "title": "International Arbitration Chamber",
-      "category": "Enterprise React SPA",
-      "description": "Sophisticated platform for European Arbitration Chamber connecting 35+ countries. Multi-language arbitration management, expert database, and international dispute resolution workflows. Professional-grade architecture for cross-border legal operations."
+      "category": "Multilingual platform",
+      "description": "Platform for an arbitration organisation with users from 35+ countries. Multiple languages, expert database and easy consultation booking."
     },
     "project3": {
-      "title": "Legal Services for Ukrainians in Poland",
-      "category": "Specialized React SPA",
-      "description": "Targeted legal assistance platform serving Ukrainian refugees and immigrants in Poland. Dual-jurisdiction expertise system, multi-language support, and streamlined consultation booking. Built for sensitive humanitarian legal support."
+      "title": "Legal help for Ukrainians in Poland",
+      "category": "Landing page with form",
+      "description": "Simple, clear site for Ukrainians in Poland: services in two languages and an easy consultation booking form."
     },
     "project4": {
-      "title": "Lemon Shine Cleaning Services",
-      "category": "Service Business React SPA",
-      "description": "Professional cleaning services platform with online booking system. Features service packages, team scheduling, customer management, and automated invoicing. Built for scalable cleaning business operations in Poland."
+      "title": "Lemon Shine Cleaning",
+      "category": "Service business site",
+      "description": "Cleaning company in Poland with online booking, service packages and a simple order form."
     },
     "project5": {
       "title": "Spotless Pro Home Cleaning",
-      "category": "Premium Cleaning React SPA",
-      "description": "High-end residential cleaning service platform for UK market. Premium service booking, quality assurance tracking, customer testimonials, and subscription management. Professional-grade solution for luxury cleaning services."
+      "category": "Premium landing",
+      "description": "Premium cleaning service for the UK market: clean design, customer reviews and easy booking."
     },
     "project6": {
       "title": "Laser Beauty Studio",
-      "category": "Beauty Clinic React SPA",
-      "description": "Modern beauty clinic platform for laser treatments in Germany. Treatment booking system, before/after galleries, consultation scheduling, and medical history management. Professional aesthetic clinic solution."
+      "category": "Beauty studio site",
+      "description": "Site for a laser treatment studio in Germany: treatment catalogue, before/after gallery and online booking."
     },
-    "orderSimilar": "Order a similar professional project"
+    "orderSimilar": "I want a site like this"
   },
   "services": {
-    "title1": "My",
-    "title2": "services",
-    "description": "Get a fast SPA website built with React using individual approach. I set up marketing tools according to your needs and budget.",
-    "package": "React + SPA + individual solution + marketing as needed",
+    "title1": "What I",
+    "title2": "do",
+    "description": "Everything you need to launch a site and start getting customers — from design to your first ad campaigns.",
+    "package": "Site + SEO + ads",
     "service1": {
-      "title": "SPA development with React",
-      "description": "Fast Single Page Applications built with React using Supabase for maximum performance and reliability."
+      "title": "Websites with AI",
+      "description": "Landing pages, corporate sites and simple web apps. Fast, modern and affordable thanks to AI tools."
     },
     "service2": {
-      "title": "Fast SPA landing pages",
-      "description": "Lightning-fast sales pages with optimized conversion and possibility to connect analytics."
+      "title": "Multiple design options",
+      "description": "I prepare 2–3 design concepts so you can pick the one you love. Then we refine it together."
     },
     "service3": {
-      "title": "Marketing tools",
-      "description": "Google Ads, Facebook Ads, Instagram Ads - professional setup of only the tools you need."
+      "title": "SEO optimisation",
+      "description": "I set up your site so Google can find it: technical SEO, meta tags, speed, mobile version, sitemap."
     },
     "service4": {
-      "title": "Upgrade to SPA",
-      "description": "Converting regular websites into fast Single Page Applications with improved performance."
+      "title": "Google Ads",
+      "description": "Basic Google Ads setup. I'll help launch your first campaigns and explain how to read the reports."
     },
     "service5": {
-      "title": "SEO + Search Console",
-      "description": "Complete SEO optimization for SPAs with Google Search Console setup for position tracking."
+      "title": "Facebook & Instagram ads",
+      "description": "Basic Meta Ads setup: ad account, first creatives, audiences and test campaigns."
     },
     "service6": {
-      "title": "Analytics as needed",
-      "description": "Google Analytics, Tag Manager, Facebook Pixel - I set up only the metrics you need for your business."
+      "title": "Google Analytics & GTM",
+      "description": "I connect analytics and Google Tag Manager so you can see where customers come from and what works best."
     },
-    "whyChooseMe": "Why choose React SPA with individual approach?",
-    "benefit1": "Modern React technology for reliability",
-    "benefit2": "Lightning-fast SPA performance (loads in 1-2 sec)",
-    "benefit3": "Marketing tools only as needed",
-    "benefit4": "Individual approach to each project",
-    "benefit5": "Transparent pricing from $300 depending on complexity",
-    "orderNow": "Order SPA now"
+    "whyChooseMe": "Why working with me is easy",
+    "benefit1": "I prepare several design options to choose from",
+    "benefit2": "Your site is built to be found on Google",
+    "benefit3": "I help with ads, not just the website",
+    "benefit4": "I speak plain language, no jargon",
+    "benefit5": "Transparent pricing from $300",
+    "orderNow": "Order now"
   },
   "whyAiSpa": {
     "title1": "Why",
-    "title2": "React + SPA?",
-    "description": "I explain in simple terms why Single Page Applications built with React using individual approach is the best choice for your business.",
+    "title2": "AI websites?",
+    "description": "In simple terms — why building with AI gets you a modern site faster and cheaper without losing quality.",
     "benefit1": {
-      "title": "React = reliability and popularity",
-      "description": "React is the most popular library for web development, used by Facebook, Netflix, Airbnb. Your website will be stable, fast and easy to maintain."
+      "title": "Fast",
+      "description": "What used to take weeks now takes days. You get your site much sooner — and start earning earlier."
     },
     "benefit2": {
-      "title": "SPA = mobile app speed",
-      "description": "Single Page Application loads once and then works like a mobile app. Instant navigation, no reloads - users stay on the site longer."
+      "title": "Several designs to choose from",
+      "description": "Instead of one option, you get two or three. Pick the one you love, and we polish it together."
     },
     "benefit3": {
-      "title": "Supabase = powerful backend",
-      "description": "I use Supabase to create a powerful backend with database, authentication, and API. Your site is ready to scale without additional costs."
+      "title": "SEO from day one",
+      "description": "The site is built optimised for Google: speed, meta tags, structure, mobile version."
     },
     "benefit4": {
-      "title": "Marketing according to your needs",
-      "description": "Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager, Search Console - I set up only what your business and budget need."
+      "title": "Help with ads",
+      "description": "I'll help launch Google Ads and Facebook/Instagram campaigns so first customers come in the first weeks."
     },
     "benefit5": {
-      "title": "Analytics for your business",
-      "description": "I set up only the metrics important for your business: where customers come from, what interests them, how much they spend, ROI of each channel."
+      "title": "Analytics",
+      "description": "I connect Google Analytics and GTM. You see real numbers: where people come from and what works."
     },
     "benefit6": {
-      "title": "Individual approach",
-      "description": "I work with each client separately to understand business needs and create exactly the solution that will bring maximum results."
+      "title": "Support after launch",
+      "description": "I don't disappear after delivery. I'll help with tweaks and explain what to do next."
     },
     "comparison": {
-      "title": "Comparison with traditional websites",
+      "title": "How it compares to an agency",
       "traditional": {
-        "title": "Regular websites",
-        "point1": "Slow loading (5-10 seconds)",
-        "point2": "Reload on every transition",
-        "point3": "Complex integration with marketing tools",
-        "point4": "Standard approach without considering specifics"
+        "title": "Classic web agency",
+        "point1": "Weeks or months of development",
+        "point2": "One design option, slow revisions",
+        "point3": "SEO and ads — separate contractors",
+        "point4": "Price often starts from $1500+"
       },
       "aiSpa": {
-        "title": "React SPA with individual approach",
-        "point1": "Instant loading (1-2 seconds)",
-        "point2": "Works like mobile app",
-        "point3": "Marketing tools as needed",
-        "point4": "Solution created specifically for your business"
+        "title": "AI website with me",
+        "point1": "Site ready in days, not months",
+        "point2": "Multiple design options to pick from",
+        "point3": "Site, SEO and ads — from one person",
+        "point4": "Transparent pricing from $300"
       }
     },
     "technicalBenefits": {
-      "title": "Technical Benefits of React SPA",
+      "title": "What you get in the end",
       "react": {
-        "title": "Why exactly React?",
-        "point1": "Virtual DOM for maximum speed",
-        "point2": "Component architecture for easy maintenance",
-        "point3": "Huge community and support",
-        "point4": "SEO optimization possible with right approach"
+        "title": "Modern website",
+        "point1": "Fast loading",
+        "point2": "Works on phones and tablets",
+        "point3": "Clean, modern design",
+        "point4": "Easy to update later"
       },
       "spa": {
-        "title": "Why SPA is better?",
-        "point1": "Loads only once",
-        "point2": "Instant navigation between pages",
-        "point3": "Works offline with caching",
-        "point4": "Less server load"
+        "title": "SEO & visibility",
+        "point1": "Optimised for Google",
+        "point2": "Proper meta tags and structure",
+        "point3": "Sitemap and robots.txt",
+        "point4": "Search Console setup"
       },
       "ai": {
-        "title": "Why Supabase?",
-        "point1": "PostgreSQL database",
-        "point2": "Ready authentication",
-        "point3": "Real-time functionality",
-        "point4": "Automatic API"
+        "title": "Ads & analytics",
+        "point1": "Google Ads — basic setup",
+        "point2": "Facebook and Instagram Ads",
+        "point3": "Google Analytics 4",
+        "point4": "Google Tag Manager"
       }
     }
   },
   "faq": {
     "title1": "Frequently",
     "title2": "asked questions",
-    "description": "Answers to the most common questions about creating SPA websites with React using individual approach and marketing tools.",
-    "question1": "What is SPA and why is it better than regular website?",
-    "answer1": "SPA (Single Page Application) is a website that loads once and then works like a mobile app. Instead of reloading the entire page on transitions, only content changes. Result: speed, better UX, higher conversion, longer time on site.",
-    "question2": "How long does it take to create a SPA website?",
-    "answer2": "Depends on project complexity. Simple landing page - 3-5 days, corporate website - 7-10 days, online store - 2-3 weeks. React allows quick creation of quality components, and Supabase provides ready backend.",
-    "question3": "What is included in the base price from $300?",
-    "answer3": "Base price includes: React SPA development, responsive design, basic SEO, hosting for a year. Marketing tools (Google Ads, Facebook Ads, Analytics etc.) are set up additionally as needed.",
-    "question4": "What marketing tools can you set up?",
-    "answer4": "I can set up: Google Ads, Facebook Ads, Instagram Ads, Google Analytics, Google Tag Manager, Google Search Console, Facebook Pixel. I discuss with each client which tools are needed specifically for their business.",
-    "question5": "Why did you choose React specifically?",
-    "answer5": "React is the most popular and stable library for web development. It's used by Facebook, Netflix, Airbnb, Uber. Huge community, constant updates, countless ready solutions. Your website will be reliable and easy to maintain.",
-    "question6": "What guarantees of website reliability?",
-    "answer6": "React ensures high code reliability thanks to component architecture. Supabase guarantees 99.9% uptime. Your website will work stably even under high loads.",
-    "question7": "Will I be able to add content myself?",
-    "answer7": "Yes! I'll set up a convenient admin panel through Supabase or teach you to work with code. React components are easy to edit. First changes are free, then we can agree on subscription maintenance.",
-    "question8": "How does SEO work for SPA?",
-    "answer8": "I use Client-Side Rendering and proper meta tag structure. Set up Google Search Console for position tracking. SPAs can rank just as well as regular websites with the right approach.",
-    "question9": "What to do after website launch?",
-    "answer9": "I'll help with setting up chosen marketing tools. Provide instructions for working with admin panel and optimization recommendations for better results. Support is discussed individually."
+    "description": "Answers to the questions I get most often — about price, timing, design, SEO and ads.",
+    "question1": "How much does a website cost?",
+    "answer1": "Simple landing page — from $300. Multi-page site — from $600. I'll give you an exact price after a short free call once I understand the task.",
+    "question2": "How long does it take?",
+    "answer2": "Thanks to AI I work fast: a simple landing — 3–5 days, a corporate site — 1–2 weeks. Depends on pages and features.",
+    "question3": "Do I get several design options?",
+    "answer3": "Yes. I prepare 2–3 concepts so you're not stuck with a single version. Then we refine the chosen one together.",
+    "question4": "Do you help with SEO?",
+    "answer4": "Yes. Basic SEO is included: speed, meta tags, mobile version, sitemap, robots.txt. I also connect Google Search Console.",
+    "question5": "Can you set up ads?",
+    "answer5": "Yes — basic Google Ads and Facebook/Instagram (Meta) Ads setup. We launch your first campaigns and I explain how to read the reports.",
+    "question6": "Do you connect analytics?",
+    "answer6": "Yes — Google Analytics 4 and Google Tag Manager. You'll see where visitors come from and how much each customer costs.",
+    "question7": "Can I update the site myself?",
+    "answer7": "Yes. If needed I'll set up a simple panel to update text and images. First edits are free.",
+    "question8": "Is there support after launch?",
+    "answer8": "Yes — the first month after launch is free support. After that we can agree on regular support or one-off changes."
   },
   "contact": {
-    "title1": "Request a",
-    "title2": "consultation",
-    "description": "Ready to get a fast SPA website built with React using individual approach? Fill out the form below or contact me in any convenient way. Let's discuss your needs and find the optimal solution."
+    "title1": "Get in",
+    "title2": "touch",
+    "description": "Tell me briefly about your idea — I'll take a look and come back with suggestions. The first call is free."
   },
   "footer": {
-    "description": "Development of fast React SPA websites with individual approach to each client. From idea to result - finding exactly the solution your business needs.",
+    "description": "AI-powered websites done for you: design options, SEO and help with ads. Simple, fast and built to bring you customers.",
     "navigation": "Navigation",
     "home": "Home",
     "about": "About me",
     "portfolio": "Portfolio",
     "services": "Services",
     "contact": "Contact",
-    "contactInfo": "Contact information",
+    "contactInfo": "Contact",
     "rights": "All rights reserved."
   },
   "language": {
@@ -219,27 +217,27 @@
     "pl": "Polski"
   },
   "imageAlt": {
-    "portfolioDesktop": "Desktop screenshot showcasing professional website design",
-    "portfolioMobile": "Mobile-responsive website interface",
-    "project1Desktop": "Forensic Institute Platform - Professional React SPA desktop interface",
-    "project1Mobile": "Forensic Institute Platform - Mobile responsive design",
-    "project2Desktop": "International Arbitration Chamber - Enterprise React SPA desktop view", 
-    "project2Mobile": "International Arbitration Chamber - Mobile interface",
-    "project3Desktop": "Legal Services for Ukrainians - Specialized React SPA desktop",
-    "project3Mobile": "Legal Services for Ukrainians - Mobile responsive layout",
-    "project4Desktop": "Lemon Shine Cleaning Services - Business React SPA desktop",
-    "project4Mobile": "Lemon Shine Cleaning Services - Mobile interface",
-    "project5Desktop": "Spotless Pro Home Cleaning - Premium React SPA desktop",
-    "project5Mobile": "Spotless Pro Home Cleaning - Mobile responsive design",
-    "project6Desktop": "Laser Beauty Studio - Beauty Clinic React SPA desktop",
-    "project6Mobile": "Laser Beauty Studio - Mobile interface"
+    "portfolioDesktop": "Website desktop screenshot",
+    "portfolioMobile": "Website mobile version",
+    "project1Desktop": "Forensic Institute Platform — desktop",
+    "project1Mobile": "Forensic Institute Platform — mobile",
+    "project2Desktop": "International Arbitration Chamber — desktop",
+    "project2Mobile": "International Arbitration Chamber — mobile",
+    "project3Desktop": "Legal help for Ukrainians in Poland — desktop",
+    "project3Mobile": "Legal help for Ukrainians in Poland — mobile",
+    "project4Desktop": "Lemon Shine Cleaning — desktop",
+    "project4Mobile": "Lemon Shine Cleaning — mobile",
+    "project5Desktop": "Spotless Pro Home Cleaning — desktop",
+    "project5Mobile": "Spotless Pro Home Cleaning — mobile",
+    "project6Desktop": "Laser Beauty Studio — desktop",
+    "project6Mobile": "Laser Beauty Studio — mobile"
   },
   "cta": {
-    "afterHero": "Ready to get a fast SPA with individual approach? Let's discuss your project!",
-    "afterAbout": "Convinced by React SPA advantages? Let's create a solution for your business!",
-    "afterPortfolio": "Like what you see? Let's create something unique for your business!",
-    "afterWhyAiSpa": "Ready to experience the power of React SPA with individual approach? Let's get started!",
-    "afterServices": "Need an individual solution? Ready to start your project?",
-    "beforeContact": "Don't wait - your competitors are already using modern technologies. Get your consultation now!"
+    "afterHero": "Ready to launch your AI-built website? Let's talk!",
+    "afterAbout": "Tell me about your idea — I'll suggest the best path.",
+    "afterPortfolio": "Like what you see? I'll build something unique for you too.",
+    "afterWhyAiSpa": "Want it just as fast and good-looking? Drop me a line.",
+    "afterServices": "Need a site, SEO and ads in one place? Send a request.",
+    "beforeContact": "First call is free — get in touch right now."
   }
 }
