@@ -1,0 +1,18 @@
+# Leonforge
+
+> Створення сучасних сайтів з AI, SEO-оптимізація та налаштування реклами Google Ads і Facebook/Instagram. Веб-розробник Leonid Pampukha (UA/EN/PL).
+
+Leonforge — це особистий бренд веб-розробника Леоніда Пампухи. Робимо сайти під ключ з кількома варіантами AI-дизайну на вибір, базовою SEO-оптимізацією, інтеграцією аналітики (Google Analytics, GTM) та запуском платної реклами в Google Ads і Meta Ads (Facebook/Instagram).
+
+## Pages
+
+- [Головна](/): Послуги, портфоліо, процес роботи, тарифи та форма зв'язку.
+- [Портфоліо](/#portfolio): Приклади реалізованих сайтів (Lemon Shine, Spotless Pro, Laser Beauty, Cheataic, Expertise, Pampukha.pl).
+- [Послуги](/#services): Створення сайтів з AI, SEO, налаштування Google Ads та Meta Ads.
+- [Процес](/#process): Етапи роботи від брифу до запуску.
+- [Тарифи](/#pricing): Пакети та орієнтовна вартість.
+- [Контакти](/#contact): Форма зв'язку, email, телефон, месенджери.
+
+## Optional
+
+- [Privacy Policy](/privacy): Політика конфіденційності.
