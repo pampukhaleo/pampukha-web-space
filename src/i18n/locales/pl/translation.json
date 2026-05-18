@@ -1,216 +1,214 @@
 {
   "navbar": {
     "about": "O mnie",
-    "portfolio": "Portfolio", 
+    "portfolio": "Portfolio",
     "services": "Usługi",
     "contact": "Kontakt"
   },
   "hero": {
-    "title1": "Tworzenie ",
-    "title2": "Landing Page",
-    "title3": " i stron internetowych na React",
-    "title4": "— szybko, niezawodnie, pod klucz",
-    "price": "od 300$",
-    "valueProposition": "Szybkość + SEO + Nowoczesny design",
-    "description": "Web developer w Kijowie. Tworzę wydajne landing page i strony internetowe na React pod klucz. Nacisk na szybkość, SEO i User Experience. Indywidualne podejście do każdego projektu.",
-    "consultation": "Zamów Landing Page",
-    "viewWork": "Zobacz portfolio"
+    "title1": "Tworzę ",
+    "title2": "strony",
+    "title3": " z pomocą AI",
+    "title4": "— szybko, ładnie i niedrogo",
+    "price": "od $300",
+    "valueProposition": "AI + SEO + Reklama",
+    "description": "Robię nowoczesne strony z AI: dostajesz kilka wariantów designu do wyboru, konfigurację SEO i pomoc w uruchomieniu reklam w Google i social media. Prosto, szybko i z efektem.",
+    "consultation": "Umów konsultację",
+    "viewWork": "Zobacz prace"
   },
   "about": {
     "title1": "O",
     "title2": "mnie",
-    "introduction": "Cześć! Nazywam się Leonid. Tworzę szybkie strony SPA na React dla małych firm z indywidualnym podejściem do każdego projektu. Pracuję z Tobą, aby znaleźć dokładnie to rozwiązanie, którego potrzebuje Twój biznes.",
-    "approach": "Moje podejście - React + SPA + indywidualne rozwiązanie",
-    "approachDescription": "Używam nowoczesnego stosu React + Supabase do tworzenia szybkich aplikacji Single Page Application. Twoja strona będzie działać błyskawicznie. Konfiguruję narzędzia marketingowe zgodnie z Twoimi potrzebami i budżetem.",
-    "cleanCode": "React SPA",
-    "cleanCodeDescription": "Używam najnowocześniejszej technologii React do tworzenia niezawodnych i szybkich aplikacji Single Page Application",
-    "responsive": "Szybkie SPA",
-    "responsiveDescription": "Tworzę aplikacje Single Page Application, które ładują się błyskawicznie i działają jak natywne aplikacje",
-    "modern": "Marketing według potrzeb",
-    "modernDescription": "Konfiguruję Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager tylko te narzędzia, których potrzebujesz",
-    "clientFocused": "Indywidualne podejście",
-    "clientFocusedDescription": "Pracuję z każdym klientem indywidualnie, aby znaleźć dokładnie to rozwiązanie, którego potrzebuje jego biznes"
+    "introduction": "Cześć! Nazywam się Leonid. Pomagam małym firmom szybko mieć swoją stronę — z AI jest taniej, szybciej i z większą swobodą w designie. Jestem z Tobą na każdym kroku: od pomysłu po pierwsze kampanie reklamowe.",
+    "approach": "Moje podejście — strona + SEO + reklama",
+    "approachDescription": "Najpierw rozmawiamy o Twoim pomyśle. Potem przygotowuję kilka wariantów designu, żebyś wybrał ten, który Ci się podoba. Następnie optymalizuję stronę pod Google i pomagam uruchomić pierwsze kampanie.",
+    "cleanCode": "Strony z AI",
+    "cleanCodeDescription": "Tworzę strony szybciej i taniej dzięki nowoczesnym narzędziom AI — bez utraty jakości i designu.",
+    "responsive": "Kilka wariantów designu",
+    "responsiveDescription": "Nie podoba Ci się pierwsza wersja? Żaden problem. Przygotuję kilka koncepcji, aż znajdziemy tę właściwą.",
+    "modern": "SEO i reklama",
+    "modernDescription": "Konfiguruję SEO, Google Analytics, GTM i pomagam z podstawową konfiguracją reklam Google Ads oraz Meta (Facebook/Instagram).",
+    "clientFocused": "Prosto i zrozumiale",
+    "clientFocusedDescription": "Bez technicznego żargonu i zbędnych wydatków. Tłumaczę po ludzku, co i po co robimy."
   },
   "portfolio": {
     "title1": "Moje",
-    "title2": "portfolio",
-    "description": "Rozwiązania React SPA dla poważnego biznesu. Systemy wysokich obciążeń, złożone integracje, profesjonalna niezawodność. Każdy projekt zbudowany z najnowocześniejszym stosem technologicznym.",
+    "title2": "prace",
+    "description": "Kilka stron, które zrobiłem dla firm z różnych krajów: landing page, strony firmowe i wielojęzyczne platformy. Kliknij projekt, żeby zobaczyć więcej.",
     "project1": {
       "title": "Platforma Instytutu Ekspertyz Sądowych",
-      "category": "Profesjonalna React SPA",
-      "description": "Wysokowydajne SPA dla biegłych sądowych obsługujących sądy i kancelarie prawne. Złożony system zarządzania sprawami z przetwarzaniem dokumentów, harmonogramowaniem ekspertów i automatycznym raportowaniem. Zbudowany do obsługi wrażliwych danych prawnych z maksymalnym bezpieczeństwem i szybkością."
+      "category": "Strona firmowa",
+      "description": "Strona dla zespołu biegłych sądowych: katalog usług, formularz zgłoszenia i przejrzysta nawigacja dla klientów i kancelarii."
     },
     "project2": {
       "title": "Międzynarodowa Izba Arbitrażowa",
-      "category": "Korporacyjna React SPA",
-      "description": "Zaawansowana platforma dla Europejskiej Izby Arbitrażowej łącząca 35+ krajów. Wielojęzyczne zarządzanie arbitrażem, baza danych ekspertów i międzynarodowe przepływy pracy rozwiązywania sporów. Architektura klasy profesjonalnej dla transgranicznej działalności prawnej."
+      "category": "Platforma wielojęzyczna",
+      "description": "Platforma dla organizacji arbitrażowej z użytkownikami z ponad 35 krajów. Wiele języków, baza ekspertów i wygodna rezerwacja konsultacji."
     },
     "project3": {
-      "title": "Usługi Prawne dla Ukraińców w Polsce",
-      "category": "Specjalistyczna React SPA",
-      "description": "Ukierunkowana platforma pomocy prawnej dla ukraińskich uchodźców i imigrantów w Polsce. System ekspertyz dwóch jurysdykcji, wsparcie wielojęzyczne i usprawnianie rezerwacji konsultacji. Zbudowana dla wrażliwego humanitarnego wsparcia prawnego."
+      "title": "Pomoc prawna dla Ukraińców w Polsce",
+      "category": "Landing z formularzem",
+      "description": "Prosty i zrozumiały serwis dla Ukraińców w Polsce: usługi w dwóch językach i łatwy formularz rezerwacji konsultacji."
     },
     "project4": {
-      "title": "Lemon Shine Usługi Sprzątające",
-      "category": "Biznesowa React SPA",
-      "description": "Platforma profesjonalnych usług sprzątających z systemem rezerwacji online. Oferuje pakiety usług, planowanie zespołu, zarządzanie klientami i automatyczne fakturowanie. Stworzona dla skalowalnych operacji sprzątających w Polsce."
+      "title": "Lemon Shine Sprzątanie",
+      "category": "Strona usługowa",
+      "description": "Firma sprzątająca w Polsce z rezerwacją online, pakietami usług i prostym formularzem zamówienia."
     },
     "project5": {
       "title": "Spotless Pro Home Cleaning",
-      "category": "Premium Sprzątanie React SPA",
-      "description": "Platforma wysokiej klasy usług sprzątania mieszkań na rynek brytyjski. Premium rezerwacja usług, śledzenie zapewnienia jakości, opinie klientów i zarządzanie subskrypcjami. Profesjonalne rozwiązanie dla luksusowych usług sprzątających."
+      "category": "Premium landing",
+      "description": "Usługi sprzątania premium na rynek brytyjski: czysty design, opinie klientów i wygodna rezerwacja."
     },
     "project6": {
       "title": "Laser Beauty Studio",
-      "category": "Klinika Urody React SPA",
-      "description": "Nowoczesna platforma kliniki urody do zabiegów laserowych w Niemczech. System rezerwacji zabiegów, galerie przed/po, planowanie konsultacji i zarządzanie historią medyczną. Profesjonalne rozwiązanie dla kliniki estetycznej."
+      "category": "Strona salonu",
+      "description": "Strona studia zabiegów laserowych w Niemczech: katalog zabiegów, galeria przed/po i rezerwacja online."
     },
-    "orderSimilar": "Zamów podobny profesjonalny projekt"
+    "orderSimilar": "Chcę taką stronę"
   },
   "services": {
-    "title1": "Moje",
-    "title2": "usługi",
-    "description": "Zdobądź szybką stronę SPA zbudowaną z React z indywidualnym podejściem. Konfiguruję narzędzia marketingowe zgodnie z Twoimi potrzebami i budżetem.",
-    "package": "React + SPA + indywidualne rozwiązanie + marketing według potrzeb",
+    "title1": "Co",
+    "title2": "robię",
+    "description": "Wszystko, czego potrzebujesz, żeby uruchomić stronę i zacząć zdobywać klientów — od designu po pierwsze kampanie reklamowe.",
+    "package": "Strona + SEO + reklama",
     "service1": {
-      "title": "Rozwój SPA na React",
-      "description": "Szybkie aplikacje Single Page Application zbudowane z React przy użyciu Supabase dla maksymalnej wydajności i niezawodności."
+      "title": "Strony pod klucz z AI",
+      "description": "Landing page, strony firmowe i proste aplikacje webowe. Szybko, nowocześnie i w rozsądnej cenie dzięki narzędziom AI."
     },
     "service2": {
-      "title": "Szybkie strony docelowe SPA",
-      "description": "Błyskawiczne strony sprzedażowe ze zoptymalizowaną konwersją i możliwością podłączenia analityki."
+      "title": "Kilka wariantów designu",
+      "description": "Przygotowuję 2–3 koncepcje designu do wyboru. Wybierasz tę, która Ci się podoba — a dalej dopracowujemy ją razem."
     },
     "service3": {
-      "title": "Narzędzia marketingowe",
-      "description": "Google Ads, Facebook Ads, Instagram Ads - profesjonalna konfiguracja tylko tych narzędzi, których potrzebujesz."
+      "title": "Optymalizacja SEO",
+      "description": "Konfiguruję stronę tak, żeby Google ją znajdował: SEO techniczne, meta tagi, szybkość, wersja mobilna, sitemap."
     },
     "service4": {
-      "title": "Aktualizacja do SPA",
-      "description": "Konwersja zwykłych stron internetowych na szybkie aplikacje Single Page Application z ulepszoną wydajnością."
+      "title": "Google Ads",
+      "description": "Podstawowa konfiguracja kampanii w Google. Pomogę uruchomić pierwsze wyświetlenia i wytłumaczę, jak czytać raporty."
     },
     "service5": {
-      "title": "SEO + Search Console",
-      "description": "Kompletna optymalizacja SEO dla SPA z konfiguracją Google Search Console do śledzenia pozycji."
+      "title": "Reklama Facebook i Instagram",
+      "description": "Podstawowa konfiguracja Meta Ads: konto reklamowe, pierwsze kreacje, grupy odbiorców i kampanie testowe."
     },
     "service6": {
-      "title": "Analityka według potrzeb",
-      "description": "Google Analytics, Tag Manager, Facebook Pixel - konfiguruję tylko te metryki, których potrzebujesz dla swojego biznesu."
+      "title": "Google Analytics i GTM",
+      "description": "Podłączam analitykę i Google Tag Manager, żebyś widział, skąd przychodzą klienci i co działa najlepiej."
     },
-    "whyChooseMe": "Dlaczego warto wybrać React SPA z indywidualnym podejściem?",
-    "benefit1": "Nowoczesna technologia React dla niezawodności",
-    "benefit2": "Błyskawiczna wydajność SPA (ładowanie w 1-2 sek)",
-    "benefit3": "Narzędzia marketingowe tylko według potrzeb",
-    "benefit4": "Indywidualne podejście do każdego projektu",
-    "benefit5": "Przejrzysta cena od 300$ w zależności od złożoności",
-    "orderNow": "Zamów SPA teraz"
+    "whyChooseMe": "Dlaczego współpraca ze mną jest prosta",
+    "benefit1": "Przygotowuję kilka wariantów designu",
+    "benefit2": "Strona zbudowana pod Google",
+    "benefit3": "Pomagam z reklamą, nie tylko ze stroną",
+    "benefit4": "Mówię po ludzku, bez żargonu",
+    "benefit5": "Przejrzysta cena od $300",
+    "orderNow": "Zamów teraz"
   },
   "whyAiSpa": {
     "title1": "Dlaczego",
-    "title2": "React + SPA?",
-    "description": "Wyjaśniam w prostych słowach, dlaczego aplikacje Single Page Application zbudowane z React z indywidualnym podejściem to najlepszy wybór dla Twojego biznesu.",
+    "title2": "strony z AI?",
+    "description": "Prosto — dlaczego dzięki AI można zrobić nowoczesną stronę szybciej i taniej bez utraty jakości.",
     "benefit1": {
-      "title": "React = niezawodność i popularność",
-      "description": "React to najpopularniejsza biblioteka do tworzenia stron internetowych, używana przez Facebook, Netflix, Airbnb. Twoja strona będzie stabilna, szybka i łatwa w utrzymaniu."
+      "title": "Szybko",
+      "description": "To, co kiedyś robiło się tygodniami, dziś powstaje w kilka dni. Dostajesz stronę dużo szybciej — i wcześniej zaczynasz zarabiać."
     },
     "benefit2": {
-      "title": "SPA = szybkość aplikacji mobilnej",
-      "description": "Single Page Application ładuje się raz, a następnie działa jak aplikacja mobilna. Natychmiastowa nawigacja, brak przeładowań - użytkownicy zostają na stronie dłużej."
+      "title": "Kilka designów do wyboru",
+      "description": "Zamiast jednego wariantu — dwa, trzy koncepcje. Wybierasz tę, która Ci się podoba, a my ją dopracowujemy."
     },
     "benefit3": {
-      "title": "Supabase = potężny backend",
-      "description": "Używam Supabase do tworzenia potężnego backendu z bazą danych, uwierzytelnianiem i API. Twoja strona jest gotowa do skalowania bez dodatkowych kosztów."
+      "title": "SEO od pierwszego dnia",
+      "description": "Strona od początku zoptymalizowana pod Google: szybkość, meta tagi, struktura, wersja mobilna."
     },
     "benefit4": {
-      "title": "Marketing według Twoich potrzeb",
-      "description": "Google Ads, Facebook Ads, Instagram Ads, Analytics, Tag Manager, Search Console - konfiguruję tylko to, czego potrzebuje Twój biznes i budżet."
+      "title": "Pomoc z reklamą",
+      "description": "Pomogę uruchomić Google Ads i kampanie na Facebooku/Instagramie, żeby pierwsi klienci pojawili się w pierwszych tygodniach."
     },
     "benefit5": {
-      "title": "Analityka dla Twojego biznesu",
-      "description": "Konfiguruję tylko te metryki, które są ważne dla Twojego biznesu: skąd przychodzą klienci, co ich interesuje, ile wydają, ROI każdego kanału."
+      "title": "Analityka",
+      "description": "Podłączam Google Analytics i GTM. Widzisz realne liczby: skąd przychodzą ludzie i co naprawdę działa."
     },
     "benefit6": {
-      "title": "Indywidualne podejście",
-      "description": "Pracuję z każdym klientem osobno, aby zrozumieć potrzeby biznesowe i stworzyć dokładnie to rozwiązanie, które przyniesie maksymalne rezultaty."
+      "title": "Wsparcie po starcie",
+      "description": "Nie znikam po oddaniu projektu. Pomogę z poprawkami i wytłumaczę, co robić dalej."
     },
     "comparison": {
-      "title": "Porównanie z tradycyjnymi stronami",
+      "title": "Jak to wygląda na tle agencji",
       "traditional": {
-        "title": "Zwykłe strony",
-        "point1": "Powolne ładowanie (5-10 sekund)",
-        "point2": "Przeładowanie przy każdym przejściu",
-        "point3": "Skomplikowana integracja z narzędziami marketingowymi",
-        "point4": "Standardowe podejście bez uwzględnienia specyfiki"
+        "title": "Klasyczna agencja web",
+        "point1": "Realizacja tygodniami lub miesiącami",
+        "point2": "Jeden wariant designu, długie poprawki",
+        "point3": "SEO i reklama — osobni wykonawcy",
+        "point4": "Cena często od $1500 w górę"
       },
       "aiSpa": {
-        "title": "React SPA z indywidualnym podejściem",
-        "point1": "Natychmiastowe ładowanie (1-2 sekundy)",
-        "point2": "Działa jak aplikacja mobilna",
-        "point3": "Narzędzia marketingowe według potrzeb",
-        "point4": "Rozwiązanie stworzone specjalnie dla Twojego biznesu"
+        "title": "Strona z AI ze mną",
+        "point1": "Strona gotowa w dni, nie miesiące",
+        "point2": "Kilka wariantów designu do wyboru",
+        "point3": "Strona, SEO i reklama — od jednej osoby",
+        "point4": "Przejrzysta cena od $300"
       }
     },
     "technicalBenefits": {
-      "title": "Korzyści techniczne React SPA",
+      "title": "Co ostatecznie dostajesz",
       "react": {
-        "title": "Dlaczego dokładnie React?",
-        "point1": "Wirtualny DOM dla maksymalnej szybkości",
-        "point2": "Architektura komponentowa dla łatwej konserwacji",
-        "point3": "Ogromna społeczność i wsparcie",
-        "point4": "Optymalizacja SEO możliwa przy odpowiednim podejściu"
+        "title": "Nowoczesna strona",
+        "point1": "Szybkie ładowanie",
+        "point2": "Działa na telefonach i tabletach",
+        "point3": "Czysty, nowoczesny design",
+        "point4": "Łatwa do aktualizacji"
       },
       "spa": {
-        "title": "Dlaczego SPA jest lepsze?",
-        "point1": "Ładuje się tylko raz",
-        "point2": "Natychmiastowa nawigacja między stronami",
-        "point3": "Działa offline z cache'owaniem",
-        "point4": "Mniejsze obciążenie serwera"
+        "title": "SEO i widoczność",
+        "point1": "Optymalizacja pod Google",
+        "point2": "Prawidłowe meta tagi i struktura",
+        "point3": "Sitemap i robots.txt",
+        "point4": "Podpięcie Search Console"
       },
       "ai": {
-        "title": "Dlaczego Supabase?",
-        "point1": "Baza danych PostgreSQL",
-        "point2": "Gotowe uwierzytelnianie",
-        "point3": "Funkcjonalność real-time",
-        "point4": "Automatyczne API"
+        "title": "Reklama i analityka",
+        "point1": "Google Ads — podstawowa konfiguracja",
+        "point2": "Reklamy Facebook i Instagram",
+        "point3": "Google Analytics 4",
+        "point4": "Google Tag Manager"
       }
     }
   },
   "faq": {
-    "title1": "Często",
-    "title2": "zadawane pytania",
-    "description": "Odpowiedzi na najczęstsze pytania dotyczące tworzenia stron SPA z React z indywidualnym podejściem i narzędziami marketingowymi.",
-    "question1": "Czym jest SPA i dlaczego jest lepsze od zwykłej strony?",
-    "answer1": "SPA (Single Page Application) to strona internetowa, która ładuje się raz, a następnie działa jak aplikacja mobilna. Zamiast przeładowywania całej strony przy przejściach, zmienia się tylko treść. Wynik: szybkość, lepszy UX, wyższa konwersja, dłuższy czas na stronie.",
-    "question2": "Ile czasu zajmuje stworzenie strony SPA?",
-    "answer2": "Zależy od złożoności projektu. Prosta strona docelowa - 3-5 dni, strona korporacyjna - 7-10 dni, sklep internetowy - 2-3 tygodnie. React pozwala na szybkie tworzenie wysokiej jakości komponentów, a Supabase zapewnia gotowy backend.",
-    "question3": "Co zawiera się w podstawowej cenie od 300$?",
-    "answer3": "Podstawowa cena obejmuje: rozwój React SPA, responsywny design, podstawowe SEO, hosting na rok. Narzędzia marketingowe (Google Ads, Facebook Ads, Analytics itp.) są konfigurowane dodatkowo według potrzeb.",
-    "question4": "Jakie narzędzia marketingowe możesz skonfigurować?",
-    "answer4": "Mogę skonfigurować: Google Ads, Facebook Ads, Instagram Ads, Google Analytics, Google Tag Manager, Google Search Console, Facebook Pixel. Omawiam z każdym klientem, jakie narzędzia są potrzebne specjalnie dla jego biznesu.",
-    "question5": "Dlaczego wybrałeś dokładnie React?",
-    "answer5": "React to najpopularniejsza i najstabilniejsza biblioteka do tworzenia stron internetowych. Używają jej Facebook, Netflix, Airbnb, Uber. Ogromna społeczność, stałe aktualizacje, niezliczone gotowe rozwiązania. Twoja strona będzie niezawodna i łatwa w utrzymaniu.",
-    "question6": "Jakie gwarancje niezawodności strony?",
-    "answer6": "React zapewnia wysoką niezawodność kodu dzięki architekturze komponentowej. Supabase gwarantuje 99,9% uptime. Twoja strona będzie działać stabilnie nawet przy wysokich obciążeniach.",
-    "question7": "Czy będę mógł samodzielnie dodawać treść?",
-    "answer7": "Tak! Skonfiguruję wygodny panel administracyjny przez Supabase lub nauczę Cię pracy z kodem. Komponenty React są łatwe w edycji. Pierwsze zmiany są bezpłatne, dalej możemy umówić się na abonamentowe utrzymanie.",
-    "question8": "Jak działa SEO dla SPA?",
-    "answer8": "Używam Client-Side Rendering i odpowiedniej struktury meta tagów. Konfiguruję Google Search Console do śledzenia pozycji. SPA mogą pozycjonować się tak samo dobrze jak zwykłe strony przy odpowiednim podejściu.",
-    "question9": "Co robić po uruchomieniu strony?",
-    "answer9": "Pomogę z konfiguracją wybranych narzędzi marketingowych. Dostarczę instrukcje dotyczące pracy z panelem administracyjnym i rekomendacje optymalizacji dla lepszych wyników. Wsparcie jest omawiane indywidualnie."
+    "title1": "Częste",
+    "title2": "pytania",
+    "description": "Odpowiedzi na pytania, które dostaję najczęściej — o ceny, terminy, design, SEO i reklamę.",
+    "question1": "Ile kosztuje strona?",
+    "answer1": "Prosty landing — od $300. Strona wielostronicowa — od $600. Dokładną cenę powiem po krótkiej darmowej rozmowie, gdy zrozumiem zadanie.",
+    "question2": "Ile to trwa?",
+    "answer2": "Dzięki AI pracuję szybko: prosty landing — 3–5 dni, strona firmowa — 1–2 tygodnie. Zależy od liczby podstron i funkcji.",
+    "question3": "Dostanę kilka wariantów designu?",
+    "answer3": "Tak. Przygotowuję 2–3 koncepcje, żebyś nie był zamknięty w jednej wersji. Wybrany design dopracowujemy razem.",
+    "question4": "Pomagasz z SEO?",
+    "answer4": "Tak. Podstawowe SEO jest w cenie: szybkość, meta tagi, wersja mobilna, sitemap, robots.txt. Podpinam też Google Search Console.",
+    "question5": "Możesz skonfigurować reklamy?",
+    "answer5": "Tak, podstawowo konfiguruję Google Ads i reklamy na Facebooku/Instagramie (Meta Ads). Uruchamiamy pierwsze kampanie i tłumaczę, jak czytać raporty.",
+    "question6": "Podłączasz analitykę?",
+    "answer6": "Tak — Google Analytics 4 i Google Tag Manager. Zobaczysz, skąd przychodzą odwiedzający i ile kosztuje klient.",
+    "question7": "Czy będę mógł sam aktualizować stronę?",
+    "answer7": "Tak. W razie potrzeby skonfiguruję wygodny panel do edycji tekstów i zdjęć. Pierwsze poprawki robię za darmo.",
+    "question8": "Czy jest wsparcie po starcie?",
+    "answer8": "Tak — pierwszy miesiąc po starcie wsparcie jest darmowe. Później możemy umówić się na stałe wsparcie lub jednorazowe poprawki."
   },
   "contact": {
-    "title1": "Poproś o",
-    "title2": "konsultację",
-    "description": "Gotowy na szybką stronę SPA zbudowaną z React z indywidualnym podejściem? Wypełnij poniższy formularz lub skontaktuj się ze mną w dowolny dogodny sposób. Omówmy Twoje potrzeby i znajdźmy optymalne rozwiązanie."
+    "title1": "Zostaw",
+    "title2": "wiadomość",
+    "description": "Opisz krótko swój pomysł — odezwę się z propozycjami. Pierwsza konsultacja jest darmowa."
   },
   "footer": {
-    "description": "Rozwój szybkich stron React SPA z indywidualnym podejściem do każdego klienta. Od pomysłu do rezultatu - znajdowanie dokładnie tego rozwiązania, którego potrzebuje Twój biznes.",
+    "description": "Strony z AI pod klucz: design do wyboru, SEO i pomoc z reklamą. Prosto, szybko i z efektem dla Twojego biznesu.",
     "navigation": "Nawigacja",
     "home": "Strona główna",
     "about": "O mnie",
     "portfolio": "Portfolio",
     "services": "Usługi",
     "contact": "Kontakt",
-    "contactInfo": "Informacje kontaktowe",
+    "contactInfo": "Kontakt",
     "rights": "Wszelkie prawa zastrzeżone."
   },
   "language": {
@@ -219,27 +217,27 @@
     "pl": "Polski"
   },
   "imageAlt": {
-    "portfolioDesktop": "Zrzut ekranu pulpitu prezentujący profesjonalny design strony internetowej",
-    "portfolioMobile": "Responsywny interfejs mobilnej strony internetowej",
-    "project1Desktop": "Platforma Instytutu Ekspertyz Sądowych - profesjonalny interfejs pulpitu React SPA",
-    "project1Mobile": "Platforma Instytutu Ekspertyz Sądowych - responsywny design mobilny",
-    "project2Desktop": "Międzynarodowa Izba Arbitrażowa - korporacyjny pulpit React SPA", 
-    "project2Mobile": "Międzynarodowa Izba Arbitrażowa - interfejs mobilny",
-    "project3Desktop": "Usługi Prawne dla Ukraińców - specjalistyczny pulpit React SPA",
-    "project3Mobile": "Usługi Prawne dla Ukraińców - responsywny układ mobilny",
-    "project4Desktop": "Lemon Shine Usługi Sprzątające - biznesowy pulpit React SPA",
-    "project4Mobile": "Lemon Shine Usługi Sprzątające - interfejs mobilny",
-    "project5Desktop": "Spotless Pro Home Cleaning - premium pulpit React SPA",
-    "project5Mobile": "Spotless Pro Home Cleaning - responsywny design mobilny",
-    "project6Desktop": "Laser Beauty Studio - pulpit React SPA kliniki urody",
-    "project6Mobile": "Laser Beauty Studio - interfejs mobilny"
+    "portfolioDesktop": "Zrzut ekranu strony — desktop",
+    "portfolioMobile": "Mobilna wersja strony",
+    "project1Desktop": "Platforma Instytutu Ekspertyz Sądowych — desktop",
+    "project1Mobile": "Platforma Instytutu Ekspertyz Sądowych — mobile",
+    "project2Desktop": "Międzynarodowa Izba Arbitrażowa — desktop",
+    "project2Mobile": "Międzynarodowa Izba Arbitrażowa — mobile",
+    "project3Desktop": "Pomoc prawna dla Ukraińców w Polsce — desktop",
+    "project3Mobile": "Pomoc prawna dla Ukraińców w Polsce — mobile",
+    "project4Desktop": "Lemon Shine Sprzątanie — desktop",
+    "project4Mobile": "Lemon Shine Sprzątanie — mobile",
+    "project5Desktop": "Spotless Pro Home Cleaning — desktop",
+    "project5Mobile": "Spotless Pro Home Cleaning — mobile",
+    "project6Desktop": "Laser Beauty Studio — desktop",
+    "project6Mobile": "Laser Beauty Studio — mobile"
   },
   "cta": {
-    "afterHero": "Gotowy na szybką stronę SPA z indywidualnym podejściem? Omówmy Twój projekt!",
-    "afterAbout": "Przekonany do zalet React SPA? Stwórzmy rozwiązanie dla Twojego biznesu!",
-    "afterPortfolio": "Podoba Ci się to, co widzisz? Stwórzmy coś unikalnego dla Twojego biznesu!",
-    "afterWhyAiSpa": "Gotowy doświadczyć mocy React SPA z indywidualnym podejściem? Zaczynajmy!",
-    "afterServices": "Potrzebujesz indywidualnego rozwiązania? Gotowy rozpocząć projekt?",
-    "beforeContact": "Nie czekaj - Twoja konkurencja już używa nowoczesnych technologii. Umów konsultację teraz!"
+    "afterHero": "Gotowy uruchomić swoją stronę z AI? Pogadajmy!",
+    "afterAbout": "Opowiedz mi o swoim pomyśle — podpowiem najlepszą drogę.",
+    "afterPortfolio": "Podoba Ci się? Zrobię coś unikalnego również dla Ciebie.",
+    "afterWhyAiSpa": "Chcesz tak samo szybko i ładnie? Napisz do mnie.",
+    "afterServices": "Potrzebujesz strony, SEO i reklamy w jednym miejscu? Zostaw zgłoszenie.",
+    "beforeContact": "Pierwsza konsultacja jest darmowa — napisz już teraz."
   }
 }
