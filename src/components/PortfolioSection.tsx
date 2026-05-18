@@ -118,11 +118,11 @@ const PortfolioSection = () => {
               onClick={() => openProjectPopup(item)}
               className="group mb-6 break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:border-primary/40 hover:-translate-y-0.5"
             >
-              <div className={`relative ${item.aspect} overflow-hidden bg-muted`}>
+              <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                 <LazyImage
-                  src={item.desktopImage}
+                  src={item.previewImage}
                   alt={t(`imageAlt.project${item.id}Desktop`)}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading={item.id <= 2 ? 'eager' : 'lazy'}
                   priority={item.id === 1}
                 />
