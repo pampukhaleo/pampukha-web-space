@@ -93,9 +93,11 @@ const Index = () => {
           </div>
         </section>
 
+        <ProcessSection />
         <PortfolioSection />
         <WhyAISPASection />
         <ServicesSection />
+        <GuaranteeSection />
         <FAQSection />
         <ContactSection />
       </main>
