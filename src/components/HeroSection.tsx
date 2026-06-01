@@ -12,7 +12,7 @@ const HeroSection = () => {
   const { trackCTAClick } = useAnalytics();
   
   return (
-    <section className="pt-32 lg:pt-40 pb-16 lg:pb-32 px-4 relative overflow-hidden" role="banner">
+    <section className="pt-32 lg:pt-40 pb-10 lg:pb-16 px-4 relative overflow-hidden" role="banner">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <header className="order-2 lg:order-1 z-20 relative text-center lg:text-left">
