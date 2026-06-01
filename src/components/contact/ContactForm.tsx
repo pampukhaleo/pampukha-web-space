@@ -6,7 +6,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { useAnalytics } from '@/components/SEO/Analytics';
 import { z } from 'zod';
 
 // Validation schema
@@ -32,7 +31,6 @@ const contactFormSchema = z.object({
 });
 export const ContactForm = () => {
   const { toast } = useToast();
-  const { trackFormSubmission } = useAnalytics();
   const submitLockRef = useRef(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -90,7 +88,6 @@ export const ContactForm = () => {
     if (isLocalDevelopment) {
       setFormSubmittedLocally(true);
       setShowLocalDevDialog(true);
-      trackFormSubmission('contact_form_local');
       setIsSubmitting(false);
       
       // Reset form in local development
@@ -144,7 +141,7 @@ ${formData.message}
         description: "Дякую за звернення — я зв'яжуся з вами найближчим часом.",
       });
 
-      trackFormSubmission('contact_form');
+
 
       // Reset form
       setFormData({ name: '', email: '', phone: '', message: '' });

@@ -2,11 +2,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
 
 interface SEOProps {
   title?: string;
@@ -197,12 +192,6 @@ export const useSEO = ({
       updateMetaTag('keywords', 'розробка SPA, React розробка, Leonforge, штучний інтелект, веб-розробка, одностранічні додатки, сучасні сайти, UI/UX дизайн, фронтенд розробка, мобільна адаптивність, SEO оптимізація');
     }
 
-    // Track page views for SPA navigation
-    window.gtag?.('event', 'page_view', {
-      page_title: title || document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-    });
 
   }, [title, description, keywords, ogImage, ogType, canonical, noindex, i18n.language]);
 };

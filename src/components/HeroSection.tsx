@@ -5,11 +5,9 @@ import { ArrowDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
-import { useAnalytics } from '@/components/SEO/Analytics';
 
 const HeroSection = () => {
   const { t } = useTranslation();
-  const { trackCTAClick } = useAnalytics();
   
   return (
     <section className="pt-32 lg:pt-40 pb-10 lg:pb-16 px-4 relative overflow-hidden" role="banner">
@@ -31,7 +29,6 @@ const HeroSection = () => {
                 size="lg"
                 className="text-base px-8 transition-all duration-200"
                 onClick={() => {
-                  trackCTAClick(t('hero.consultation'), 'hero_section');
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 aria-describedby="hero-cta-description"
@@ -43,7 +40,6 @@ const HeroSection = () => {
                 size="lg"
                 className="text-base px-8 transition-all duration-200"
                 onClick={() => {
-                  trackCTAClick(t('hero.viewWork'), 'hero_section');
                   document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
