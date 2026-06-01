@@ -3,11 +3,9 @@ import { Button } from '@/components/ui/button';
 import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
 import ProjectPopup from '@/components/portfolio/ProjectPopup';
-import { useAnalytics } from '@/components/SEO/Analytics';
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
-  const { trackPortfolioView } = useAnalytics();
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [viewType] = useState<'desktop' | 'mobile'>('desktop');
@@ -85,7 +83,6 @@ const PortfolioSection = () => {
   const openProjectPopup = (project: any) => {
     setSelectedProject(project);
     setIsPopupOpen(true);
-    trackPortfolioView(project.title);
   };
 
   const closeProjectPopup = () => {
