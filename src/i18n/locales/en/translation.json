@@ -229,4 +229,57 @@
     "question4": "Do you help with SEO?",
     "answer4": "Yes. Basic SEO is included: speed, meta tags, mobile version, sitemap, robots.txt. I also connect Google Search Console.",
     "question5": "Can you set up ads?",
-    "answer5": "Yes — basic Google Ads and Facebook/Instagram (Meta) Ads setup. We launch your first campaigns and I explain how to read the reports
+    "answer5": "Yes — basic Google Ads and Facebook/Instagram (Meta) Ads setup. We launch your first campaigns and I explain how to read the reports.",
+    "question6": "Do you connect analytics?",
+    "answer6": "Yes — Google Analytics 4 and Google Tag Manager. You'll see where visitors come from and how much each customer costs.",
+    "question7": "Can I update the site myself?",
+    "answer7": "Yes. If needed I'll set up a simple panel to update text and images. First edits are free.",
+    "question8": "Is there support after launch?",
+    "answer8": "Yes — the first month after launch is free support. After that we can agree on regular support or one-off changes."
+  },
+  "contact": {
+    "title1": "Get in",
+    "title2": "touch",
+    "description": "Tell me briefly about your idea — I'll take a look and come back with suggestions. The first call is free."
+  },
+  "footer": {
+    "description": "Modern websites done for you: design options, SEO and help with ads. Simple, fast and built to bring you customers.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About me",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact",
+    "contactInfo": "Contact",
+    "rights": "All rights reserved."
+  },
+  "language": {
+    "uk": "Українська",
+    "en": "English",
+    "pl": "Polski"
+  },
+  "imageAlt": {
+    "portfolioDesktop": "Website desktop screenshot",
+    "portfolioMobile": "Website mobile version",
+    "project1Desktop": "Forensic Institute Platform — desktop",
+    "project1Mobile": "Forensic Institute Platform — mobile",
+    "project2Desktop": "International Arbitration Chamber — desktop",
+    "project2Mobile": "International Arbitration Chamber — mobile",
+    "project3Desktop": "Legal help for Ukrainians in Poland — desktop",
+    "project3Mobile": "Legal help for Ukrainians in Poland — mobile",
+    "project4Desktop": "Lemon Shine Cleaning — desktop",
+    "project4Mobile": "Lemon Shine Cleaning — mobile",
+    "project5Desktop": "Spotless Pro Home Cleaning — desktop",
+    "project5Mobile": "Spotless Pro Home Cleaning — mobile",
+    "project6Desktop": "Laser Beauty Studio — desktop",
+    "project6Mobile": "Laser Beauty Studio — mobile"
+  },
+  "cta": {
+    "afterHero": "Ready to launch your website? Let's talk!",
+    "afterAbout": "Tell me about your idea — I'll suggest the best path.",
+    "afterPortfolio": "Like what you see? I'll build something unique for you too.",
+    "afterWhyAiSpa": "Want it just as fast and good-looking? Drop me a line.",
+    "afterServices": "Need a site, SEO and ads in one place? Send a request.",
+    "beforeContact": "First call is free — get in touch right now."
+  }
+}
