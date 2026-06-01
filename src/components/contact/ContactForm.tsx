@@ -141,7 +141,7 @@ ${formData.message}
         description: "Дякую за звернення — я зв'яжуся з вами найближчим часом.",
       });
 
-      trackFormSubmission('contact_form');
+
 
       // Reset form
       setFormData({ name: '', email: '', phone: '', message: '' });
