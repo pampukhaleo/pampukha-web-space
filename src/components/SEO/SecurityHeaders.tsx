@@ -13,8 +13,8 @@ export const SecurityHeaders = () => {
         "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net https://www.facebook.com; " +
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
         "img-src 'self' data: https: https://www.facebook.com; " +
-        "font-src 'self' https://fonts.gstatic.com; " +
-        "connect-src 'self' https://fwwpidktaanowpaihgzy.supabase.co https://www.facebook.com https://connect.facebook.net; " +
+        "font-src 'self' data: https://fonts.gstatic.com; " +
+        "connect-src 'self' https://fwwpidktaanowpaihgzy.supabase.co https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://api.facebook.com; " +
         "object-src 'none';"
       );
       document.head.appendChild(csp);
