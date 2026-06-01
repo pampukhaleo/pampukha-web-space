@@ -9,6 +9,8 @@ import ServicesSection from '@/components/ServicesSection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import ProcessSection from '@/components/ProcessSection';
+import GuaranteeSection from '@/components/GuaranteeSection';
 import CTAButton from '@/components/CTAButton';
 import { SEO } from '@/components/SEO/SEO';
 import { Breadcrumbs } from '@/components/SEO/Breadcrumbs';
@@ -56,9 +58,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Створення сайтів з AI | SEO та реклама — Leonforge"
-        description="Створюю сучасні сайти з AI: кілька варіантів дизайну на вибір, SEO-оптимізація та допомога з рекламою Google Ads і Facebook/Instagram. Швидко і за адекватною ціною."
-        keywords="створення сайтів з AI, сайт під ключ, лендінг, веб-розробник, SEO, Google Ads, Facebook Ads, Instagram Ads, Google Analytics, GTM, дизайн на вибір, Київ"
+        title="Створення сайтів під ключ | SEO та реклама — Leonforge"
+        description="Сучасні сайти під ключ: кілька варіантів дизайну, SEO-оптимізація та реклама Google Ads і Facebook/Instagram. Швидко і за адекватною ціною."
+        keywords="створення сайтів, сайт під ключ, лендінг, веб-розробник, SEO, Google Ads, Facebook Ads, Instagram Ads, Google Analytics, GTM, дизайн на вибір, Київ"
         ogImage="https://leonforge.com/leonforge_logo.png"
         structuredData={[
           { type: 'LocalBusiness' },
@@ -91,9 +93,11 @@ const Index = () => {
           </div>
         </section>
 
+        <ProcessSection />
         <PortfolioSection />
         <WhyAISPASection />
         <ServicesSection />
+        <GuaranteeSection />
         <FAQSection />
         <ContactSection />
       </main>

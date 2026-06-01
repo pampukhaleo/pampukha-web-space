@@ -6,30 +6,72 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title1": "Tworzę ",
-    "title2": "strony",
-    "title3": " z pomocą AI",
-    "title4": "— szybko, ładnie i niedrogo",
+    "title1": "Nowoczesne strony ",
+    "title2": "pod klucz",
+    "title3": " —",
+    "title4": "szybko i niedrogo",
     "price": "od $300",
-    "valueProposition": "AI + SEO + Reklama",
-    "description": "Robię nowoczesne strony z AI: dostajesz kilka wariantów designu do wyboru, konfigurację SEO i pomoc w uruchomieniu reklam w Google i social media. Prosto, szybko i z efektem.",
+    "valueProposition": "Strona + SEO + Reklama",
+    "description": "Tworzę nowoczesne strony dla małych firm: kilka wariantów designu do wyboru, konfiguracja SEO i pomoc w uruchomieniu reklam w Google i social media. Gotowe w 3–5 dni, od $300.",
     "consultation": "Umów konsultację",
     "viewWork": "Zobacz prace"
   },
   "about": {
     "title1": "O",
     "title2": "mnie",
-    "introduction": "Cześć! Nazywam się Leonid. Pomagam małym firmom szybko mieć swoją stronę — z AI jest taniej, szybciej i z większą swobodą w designie. Jestem z Tobą na każdym kroku: od pomysłu po pierwsze kampanie reklamowe.",
+    "introduction": "Cześć! Nazywam się Leonid. Pomagam małym firmom szybko mieć swoją stronę w uczciwej cenie. Jestem z Tobą na każdym kroku: od pomysłu po pierwsze kampanie reklamowe.",
     "approach": "Moje podejście — strona + SEO + reklama",
     "approachDescription": "Najpierw rozmawiamy o Twoim pomyśle. Potem przygotowuję kilka wariantów designu, żebyś wybrał ten, który Ci się podoba. Następnie optymalizuję stronę pod Google i pomagam uruchomić pierwsze kampanie.",
-    "cleanCode": "Strony z AI",
-    "cleanCodeDescription": "Tworzę strony szybciej i taniej dzięki nowoczesnym narzędziom AI — bez utraty jakości i designu.",
+    "cleanCode": "Strony pod klucz",
+    "cleanCodeDescription": "Tworzę strony szybko i w uczciwej cenie — bez utraty jakości i designu.",
     "responsive": "Kilka wariantów designu",
     "responsiveDescription": "Nie podoba Ci się pierwsza wersja? Żaden problem. Przygotuję kilka koncepcji, aż znajdziemy tę właściwą.",
     "modern": "SEO i reklama",
     "modernDescription": "Konfiguruję SEO, Google Analytics, GTM i pomagam z podstawową konfiguracją reklam Google Ads oraz Meta (Facebook/Instagram).",
     "clientFocused": "Prosto i zrozumiale",
     "clientFocusedDescription": "Bez technicznego żargonu i zbędnych wydatków. Tłumaczę po ludzku, co i po co robimy."
+  },
+  "process": {
+    "title1": "Jak",
+    "title2": "pracujemy",
+    "description": "Przejrzysty proces w 4 krokach — widzisz postęp i masz kontrolę na każdym etapie.",
+    "step1": {
+      "number": "01",
+      "title": "Brief",
+      "description": "Darmowa 30-minutowa rozmowa: omawiamy Twoje cele, konkurencję i priorytety."
+    },
+    "step2": {
+      "number": "02",
+      "title": "2–3 koncepcje designu",
+      "description": "Przygotowuję kilka wariantów do wyboru. Nie podobają się? Robię ponownie za darmo."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Realizacja i poprawki",
+      "description": "Pokazuję postęp, wprowadzamy poprawki razem. Widzisz stronę na każdym etapie."
+    },
+    "step4": {
+      "number": "04",
+      "title": "Start + SEO + reklama",
+      "description": "Publikujemy stronę, podłączam analitykę i pomagam uruchomić pierwsze kampanie."
+    }
+  },
+  "guarantee": {
+    "title1": "Moje",
+    "title2": "gwarancje",
+    "description": "Pracuję przejrzyście i uczciwie — żebyś był pewny rezultatu.",
+    "item1": {
+      "title": "Nie podoba się design? Robię ponownie",
+      "description": "Na etapie koncepcji wprowadzam poprawki za darmo, aż rezultat Cię zadowoli."
+    },
+    "item2": {
+      "title": "30 dni wsparcia po starcie",
+      "description": "Pierwszy miesiąc po oddaniu — darmowe poprawki, odpowiedzi na pytania i pomoc."
+    },
+    "item3": {
+      "title": "Płatność w etapach",
+      "description": "Przejrzyste etapy i płatność częściowa. Bez przedpłaty za całość z góry."
+    }
   },
   "portfolio": {
     "title1": "Moje",
@@ -73,8 +115,8 @@
     "description": "Wszystko, czego potrzebujesz, żeby uruchomić stronę i zacząć zdobywać klientów — od designu po pierwsze kampanie reklamowe.",
     "package": "Strona + SEO + reklama",
     "service1": {
-      "title": "Strony pod klucz z AI",
-      "description": "Landing page, strony firmowe i proste aplikacje webowe. Szybko, nowocześnie i w rozsądnej cenie dzięki narzędziom AI."
+      "title": "Strony pod klucz",
+      "description": "Landing page, strony firmowe i proste aplikacje webowe. Szybko, nowocześnie i w rozsądnej cenie."
     },
     "service2": {
       "title": "Kilka wariantów designu",
@@ -106,11 +148,11 @@
   },
   "whyAiSpa": {
     "title1": "Dlaczego",
-    "title2": "strony z AI?",
-    "description": "Prosto — dlaczego dzięki AI można zrobić nowoczesną stronę szybciej i taniej bez utraty jakości.",
+    "title2": "warto ze mną?",
+    "description": "Prosto — dlaczego ze mną dostaniesz nowoczesną stronę szybciej i taniej bez utraty jakości.",
     "benefit1": {
       "title": "Szybko",
-      "description": "To, co kiedyś robiło się tygodniami, dziś powstaje w kilka dni. Dostajesz stronę dużo szybciej — i wcześniej zaczynasz zarabiać."
+      "description": "Strona gotowa w 3–5 dni, a nie w miesiące. Wcześniej zaczynasz zdobywać klientów."
     },
     "benefit2": {
       "title": "Kilka designów do wyboru",
@@ -142,7 +184,7 @@
         "point4": "Cena często od $1500 w górę"
       },
       "aiSpa": {
-        "title": "Strona z AI ze mną",
+        "title": "Współpraca ze mną",
         "point1": "Strona gotowa w dni, nie miesiące",
         "point2": "Kilka wariantów designu do wyboru",
         "point3": "Strona, SEO i reklama — od jednej osoby",
@@ -181,7 +223,7 @@
     "question1": "Ile kosztuje strona?",
     "answer1": "Prosty landing — od $300. Strona wielostronicowa — od $600. Dokładną cenę powiem po krótkiej darmowej rozmowie, gdy zrozumiem zadanie.",
     "question2": "Ile to trwa?",
-    "answer2": "Dzięki AI pracuję szybko: prosty landing — 3–5 dni, strona firmowa — 1–2 tygodnie. Zależy od liczby podstron i funkcji.",
+    "answer2": "Pracuję szybko: prosty landing — 3–5 dni, strona firmowa — 1–2 tygodnie. Zależy od liczby podstron i funkcji.",
     "question3": "Dostanę kilka wariantów designu?",
     "answer3": "Tak. Przygotowuję 2–3 koncepcje, żebyś nie był zamknięty w jednej wersji. Wybrany design dopracowujemy razem.",
     "question4": "Pomagasz z SEO?",
@@ -201,7 +243,7 @@
     "description": "Opisz krótko swój pomysł — odezwę się z propozycjami. Pierwsza konsultacja jest darmowa."
   },
   "footer": {
-    "description": "Strony z AI pod klucz: design do wyboru, SEO i pomoc z reklamą. Prosto, szybko i z efektem dla Twojego biznesu.",
+    "description": "Nowoczesne strony pod klucz: design do wyboru, SEO i pomoc z reklamą. Prosto, szybko i z efektem dla Twojego biznesu.",
     "navigation": "Nawigacja",
     "home": "Strona główna",
     "about": "O mnie",
@@ -233,7 +275,7 @@
     "project6Mobile": "Laser Beauty Studio — mobile"
   },
   "cta": {
-    "afterHero": "Gotowy uruchomić swoją stronę z AI? Pogadajmy!",
+    "afterHero": "Gotowy uruchomić swoją stronę? Pogadajmy!",
     "afterAbout": "Opowiedz mi o swoim pomyśle — podpowiem najlepszą drogę.",
     "afterPortfolio": "Podoba Ci się? Zrobię coś unikalnego również dla Ciebie.",
     "afterWhyAiSpa": "Chcesz tak samo szybko i ładnie? Napisz do mnie.",

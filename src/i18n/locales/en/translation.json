@@ -6,30 +6,72 @@
     "contact": "Contact"
   },
   "hero": {
-    "title1": "I build ",
-    "title2": "websites",
-    "title3": " with AI",
-    "title4": "— fast, beautiful and affordable",
+    "title1": "Modern websites ",
+    "title2": "done for you",
+    "title3": " —",
+    "title4": "fast and affordable",
     "price": "from $300",
-    "valueProposition": "AI + SEO + Ads",
-    "description": "I create modern websites with AI: you get a few design options to choose from, full SEO setup and help launching ads on Google and social media. Simple, fast and result-driven.",
+    "valueProposition": "Website + SEO + Ads",
+    "description": "I build modern websites for small businesses: a few design options to choose from, full SEO setup and help launching ads on Google and social media. Live in 3–5 days, from $300.",
     "consultation": "Book a call",
     "viewWork": "See my work"
   },
   "about": {
     "title1": "About",
     "title2": "me",
-    "introduction": "Hi! I'm Leonid. I help small businesses get a website fast — with AI it's cheaper, quicker and gives more design freedom. I'm with you every step: from idea to launching your first ad campaign.",
+    "introduction": "Hi! I'm Leonid. I help small businesses get a website fast and at a fair price. I'm with you every step: from idea to launching your first ad campaign.",
     "approach": "My approach — website + SEO + ads",
     "approachDescription": "First we talk through your idea. Then I prepare a few design options so you can pick the one you love. After that I optimise the site for Google and help launch your first ad campaigns.",
-    "cleanCode": "Websites with AI",
-    "cleanCodeDescription": "I build sites faster and cheaper using modern AI tools — without losing quality or design.",
+    "cleanCode": "Websites done for you",
+    "cleanCodeDescription": "I build sites fast and at a fair price — without losing quality or design.",
     "responsive": "Multiple design options",
     "responsiveDescription": "Don't like the first version? No problem. I prepare a few concepts until we find the one you really love.",
     "modern": "SEO & ads",
     "modernDescription": "I set up SEO, Google Analytics, GTM and help with basic Google Ads and Meta (Facebook/Instagram) campaigns.",
     "clientFocused": "Simple & clear",
     "clientFocusedDescription": "No tech jargon, no wasted spend. I explain in plain language what we're doing and why."
+  },
+  "process": {
+    "title1": "How we",
+    "title2": "work together",
+    "description": "A transparent 4-step process — you see the progress and stay in control at every stage.",
+    "step1": {
+      "number": "01",
+      "title": "Brief",
+      "description": "Free 30-minute call: we discuss your goals, competitors and priorities."
+    },
+    "step2": {
+      "number": "02",
+      "title": "2–3 design concepts",
+      "description": "I prepare a few design options. Don't like them? I redo them for free."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Build and revisions",
+      "description": "I share progress and we make changes together. You see the site at every stage."
+    },
+    "step4": {
+      "number": "04",
+      "title": "Launch + SEO + ads",
+      "description": "We publish the site, connect analytics and launch your first campaigns."
+    }
+  },
+  "guarantee": {
+    "title1": "My",
+    "title2": "guarantees",
+    "description": "I work transparently and honestly — so you stay confident in the result.",
+    "item1": {
+      "title": "Don't like the design? I redo it",
+      "description": "At the concept stage I revise designs for free until you're happy with the result."
+    },
+    "item2": {
+      "title": "30 days of post-launch support",
+      "description": "Free edits, answers to your questions and help for the first month after launch."
+    },
+    "item3": {
+      "title": "Pay in stages",
+      "description": "Transparent milestones and staged payment. No full upfront payment required."
+    }
   },
   "portfolio": {
     "title1": "My",
@@ -73,8 +115,8 @@
     "description": "Everything you need to launch a site and start getting customers — from design to your first ad campaigns.",
     "package": "Site + SEO + ads",
     "service1": {
-      "title": "Websites with AI",
-      "description": "Landing pages, corporate sites and simple web apps. Fast, modern and affordable thanks to AI tools."
+      "title": "Websites done for you",
+      "description": "Landing pages, corporate sites and simple web apps. Fast, modern and affordable."
     },
     "service2": {
       "title": "Multiple design options",
@@ -106,11 +148,11 @@
   },
   "whyAiSpa": {
     "title1": "Why",
-    "title2": "AI websites?",
-    "description": "In simple terms — why building with AI gets you a modern site faster and cheaper without losing quality.",
+    "title2": "work with me?",
+    "description": "Simply put — why working with me gets you a modern site faster and cheaper without losing quality.",
     "benefit1": {
       "title": "Fast",
-      "description": "What used to take weeks now takes days. You get your site much sooner — and start earning earlier."
+      "description": "Your site is ready in 3–5 days, not months. You start getting customers earlier."
     },
     "benefit2": {
       "title": "Several designs to choose from",
@@ -142,7 +184,7 @@
         "point4": "Price often starts from $1500+"
       },
       "aiSpa": {
-        "title": "AI website with me",
+        "title": "Working with me",
         "point1": "Site ready in days, not months",
         "point2": "Multiple design options to pick from",
         "point3": "Site, SEO and ads — from one person",
@@ -181,7 +223,7 @@
     "question1": "How much does a website cost?",
     "answer1": "Simple landing page — from $300. Multi-page site — from $600. I'll give you an exact price after a short free call once I understand the task.",
     "question2": "How long does it take?",
-    "answer2": "Thanks to AI I work fast: a simple landing — 3–5 days, a corporate site — 1–2 weeks. Depends on pages and features.",
+    "answer2": "I work fast: a simple landing — 3–5 days, a corporate site — 1–2 weeks. Depends on pages and features.",
     "question3": "Do I get several design options?",
     "answer3": "Yes. I prepare 2–3 concepts so you're not stuck with a single version. Then we refine the chosen one together.",
     "question4": "Do you help with SEO?",
@@ -201,7 +243,7 @@
     "description": "Tell me briefly about your idea — I'll take a look and come back with suggestions. The first call is free."
   },
   "footer": {
-    "description": "AI-powered websites done for you: design options, SEO and help with ads. Simple, fast and built to bring you customers.",
+    "description": "Modern websites done for you: design options, SEO and help with ads. Simple, fast and built to bring you customers.",
     "navigation": "Navigation",
     "home": "Home",
     "about": "About me",
@@ -233,7 +275,7 @@
     "project6Mobile": "Laser Beauty Studio — mobile"
   },
   "cta": {
-    "afterHero": "Ready to launch your AI-built website? Let's talk!",
+    "afterHero": "Ready to launch your website? Let's talk!",
     "afterAbout": "Tell me about your idea — I'll suggest the best path.",
     "afterPortfolio": "Like what you see? I'll build something unique for you too.",
     "afterWhyAiSpa": "Want it just as fast and good-looking? Drop me a line.",
