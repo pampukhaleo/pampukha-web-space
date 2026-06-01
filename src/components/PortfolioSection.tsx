@@ -22,7 +22,7 @@ const PortfolioSection = () => {
       desktopImage: '/expertisedesktop.png',
       mobileImage: '/expertisemobile.png',
       liveUrl: 'https://expertise.com.ua/',
-      technologies: ['AI-сайт', 'Мультимовний', 'SEO'],
+      technologies: ['Сайт під ключ', 'Мультимовний', 'SEO'],
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const PortfolioSection = () => {
       desktopImage: '/cheataicdesktop.png',
       mobileImage: '/cheataicmobile.png',
       liveUrl: 'https://chea-taic.be/',
-      technologies: ['AI-сайт', 'Лендинг', 'SEO'],
+      technologies: ['Сайт під ключ', 'Лендинг', 'SEO'],
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const PortfolioSection = () => {
       desktopImage: '/pampukhapldesktop.png',
       mobileImage: '/pampukhaplmobile.png',
       liveUrl: 'https://pampukha.pl/',
-      technologies: ['AI-сайт', 'Форма заявок', 'Мультимовний'],
+      technologies: ['Сайт під ключ', 'Форма заявок', 'Мультимовний'],
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_6.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://lemonshine.pl/',
-      technologies: ['AI-сайт', 'Бронювання', 'SEO'],
+      technologies: ['Сайт під ключ', 'Бронювання', 'SEO'],
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_7.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://spotlessprohome.co.uk/',
-      technologies: ['AI-сайт', 'Лендинг', 'SEO'],
+      technologies: ['Сайт під ключ', 'Лендинг', 'SEO'],
     },
     {
       id: 6,
@@ -77,7 +77,7 @@ const PortfolioSection = () => {
       desktopImage: '/Screenshot_8.png',
       mobileImage: '/placeholder.svg',
       liveUrl: 'https://laserbeauty-studio.de/',
-      technologies: ['AI-сайт', 'Бронювання', 'Галерея'],
+      technologies: ['Сайт під ключ', 'Бронювання', 'Галерея'],
     },
   ];
 
