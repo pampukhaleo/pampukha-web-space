@@ -33,6 +33,10 @@ export const UI: Record<
     contactTitle: string;
     contactLead: string;
     popular: string;
+    quickPreview: string;
+    featuredCase: string;
+    prevCase: string;
+    nextCaseNav: string;
   }
 > = {
   uk: {
