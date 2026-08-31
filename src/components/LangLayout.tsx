@@ -1,14 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import type { Lang } from '@/lib/i18n-routes';
+import { homePath, LANGS, type Lang } from '@/lib/i18n-routes';
+
+type AltPaths = Record<Lang, string>;
+
+const AltPathsContext = createContext<AltPaths | null>(null);
+
+export const useAltPaths = (): AltPaths => {
+  const ctx = useContext(AltPathsContext);
+  return (
+    ctx ||
+    (Object.fromEntries(LANGS.map((l) => [l, homePath(l)])) as AltPaths)
+  );
+};
 
 interface LangLayoutProps {
   lang: Lang;
+  altPaths?: AltPaths;
   children: React.ReactNode;
 }
 
-/** Keeps i18n in sync with the language prefix of the current route. */
-export const LangLayout = ({ lang, children }: LangLayoutProps) => {
+/** Keeps i18n in sync with the language prefix and exposes the page's language alternates. */
+export const LangLayout = ({ lang, altPaths, children }: LangLayoutProps) => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -18,7 +31,14 @@ export const LangLayout = ({ lang, children }: LangLayoutProps) => {
     document.documentElement.lang = lang;
   }, [lang, i18n]);
 
-  return <>{children}</>;
+  const value = useMemo(
+    () =>
+      altPaths ||
+      (Object.fromEntries(LANGS.map((l) => [l, homePath(l)])) as AltPaths),
+    [altPaths],
+  );
+
+  return <AltPathsContext.Provider value={value}>{children}</AltPathsContext.Provider>;
 };
 
 export default LangLayout;

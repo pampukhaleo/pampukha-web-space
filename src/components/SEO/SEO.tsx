@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useSEO } from '@/hooks/useSEO';
 import { StructuredData } from './StructuredData';
@@ -6,6 +5,7 @@ import { MetaViewport } from './MetaViewport';
 import { PreloadResources } from './PreloadResources';
 import { PerformanceOptimizer } from './PerformanceOptimizer';
 import { SecurityHeaders } from './SecurityHeaders';
+import type { Lang } from '@/lib/i18n-routes';
 
 interface SEOProps {
   title?: string;
@@ -15,6 +15,7 @@ interface SEOProps {
   ogType?: string;
   canonical?: string;
   noindex?: boolean;
+  altPaths?: Partial<Record<Lang, string>>;
   structuredData?: Array<{
     type: 'LocalBusiness' | 'Organization' | 'WebSite' | 'Person' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'ItemList';
     data?: any;
@@ -29,6 +30,7 @@ export const SEO: React.FC<SEOProps> = ({
   ogType,
   canonical,
   noindex,
+  altPaths,
   structuredData = []
 }) => {
   useSEO({
@@ -38,7 +40,8 @@ export const SEO: React.FC<SEOProps> = ({
     ogImage,
     ogType,
     canonical,
-    noindex
+    noindex,
+    altPaths,
   });
 
   return (
