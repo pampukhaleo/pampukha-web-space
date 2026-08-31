@@ -2,17 +2,45 @@
 
 > Створення сучасних сайтів під ключ, SEO-оптимізація та налаштування реклами Google Ads і Facebook/Instagram. Веб-розробник Leonid Pampukha (UA/EN/PL).
 
-Leonforge — це особистий бренд веб-розробника Леоніда Пампухи. Робимо сайти під ключ з кількома варіантами дизайну на вибір, базовою SEO-оптимізацією, інтеграцією аналітики (Google Analytics, GTM) та запуском платної реклами в Google Ads і Meta Ads (Facebook/Instagram).
+Leonforge — це особистий бренд веб-розробника Леоніда Пампухи. Сайти під ключ із кількома варіантами дизайну на вибір, SEO-оптимізацією та запуском реклами в Google і Facebook/Instagram. Сайт має три мовні версії з префіксами: /uk, /en, /pl.
 
-## Pages
+## Послуги (uk)
 
-- [Головна](/): Послуги, портфоліо, процес роботи, тарифи та форма зв'язку.
-- [Портфоліо](/#portfolio): Приклади реалізованих сайтів (Lemon Shine, Spotless Pro, Laser Beauty, Cheataic, Expertise, Pampukha.pl).
-- [Послуги](/#services): Створення сайтів під ключ, SEO, налаштування Google Ads та Meta Ads.
-- [Процес](/#process): Етапи роботи від брифу до запуску.
-- [Тарифи](/#pricing): Пакети та орієнтовна вартість.
-- [Контакти](/#contact): Форма зв'язку, email, телефон, месенджери.
+- [Створення сайтів під ключ](/uk/poslugy/stvorennya-saytiv): корпоративні та бізнес-сайти, від $600, 5–10 днів.
+- [Лендінг](/uk/poslugy/lending): односторінковий сайт під послугу чи рекламу, від $300, 3–5 днів.
+- [Інтернет-магазин](/uk/poslugy/internet-magazyn): каталог, кошик, оплата й доставка.
+- [SEO-оптимізація](/uk/poslugy/seo-optymizatsiya): технічне SEO, структура, тексти, Search Console.
+- [Налаштування реклами](/uk/poslugy/nalashtuvannya-reklamy): Google Ads і Facebook/Instagram Ads.
 
-## Optional
+## Services (en)
 
-- [Privacy Policy](/privacy): Політика конфіденційності.
+- [Website development](/en/services/website-development)
+- [Landing page](/en/services/landing-page)
+- [Online store](/en/services/online-store)
+- [SEO optimisation](/en/services/seo-optimisation)
+- [Ads setup](/en/services/ads-setup)
+
+## Usługi (pl)
+
+- [Tworzenie stron](/pl/uslugi/tworzenie-stron)
+- [Landing page](/pl/uslugi/landing-page)
+- [Sklep internetowy](/pl/uslugi/sklep-internetowy)
+- [Optymalizacja SEO](/pl/uslugi/optymalizacja-seo)
+- [Konfiguracja reklam](/pl/uslugi/konfiguracja-reklam)
+
+## Ключові сторінки
+
+- [Головна](/uk): позиціонування, портфоліо, процес роботи, гарантії.
+- [Ціни](/uk/tsiny) · [Pricing](/en/pricing) · [Cennik](/pl/cennik): лендінг від $300, сайт для бізнесу від $600, повний пакет від $900.
+- [Контакти](/uk/kontakty) · [Contact](/en/contact) · [Kontakt](/pl/kontakt): Telegram @leonforge, форма заявки.
+
+## Кейси
+
+- [Expertise](/uk/keysy/expertise) — сайт інституту судових експертиз (Україна).
+- [Pampukha.pl](/uk/keysy/pampukha-pl) — сайт послуг у Польщі.
+- [Lemon Shine](/uk/keysy/lemonshine) — клінінгова компанія, Польща.
+- [Spotless Pro](/uk/keysy/spotlesspro) — клінінг, Великобританія.
+- [Laser Beauty](/uk/keysy/laserbeauty) — студія лазерної косметології, Німеччина.
+- [Cheataic](/uk/keysy/cheataic) — вебпроєкт із бронюванням.
+
+Повний перелік URL — у [sitemap.xml](/sitemap.xml).
