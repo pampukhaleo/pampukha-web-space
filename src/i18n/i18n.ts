@@ -25,11 +25,16 @@ i18n
   .init({
     resources,
     fallbackLng: 'uk',
+    supportedLngs: ['uk', 'en', 'pl'],
+    nonExplicitSupportedLngs: true,
+    load: 'languageOnly',
     detection: {
-      order: ['querystring', 'localStorage', 'navigator'],
+      order: ['path', 'querystring', 'localStorage', 'navigator'],
+      lookupFromPathIndex: 0,
       lookupQuerystring: 'lang',
       caches: ['localStorage'],
     },
+
     interpolation: {
       escapeValue: false,
     },
