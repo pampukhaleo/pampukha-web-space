@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Globe } from 'lucide-react';
 import {
   DropdownMenu,
@@ -9,22 +10,17 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
-
-const languages = [
-  { code: 'uk', name: 'Українська' },
-  { code: 'en', name: 'English' },
-  { code: 'pl', name: 'Polski' }
-];
+import { useAltPaths } from '@/components/LangLayout';
+import { LANGS, type Lang } from '@/lib/i18n-routes';
 
 const LanguageSwitcher = () => {
   const { t, i18n } = useTranslation();
-  
-  const changeLanguage = (lng: string) => {
+  const navigate = useNavigate();
+  const altPaths = useAltPaths();
+
+  const changeLanguage = (lng: Lang) => {
     i18n.changeLanguage(lng);
-    // Update URL with language parameter
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lng);
-    window.history.pushState({}, '', url.toString());
+    navigate(altPaths[lng]);
   };
 
   return (
@@ -43,13 +39,13 @@ const LanguageSwitcher = () => {
         align="end" 
         className="bg-background border border-border shadow-lg z-50"
       >
-        {languages.map((lang) => (
+        {LANGS.map((code) => (
           <DropdownMenuItem
-            key={lang.code}
-            onClick={() => changeLanguage(lang.code)}
-            className={`cursor-pointer hover:bg-accent hover:text-accent-foreground ${i18n.language === lang.code ? 'font-bold text-primary' : ''}`}
+            key={code}
+            onClick={() => changeLanguage(code)}
+            className={`cursor-pointer hover:bg-accent hover:text-accent-foreground ${i18n.language === code ? 'font-bold text-primary' : ''}`}
           >
-            {t(`language.${lang.code}`)}
+            {t(`language.${code}`)}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
