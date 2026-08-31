@@ -7,26 +7,26 @@ Leonforge — це особистий бренд веб-розробника Л�
 ## Послуги (uk)
 
 - [Створення сайтів під ключ](/uk/poslugy/stvorennya-saytiv): корпоративні та бізнес-сайти, від $600, 5–10 днів.
-- [Лендінг](/uk/poslugy/lending): односторінковий сайт під послугу чи рекламу, від $300, 3–5 днів.
+- [Лендінг](/uk/poslugy/landing-pid-klyuch): односторінковий сайт під послугу чи рекламу, від $300, 3–5 днів.
 - [Інтернет-магазин](/uk/poslugy/internet-magazyn): каталог, кошик, оплата й доставка.
-- [SEO-оптимізація](/uk/poslugy/seo-optymizatsiya): технічне SEO, структура, тексти, Search Console.
-- [Налаштування реклами](/uk/poslugy/nalashtuvannya-reklamy): Google Ads і Facebook/Instagram Ads.
+- [SEO-оптимізація](/uk/poslugy/seo-prosuvannya): технічне SEO, структура, тексти, Search Console.
+- [Налаштування реклами](/uk/poslugy/google-ads-reklama): Google Ads і Facebook/Instagram Ads.
 
 ## Services (en)
 
 - [Website development](/en/services/website-development)
 - [Landing page](/en/services/landing-page)
 - [Online store](/en/services/online-store)
-- [SEO optimisation](/en/services/seo-optimisation)
-- [Ads setup](/en/services/ads-setup)
+- [SEO optimisation](/en/services/seo)
+- [Ads setup](/en/services/google-ads)
 
 ## Usługi (pl)
 
 - [Tworzenie stron](/pl/uslugi/tworzenie-stron)
 - [Landing page](/pl/uslugi/landing-page)
 - [Sklep internetowy](/pl/uslugi/sklep-internetowy)
-- [Optymalizacja SEO](/pl/uslugi/optymalizacja-seo)
-- [Konfiguracja reklam](/pl/uslugi/konfiguracja-reklam)
+- [Optymalizacja SEO](/pl/uslugi/seo)
+- [Konfiguracja reklam](/pl/uslugi/google-ads)
 
 ## Ключові сторінки
 
@@ -39,8 +39,8 @@ Leonforge — це особистий бренд веб-розробника Л�
 - [Expertise](/uk/keysy/expertise) — сайт інституту судових експертиз (Україна).
 - [Pampukha.pl](/uk/keysy/pampukha-pl) — сайт послуг у Польщі.
 - [Lemon Shine](/uk/keysy/lemonshine) — клінінгова компанія, Польща.
-- [Spotless Pro](/uk/keysy/spotlesspro) — клінінг, Великобританія.
-- [Laser Beauty](/uk/keysy/laserbeauty) — студія лазерної косметології, Німеччина.
-- [Cheataic](/uk/keysy/cheataic) — вебпроєкт із бронюванням.
+- [Spotless Pro](/uk/keysy/spotless-pro) — клінінг, Великобританія.
+- [Laser Beauty](/uk/keysy/laser-beauty) — студія лазерної косметології, Німеччина.
+- [Cheataic](/uk/keysy/arbitration) — вебпроєкт із бронюванням.
 
 Повний перелік URL — у [sitemap.xml](/sitemap.xml).
