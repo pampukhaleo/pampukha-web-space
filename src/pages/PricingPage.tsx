@@ -95,7 +95,7 @@ const PricingPage = ({ lang }: PricingPageProps) => {
           </section>
 
           <section className="px-4 pb-16">
-            <div className="container mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+            <div className="container mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
               {PRICING_PLANS.map((plan) => {
                 const p = plan.content[lang];
                 const service = getService(plan.serviceId);
@@ -147,6 +147,24 @@ const PricingPage = ({ lang }: PricingPageProps) => {
                   </article>
                 );
               })}
+            </div>
+          </section>
+
+          <section className="px-4 pb-16">
+            <div className="container mx-auto max-w-4xl">
+              <div className="rounded-lg border border-border bg-card p-6 md:p-8">
+                <h2 className="mb-3 text-2xl font-semibold">{copy.extrasTitle}</h2>
+                <p className="mb-6 max-w-2xl text-muted-foreground">{copy.extrasLead}</p>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {copy.extras.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm">
+                      <Check size={16} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-sm font-medium text-foreground">{copy.extrasPriceLabel}</p>
+              </div>
             </div>
           </section>
 
