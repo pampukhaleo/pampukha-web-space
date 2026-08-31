@@ -33,6 +33,10 @@ export const UI: Record<
     contactTitle: string;
     contactLead: string;
     popular: string;
+    quickPreview: string;
+    featuredCase: string;
+    prevCase: string;
+    nextCaseNav: string;
   }
 > = {
   uk: {
@@ -71,6 +75,10 @@ export const UI: Record<
     contactTitle: 'Залишити заявку',
     contactLead: 'Розкажіть коротко про завдання — повернусь із пропозицією. Перша консультація безкоштовна.',
     popular: 'Найчастіше обирають',
+    quickPreview: 'Швидкий перегляд',
+    featuredCase: 'Обраний кейс',
+    prevCase: 'Попередній проєкт',
+    nextCaseNav: 'Наступний проєкт',
   },
   en: {
     home: 'Home',
@@ -108,6 +116,10 @@ export const UI: Record<
     contactTitle: 'Send a request',
     contactLead: 'Tell me briefly about your task and I will come back with a proposal. The first call is free.',
     popular: 'Most chosen',
+    quickPreview: 'Quick preview',
+    featuredCase: 'Featured case',
+    prevCase: 'Previous project',
+    nextCaseNav: 'Next project',
   },
   pl: {
     home: 'Strona główna',
@@ -145,5 +157,9 @@ export const UI: Record<
     contactTitle: 'Wyślij zapytanie',
     contactLead: 'Opisz krótko zadanie — wrócę z propozycją. Pierwsza rozmowa jest bezpłatna.',
     popular: 'Najczęściej wybierane',
+    quickPreview: 'Szybki podgląd',
+    featuredCase: 'Wyróżniona realizacja',
+    prevCase: 'Poprzedni projekt',
+    nextCaseNav: 'Następny projekt',
   },
 };

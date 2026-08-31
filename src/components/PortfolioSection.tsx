@@ -1,159 +1,73 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { LazyImage } from '@/components/SEO/LazyImageLoader';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button';
 import ProjectPopup from '@/components/portfolio/ProjectPopup';
+import FeaturedCase from '@/components/portfolio/FeaturedCase';
+import CaseCarousel from '@/components/portfolio/CaseCarousel';
+import { CASES, type CaseStudy } from '@/data/cases';
+import { DEFAULT_LANG, isLang, type Lang } from '@/lib/i18n-routes';
 
 const PortfolioSection = () => {
-  const { t } = useTranslation();
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const { t, i18n } = useTranslation();
+  const lang: Lang = isLang(i18n.language) ? i18n.language : DEFAULT_LANG;
+
+  const [selectedProject, setSelectedProject] = useState<CaseStudy | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [viewType] = useState<'desktop' | 'mobile'>('desktop');
 
-  const portfolioItems = [
-    {
-      id: 1,
-      title: t('portfolio.project1.title'),
-      category: t('portfolio.project1.category'),
-      description: t('portfolio.project1.description'),
-      previewImage: '/expertise_hero.jpg',
-      desktopImage: '/expertisedesktop.png',
-      mobileImage: '/expertisemobile.png',
-      liveUrl: 'https://expertise.com.ua/',
-      technologies: ['Сайт під ключ', 'Мультимовний', 'SEO'],
-    },
-    {
-      id: 2,
-      title: t('portfolio.project2.title'),
-      category: t('portfolio.project2.category'),
-      description: t('portfolio.project2.description'),
-      previewImage: '/cheataic_hero.jpg',
-      desktopImage: '/cheataicdesktop.png',
-      mobileImage: '/cheataicmobile.png',
-      liveUrl: 'https://chea-taic.be/',
-      technologies: ['Сайт під ключ', 'Лендинг', 'SEO'],
-    },
-    {
-      id: 3,
-      title: t('portfolio.project3.title'),
-      category: t('portfolio.project3.category'),
-      description: t('portfolio.project3.description'),
-      previewImage: '/pampukhapl_hero.jpg',
-      desktopImage: '/pampukhapldesktop.png',
-      mobileImage: '/pampukhaplmobile.png',
-      liveUrl: 'https://pampukha.pl/',
-      technologies: ['Сайт під ключ', 'Форма заявок', 'Мультимовний'],
-    },
-    {
-      id: 4,
-      title: t('portfolio.project4.title'),
-      category: t('portfolio.project4.category'),
-      description: t('portfolio.project4.description'),
-      previewImage: '/lemonshine_hero.jpg',
-      desktopImage: '/Screenshot_6.png',
-      mobileImage: '/placeholder.svg',
-      liveUrl: 'https://lemonshine.pl/',
-      technologies: ['Сайт під ключ', 'Бронювання', 'SEO'],
-    },
-    {
-      id: 5,
-      title: t('portfolio.project5.title'),
-      category: t('portfolio.project5.category'),
-      description: t('portfolio.project5.description'),
-      previewImage: '/spotlesspro_hero.jpg',
-      desktopImage: '/Screenshot_7.png',
-      mobileImage: '/placeholder.svg',
-      liveUrl: 'https://spotlessprohome.co.uk/',
-      technologies: ['Сайт під ключ', 'Лендинг', 'SEO'],
-    },
-    {
-      id: 6,
-      title: t('portfolio.project6.title'),
-      category: t('portfolio.project6.category'),
-      description: t('portfolio.project6.description'),
-      previewImage: '/laserbeauty_hero.jpg',
-      desktopImage: '/Screenshot_8.png',
-      mobileImage: '/placeholder.svg',
-      liveUrl: 'https://laserbeauty-studio.de/',
-      technologies: ['Сайт під ключ', 'Бронювання', 'Галерея'],
-    },
-  ];
+  const [featured, ...rest] = CASES;
 
-
-  const openProjectPopup = (project: any) => {
-    setSelectedProject(project);
+  const openQuickPreview = (item: CaseStudy) => {
+    setSelectedProject(item);
     setIsPopupOpen(true);
   };
 
-  const closeProjectPopup = () => {
+  const closeQuickPreview = () => {
     setIsPopupOpen(false);
     setSelectedProject(null);
   };
 
+  const popupProject = selectedProject
+    ? {
+        id: CASES.findIndex((c) => c.slug === selectedProject.slug) + 1,
+        title: selectedProject.content[lang].title,
+        category: selectedProject.content[lang].category,
+        description: selectedProject.content[lang].summary,
+        desktopImage: selectedProject.desktopImage,
+        mobileImage: selectedProject.previewImage,
+        liveUrl: selectedProject.liveUrl,
+        technologies: selectedProject.content[lang].tags,
+      }
+    : null;
+
   return (
     <section
       id="portfolio"
-      className="py-16 md:py-24 px-4 relative overflow-hidden bg-muted/30"
+      className="relative overflow-hidden bg-muted/30 px-4 py-16 md:py-24"
       role="main"
     >
-      <div className="container mx-auto relative z-10">
-        <header className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+      <div className="container relative z-10 mx-auto">
+        <header className="mb-12 text-center">
+          <h2 className="mb-6 text-3xl font-semibold md:text-4xl">
             {t('portfolio.title1')}{' '}
             <span className="text-primary">{t('portfolio.title2')}</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
             {t('portfolio.description')}
           </p>
         </header>
 
-        {/* Masonry grid (CSS columns) */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
-          {portfolioItems.map((item) => (
-            <article
-              key={item.id}
-              onClick={() => openProjectPopup(item)}
-              className="group mb-6 break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:border-primary/40 hover:-translate-y-0.5"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-                <LazyImage
-                  src={item.previewImage}
-                  alt={t(`imageAlt.project${item.id}Desktop`)}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  loading={item.id <= 2 ? 'eager' : 'lazy'}
-                  priority={item.id === 1}
-                />
-              </div>
+        {featured && (
+          <div className="mb-12">
+            <FeaturedCase item={featured} lang={lang} onQuickPreview={openQuickPreview} />
+          </div>
+        )}
 
-              <div className="p-5">
-                <p className="text-xs uppercase tracking-wider text-primary mb-2">
-                  {item.category}
-                </p>
-                <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                  {item.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {item.technologies.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <CaseCarousel items={rest} lang={lang} onQuickPreview={openQuickPreview} />
 
-        <div className="mt-16 text-center">
+        <div className="mt-14 text-center">
           <Button
             size="lg"
-            className="whitespace-normal h-auto py-3 px-6 leading-tight"
+            className="h-auto whitespace-normal px-6 py-3 leading-tight"
             onClick={() =>
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
             }
@@ -163,12 +77,12 @@ const PortfolioSection = () => {
         </div>
       </div>
 
-      {selectedProject && (
+      {popupProject && (
         <ProjectPopup
           isOpen={isPopupOpen}
-          onClose={closeProjectPopup}
-          project={selectedProject}
-          viewType={viewType}
+          onClose={closeQuickPreview}
+          project={popupProject}
+          viewType="desktop"
         />
       )}
     </section>
