@@ -1,7 +1,6 @@
-
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-
+import { BASE_URL, HREFLANG, LANGS, OG_LOCALE, type Lang } from '@/lib/i18n-routes';
 
 interface SEOProps {
   title?: string;
@@ -9,9 +8,42 @@ interface SEOProps {
   keywords?: string;
   ogImage?: string;
   ogType?: string;
+  /** Absolute or root-relative canonical path. Defaults to the current pathname. */
   canonical?: string;
   noindex?: boolean;
+  /** Equivalent path of this page in every language, used for hreflang. */
+  altPaths?: Partial<Record<Lang, string>>;
 }
+
+const upsert = (
+  selector: string,
+  create: () => HTMLElement,
+): HTMLElement => {
+  let el = document.head.querySelector(selector) as HTMLElement | null;
+  if (!el) {
+    el = create();
+    document.head.appendChild(el);
+  }
+  return el;
+};
+
+const setMetaName = (name: string, content: string) => {
+  const el = upsert(`meta[name="${name}"]`, () => {
+    const m = document.createElement('meta');
+    m.setAttribute('name', name);
+    return m;
+  });
+  el.setAttribute('content', content);
+};
+
+const setMetaProperty = (property: string, content: string) => {
+  const el = upsert(`meta[property="${property}"]`, () => {
+    const m = document.createElement('meta');
+    m.setAttribute('property', property);
+    return m;
+  });
+  el.setAttribute('content', content);
+};
 
 export const useSEO = ({
   title,
@@ -21,177 +53,88 @@ export const useSEO = ({
   ogType = 'website',
   canonical,
   noindex = false,
+  altPaths,
 }: SEOProps) => {
   const { i18n } = useTranslation();
+  const lang = (LANGS as readonly string[]).includes(i18n.language)
+    ? (i18n.language as Lang)
+    : 'uk';
 
   useEffect(() => {
-    // Используем новый домен leonforge.com
-    const baseUrl = 'https://leonforge.com';
-    
-    // Set document language
-    document.documentElement.lang = i18n.language;
+    document.documentElement.lang = lang;
 
-    // Handle canonical URL - if ?lang= parameter exists, use current URL as canonical
-    const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang');
-    const canonicalUrl = langParam ? window.location.href : (canonical || window.location.origin + window.location.pathname);
-    
-    // Управление title
-    if (title) {
-      document.title = title;
-    }
+    const path =
+      canonical && canonical.startsWith('http')
+        ? canonical.replace(BASE_URL, '')
+        : canonical || window.location.pathname;
+    const canonicalUrl = `${BASE_URL}${path === '/' ? '/' : path.replace(/\/$/, '')}`;
 
-    // Управление meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    const finalDescription = description || 'Створення сайтів на React у Києві. Веб-розробка під ключ з індивідуальним підходом.';
-    metaDescription.setAttribute('content', finalDescription);
+    if (title) document.title = title;
 
-    // Управление keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords && keywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    if (metaKeywords && keywords) {
-      metaKeywords.setAttribute('content', keywords);
-    }
+    if (description) setMetaName('description', description);
+    if (keywords) setMetaName('keywords', keywords);
 
-    // Управление Open Graph
-    const updateMetaProperty = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
+    if (title) setMetaProperty('og:title', title);
+    if (description) setMetaProperty('og:description', description);
 
-    if (title) updateMetaProperty('og:title', title);
-    if (description) updateMetaProperty('og:description', description);
-    
-    // Add og:image with fallback
-    const finalOgImage = ogImage || `${baseUrl}/leonforge_logo.png`;
-    updateMetaProperty('og:image', finalOgImage);
-    updateMetaProperty('og:image:alt', title || 'Leonforge - Web Development');
-    updateMetaProperty('og:image:width', '1200');
-    updateMetaProperty('og:image:height', '630');
-    
-    updateMetaProperty('og:type', ogType);
-    updateMetaProperty('og:url', canonicalUrl);
-    updateMetaProperty('og:locale', i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL');
-    updateMetaProperty('og:site_name', 'Leonforge');
+    const finalOgImage = ogImage || `${BASE_URL}/leonforge_logo.png`;
+    setMetaProperty('og:image', finalOgImage);
+    setMetaProperty('og:image:alt', title || 'Leonforge');
+    setMetaProperty('og:type', ogType);
+    setMetaProperty('og:url', canonicalUrl);
+    setMetaProperty('og:locale', OG_LOCALE[lang]);
+    setMetaProperty('og:site_name', 'Leonforge');
 
-    // Remove existing locale alternates and create new ones
-    const existingLocaleAlternates = document.querySelectorAll('meta[property="og:locale:alternate"]');
-    existingLocaleAlternates.forEach(meta => meta.remove());
-    
-    // Add locale alternates
-    const locales = ['uk_UA', 'en_US', 'pl_PL'];
-    locales.forEach(locale => {
-      if (locale !== (i18n.language === 'uk' ? 'uk_UA' : i18n.language === 'en' ? 'en_US' : 'pl_PL')) {
-        const meta = document.createElement('meta');
-        meta.setAttribute('property', 'og:locale:alternate');
-        meta.setAttribute('content', locale);
-        document.head.appendChild(meta);
-      }
+    document
+      .querySelectorAll('meta[property="og:locale:alternate"]')
+      .forEach((m) => m.remove());
+    LANGS.filter((l) => l !== lang).forEach((l) => {
+      const m = document.createElement('meta');
+      m.setAttribute('property', 'og:locale:alternate');
+      m.setAttribute('content', OG_LOCALE[l]);
+      document.head.appendChild(m);
     });
 
-    // Twitter Card meta tags
-    const updateTwitterMeta = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
+    setMetaName('twitter:card', 'summary_large_image');
+    setMetaName('twitter:url', canonicalUrl);
+    if (title) setMetaName('twitter:title', title);
+    if (description) setMetaName('twitter:description', description);
+    setMetaName('twitter:image', finalOgImage);
 
-    updateTwitterMeta('twitter:card', 'summary_large_image');
-    updateTwitterMeta('twitter:url', canonicalUrl);
-    if (title) updateTwitterMeta('twitter:title', title);
-    if (description) updateTwitterMeta('twitter:description', description);
-    updateTwitterMeta('twitter:image', finalOgImage);
-    updateTwitterMeta('twitter:image:alt', title || 'Leonforge - Web Development');
-
-    // Управление canonical URL
-    let linkCanonical = document.querySelector('link[rel="canonical"]');
-    if (!linkCanonical) {
-      linkCanonical = document.createElement('link');
-      linkCanonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(linkCanonical);
-    }
+    const linkCanonical = upsert('link[rel="canonical"]', () => {
+      const l = document.createElement('link');
+      l.setAttribute('rel', 'canonical');
+      return l;
+    });
     linkCanonical.setAttribute('href', canonicalUrl);
 
-    // Управление hreflang для мультиязычности
-    const currentPath = window.location.pathname;
-    const languages = [
-      { code: 'uk-UA', param: 'uk' }, 
-      { code: 'en-US', param: 'en' }, 
-      { code: 'pl-PL', param: 'pl' }
-    ];
-    const existingHreflangs = document.querySelectorAll('link[rel="alternate"][hreflang]');
-    existingHreflangs.forEach(link => link.remove());
+    // hreflang — path based, one entry per language plus x-default
+    document
+      .querySelectorAll('link[rel="alternate"][hreflang]')
+      .forEach((l) => l.remove());
 
-    languages.forEach(lang => {
-      const hreflang = document.createElement('link');
-      hreflang.setAttribute('rel', 'alternate');
-      hreflang.setAttribute('hreflang', lang.code);
-      hreflang.setAttribute('href', `${baseUrl}${currentPath}?lang=${lang.param}`);
-      document.head.appendChild(hreflang);
-    });
-
-    // x-default hreflang
-    const hreflangDefault = document.createElement('link');
-    hreflangDefault.setAttribute('rel', 'alternate');
-    hreflangDefault.setAttribute('hreflang', 'x-default');
-    hreflangDefault.setAttribute('href', `${baseUrl}${currentPath}`);
-    document.head.appendChild(hreflangDefault);
-
-    // Управление robots meta
-    let metaRobots = document.querySelector('meta[name="robots"]');
-    if (!metaRobots) {
-      metaRobots = document.createElement('meta');
-      metaRobots.setAttribute('name', 'robots');
-      document.head.appendChild(metaRobots);
-    }
-    const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
-    metaRobots.setAttribute('content', robotsContent);
-
-    // Add specific bot meta tags for better crawling
-    const updateMetaTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        document.head.appendChild(meta);
+    if (altPaths) {
+      LANGS.forEach((l) => {
+        const altPath = altPaths[l];
+        if (!altPath) return;
+        const link = document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('hreflang', HREFLANG[l]);
+        link.setAttribute('href', `${BASE_URL}${altPath}`);
+        document.head.appendChild(link);
+      });
+      if (altPaths.uk) {
+        const xDefault = document.createElement('link');
+        xDefault.setAttribute('rel', 'alternate');
+        xDefault.setAttribute('hreflang', 'x-default');
+        xDefault.setAttribute('href', `${BASE_URL}${altPaths.uk}`);
+        document.head.appendChild(xDefault);
       }
-      meta.setAttribute('content', content);
-    };
-
-    updateMetaTag('googlebot', robotsContent);
-    updateMetaTag('bingbot', robotsContent);
-    updateMetaTag('revisit-after', '7 days');
-    
-    // Additional SEO meta tags
-    updateMetaTag('author', 'Leonforge Development');
-    updateMetaTag('generator', 'React + Vite');
-    updateMetaTag('application-name', 'Leonforge');
-    updateMetaTag('distribution', 'global');
-    updateMetaTag('rating', 'general');
-    
-    // Enhanced keywords with more specific terms
-    if (!keywords) {
-      updateMetaTag('keywords', 'розробка SPA, React розробка, Leonforge, штучний інтелект, веб-розробка, одностранічні додатки, сучасні сайти, UI/UX дизайн, фронтенд розробка, мобільна адаптивність, SEO оптимізація');
     }
 
-
-  }, [title, description, keywords, ogImage, ogType, canonical, noindex, i18n.language]);
+    const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow';
+    setMetaName('robots', robotsContent);
+    setMetaName('googlebot', robotsContent);
+    setMetaName('author', 'Leonid Pampukha');
+  }, [title, description, keywords, ogImage, ogType, canonical, noindex, altPaths, lang]);
 };
