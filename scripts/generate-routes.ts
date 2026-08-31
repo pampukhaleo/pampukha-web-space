@@ -84,7 +84,8 @@ const sitemap = [
 
 writeFileSync(resolve('public/sitemap.xml'), sitemap);
 
-const routes = entries.flatMap((entry) => LANGS.map((lang) => entry.paths[lang]));
+// '/' redirects to the default language — prerender it too so crawlers get real HTML.
+const routes = ['/', ...entries.flatMap((entry) => LANGS.map((lang) => entry.paths[lang]))];
 writeFileSync(resolve('prerender-routes.json'), `${JSON.stringify(routes, null, 2)}\n`);
 
 console.log(`sitemap.xml written (${routes.length} urls); prerender-routes.json written`);
