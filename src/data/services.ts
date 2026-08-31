@@ -49,10 +49,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Створення сайтів',
         cardTitle: 'Створення сайтів під ключ',
         cardText: 'Корпоративні сайти та багатосторінкові проєкти: дизайн, тексти, налаштування і запуск.',
-        priceLabel: 'від $600',
-        metaTitle: 'Створення сайтів під ключ — від $600 | Leonforge',
+        priceLabel: 'від $500',
+        metaTitle: 'Створення сайтів під ключ — від $500 | Leonforge',
         metaDescription:
-          'Розробка сайтів під ключ: 2–3 варіанти дизайну на вибір, адаптив, базове SEO і запуск за 1–2 тижні. Ціна від $600.',
+          'Розробка сайтів під ключ: 2–3 варіанти дизайну на вибір, адаптив і базове SEO у вартості. Ціна від $500, терміни — від 2 тижнів.',
         h1: 'Створення сайтів під ключ',
         lead:
           'Роблю сайт від першої розмови до запуску: дизайн на вибір, готові тексти, адаптив під телефони, базове SEO і підключена аналітика.',
@@ -70,11 +70,11 @@ export const SERVICES: Service[] = [
           { title: 'Форма заявок', text: 'Заявки з сайту приходять вам на пошту або в Telegram — нічого не губиться.' },
           { title: 'Аналітика', text: 'Підключаю Google Analytics 4, за потреби — Google Tag Manager і піксель Meta.' },
         ],
-        priceFrom: 'від $600',
-        timeline: '1–2 тижні',
+        priceFrom: 'від $500',
+        timeline: 'від 2 тижнів, залежить від обсягу',
         faq: [
-          { q: 'Скільки коштує сайт під ключ?', a: 'Багатосторінковий корпоративний сайт — від $600. Простий односторінковий лендінг — від $300. Точну суму називаю після короткої безкоштовної розмови, коли розумію обсяг.' },
-          { q: 'Скільки часу займе розробка?', a: 'Зазвичай 1–2 тижні для корпоративного сайту. Терміни залежать від кількості сторінок і того, як швидко ви даєте матеріали та зворотний зв\'язок.' },
+          { q: 'Скільки коштує сайт під ключ?', a: 'Багатосторінковий сайт — від $500. Односторінковий лендінг — від $300. Базове SEO входить у ціну, без доплат. Точну суму називаю після короткої безкоштовної розмови, коли розумію обсяг.' },
+          { q: 'Скільки часу займе розробка?', a: 'Зазвичай від 2 тижнів. Точний строк залежить від обсягу: кількості сторінок, функцій і того, як швидко ви даєте матеріали та зворотний зв\'язок.' },
           { q: 'Чи можу я потім сам змінювати тексти?', a: 'Так. За потреби налаштую просту панель редагування, щоб ви самі міняли тексти й фото без розробника.' },
           { q: 'Що потрібно від мене на старті?', a: 'Опис послуг, логотип і фото, якщо вони є, та приклади сайтів, які вам подобаються. Все інше можемо зібрати разом на дзвінку.' },
         ],
@@ -83,10 +83,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Website development',
         cardTitle: 'Full-service website development',
         cardText: 'Corporate and multi-page websites: design, copy, setup and launch in one place.',
-        priceLabel: 'from $600',
-        metaTitle: 'Website Development from $600 | Leonforge',
+        priceLabel: 'from $500',
+        metaTitle: 'Website Development from $500 | Leonforge',
         metaDescription:
-          'Full-service website development: 2–3 design concepts to choose from, responsive layout, basic SEO and launch in 1–2 weeks. From $600.',
+          'Full-service website development: 2–3 design concepts, responsive layout and basic SEO included. From $500, usually from 2 weeks.',
         h1: 'Website development, done for you',
         lead:
           'From the first call to launch: design options to pick from, ready copy, mobile-friendly layout, basic SEO and analytics connected.',
@@ -104,11 +104,11 @@ export const SERVICES: Service[] = [
           { title: 'Enquiry form', text: 'Requests land in your inbox or Telegram, so nothing gets lost.' },
           { title: 'Analytics', text: 'Google Analytics 4, plus Tag Manager and the Meta pixel if you need them.' },
         ],
-        priceFrom: 'from $600',
-        timeline: '1–2 weeks',
+        priceFrom: 'from $500',
+        timeline: 'from 2 weeks, depends on scope',
         faq: [
-          { q: 'How much does a website cost?', a: 'A multi-page corporate site starts at $600. A single-page landing starts at $300. I give an exact figure after a short free call.' },
-          { q: 'How long does it take?', a: 'Usually 1–2 weeks for a corporate site, depending on the number of pages and how quickly you send materials and feedback.' },
+          { q: 'How much does a website cost?', a: 'A multi-page site starts at $500. A single-page landing starts at $300. Basic SEO is included at no extra cost. I give an exact figure after a short free call.' },
+          { q: 'How long does it take?', a: 'Usually from 2 weeks. It depends on scope: number of pages, features and how quickly you send materials and feedback.' },
           { q: 'Can I edit the texts myself later?', a: 'Yes. If you need it, I set up a simple editing panel so you can change text and images without a developer.' },
           { q: 'What do you need from me to start?', a: 'A description of your services, your logo and photos if you have them, and examples of sites you like. We can work out the rest on the call.' },
         ],
@@ -117,10 +117,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Tworzenie stron',
         cardTitle: 'Tworzenie stron internetowych',
         cardText: 'Strony firmowe i wielostronicowe serwisy: projekt, teksty, konfiguracja i uruchomienie.',
-        priceLabel: 'od $600',
-        metaTitle: 'Tworzenie stron internetowych od $600 | Leonforge',
+        priceLabel: 'od $500',
+        metaTitle: 'Tworzenie stron internetowych od $500 | Leonforge',
         metaDescription:
-          'Tworzenie stron internetowych pod klucz: 2–3 warianty projektu, wersja mobilna, podstawowe SEO i start w 1–2 tygodnie. Od $600.',
+          'Tworzenie stron internetowych pod klucz: 2–3 warianty projektu, wersja mobilna i podstawowe SEO w cenie. Od $500, zwykle od 2 tygodni.',
         h1: 'Tworzenie stron internetowych pod klucz',
         lead:
           'Od pierwszej rozmowy do uruchomienia: projekt do wyboru, gotowe teksty, wersja mobilna, podstawowe SEO i podłączona analityka.',
@@ -138,11 +138,11 @@ export const SERVICES: Service[] = [
           { title: 'Formularz kontaktowy', text: 'Zgłoszenia trafiają na Twoją pocztę lub Telegram — nic nie ginie.' },
           { title: 'Analityka', text: 'Google Analytics 4, a w razie potrzeby Tag Manager i piksel Meta.' },
         ],
-        priceFrom: 'od $600',
-        timeline: '1–2 tygodnie',
+        priceFrom: 'od $500',
+        timeline: 'od 2 tygodni, zależnie od zakresu',
         faq: [
-          { q: 'Ile kosztuje strona pod klucz?', a: 'Wielostronicowa strona firmowa — od $600. Prosty landing page — od $300. Dokładną kwotę podaję po krótkiej bezpłatnej rozmowie.' },
-          { q: 'Ile trwa realizacja?', a: 'Zwykle 1–2 tygodnie dla strony firmowej. Termin zależy od liczby podstron oraz tempa przekazywania materiałów.' },
+          { q: 'Ile kosztuje strona pod klucz?', a: 'Strona wielostronicowa — od $500. Prosty landing page — od $300. Podstawowe SEO jest w cenie. Dokładną kwotę podaję po krótkiej bezpłatnej rozmowie.' },
+          { q: 'Ile trwa realizacja?', a: 'Zwykle od 2 tygodni. Termin zależy od zakresu: liczby podstron, funkcji i tempa przekazywania materiałów.' },
           { q: 'Czy sam zmienię potem teksty?', a: 'Tak. W razie potrzeby konfiguruję prosty panel, w którym samodzielnie zmienisz teksty i zdjęcia.' },
           { q: 'Czego potrzebujesz na start?', a: 'Opisu usług, logo i zdjęć, jeśli są, oraz przykładów stron, które Ci się podobają. Resztę ustalimy na rozmowie.' },
         ],
@@ -157,12 +157,12 @@ export const SERVICES: Service[] = [
       uk: {
         navLabel: 'Лендінг',
         cardTitle: 'Лендінг під ключ',
-        cardText: 'Односторінковий сайт під одну послугу чи рекламну кампанію. Готовий за 3–5 днів.',
+        cardText: 'Односторінковий сайт під одну послугу чи рекламну кампанію. Базове SEO у вартості.',
         priceLabel: 'від $300',
-        metaTitle: 'Лендінг під ключ за 3–5 днів — від $300 | Leonforge',
+        metaTitle: 'Лендінг під ключ — від $300 | Leonforge',
         metaDescription:
-          'Розробка лендінгу під ключ: дизайн на вибір, форма заявок, адаптив і базове SEO. Готовий сайт за 3–5 днів, ціна від $300.',
-        h1: 'Лендінг під ключ за 3–5 днів',
+          'Розробка лендінгу під ключ: дизайн на вибір, форма заявок, адаптив і базове SEO у вартості. Ціна від $300, терміни — від тижня.',
+        h1: 'Лендінг під ключ від $300',
         lead:
           'Одна сторінка, яка робить одну справу — приводить заявки. Дизайн на вибір, форма, аналітика і готовність до реклами.',
         intro: [
@@ -180,7 +180,7 @@ export const SERVICES: Service[] = [
           { title: 'Базове SEO', text: 'Мета-теги, заголовки, sitemap, підключення Search Console.' },
         ],
         priceFrom: 'від $300',
-        timeline: '3–5 днів',
+        timeline: 'від тижня, залежить від обсягу',
         faq: [
           { q: 'Чому лендінг дешевший за сайт?', a: 'Це одна сторінка з однією метою — менше екранів, менше сценаріїв, менше роботи. Але якість дизайну і швидкість такі самі.' },
           { q: 'Чи можна потім розширити лендінг до сайту?', a: 'Так. Лендінг робиться на тій самій основі, тому додати сторінки послуг і блог можна будь-коли без переробки з нуля.' },
@@ -190,13 +190,13 @@ export const SERVICES: Service[] = [
       },
       en: {
         navLabel: 'Landing page',
-        cardTitle: 'Landing page in 3–5 days',
-        cardText: 'A single page built around one service or ad campaign. Live in 3–5 days.',
+        cardTitle: 'Landing page',
+        cardText: 'A single page built around one service or ad campaign. Basic SEO included.',
         priceLabel: 'from $300',
-        metaTitle: 'Landing Page in 3–5 Days from $300 | Leonforge',
+        metaTitle: 'Landing Page from $300 | Leonforge',
         metaDescription:
-          'Landing page development: design options, enquiry form, responsive layout and basic SEO. Live in 3–5 days, from $300.',
-        h1: 'Landing page in 3–5 days',
+          'Landing page development: design options, enquiry form, responsive layout and basic SEO included. From $300, usually from one week.',
+        h1: 'Landing page from $300',
         lead:
           'One page that does one job — bring enquiries. Design options, a working form, analytics and ad-ready setup.',
         intro: [
@@ -214,7 +214,7 @@ export const SERVICES: Service[] = [
           { title: 'Basic SEO', text: 'Meta tags, headings, sitemap and Search Console.' },
         ],
         priceFrom: 'from $300',
-        timeline: '3–5 days',
+        timeline: 'from one week, depends on scope',
         faq: [
           { q: 'Why is a landing page cheaper than a website?', a: 'It is one page with one goal — fewer screens and fewer scenarios. The design quality and speed are the same.' },
           { q: 'Can it grow into a full website later?', a: 'Yes. It is built on the same foundation, so service pages and a blog can be added at any time without starting over.' },
@@ -224,13 +224,13 @@ export const SERVICES: Service[] = [
       },
       pl: {
         navLabel: 'Landing page',
-        cardTitle: 'Landing page w 3–5 dni',
-        cardText: 'Jedna strona pod konkretną usługę lub kampanię reklamową. Gotowa w 3–5 dni.',
+        cardTitle: 'Landing page',
+        cardText: 'Jedna strona pod konkretną usługę lub kampanię reklamową. Podstawowe SEO w cenie.',
         priceLabel: 'od $300',
-        metaTitle: 'Landing page w 3–5 dni od $300 | Leonforge',
+        metaTitle: 'Landing page od $300 | Leonforge',
         metaDescription:
-          'Landing page pod klucz: projekt do wyboru, formularz, wersja mobilna i podstawowe SEO. Gotowy w 3–5 dni, od $300.',
-        h1: 'Landing page w 3–5 dni',
+          'Landing page pod klucz: projekt do wyboru, formularz, wersja mobilna i podstawowe SEO w cenie. Od $300, zwykle od tygodnia.',
+        h1: 'Landing page od $300',
         lead:
           'Jedna strona z jednym zadaniem — przynosić zapytania. Projekt do wyboru, formularz, analityka i gotowość na reklamę.',
         intro: [
@@ -248,7 +248,7 @@ export const SERVICES: Service[] = [
           { title: 'Podstawowe SEO', text: 'Meta tagi, nagłówki, sitemap i Search Console.' },
         ],
         priceFrom: 'od $300',
-        timeline: '3–5 dni',
+        timeline: 'od tygodnia, zależnie od zakresu',
         faq: [
           { q: 'Dlaczego landing jest tańszy niż strona?', a: 'To jedna strona z jednym celem — mniej ekranów i scenariuszy. Jakość projektu i szybkość pozostają takie same.' },
           { q: 'Czy można go później rozbudować?', a: 'Tak. Powstaje na tej samej podstawie, więc podstrony usług i blog można dodać w każdej chwili.' },
@@ -267,10 +267,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Інтернет-магазин',
         cardTitle: 'Створення інтернет-магазину',
         cardText: 'Каталог, кошик, оплата і доставка. Магазин, яким зручно керувати самому.',
-        priceLabel: 'від $900',
-        metaTitle: 'Створення інтернет-магазину під ключ — від $900 | Leonforge',
+        priceLabel: 'ціна за домовленістю',
+        metaTitle: 'Створення інтернет-магазину під ключ | Leonforge',
         metaDescription:
-          'Розробка інтернет-магазину: каталог товарів, кошик, онлайн-оплата, доставка та панель керування. Запуск від 2 тижнів, ціна від $900.',
+          'Розробка інтернет-магазину: каталог товарів, кошик, онлайн-оплата, доставка та панель керування. Запуск від 2 тижнів, ціна за домовленістю.',
         h1: 'Створення інтернет-магазину',
         lead:
           'Магазин із каталогом, кошиком, оплатою і зручною панеллю, у якій ви самі додаєте товари й бачите замовлення.',
@@ -288,7 +288,7 @@ export const SERVICES: Service[] = [
           { title: 'SEO для товарів', text: 'Зрозумілі адреси сторінок, унікальні мета-теги, розмітка Product для Google.' },
           { title: 'Аналітика продажів', text: 'Налаштування електронної торгівлі, щоб бачити, які товари й канали дають гроші.' },
         ],
-        priceFrom: 'від $900',
+        priceFrom: 'ціна за домовленістю',
         timeline: 'від 2 тижнів',
         faq: [
           { q: 'Скільки товарів можна додати?', a: 'Обмежень немає. Структуру каталогу продумуємо на старті, щоб і при 20, і при 2000 товарів навігація залишалась зрозумілою.' },
@@ -301,10 +301,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Online store',
         cardTitle: 'Online store development',
         cardText: 'Catalogue, cart, payments and delivery — plus an admin panel you can run yourself.',
-        priceLabel: 'from $900',
-        metaTitle: 'Online Store Development from $900 | Leonforge',
+        priceLabel: 'price on request',
+        metaTitle: 'Online Store Development | Leonforge',
         metaDescription:
-          'Online store development: product catalogue, cart, online payments, delivery options and an admin panel. Launch from 2 weeks, from $900.',
+          'Online store development: product catalogue, cart, online payments, delivery options and an admin panel. Launch from 2 weeks, price on request.',
         h1: 'Online store development',
         lead:
           'A store with a catalogue, cart, payments and a panel where you add products and see orders yourself.',
@@ -322,7 +322,7 @@ export const SERVICES: Service[] = [
           { title: 'SEO for products', text: 'Readable URLs, unique meta tags and Product markup for Google.' },
           { title: 'Sales analytics', text: 'Ecommerce tracking so you see which products and channels make money.' },
         ],
-        priceFrom: 'from $900',
+        priceFrom: 'price on request',
         timeline: 'from 2 weeks',
         faq: [
           { q: 'How many products can I have?', a: 'There is no limit. We plan the catalogue structure up front so navigation stays clear with 20 or 2,000 products.' },
@@ -335,10 +335,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Sklep internetowy',
         cardTitle: 'Sklep internetowy',
         cardText: 'Katalog, koszyk, płatności i dostawa oraz panel, którym zarządzasz samodzielnie.',
-        priceLabel: 'od $900',
-        metaTitle: 'Sklep internetowy pod klucz od $900 | Leonforge',
+        priceLabel: 'cena do uzgodnienia',
+        metaTitle: 'Sklep internetowy pod klucz | Leonforge',
         metaDescription:
-          'Tworzenie sklepu internetowego: katalog produktów, koszyk, płatności online, dostawa i panel administracyjny. Start od 2 tygodni, od $900.',
+          'Tworzenie sklepu internetowego: katalog produktów, koszyk, płatności online, dostawa i panel administracyjny. Start od 2 tygodni, cena do uzgodnienia.',
         h1: 'Tworzenie sklepu internetowego',
         lead:
           'Sklep z katalogiem, koszykiem, płatnościami i panelem, w którym sam dodajesz produkty i widzisz zamówienia.',
@@ -356,7 +356,7 @@ export const SERVICES: Service[] = [
           { title: 'SEO produktów', text: 'Czytelne adresy, unikalne meta tagi i znaczniki Product dla Google.' },
           { title: 'Analityka sprzedaży', text: 'Konfiguracja e-commerce, żeby widzieć, które produkty i kanały zarabiają.' },
         ],
-        priceFrom: 'od $900',
+        priceFrom: 'cena do uzgodnienia',
         timeline: 'od 2 tygodni',
         faq: [
           { q: 'Ile produktów mogę dodać?', a: 'Bez ograniczeń. Strukturę katalogu planujemy na starcie, żeby nawigacja była czytelna przy 20 i przy 2000 produktów.' },
@@ -376,10 +376,10 @@ export const SERVICES: Service[] = [
         navLabel: 'SEO',
         cardTitle: 'SEO-просування сайту',
         cardText: 'Технічна оптимізація, структура сторінок і тексти під запити, за якими вас шукають.',
-        priceLabel: 'від $200',
+        priceLabel: 'входить у вартість сайту',
         metaTitle: 'SEO-просування сайту — оптимізація під Google | Leonforge',
         metaDescription:
-          'SEO-просування: технічний аудит, збір запитів, оптимізація сторінок, sitemap і Search Console. Зрозумілі звіти без складних термінів. Від $200.',
+          'Базове SEO входить у вартість кожного сайту: мета-теги, структура, sitemap і Search Console. Окремий аудит чужого сайту — за домовленістю.',
         h1: 'SEO-просування сайту',
         lead:
           'Роблю так, щоб сайт знаходили в Google за запитами ваших клієнтів — від технічної бази до текстів на сторінках.',
@@ -397,7 +397,7 @@ export const SERVICES: Service[] = [
           { title: 'Технічна база', text: 'Sitemap.xml, robots.txt, hreflang для мовних версій, мікророзмітка.' },
           { title: 'Search Console', text: 'Підключення, відправлення карти сайту і зрозумілий звіт про динаміку.' },
         ],
-        priceFrom: 'від $200',
+        priceFrom: 'входить у вартість сайту',
         timeline: 'перші зміни — 4–8 тижнів',
         faq: [
           { q: 'Коли будуть результати?', a: 'Технічні правки Google бачить за кілька днів, а зростання позицій зазвичай помітно через 4–8 тижнів. Це нормальний строк для нового сайту.' },
@@ -410,10 +410,10 @@ export const SERVICES: Service[] = [
         navLabel: 'SEO',
         cardTitle: 'SEO for your website',
         cardText: 'Technical fixes, page structure and copy built around the searches your clients actually use.',
-        priceLabel: 'from $200',
+        priceLabel: 'included with every site',
         metaTitle: 'SEO Services — Get Found on Google | Leonforge',
         metaDescription:
-          'SEO services: technical audit, keyword research, on-page optimisation, sitemap and Search Console setup. Clear reports, no jargon. From $200.',
+          'Basic SEO is included with every website: meta tags, structure, sitemap and Search Console. A separate audit of an existing site is quoted on request.',
         h1: 'SEO for your website',
         lead:
           'Making your site findable in Google for the searches your customers use — from the technical base to the copy on each page.',
@@ -431,7 +431,7 @@ export const SERVICES: Service[] = [
           { title: 'Technical foundation', text: 'Sitemap.xml, robots.txt, hreflang for language versions, structured data.' },
           { title: 'Search Console', text: 'Setup, sitemap submission and a plain-language report on progress.' },
         ],
-        priceFrom: 'from $200',
+        priceFrom: 'included with every site',
         timeline: 'first movement in 4–8 weeks',
         faq: [
           { q: 'When will I see results?', a: 'Google picks up technical fixes within days, while ranking growth is usually visible after 4–8 weeks. That is a normal timeline for a young site.' },
@@ -444,10 +444,10 @@ export const SERVICES: Service[] = [
         navLabel: 'SEO',
         cardTitle: 'Pozycjonowanie SEO',
         cardText: 'Optymalizacja techniczna, struktura podstron i treści pod frazy, których używają klienci.',
-        priceLabel: 'od $200',
+        priceLabel: 'w cenie każdej strony',
         metaTitle: 'Pozycjonowanie SEO — widoczność w Google | Leonforge',
         metaDescription:
-          'Pozycjonowanie SEO: audyt techniczny, dobór fraz, optymalizacja podstron, sitemap i Search Console. Zrozumiałe raporty. Od $200.',
+          'Podstawowe SEO jest w cenie każdej strony: meta tagi, struktura, sitemap i Search Console. Osobny audyt istniejącej strony — wycena indywidualna.',
         h1: 'Pozycjonowanie SEO',
         lead:
           'Sprawiam, że strona jest znajdowana w Google po frazach Twoich klientów — od bazy technicznej po treści na podstronach.',
@@ -465,7 +465,7 @@ export const SERVICES: Service[] = [
           { title: 'Baza techniczna', text: 'Sitemap.xml, robots.txt, hreflang dla wersji językowych, dane strukturalne.' },
           { title: 'Search Console', text: 'Konfiguracja, przesłanie mapy strony i czytelny raport z postępów.' },
         ],
-        priceFrom: 'od $200',
+        priceFrom: 'w cenie każdej strony',
         timeline: 'pierwsze zmiany w 4–8 tygodni',
         faq: [
           { q: 'Kiedy będą efekty?', a: 'Poprawki techniczne Google widzi w kilka dni, a wzrost pozycji zwykle po 4–8 tygodniach. To normalny termin dla młodej strony.' },
@@ -485,10 +485,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Реклама',
         cardTitle: 'Реклама Google, Facebook та Instagram',
         cardText: 'Базове налаштування кампаній, аналітика і зрозуміле пояснення, куди йдуть гроші.',
-        priceLabel: 'від $150',
+        priceLabel: 'ціна за домовленістю',
         metaTitle: 'Налаштування реклами Google Ads та Facebook | Leonforge',
         metaDescription:
-          'Базове налаштування реклами: Google Ads, Facebook та Instagram, аналітика і цілі. Запуск перших кампаній із зрозумілими звітами. Від $150.',
+          'Базове налаштування реклами: Google Ads, Facebook та Instagram, аналітика і цілі. Ціна залежить від обсягу робіт і рахується після розмови.',
         h1: 'Налаштування реклами Google, Facebook та Instagram',
         lead:
           'Запускаю перші кампанії, підключаю аналітику і пояснюю простими словами, скільки коштує заявка і що з цим робити.',
@@ -506,10 +506,10 @@ export const SERVICES: Service[] = [
           { title: 'Тестовий запуск', text: 'Кілька варіантів оголошень, щоб побачити, що працює краще на ваших грошах.' },
           { title: 'Пояснення звітів', text: 'Розбираємо разом, скільки коштує клік і заявка та де можна зекономити.' },
         ],
-        priceFrom: 'від $150',
-        timeline: '2–4 дні на запуск',
+        priceFrom: 'ціна за домовленістю',
+        timeline: 'залежить від обсягу',
         faq: [
-          { q: 'Який бюджет потрібен на старт?', a: 'Для перших тестів зазвичай вистачає $150–300 на місяць рекламного бюджету. Це окремо від вартості налаштування.' },
+          { q: 'Який бюджет потрібен на старт?', a: 'Рекламний бюджет ви платите напряму Google або Meta. Вартість самого налаштування залежить від обсягу робіт — рахую після короткої розмови.' },
           { q: 'Google чи Facebook — що обрати?', a: 'Google краще працює, коли послугу вже шукають. Facebook та Instagram — коли попит треба створити. Часто починаємо з одного і додаємо другий.' },
           { q: 'Ви ведете рекламу постійно?', a: 'Основна послуга — налаштування і запуск із поясненням. Регулярне ведення можливе окремо, за домовленістю.' },
           { q: 'Що як реклама не спрацює?', a: 'Дивимось цифри: дорогий клік, слабке оголошення чи сторінка, яка не переконує. Перші правки після запуску роблю без доплат.' },
@@ -519,10 +519,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Ads',
         cardTitle: 'Google, Facebook and Instagram ads',
         cardText: 'Campaign setup, analytics and a plain explanation of where your money goes.',
-        priceLabel: 'from $150',
+        priceLabel: 'price on request',
         metaTitle: 'Google Ads and Facebook Ads Setup | Leonforge',
         metaDescription:
-          'Ad campaign setup: Google Ads, Facebook and Instagram, analytics and conversion goals. First campaigns launched with reports you can read. From $150.',
+          'Ad campaign setup: Google Ads, Facebook and Instagram, analytics and conversion goals. Price depends on scope and is quoted after a short call.',
         h1: 'Google, Facebook and Instagram ads setup',
         lead:
           'I launch your first campaigns, connect analytics and explain in plain words what an enquiry costs and what to do about it.',
@@ -540,10 +540,10 @@ export const SERVICES: Service[] = [
           { title: 'Test launch', text: 'Several ad variants so you can see what works on your budget.' },
           { title: 'Report walkthrough', text: 'We go through cost per click and per enquiry, and where you can save.' },
         ],
-        priceFrom: 'from $150',
-        timeline: '2–4 days to launch',
+        priceFrom: 'price on request',
+        timeline: 'depends on scope',
         faq: [
-          { q: 'What budget do I need to start?', a: 'For first tests, $150–300 per month of ad spend is usually enough. That is separate from the setup fee.' },
+          { q: 'What budget do I need to start?', a: 'You pay the ad budget directly to Google or Meta. The setup fee depends on the scope of work and is quoted after a short call.' },
           { q: 'Google or Facebook?', a: 'Google works better when people already search for your service. Facebook and Instagram work when demand has to be created. We often start with one and add the other.' },
           { q: 'Do you manage campaigns long term?', a: 'The core service is setup, launch and explanation. Ongoing management is possible separately by agreement.' },
           { q: 'What if the ads do not work?', a: 'We look at the numbers: expensive clicks, weak ad copy or a page that does not convince. The first fixes after launch are included.' },
@@ -553,10 +553,10 @@ export const SERVICES: Service[] = [
         navLabel: 'Reklama',
         cardTitle: 'Reklama Google, Facebook i Instagram',
         cardText: 'Konfiguracja kampanii, analityka i jasne wyjaśnienie, na co idą pieniądze.',
-        priceLabel: 'od $150',
+        priceLabel: 'cena do uzgodnienia',
         metaTitle: 'Konfiguracja reklam Google Ads i Facebook | Leonforge',
         metaDescription:
-          'Konfiguracja reklam: Google Ads, Facebook i Instagram, analityka i cele konwersji. Uruchomienie pierwszych kampanii i czytelne raporty. Od $150.',
+          'Konfiguracja reklam: Google Ads, Facebook i Instagram, analityka i cele konwersji. Cena zależy od zakresu i jest wyceniana po rozmowie.',
         h1: 'Konfiguracja reklam Google, Facebook i Instagram',
         lead:
           'Uruchamiam pierwsze kampanie, podłączam analitykę i tłumaczę prostym językiem, ile kosztuje zapytanie i co z tym zrobić.',
@@ -574,10 +574,10 @@ export const SERVICES: Service[] = [
           { title: 'Start testowy', text: 'Kilka wariantów reklam, żeby zobaczyć, co działa na Twoim budżecie.' },
           { title: 'Omówienie raportów', text: 'Analizujemy koszt kliknięcia i zapytania oraz miejsca na oszczędności.' },
         ],
-        priceFrom: 'od $150',
-        timeline: '2–4 dni do startu',
+        priceFrom: 'cena do uzgodnienia',
+        timeline: 'zależnie od zakresu',
         faq: [
-          { q: 'Jaki budżet na start?', a: 'Na pierwsze testy zwykle wystarcza $150–300 miesięcznie budżetu reklamowego. To osobno od kosztu konfiguracji.' },
+          { q: 'Jaki budżet na start?', a: 'Budżet reklamowy płacisz bezpośrednio Google lub Meta. Koszt samej konfiguracji zależy od zakresu i wyceniam go po krótkiej rozmowie.' },
           { q: 'Google czy Facebook?', a: 'Google działa lepiej, gdy usługi już się szuka. Facebook i Instagram — gdy popyt trzeba stworzyć. Często zaczynamy od jednego i dodajemy drugi.' },
           { q: 'Czy prowadzisz kampanie na stałe?', a: 'Podstawowa usługa to konfiguracja, start i wyjaśnienie. Stałe prowadzenie jest możliwe osobno.' },
           { q: 'A jeśli reklama nie zadziała?', a: 'Sprawdzamy liczby: drogie kliknięcia, słaba reklama albo strona, która nie przekonuje. Pierwsze poprawki po starcie są w cenie.' },

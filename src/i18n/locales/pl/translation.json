@@ -12,7 +12,7 @@
     "title4": "szybko i niedrogo",
     "price": "od $300",
     "valueProposition": "Strona + SEO + Reklama",
-    "description": "Tworzę nowoczesne strony dla małych firm: kilka wariantów designu do wyboru, konfiguracja SEO i pomoc w uruchomieniu reklam w Google i social media. Gotowe w 3–5 dni, od $300.",
+    "description": "Tworzę nowoczesne strony dla małych firm: kilka wariantów designu do wyboru, konfiguracja SEO i pomoc w uruchomieniu reklam w Google i na Facebooku. Landing od $300, strona wielostronicowa od $500.",
     "consultation": "Umów konsultację",
     "viewWork": "Zobacz prace"
   },
@@ -152,7 +152,7 @@
     "description": "Prosto — dlaczego ze mną dostaniesz nowoczesną stronę szybciej i taniej bez utraty jakości.",
     "benefit1": {
       "title": "Szybko",
-      "description": "Strona gotowa w 3–5 dni, a nie w miesiące. Wcześniej zaczynasz zdobywać klientów."
+      "description": "Strona gotowa w tygodnie, a nie miesiące. Wcześniej zaczynasz zdobywać klientów."
     },
     "benefit2": {
       "title": "Kilka designów do wyboru",
@@ -221,9 +221,9 @@
     "title2": "pytania",
     "description": "Odpowiedzi na pytania, które dostaję najczęściej — o ceny, terminy, design, SEO i reklamę.",
     "question1": "Ile kosztuje strona?",
-    "answer1": "Prosty landing — od $300. Strona wielostronicowa — od $600. Dokładną cenę powiem po krótkiej darmowej rozmowie, gdy zrozumiem zadanie.",
+    "answer1": "Landing — od $300. Strona wielostronicowa — od $500. Podstawowe SEO jest w cenie. Dokładną kwotę powiem po krótkiej darmowej rozmowie, gdy zrozumiem zadanie.",
     "question2": "Ile to trwa?",
-    "answer2": "Pracuję szybko: prosty landing — 3–5 dni, strona firmowa — 1–2 tygodnie. Zależy od liczby podstron i funkcji.",
+    "answer2": "Landing zajmuje zwykle od tygodnia, strona wielostronicowa — od dwóch. Dokładny termin zależy od zakresu prac i tempa przekazywania materiałów.",
     "question3": "Dostanę kilka wariantów designu?",
     "answer3": "Tak. Przygotowuję 2–3 koncepcje, żebyś nie był zamknięty w jednej wersji. Wybrany design dopracowujemy razem.",
     "question4": "Pomagasz z SEO?",
