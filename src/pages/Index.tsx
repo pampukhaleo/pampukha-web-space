@@ -152,7 +152,7 @@ const Index = ({ lang = DEFAULT_LANG }: { lang?: Lang }) => {
                       </p>
                       <span className="text-sm text-muted-foreground">{c.priceLabel}</span>
                       <span className="mt-3 inline-flex items-center gap-1 text-sm text-primary">
-                        {ui.allServices}
+                        {c.navLabel}
                         <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                       </span>
                     </Link>
