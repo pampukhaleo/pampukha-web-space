@@ -18,23 +18,22 @@ export const PageBreadcrumbs = ({ items }: PageBreadcrumbsProps) => (
     <nav aria-label="Breadcrumb" className="py-4">
       <ol className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
         {items.map((item, index) => (
-          <React.Fragment key={`${item.label}-${index}`}>
+          <li key={`${item.label}-${index}`} className="flex items-center gap-2">
             {index > 0 && (
               <ChevronRight size={14} className="text-muted-foreground/40" aria-hidden="true" />
             )}
-            <li>
-              {item.href && index < items.length - 1 ? (
-                <Link to={item.href} className="hover:text-primary transition-colors">
-                  {item.label}
-                </Link>
-              ) : (
-                <span className="text-foreground" aria-current="page">
-                  {item.label}
-                </span>
-              )}
-            </li>
-          </React.Fragment>
+            {item.href && index < items.length - 1 ? (
+              <Link to={item.href} className="hover:text-primary transition-colors">
+                {item.label}
+              </Link>
+            ) : (
+              <span className="text-foreground" aria-current="page">
+                {item.label}
+              </span>
+            )}
+          </li>
         ))}
+
       </ol>
     </nav>
     <JsonLd
