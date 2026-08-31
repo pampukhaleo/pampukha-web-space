@@ -34,20 +34,20 @@ const META: Record<Lang, { title: string; description: string; keywords: string 
   uk: {
     title: 'Створення сайтів під ключ | SEO та реклама — Leonforge',
     description:
-      'Сучасні сайти під ключ: кілька варіантів дизайну, SEO-оптимізація та реклама Google і Facebook. Готовий сайт за 3–5 днів від $300.',
+      'Сучасні сайти під ключ: кілька варіантів дизайну, SEO-оптимізація та реклама Google і Facebook. Лендінг від $300, сайт для бізнесу від $500.',
     keywords:
       'створення сайтів, розробка сайтів, сайт під ключ, лендінг, інтернет-магазин, SEO, Google Ads, Facebook Ads, Київ',
   },
   en: {
     title: 'Website development, SEO and ads setup — Leonforge',
     description:
-      'Modern business websites: several design options, SEO optimisation and Google/Facebook ads setup. Live in 3–5 days from $300.',
+      'Modern business websites: several design options, SEO optimisation and Google/Facebook ads setup. Landing from $300, business site from $500.',
     keywords: 'website development, landing page, online store, SEO, Google Ads, Facebook Ads',
   },
   pl: {
     title: 'Tworzenie stron internetowych, SEO i reklama — Leonforge',
     description:
-      'Nowoczesne strony dla firm: kilka wariantów projektu, optymalizacja SEO oraz reklama Google i Facebook. Start w 3–5 dni od $300.',
+      'Nowoczesne strony dla firm: kilka wariantów projektu, optymalizacja SEO oraz reklama Google i Facebook. Landing od $300, strona firmowa od $500.',
     keywords: 'tworzenie stron internetowych, landing page, sklep internetowy, SEO, Google Ads, Facebook Ads',
   },
 };
@@ -179,7 +179,7 @@ const Index = ({ lang = DEFAULT_LANG }: { lang?: Lang }) => {
             <div className="container mx-auto max-w-5xl">
               <h2 className="text-2xl md:text-3xl font-semibold mb-3">{ui.pricingTeaserTitle}</h2>
               <p className="mb-10 text-muted-foreground max-w-2xl">{ui.pricingTeaserLead}</p>
-              <div className="grid gap-4 md:grid-cols-3">
+              <div className="grid gap-4 md:grid-cols-2">
                 {PRICING_PLANS.map((plan) => {
                   const p = plan.content[lang];
                   return (

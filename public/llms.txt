@@ -6,8 +6,8 @@ Leonforge — це особистий бренд веб-розробника Л�
 
 ## Послуги (uk)
 
-- [Створення сайтів під ключ](/uk/poslugy/stvorennya-saytiv): корпоративні та бізнес-сайти, від $600, 5–10 днів.
-- [Лендінг](/uk/poslugy/landing-pid-klyuch): односторінковий сайт під послугу чи рекламу, від $300, 3–5 днів.
+- [Створення сайтів під ключ](/uk/poslugy/stvorennya-saytiv): корпоративні та бізнес-сайти, від $500, від 2 тижнів.
+- [Лендінг](/uk/poslugy/landing-pid-klyuch): односторінковий сайт під послугу чи рекламу, $300, від 1 тижня.
 - [Інтернет-магазин](/uk/poslugy/internet-magazyn): каталог, кошик, оплата й доставка.
 - [SEO-оптимізація](/uk/poslugy/seo-prosuvannya): технічне SEO, структура, тексти, Search Console.
 - [Налаштування реклами](/uk/poslugy/google-ads-reklama): Google Ads і Facebook/Instagram Ads.
@@ -31,7 +31,7 @@ Leonforge — це особистий бренд веб-розробника Л�
 ## Ключові сторінки
 
 - [Головна](/uk): позиціонування, портфоліо, процес роботи, гарантії.
-- [Ціни](/uk/tsiny) · [Pricing](/en/pricing) · [Cennik](/pl/cennik): лендінг від $300, сайт для бізнесу від $600, повний пакет від $900.
+- [Ціни](/uk/tsiny) · [Pricing](/en/pricing) · [Cennik](/pl/cennik): лендінг $300, сайт для бізнесу $500, додаткові послуги (реклама, аналітика) — за домовленістю.
 - [Контакти](/uk/kontakty) · [Contact](/en/contact) · [Kontakt](/pl/kontakt): Telegram @leonforge, форма заявки.
 
 ## Кейси
