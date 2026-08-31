@@ -12,7 +12,9 @@
     "predeploy": "npm run build",
     "clean": "rm -rf dist",
     "build": "vite build",
-    "deploy": "npm run clean && vite build && cp dist/index.html dist/404.html && gh-pages -d dist"
+    "deploy": "npm run clean && vite build && cp dist/index.html dist/404.html && gh-pages -d dist",
+    "predev": "bun scripts/generate-routes.ts",
+    "prebuild": "bun scripts/generate-routes.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
