@@ -7,7 +7,7 @@ const ContactSection = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="contact" className="py-16 md:py-24 px-4 bg-muted/30" role="main">
+    <section id="contact" className="py-16 md:py-24 px-4 bg-muted/30">
       <div className="container mx-auto">
         <header className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
@@ -18,7 +18,7 @@ const ContactSection = () => {
           </p>
         </header>
 
-        <div role="region" aria-label="Форма обратной связи">
+        <div role="region" aria-label={t('contact.title1')}>
           <ContactForm />
         </div>
       </div>
