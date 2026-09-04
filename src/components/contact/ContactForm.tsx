@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -7,165 +8,245 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { z } from 'zod';
+import { isLang, type Lang } from '@/lib/i18n-routes';
 
-// Validation schema
-const contactFormSchema = z.object({
-  name: z.string()
-    .trim()
-    .min(2, { message: "Ім'я має містити мінімум 2 символи" })
-    .max(100, { message: "Ім'я має бути менше 100 символів" }),
-  email: z.string()
-    .trim()
-    .email({ message: "Невірний формат email" })
-    .max(255, { message: "Email має бути менше 255 символів" }),
-  phone: z.string()
-    .trim()
-    .min(1, { message: "Телефон обов'язковий" })
-    .regex(/^[\d\s+\-()]+$/, { message: "Телефон може містити тільки цифри, +, -, пробіли, дужки" })
-    .min(10, { message: "Телефон має містити мінімум 10 символів" })
-    .max(20, { message: "Телефон має бути менше 20 символів" }),
-  message: z.string()
-    .trim()
-    .min(10, { message: "Повідомлення має містити мінімум 10 символів" })
-    .max(1000, { message: "Повідомлення має бути менше 1000 символів" })
-});
+interface FormCopy {
+  heading: string;
+  name: string;
+  namePlaceholder: string;
+  email: string;
+  emailPlaceholder: string;
+  phone: string;
+  phonePlaceholder: string;
+  message: string;
+  messagePlaceholder: string;
+  submit: string;
+  submitting: string;
+  privacy: string;
+  localMode: string;
+  successTitle: string;
+  successText: string;
+  errorTitle: string;
+  errorText: string;
+  genericError: string;
+  localDialogTitle: string;
+  localDialogText: string;
+  errors: {
+    nameMin: string;
+    nameMax: string;
+    email: string;
+    emailMax: string;
+    phoneRequired: string;
+    phoneFormat: string;
+    phoneMin: string;
+    phoneMax: string;
+    messageMin: string;
+    messageMax: string;
+  };
+}
+
+const COPY: Record<Lang, FormCopy> = {
+  uk: {
+    heading: 'Замовити консультацію',
+    name: "Ім'я",
+    namePlaceholder: "Введіть ваше ім'я",
+    email: 'Email',
+    emailPlaceholder: 'ваш@email.com',
+    phone: 'Телефон',
+    phonePlaceholder: '+380 ХХ ХХХ ХХХХ',
+    message: 'Повідомлення',
+    messagePlaceholder: 'Опишіть ваш проєкт чи побажання...',
+    submit: 'Відправити запит',
+    submitting: 'Відправляється...',
+    privacy: 'Надсилаючи форму, ви погоджуєтесь з політикою конфіденційності.',
+    localMode: 'Локальне середовище: форма працює в режимі симуляції без надсилання на сервер.',
+    successTitle: 'Повідомлення надіслано!',
+    successText: "Дякую за звернення — я зв'яжуся з вами найближчим часом.",
+    errorTitle: 'Помилка!',
+    errorText: 'Щось пішло не так. Спробуйте ще раз або напишіть на email.',
+    genericError: 'Щось пішло не так',
+    localDialogTitle: 'Форму відправлено (локальне середовище)',
+    localDialogText: 'У реальному середовищі форма надсилає повідомлення в Telegram. Тут показано дані, які було б надіслано.',
+    errors: {
+      nameMin: "Ім'я має містити мінімум 2 символи",
+      nameMax: "Ім'я має бути коротшим за 100 символів",
+      email: 'Невірний формат email',
+      emailMax: 'Email має бути коротшим за 255 символів',
+      phoneRequired: "Телефон обов'язковий",
+      phoneFormat: 'Телефон може містити тільки цифри, +, -, пробіли, дужки',
+      phoneMin: 'Телефон має містити мінімум 10 символів',
+      phoneMax: 'Телефон має бути коротшим за 20 символів',
+      messageMin: 'Повідомлення має містити мінімум 10 символів',
+      messageMax: 'Повідомлення має бути коротшим за 1000 символів',
+    },
+  },
+  en: {
+    heading: 'Request a consultation',
+    name: 'Name',
+    namePlaceholder: 'Enter your name',
+    email: 'Email',
+    emailPlaceholder: 'you@email.com',
+    phone: 'Phone',
+    phonePlaceholder: '+44 XXXX XXX XXX',
+    message: 'Message',
+    messagePlaceholder: 'Describe your project or what you need...',
+    submit: 'Send request',
+    submitting: 'Sending...',
+    privacy: 'By submitting this form you agree to the privacy policy.',
+    localMode: 'Local environment: the form runs in simulation mode and does not send anything.',
+    successTitle: 'Message sent!',
+    successText: 'Thank you — I will get back to you shortly.',
+    errorTitle: 'Error',
+    errorText: 'Something went wrong. Please try again or send an email.',
+    genericError: 'Something went wrong',
+    localDialogTitle: 'Form submitted (local environment)',
+    localDialogText: 'In production this form sends a Telegram message. Below is the data that would be sent.',
+    errors: {
+      nameMin: 'Name must be at least 2 characters',
+      nameMax: 'Name must be under 100 characters',
+      email: 'Invalid email format',
+      emailMax: 'Email must be under 255 characters',
+      phoneRequired: 'Phone is required',
+      phoneFormat: 'Phone may contain only digits, +, -, spaces and brackets',
+      phoneMin: 'Phone must be at least 10 characters',
+      phoneMax: 'Phone must be under 20 characters',
+      messageMin: 'Message must be at least 10 characters',
+      messageMax: 'Message must be under 1000 characters',
+    },
+  },
+  pl: {
+    heading: 'Zamów konsultację',
+    name: 'Imię',
+    namePlaceholder: 'Wpisz swoje imię',
+    email: 'Email',
+    emailPlaceholder: 'twoj@email.com',
+    phone: 'Telefon',
+    phonePlaceholder: '+48 XXX XXX XXX',
+    message: 'Wiadomość',
+    messagePlaceholder: 'Opisz swój projekt lub potrzeby...',
+    submit: 'Wyślij zapytanie',
+    submitting: 'Wysyłanie...',
+    privacy: 'Wysyłając formularz, akceptujesz politykę prywatności.',
+    localMode: 'Środowisko lokalne: formularz działa w trybie symulacji i nic nie wysyła.',
+    successTitle: 'Wiadomość wysłana!',
+    successText: 'Dziękuję — skontaktuję się z Tobą wkrótce.',
+    errorTitle: 'Błąd',
+    errorText: 'Coś poszło nie tak. Spróbuj ponownie lub napisz e-mail.',
+    genericError: 'Coś poszło nie tak',
+    localDialogTitle: 'Formularz wysłany (środowisko lokalne)',
+    localDialogText: 'W wersji produkcyjnej formularz wysyła wiadomość na Telegram. Poniżej dane, które zostałyby wysłane.',
+    errors: {
+      nameMin: 'Imię musi mieć co najmniej 2 znaki',
+      nameMax: 'Imię musi mieć mniej niż 100 znaków',
+      email: 'Nieprawidłowy format e-mail',
+      emailMax: 'E-mail musi mieć mniej niż 255 znaków',
+      phoneRequired: 'Telefon jest wymagany',
+      phoneFormat: 'Telefon może zawierać tylko cyfry, +, -, spacje i nawiasy',
+      phoneMin: 'Telefon musi mieć co najmniej 10 znaków',
+      phoneMax: 'Telefon musi mieć mniej niż 20 znaków',
+      messageMin: 'Wiadomość musi mieć co najmniej 10 znaków',
+      messageMax: 'Wiadomość musi mieć mniej niż 1000 znaków',
+    },
+  },
+};
+
+const buildSchema = (e: FormCopy['errors']) =>
+  z.object({
+    name: z.string().trim().min(2, { message: e.nameMin }).max(100, { message: e.nameMax }),
+    email: z.string().trim().email({ message: e.email }).max(255, { message: e.emailMax }),
+    phone: z
+      .string()
+      .trim()
+      .min(1, { message: e.phoneRequired })
+      .regex(/^[\d\s+\-()]+$/, { message: e.phoneFormat })
+      .min(10, { message: e.phoneMin })
+      .max(20, { message: e.phoneMax }),
+    message: z.string().trim().min(10, { message: e.messageMin }).max(1000, { message: e.messageMax }),
+  });
+
 export const ContactForm = () => {
   const { toast } = useToast();
+  const { i18n } = useTranslation();
+  const lang: Lang = isLang(i18n.language?.slice(0, 2)) ? (i18n.language.slice(0, 2) as Lang) : 'uk';
+  const c = COPY[lang];
+  const schema = useMemo(() => buildSchema(c.errors), [c]);
+
   const submitLockRef = useRef(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [showLocalDevDialog, setShowLocalDevDialog] = useState(false);
   const [formSubmittedLocally, setFormSubmittedLocally] = useState(false);
 
-  // Detect if we're in local development
   const isLocalDevelopment = window.location.hostname === 'localhost';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
     if (error) setError('');
-    // Clear field error when user types
     if (fieldErrors[name]) {
-      setFieldErrors(prev => ({ ...prev, [name]: '' }));
+      setFieldErrors((prev) => ({ ...prev, [name]: '' }));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Захист від подвійної відправки
-    if (submitLockRef.current) {
-      return;
-    }
-    
-    // Validate form data
-    const validationResult = contactFormSchema.safeParse(formData);
-    
+    if (submitLockRef.current) return;
+
+    const validationResult = schema.safeParse(formData);
     if (!validationResult.success) {
       const errors: Record<string, string> = {};
       validationResult.error.errors.forEach((err) => {
-        if (err.path[0]) {
-          errors[err.path[0].toString()] = err.message;
-        }
+        if (err.path[0]) errors[err.path[0].toString()] = err.message;
       });
       setFieldErrors(errors);
       return;
     }
-    
+
     submitLockRef.current = true;
     setIsSubmitting(true);
     setError('');
     setFieldErrors({});
 
-    // For local development, show dialog with form data instead of API call
     if (isLocalDevelopment) {
       setFormSubmittedLocally(true);
       setShowLocalDevDialog(true);
       setIsSubmitting(false);
-      
-      // Reset form in local development
+      submitLockRef.current = false;
       setFormData({ name: '', email: '', phone: '', message: '' });
       return;
     }
 
     try {
-      // Create the text for Telegram message
-      const telegramText = `
-🆕 *Нова заявка з сайту Leonforge*:
-
-👤 *Ім'я:* ${formData.name}
-📧 *Email:* ${formData.email}
-📱 *Телефон:* ${formData.phone || 'Не вказано'}
-📝 *Повідомлення:*
-${formData.message}
-      `;
-
       const apiUrl = 'https://fwwpidktaanowpaihgzy.supabase.co/functions/v1/swift-responder';
-      
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, lang }),
       });
 
-      // Handle different response types
       let data;
       const contentType = response.headers.get('content-type');
       if (contentType && contentType.includes('application/json')) {
         data = await response.json();
       } else {
-        // Handle non-JSON responses gracefully
         const textResponse = await response.text();
-        
         if (!response.ok) {
           throw new Error(`Server returned ${response.status}: ${textResponse || response.statusText}`);
         }
-        
         data = { success: response.ok };
       }
 
       if (!response.ok) {
-        throw new Error(data.error || `Помилка сервера: ${response.status}`);
+        throw new Error(data.error || `Error ${response.status}`);
       }
 
-      // Show success message
-      toast({
-        title: "Повідомлення надіслано!",
-        description: "Дякую за звернення — я зв'яжуся з вами найближчим часом.",
-      });
-
-
-
-      // Reset form
+      toast({ title: c.successTitle, description: c.successText });
       setFormData({ name: '', email: '', phone: '', message: '' });
-    } catch (error) {
-      
-      // Provide a more helpful error message in development
-      let errorMessage;
-      if (error instanceof Error) {
-        errorMessage = error.message;
-        
-        // Check for 404 errors which are common in local development
-        if (errorMessage.includes('404') || errorMessage.includes('Not Found')) {
-          errorMessage = 'API endpoint не знайдено. У локальному середовищі ця функція недоступна без налаштованого сервера.';
-        }
-      } else {
-        errorMessage = 'Щось пішло не так';
-      }
-      
-      setError(errorMessage);
-      
-      toast({
-        title: "Помилка!",
-        description: "Щось пішло не так. Спробуйте ще раз або напишіть на email.",
-      });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : c.genericError);
+      toast({ title: c.errorTitle, description: c.errorText });
     } finally {
       submitLockRef.current = false;
       setIsSubmitting(false);
@@ -175,48 +256,43 @@ ${formData.message}
   return (
     <>
       <Card className="bg-card border border-border shadow-md text-card-foreground max-w-2xl mx-auto w-full">
-      <CardContent className="p-8">
-          <h3 className="text-2xl font-bold mb-6">Замовити консультацію</h3>
+        <CardContent className="p-8">
+          <h3 className="text-2xl font-bold mb-6">{c.heading}</h3>
 
           {error && (
-            <Alert className="mb-6 border-red-300 bg-red-50 dark:bg-red-900/10">
-              <AlertDescription className="text-red-800 dark:text-red-200">
-                {error}
-              </AlertDescription>
+            <Alert className="mb-6 border-destructive/40 bg-destructive/10">
+              <AlertDescription className="text-destructive">{error}</AlertDescription>
             </Alert>
           )}
 
           {isLocalDevelopment && !error && (
-            <Alert className="mb-6 border-amber-300 bg-amber-50 dark:bg-amber-900/10">
-              <AlertDescription className="text-amber-800 dark:text-amber-200">
-                Локальне середовище: форма працює в режимі симуляції без надсилання на сервер.
-              </AlertDescription>
+            <Alert className="mb-6 border-border bg-muted/40">
+              <AlertDescription className="text-muted-foreground">{c.localMode}</AlertDescription>
             </Alert>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6" noValidate>
             <div>
               <label htmlFor="name" className="block mb-2 font-medium">
-                Ім'я
+                {c.name}
               </label>
               <Input
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Введіть ваше ім'я"
+                placeholder={c.namePlaceholder}
+                autoComplete="name"
                 required
                 className="w-full p-3 rounded-lg bg-input text-foreground border border-border"
               />
-              {fieldErrors.name && (
-                <p className="text-red-500 text-sm mt-1">{fieldErrors.name}</p>
-              )}
+              {fieldErrors.name && <p className="text-destructive text-sm mt-1">{fieldErrors.name}</p>}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="email" className="block mb-2 font-medium">
-                  Email
+                  {c.email}
                 </label>
                 <Input
                   id="email"
@@ -224,85 +300,78 @@ ${formData.message}
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="ваш@email.com"
+                  placeholder={c.emailPlaceholder}
+                  autoComplete="email"
                   required
                   className="w-full p-3 rounded-lg bg-input text-foreground border border-border"
                 />
-                {fieldErrors.email && (
-                  <p className="text-red-500 text-sm mt-1">{fieldErrors.email}</p>
-                )}
+                {fieldErrors.email && <p className="text-destructive text-sm mt-1">{fieldErrors.email}</p>}
               </div>
               <div>
                 <label htmlFor="phone" className="block mb-2 font-medium">
-                  Телефон
+                  {c.phone}
                 </label>
                 <Input
                   id="phone"
                   name="phone"
+                  type="tel"
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  placeholder="+380 ХХ ХХХ ХХХХ"
+                  placeholder={c.phonePlaceholder}
+                  autoComplete="tel"
                   className="w-full p-3 rounded-lg bg-input text-foreground border border-border"
                 />
-                {fieldErrors.phone && (
-                  <p className="text-red-500 text-sm mt-1">{fieldErrors.phone}</p>
-                )}
+                {fieldErrors.phone && <p className="text-destructive text-sm mt-1">{fieldErrors.phone}</p>}
               </div>
             </div>
 
             <div>
               <label htmlFor="message" className="block mb-2 font-medium">
-                Повідомлення
+                {c.message}
               </label>
               <Textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Опишіть ваш проект чи побажання..."
+                placeholder={c.messagePlaceholder}
                 rows={5}
                 required
                 className="w-full p-3 rounded-lg resize-none bg-input text-foreground border border-border"
               />
-              {fieldErrors.message && (
-                <p className="text-red-500 text-sm mt-1">{fieldErrors.message}</p>
-              )}
+              {fieldErrors.message && <p className="text-destructive text-sm mt-1">{fieldErrors.message}</p>}
             </div>
 
-            <Button
-              type="submit"
-              className="w-full bg-primary hover:bg-primary/90 py-6 text-lg"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Відправляється...' : 'Відправити запит'}
+            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 py-6 text-lg" disabled={isSubmitting}>
+              {isSubmitting ? c.submitting : c.submit}
             </Button>
 
-            <p className="text-sm text-muted-foreground text-center">
-              Надсилаючи форму, ви погоджуєтесь з нашою політикою конфіденційності.
-            </p>
+            <p className="text-sm text-muted-foreground text-center">{c.privacy}</p>
           </form>
         </CardContent>
       </Card>
 
-      {/* Local Development Dialog - Shows form data for testing */}
       <Dialog open={showLocalDevDialog} onOpenChange={setShowLocalDevDialog}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Форму відправлено (Локальне середовище)</DialogTitle>
-            <DialogDescription>
-              У реальному середовищі ця форма надсилає повідомлення через Telegram. В локальному середовищі ви можете побачити дані, які було б надіслано.
-            </DialogDescription>
+            <DialogTitle>{c.localDialogTitle}</DialogTitle>
+            <DialogDescription>{c.localDialogText}</DialogDescription>
           </DialogHeader>
           <div className="mt-4 space-y-3 text-sm">
-            <p><strong>Ім'я:</strong> {formSubmittedLocally ? formData.name || '(було очищено)' : ''}</p>
-            <p><strong>Email:</strong> {formSubmittedLocally ? formData.email || '(було очищено)' : ''}</p>
-            <p><strong>Телефон:</strong> {formSubmittedLocally ? formData.phone || 'Не вказано' : ''}</p>
-            <p><strong>Повідомлення:</strong> {formSubmittedLocally ? formData.message || '(було очищено)' : ''}</p>
+            <p>
+              <strong>{c.name}:</strong> {formSubmittedLocally ? formData.name || '—' : ''}
+            </p>
+            <p>
+              <strong>{c.email}:</strong> {formSubmittedLocally ? formData.email || '—' : ''}
+            </p>
+            <p>
+              <strong>{c.phone}:</strong> {formSubmittedLocally ? formData.phone || '—' : ''}
+            </p>
+            <p>
+              <strong>{c.message}:</strong> {formSubmittedLocally ? formData.message || '—' : ''}
+            </p>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">
-            Для налаштування надсилання через Telegram, потрібно створити API сервер з відповідним токеном.
-          </p>
         </DialogContent>
       </Dialog>
     </>
