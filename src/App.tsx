@@ -8,7 +8,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate,
+
   useLocation,
 } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
@@ -96,7 +96,7 @@ const App = () => (
         <BrowserRouter basename={import.meta.env.BASE_URL}>
           <ScrollManager />
           <Routes>
-            <Route path="/" element={<RootRedirect />} />
+            <Route path="/" element={<RootHome />} />
 
             {LANGS.map((lang) => (
               <Route
