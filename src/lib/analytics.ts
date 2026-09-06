@@ -52,31 +52,22 @@ export function initPixel() {
   if (typeof document === 'undefined') return;
   if (typeof window.fbq === 'function') return;
 
-  // Meta Pixel base code
-  (function (f: Window, b: Document, e: string, v: string, n: unknown, t: HTMLScriptElement, s: HTMLScriptElement) {
-    if (f.fbq) return;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const fbqFunc = function (this: any, ...args: unknown[]) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (fbqFunc as any).callMethod ? (fbqFunc as any).callMethod.apply(fbqFunc, args) : (fbqFunc as any).queue.push(args);
-    };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    if (!f._fbq) f._fbq = fbqFunc as any;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (fbqFunc as any).push = fbqFunc;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (fbqFunc as any).loaded = true;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (fbqFunc as any).version = '2.0';
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (fbqFunc as any).queue = [];
-    t = b.createElement(e) as HTMLScriptElement;
-    t.async = true;
-    t.src = v;
-    s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
-    s.parentNode?.insertBefore(t, s);
-  })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js', null as unknown as never, null as unknown as HTMLScriptElement, null as unknown as HTMLScriptElement);
-
-  window.fbq('init', FB_PIXEL_ID);
-  window.fbq('track', 'PageView');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const w = window as any;
+  if (w.fbq) return;
+  w.fbq = function () {
+    w.fbq.callMethod ? w.fbq.callMethod.apply(w.fbq, arguments) : w.fbq.queue.push(arguments);
+  };
+  if (!w._fbq) w._fbq = w.fbq;
+  w.fbq.push = w.fbq;
+  w.fbq.loaded = true;
+  w.fbq.version = '2.0';
+  w.fbq.queue = [];
+  const t = document.createElement('script');
+  t.async = true;
+  t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+  const s = document.getElementsByTagName('script')[0];
+  s.parentNode?.insertBefore(t, s);
+  w.fbq('init', FB_PIXEL_ID);
+  w.fbq('track', 'PageView');
 }
