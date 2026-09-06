@@ -31,6 +31,9 @@ import {
   servicePath,
   type Lang,
 } from "./lib/i18n-routes";
+import { ConsentProvider } from "./components/ConsentProvider";
+import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import { ConsentBanner } from "./components/ConsentBanner";
 
 // Import i18n configuration
 import "./i18n/i18n";
@@ -97,8 +100,11 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
-          <ScrollManager />
+        <ConsentProvider>
+          <BrowserRouter basename={import.meta.env.BASE_URL}>
+            <AnalyticsProvider>
+              <ScrollManager />
+              <ConsentBanner />
           <Routes>
             <Route path="/" element={<RootHome />} />
 
@@ -148,7 +154,9 @@ const App = () => (
 
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+            </AnalyticsProvider>
+          </BrowserRouter>
+        </ConsentProvider>
       </TooltipProvider>
     </QueryClientProvider>
   </ThemeProvider>
