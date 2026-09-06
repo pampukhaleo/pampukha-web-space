@@ -55,8 +55,12 @@ const ScrollManager = () => {
   return null;
 };
 
-/** Legacy "/" and "/?lang=xx" entries redirect to the prefixed home page. */
-const RootRedirect = () => {
+/**
+ * Legacy "/" and "/?lang=xx" entries render the home page directly (so crawlers
+ * and prerender see real content) and quietly rewrite the URL to the language
+ * prefix for humans. Canonical always points to the prefixed home page.
+ */
+const RootHome = () => {
   const { search } = useLocation();
   const param = new URLSearchParams(search).get("lang");
   const stored =
@@ -72,8 +76,16 @@ const RootRedirect = () => {
         ? (browser as Lang)
         : DEFAULT_LANG;
 
-  return <Navigate to={homePath(lang)} replace />;
+  useEffect(() => {
+    const target = `${import.meta.env.BASE_URL.replace(/\/$/, "")}${homePath(lang)}`;
+    if (window.location.pathname !== target) {
+      window.history.replaceState(window.history.state, "", target);
+    }
+  }, [lang]);
+
+  return <Index lang={lang} />;
 };
+
 
 const App = () => (
   <ThemeProvider defaultTheme="dark" attribute="class">
