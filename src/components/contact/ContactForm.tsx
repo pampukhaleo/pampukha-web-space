@@ -257,7 +257,7 @@ export const ContactForm = () => {
     <>
       <Card className="bg-card border border-border shadow-md text-card-foreground max-w-2xl mx-auto w-full">
         <CardContent className="p-8">
-          <h3 className="text-2xl font-bold mb-6">{c.heading}</h3>
+          <h2 className="text-2xl font-bold mb-6">{c.heading}</h2>
 
           {error && (
             <Alert className="mb-6 border-destructive/40 bg-destructive/10">
