@@ -32,7 +32,7 @@ export function initGA4() {
 
   const script = document.createElement('script');
   script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID ?? GOOGLE_ADS_ID}`;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
   document.head.appendChild(script);
 }
 
