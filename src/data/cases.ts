@@ -61,7 +61,7 @@ export const CASES: CaseStudy[] = [
         category: 'Corporate website',
         summary:
           'A website for a team of forensic experts: service catalogue, request form and clear navigation for clients and law firms.',
-        metaTitle: 'Case study: Forensic Expertise Institute website | Leonforge',
+        metaTitle: 'Case: Forensic Expertise Institute site | Leonforge',
         metaDescription:
           'How I built a corporate website for a forensic expertise institute: service structure, request form and search optimisation.',
         task:
@@ -84,7 +84,7 @@ export const CASES: CaseStudy[] = [
         category: 'Strona firmowa',
         summary:
           'Strona dla zespołu biegłych sądowych: katalog usług, formularz zgłoszenia i czytelna nawigacja dla klientów i kancelarii.',
-        metaTitle: 'Realizacja: strona Instytutu Ekspertyz Sądowych | Leonforge',
+        metaTitle: 'Realizacja: Instytut Ekspertyz Sądowych | Leonforge',
         metaDescription:
           'Jak powstała strona firmowa dla instytutu ekspertyz sądowych: struktura usług, formularz zgłoszeń i optymalizacja pod wyszukiwarkę.',
         task:
@@ -117,7 +117,7 @@ export const CASES: CaseStudy[] = [
         category: 'Мультимовна платформа',
         summary:
           'Платформа для арбітражної організації з користувачами з 35+ країн: кілька мов, база експертів і бронювання консультацій.',
-        metaTitle: 'Кейс: мультимовна платформа арбітражної палати | Leonforge',
+        metaTitle: 'Кейс: платформа арбітражної палати | Leonforge',
         metaDescription:
           'Розробка мультимовної платформи для міжнародної арбітражної палати: кілька мов, база експертів, правила і бронювання.',
         task:
@@ -163,7 +163,7 @@ export const CASES: CaseStudy[] = [
         category: 'Platforma wielojęzyczna',
         summary:
           'Platforma dla organizacji arbitrażowej z użytkownikami z ponad 35 krajów: kilka języków, baza ekspertów i rezerwacja konsultacji.',
-        metaTitle: 'Realizacja: wielojęzyczna platforma arbitrażowa | Leonforge',
+        metaTitle: 'Realizacja: platforma arbitrażowa | Leonforge',
         metaDescription:
           'Budowa wielojęzycznej platformy dla międzynarodowej izby arbitrażowej: języki, baza ekspertów, regulaminy i rezerwacje.',
         task:
@@ -219,7 +219,7 @@ export const CASES: CaseStudy[] = [
         category: 'Landing page with form',
         summary:
           'A simple, clear site for Ukrainians in Poland: services described in two languages and a consultation booking form.',
-        metaTitle: 'Case study: legal services landing page in Poland | Leonforge',
+        metaTitle: 'Case: legal services landing, Poland | Leonforge',
         metaDescription:
           'A landing page for a lawyer helping Ukrainians in Poland: two languages, plain-language services and a booking form.',
         task:
@@ -298,7 +298,7 @@ export const CASES: CaseStudy[] = [
         category: 'Service business site',
         summary:
           'A cleaning company website with online booking, service packages and a simple order form.',
-        metaTitle: 'Case study: cleaning company website with booking | Leonforge',
+        metaTitle: 'Case: cleaning website with booking | Leonforge',
         metaDescription:
           'A website for a cleaning company in Poland: service packages with prices, online booking and ad-ready analytics.',
         task:
@@ -321,7 +321,7 @@ export const CASES: CaseStudy[] = [
         category: 'Strona usługowa',
         summary:
           'Strona firmy sprzątającej z rezerwacją online, pakietami usług i prostym formularzem zamówienia.',
-        metaTitle: 'Realizacja: strona firmy sprzątającej z rezerwacją | Leonforge',
+        metaTitle: 'Realizacja: strona firmy sprzątającej | Leonforge',
         metaDescription:
           'Strona dla firmy sprzątającej w Polsce: pakiety usług z cenami, rezerwacja online i gotowość na kampanie reklamowe.',
         task:
@@ -354,7 +354,7 @@ export const CASES: CaseStudy[] = [
         category: 'Преміум-лендінг',
         summary:
           'Сайт прибирання преміумкласу для британського ринку: акуратний дизайн, відгуки клієнтів та зручне бронювання.',
-        metaTitle: 'Кейс: преміум-лендінг клінінгу для ринку Британії | Leonforge',
+        metaTitle: 'Кейс: преміум-лендінг клінінгу, Британія | Leonforge',
         metaDescription:
           'Преміальний лендінг для клінінгової компанії у Великій Британії: акуратний дизайн, відгуки і форма бронювання.',
         task:
@@ -400,7 +400,7 @@ export const CASES: CaseStudy[] = [
         category: 'Landing premium',
         summary:
           'Strona usług sprzątania premium na rynek brytyjski: dopracowany projekt, opinie klientów i wygodna rezerwacja.',
-        metaTitle: 'Realizacja: landing premium dla sprzątania, UK | Leonforge',
+        metaTitle: 'Realizacja: landing premium sprzątanie, UK | Leonforge',
         metaDescription:
           'Landing premium dla brytyjskiej firmy sprzątającej: dopracowany projekt, opinie i formularz rezerwacji.',
         task:
@@ -433,7 +433,7 @@ export const CASES: CaseStudy[] = [
         category: 'Сайт салону краси',
         summary:
           'Сайт салону лазерних процедур у Німеччині: каталог процедур, фото до/після та запис онлайн.',
-        metaTitle: 'Кейс: сайт салону лазерних процедур у Німеччині | Leonforge',
+        metaTitle: 'Кейс: салон лазерних процедур, Німеччина | Leonforge',
         metaDescription:
           'Сайт для салону краси в Німеччині: каталог процедур із цінами, галерея до/після і запис онлайн.',
         task:
@@ -456,7 +456,7 @@ export const CASES: CaseStudy[] = [
         category: 'Beauty studio website',
         summary:
           'A laser treatment studio site in Germany: treatment catalogue, before/after gallery and online booking.',
-        metaTitle: 'Case study: laser beauty studio website, Germany | Leonforge',
+        metaTitle: 'Case: laser beauty studio site, Germany | Leonforge',
         metaDescription:
           'A website for a beauty studio in Germany: treatment catalogue with prices, before/after gallery and online booking.',
         task:
@@ -479,7 +479,7 @@ export const CASES: CaseStudy[] = [
         category: 'Strona salonu kosmetycznego',
         summary:
           'Strona studia zabiegów laserowych w Niemczech: katalog zabiegów, galeria przed/po i rezerwacja online.',
-        metaTitle: 'Realizacja: strona studia laserowego w Niemczech | Leonforge',
+        metaTitle: 'Realizacja: studio laserowe, Niemcy | Leonforge',
         metaDescription:
           'Strona dla salonu kosmetycznego w Niemczech: katalog zabiegów z cenami, galeria przed/po i rezerwacja online.',
         task:
