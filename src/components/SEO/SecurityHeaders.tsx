@@ -10,11 +10,11 @@ export const SecurityHeaders = () => {
       csp.setAttribute('http-equiv', 'Content-Security-Policy');
       csp.setAttribute('content',
         "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net https://www.facebook.com; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net https://www.facebook.com https://www.googletagmanager.com https://www.google-analytics.com; " +
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-        "img-src 'self' data: https: https://www.facebook.com; " +
+        "img-src 'self' data: https: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; " +
         "font-src 'self' data: https://fonts.gstatic.com; " +
-        "connect-src 'self' https://fwwpidktaanowpaihgzy.supabase.co https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://api.facebook.com; " +
+        "connect-src 'self' https://fwwpidktaanowpaihgzy.supabase.co https://www.facebook.com https://connect.facebook.net https://graph.facebook.com https://api.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; " +
         "object-src 'none';"
       );
       document.head.appendChild(csp);

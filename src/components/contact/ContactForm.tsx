@@ -9,6 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { z } from 'zod';
 import { isLang, type Lang } from '@/lib/i18n-routes';
+import { trackFormSubmission } from '@/lib/analytics';
 
 interface FormCopy {
   heading: string;
@@ -243,6 +244,7 @@ export const ContactForm = () => {
       }
 
       toast({ title: c.successTitle, description: c.successText });
+      trackFormSubmission();
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (err) {
       setError(err instanceof Error ? err.message : c.genericError);
