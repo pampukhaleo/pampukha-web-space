@@ -8,7 +8,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate,
+
   useLocation,
 } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
@@ -55,8 +55,12 @@ const ScrollManager = () => {
   return null;
 };
 
-/** Legacy "/" and "/?lang=xx" entries redirect to the prefixed home page. */
-const RootRedirect = () => {
+/**
+ * Legacy "/" and "/?lang=xx" entries render the home page directly (so crawlers
+ * and prerender see real content) and quietly rewrite the URL to the language
+ * prefix for humans. Canonical always points to the prefixed home page.
+ */
+const RootHome = () => {
   const { search } = useLocation();
   const param = new URLSearchParams(search).get("lang");
   const stored =
@@ -72,8 +76,20 @@ const RootRedirect = () => {
         ? (browser as Lang)
         : DEFAULT_LANG;
 
-  return <Navigate to={homePath(lang)} replace />;
+  useEffect(() => {
+    // Keep the URL as "/" while prerendering, so the snapshot is written to
+    // dist/index.html instead of the language folder.
+    if (navigator.webdriver) return;
+    const target = `${import.meta.env.BASE_URL.replace(/\/$/, "")}${homePath(lang)}`;
+    if (window.location.pathname !== target) {
+      window.history.replaceState(window.history.state, "", target);
+    }
+  }, [lang]);
+
+
+  return <Index lang={lang} />;
 };
+
 
 const App = () => (
   <ThemeProvider defaultTheme="dark" attribute="class">
@@ -84,7 +100,7 @@ const App = () => (
         <BrowserRouter basename={import.meta.env.BASE_URL}>
           <ScrollManager />
           <Routes>
-            <Route path="/" element={<RootRedirect />} />
+            <Route path="/" element={<RootHome />} />
 
             {LANGS.map((lang) => (
               <Route
