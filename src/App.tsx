@@ -77,11 +77,15 @@ const RootHome = () => {
         : DEFAULT_LANG;
 
   useEffect(() => {
+    // Keep the URL as "/" while prerendering, so the snapshot is written to
+    // dist/index.html instead of the language folder.
+    if (navigator.webdriver) return;
     const target = `${import.meta.env.BASE_URL.replace(/\/$/, "")}${homePath(lang)}`;
     if (window.location.pathname !== target) {
       window.history.replaceState(window.history.state, "", target);
     }
   }, [lang]);
+
 
   return <Index lang={lang} />;
 };
