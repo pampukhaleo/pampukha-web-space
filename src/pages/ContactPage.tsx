@@ -11,6 +11,7 @@ import LangLayout from '@/components/LangLayout';
 import { UI } from '@/data/ui-copy';
 import { CONTACT_COPY } from '@/data/contact-copy';
 import { getService } from '@/data/services';
+import { trackTelegram } from '@/lib/analytics';
 import {
   contactPath,
   homePath,
@@ -104,6 +105,7 @@ const ContactPage = ({ lang }: { lang: Lang }) => {
                       href="https://t.me/leonforge"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={trackTelegram}
                       className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
                     >
                       <MessageCircle size={16} aria-hidden="true" />
