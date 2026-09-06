@@ -1,4 +1,6 @@
 const GA_ID = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY as string | undefined;
+const GOOGLE_ADS_ID = 'AW-564900300';
+const LEAD_CONVERSION_ID = 'AW-564900300/oaLGCKfrg_AcEMzjro0C';
 const FB_PIXEL_ID = '247977289845698';
 
 declare global {
@@ -11,19 +13,26 @@ declare global {
 }
 
 export function initGA4() {
-  if (typeof document === 'undefined' || !GA_ID) return;
+  if (typeof document === 'undefined') return;
   if (typeof window.gtag === 'function') return;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag(...args: unknown[]) {
     window.dataLayer.push(args);
   };
+  window.gtag('consent', 'default', {
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    analytics_storage: 'granted',
+  });
   window.gtag('js', new Date());
-  window.gtag('config', GA_ID);
+  if (GA_ID) window.gtag('config', GA_ID);
+  window.gtag('config', GOOGLE_ADS_ID);
 
   const script = document.createElement('script');
   script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID ?? GOOGLE_ADS_ID}`;
   document.head.appendChild(script);
 }
 
@@ -36,6 +45,11 @@ export function trackPageViewGA4(path: string) {
 export function trackFormSubmission() {
   if (typeof window.gtag === 'function') {
     window.gtag('event', 'form_submission');
+    window.gtag('event', 'conversion', {
+      send_to: LEAD_CONVERSION_ID,
+      value: 1,
+      currency: 'USD',
+    });
   }
   if (typeof window.fbq === 'function') {
     window.fbq('track', 'Lead');
