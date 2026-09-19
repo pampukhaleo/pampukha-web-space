@@ -17,9 +17,12 @@ export function initGA4() {
   if (typeof window.gtag === 'function') return;
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
+  // Стандартная форма из сниппета Google: обычная функция, кладущая объект arguments в очередь.
+  // gtag.js обрабатывает только arguments-подобные объекты, не plain-массивы.
+  window.gtag = function gtag() {
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer.push(arguments);
+  } as (...args: unknown[]) => void;
   window.gtag('consent', 'default', {
     ad_storage: 'granted',
     ad_user_data: 'granted',
